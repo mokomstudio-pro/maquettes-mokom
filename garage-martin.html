@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour site carte de visite (1 page) — exemple B</title>
+<meta name="description" content="Garage Martin à Libourne. Entretien, réparation, pneus, contrôle technique toutes marques. Devis gratuit, véhicule de prêt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#3F5A3C;--rose:#E7B7B0;--creme:#FBF7F3;--encre:#2A2A26;--gris:#767269;--sable:#F1E9E1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--creme);color:var(--encre);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Lora',serif;font-weight:500;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1040px,92%);margin:0 auto}
+.label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--vert);font-weight:700;display:block;margin-bottom:12px}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;transition:.25s;border:2px solid transparent}
+.btn-vert{background:var(--vert);color:#fff}
+.btn-vert:hover{background:var(--encre)}
+.btn-line{border-color:var(--vert);color:var(--vert)}
+.btn-line:hover{background:var(--vert);color:#fff}
+.ph{position:relative;overflow:hidden;background:var(--sable) center/cover no-repeat;border-radius:18px}
+
+header{position:sticky;top:0;z-index:50;background:rgba(251,247,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(42,42,38,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{font-family:'Lora',serif;font-size:24px;display:flex;align-items:center;gap:10px}
+.logo i{width:14px;height:14px;border-radius:50% 50% 50% 0;background:var(--rose);transform:rotate(-45deg)}
+.menu{display:flex;gap:26px;font-weight:600;font-size:15px}
+.nav-r{display:flex;align-items:center;gap:16px;font-weight:700;font-size:15px}
+
+.hero{padding:70px 0 60px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(38px,4.8vw,60px);margin-bottom:18px}
+.hero h1 i{color:var(--vert)}
+.hero p{font-size:18px;color:var(--gris);margin-bottom:28px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.hero .ph{aspect-ratio:4/5}
+.open{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:999px;padding:8px 16px;font-size:14px;font-weight:700;border:1px solid rgba(42,42,38,.08)}
+.open i{width:9px;height:9px;border-radius:50%;background:#4CAF50}
+
+section{padding:70px 0}
+.head{max-width:560px;margin-bottom:34px}
+.head h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:10px}
+.head p{color:var(--gris)}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{background:#fff;border-radius:18px;padding:26px;border:1px solid rgba(42,42,38,.06)}
+.svc i{display:block;width:40px;height:40px;border-radius:50%;background:var(--rose);margin-bottom:16px}
+.svc h3{font-size:21px;margin-bottom:8px}
+.svc p{font-size:15px;color:var(--gris)}
+
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.galerie .ph{aspect-ratio:1}
+
+.about{background:var(--vert);color:#fff}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+.about .ph{aspect-ratio:4/5}
+.about .label{color:var(--rose)}
+.about h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:14px}
+.about p{color:rgba(255,255,255,.85);margin-bottom:12px}
+
+.avis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.avis div{background:#fff;border-radius:18px;padding:24px;border:1px solid rgba(42,42,38,.06)}
+.avis .stars{color:#E0A33B;letter-spacing:3px;margin-bottom:8px}
+.avis p{font-size:15px;margin-bottom:12px}
+.avis b{font-size:14px;font-weight:700}
+.avis small{color:var(--gris);display:block;font-size:12px}
+
+.contact{background:var(--sable)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:12px}
+.contact p{color:var(--gris);margin-bottom:22px}
+.contact dl{display:grid;gap:16px}
+.contact dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--vert);font-weight:700;margin-bottom:2px}
+.contact dd{font-size:16px}
+.contact .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.map{background:#DCE3D8;border-radius:18px;min-height:360px;display:grid;place-items:center;color:var(--vert);font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(42,42,38,.08)}
+
+footer{padding:36px 0 26px;font-size:13px;color:var(--gris)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.foot .links{display:flex;gap:20px}
+
+@media (max-width:900px){
+  .menu,.nav-r span{display:none}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .services,.avis{grid-template-columns:1fr}
+}
+@media (max-width:600px){.galerie{grid-template-columns:1fr 1fr}section{padding:54px 0}}
+@media (max-width:600px){nav{height:64px}.logo{font-size:20px}.nav-r .btn{padding:10px 16px!important;font-size:13px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+body{background-color:var(--creme);background-image:radial-gradient(rgba(63,90,60,.14) 1px,transparent 1.2px);background-size:22px 22px}
+header{background:rgba(251,247,243,.96);border-bottom:1px dashed rgba(63,90,60,.4)}
+.hero h1 i{text-decoration:underline wavy var(--rose);text-decoration-thickness:2px;text-underline-offset:8px}
+.hero .ph{border-radius:2px;border:12px solid #fff;border-bottom-width:52px;box-shadow:0 16px 40px rgba(42,42,38,.16);transform:rotate(2deg);position:relative}
+.hero .ph::after{content:"Bouquet du jour ♡";position:absolute;left:0;right:0;bottom:-44px;text-align:center;font-family:'Lora',serif;font-style:italic;color:var(--encre);font-size:15px}
+.svc{border-radius:2px;border:1px dashed var(--vert);background:#fff}
+.svc i{border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--rose)}
+.svc h3{font-style:italic}
+.galerie .ph{border-radius:2px;border:10px solid #fff;border-bottom-width:38px;box-shadow:0 12px 30px rgba(42,42,38,.15)}
+.galerie .ph:nth-child(1){transform:rotate(-2deg)}
+.galerie .ph:nth-child(2){transform:rotate(1.5deg) translateY(10px)}
+.galerie .ph:nth-child(3){transform:rotate(-1deg)}
+.about{background:var(--vert);background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1.2px);background-size:22px 22px}
+.about .ph{border-radius:2px;border:12px solid #fff;border-bottom-width:44px;transform:rotate(-2deg);box-shadow:0 16px 40px rgba(0,0,0,.2)}
+.about h2{font-style:italic}
+.avis div{border-radius:2px;border:1px dashed rgba(42,42,38,.35);background:#fff}
+.avis .stars{color:var(--rose)}
+.contact{background:var(--sable);border-top:1px dashed rgba(63,90,60,.4)}
+.map{border-radius:2px;border:1px dashed var(--vert)}
+.btn{border-radius:999px}
+.open{border:1px dashed var(--vert)}
+
+
+/* ===== VARIANTE B : couleurs & typos ===== */
+:root{--vert:#1F3C88;--rose:#E63946;--creme:#F7F8FA;--encre:#1C2230;--gris:#5F6775;--sable:#E9EDF3}
+body{font-family:'Rubik',sans-serif;background-image:none}
+h1,h2,h3{font-family:'Rubik',sans-serif;font-weight:900;letter-spacing:-.02em}
+.hero h1 i{font-style:normal;color:var(--vert);text-decoration:none}
+header{border-bottom:4px solid var(--vert)}
+.logo i{border-radius:3px;transform:none;background:var(--rose)}
+.btn{border-radius:6px;text-transform:uppercase;letter-spacing:.04em;font-weight:700}
+.btn-vert{background:var(--vert)}.btn-vert:hover{background:var(--rose)}
+.hero .ph{border:0;border-radius:8px;transform:none;box-shadow:0 20px 50px rgba(28,34,48,.18)}
+.hero .ph::after{display:none}
+.open{border:1px solid var(--sable);background:#fff}
+.svc{border:0;border-radius:8px;border-top:4px solid var(--rose);box-shadow:0 10px 30px rgba(28,34,48,.06)}
+.svc i{border-radius:3px;transform:none;background:var(--vert)}
+.svc h3{font-style:normal}
+.galerie .ph{border:0;border-radius:8px;transform:none!important}
+.about{background:var(--vert);background-image:none}
+.about .ph{border:0;border-radius:8px;transform:none}
+.about h2{font-style:normal}
+.avis div{border:0;border-radius:8px;box-shadow:0 10px 30px rgba(28,34,48,.06)}.avis .stars{color:#F2B705}
+.contact{background:var(--sable);border-top:0}
+.map{border:0;border-radius:8px;background:#D9E0EA}
+.label{color:var(--rose)}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <a href="#" class="logo"><i></i>Garage Martin</a>
+  <div class="menu"><a href="#services">Prestations</a><a href="#galerie">L'atelier</a><a href="#apropos">Qui sommes-nous</a><a href="#avis">Avis</a><a href="#contact">Contact</a></div>
+  <div class="nav-r"><span>05 57 00 00 00</span><a href="#contact" class="btn btn-vert" style="padding:10px 20px">Prendre RDV</a></div>
+</nav></div></header>
+
+<section class="hero"><div class="wrap hero-grid">
+  <div><span class="label">Garage toutes marques · Libourne</span>
+    <h1>Votre voiture entretenue <i>au juste prix.</i></h1>
+    <p>Révision, freins, pneus, diagnostic, climatisation, préparation au contrôle technique. Toutes marques, devis gratuit avant chaque intervention, véhicule de prêt.</p>
+    <div class="btns"><a href="#contact" class="btn btn-vert">Prendre rendez-vous</a><a href="#services" class="btn btn-line">Nos prestations</a></div>
+    <span class="open"><i></i>Ouvert aujourd'hui · 8 h – 12 h · 14 h – 18 h 30</span></div>
+  <div class="ph" style="background-image:url(img/gar-hero.jpg)"></div>
+</div></section>
+
+<section id="services" style="padding-top:20px"><div class="wrap">
+  <div class="head"><span class="label">Prestations</span><h2>Ce qu'on fait, tous les jours.</h2></div>
+  <div class="services">
+    <div class="svc"><i></i><h3>Entretien & révision</h3><p>Vidange, filtres, courroie, plaquettes. Carnet constructeur respecté, garantie préservée. Révision complète dès 129 €.</p></div>
+    <div class="svc"><i></i><h3>Pneus & géométrie</h3><p>Montage, équilibrage, géométrie 3D. Toutes marques, en stock ou sous 24 h. Gardiennage saisonnier.</p></div>
+    <div class="svc"><i></i><h3>Diagnostic & réparation</h3><p>Valise toutes marques, voyant moteur, embrayage, climatisation, pare-brise. Devis avant d'ouvrir le capot.</p></div>
+  </div>
+</div></section>
+
+<section id="galerie" style="padding-top:0"><div class="wrap">
+  <div class="head"><span class="label">L'atelier</span><h2>Trois ponts, deux mécaniciens.</h2></div>
+  <div class="galerie"><div class="ph" style="background-image:url(img/gar-g1.jpg)"></div><div class="ph" style="background-image:url(img/gar-g2.jpg)"></div><div class="ph" style="background-image:url(img/gar-g3.jpg)"></div></div>
+</div></section>
+
+<section id="apropos" class="about"><div class="wrap about-grid">
+  <div class="ph" style="background-image:url(img/gar-portrait.jpg)"></div>
+  <div><span class="label" style="color:#F7F8FA">Qui sommes-nous</span><h2>Thomas Martin, mécanicien depuis 2004.</h2>
+    <p>Formé chez un concessionnaire, Thomas a repris le garage de la route de Saint-Émilion en 2015. Avec Kevin, son apprenti devenu associé, ils entretiennent environ 1 200 véhicules par an.</p>
+    <p>Pas de pièces changées « au cas où », pas de surprise sur la facture : le devis est signé avant, et vous récupérez les pièces remplacées si vous le demandez.</p></div>
+</div></section>
+
+<section id="avis"><div class="wrap">
+  <div class="head"><span class="label">Avis</span><h2>Ce que disent nos clients.</h2></div>
+  <div class="avis">
+    <div><div class="stars">★★★★★</div><p>« Devis respecté au centime, voiture prête à l'heure dite. Je ne vais plus ailleurs. »</p><b>Sandrine B.</b><small>Avis Google</small></div>
+    <div><div class="stars">★★★★★</div><p>« Ils m'ont dit que mes plaquettes pouvaient attendre 10 000 km. Un garage honnête, ça existe. »</p><b>Olivier M.</b><small>Avis Google</small></div>
+    <div><div class="stars">★★★★★</div><p>« Véhicule de prêt gratuit pendant la réparation. Pratique quand on habite à la campagne. »</p><b>Nathalie T.</b><small>Avis Google</small></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap contact-grid">
+  <div><span class="label">Contact</span><h2>Route de Saint-Émilion, à la sortie de Libourne.</h2><p>Appelez pour un rendez-vous ou passez directement : on vous dit tout de suite si on peut vous prendre dans la journée.</p>
+    <dl><div><dt>Adresse</dt><dd>142 route de Saint-Émilion, 33500 Libourne</dd></div><div><dt>Téléphone</dt><dd>05 57 00 00 00</dd></div><div><dt>Email</dt><dd>contact@garage-martin-libourne.fr</dd></div><div><dt>Horaires</dt><dd>Lundi – Vendredi : 8 h – 12 h · 14 h – 18 h 30 · Samedi : 8 h – 12 h</dd></div></dl>
+    <div class="btns"><a href="#" class="btn btn-vert">Appeler</a><a href="#" class="btn btn-line">Itinéraire</a></div></div>
+  <div class="map">Carte Google Maps</div>
+</div></section>
+
+<footer><div class="wrap foot"><span>© 2026 Garage Martin — 142 route de Saint-Émilion, Libourne — SIRET 000 000 000 00000</span><div class="links"><a href="#">Facebook</a><a href="#">Mentions légales</a></div></div></footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

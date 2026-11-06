@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour indépendant & expert</title>
+<meta name="description" content="Léa Marchand accompagne les PME et scale-ups de Nouvelle-Aquitaine dans leur stratégie, leur organisation et leurs transitions de croissance. Diagnostic offert.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#15213B;--nuit-deep:#0E1629;--lin:#F3F0EA;--terra:#D2694A;--gris:#6E7480;--sauge:#D9E0D6;--blanc:#fff;--ligne:rgba(21,33,59,.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--lin);color:var(--nuit);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.08;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1140px,92%);margin:0 auto}
+.label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);font-weight:600;display:block;margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 28px;border-radius:8px;font-weight:600;font-size:15px;transition:.25s;border:1.5px solid transparent}
+.btn-nuit{background:var(--nuit);color:#fff}
+.btn-nuit:hover{background:var(--terra)}
+.btn-line{border-color:var(--nuit);color:var(--nuit)}
+.btn-line:hover{background:var(--nuit);color:#fff}
+.ph{position:relative;overflow:hidden;background:linear-gradient(160deg,#2A3A5E 0%,#15213B 60%,#0E1629 100%)}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(210,105,74,.35),transparent 45%),radial-gradient(circle at 20% 90%,rgba(217,224,214,.25),transparent 45%)}
+.ph span{position:absolute;left:16px;bottom:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8);z-index:1}
+.ph.sauge{background:linear-gradient(160deg,#E6ECE3 0%,#D9E0D6 60%,#BFC9BB 100%)}
+.ph.sauge span{color:var(--nuit)}
+.ph.terra{background:linear-gradient(160deg,#E68A6E 0%,#D2694A 60%,#A84B31 100%)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(243,240,234,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--ligne)}
+nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:'DM Serif Display',serif;font-size:22px;display:flex;align-items:center;gap:10px}
+.logo i{width:10px;height:10px;border-radius:50%;background:var(--terra)}
+.menu{display:flex;gap:32px;font-size:15px;font-weight:500}
+.menu a:hover{color:var(--terra)}
+
+.hero{padding:90px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.hero h1{font-size:clamp(42px,5.4vw,70px);margin-bottom:24px}
+.hero h1 i{color:var(--terra)}
+.hero p{font-size:19px;color:var(--gris);max-width:520px;margin-bottom:34px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.hero .trust{display:flex;align-items:center;gap:14px;font-size:14px;color:var(--gris)}
+.hero .trust .faces{display:flex}
+.hero .trust .faces i{width:34px;height:34px;border-radius:50%;border:2px solid var(--lin);margin-left:-8px;background:var(--sauge)}
+.hero .trust .faces i:nth-child(2){background:var(--terra)}
+.hero .trust .faces i:nth-child(3){background:var(--nuit)}
+.portrait{position:relative}
+.portrait .ph{aspect-ratio:4/5;border-radius:18px 18px 18px 120px}
+.portrait .card{position:absolute;left:-40px;bottom:40px;background:#fff;padding:20px 24px;border-radius:12px;box-shadow:0 20px 50px rgba(21,33,59,.15);max-width:260px}
+.portrait .card b{font-family:'DM Serif Display',serif;font-size:30px;display:block;color:var(--terra);line-height:1}
+.portrait .card small{font-size:14px;color:var(--gris)}
+
+.logos{border-top:1px solid var(--ligne);border-bottom:1px solid var(--ligne);padding:28px 0}
+.logos .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.logos small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.logos b{font-family:'DM Serif Display',serif;font-size:20px;opacity:.55;letter-spacing:.02em}
+
+section{padding:100px 0}
+.head{max-width:640px;margin-bottom:50px}
+.head h2{font-size:clamp(32px,3.8vw,48px);margin-bottom:14px}
+.head p{color:var(--gris);font-size:17px}
+
+.offres{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.offre{background:#fff;border-radius:16px;padding:34px;border:1px solid var(--ligne);display:flex;flex-direction:column;transition:.3s}
+.offre:hover{transform:translateY(-6px);box-shadow:0 26px 50px rgba(21,33,59,.1)}
+.offre .num{font-family:'DM Serif Display',serif;font-size:14px;color:var(--terra);margin-bottom:22px}
+.offre h3{font-size:26px;margin-bottom:12px}
+.offre p{color:var(--gris);font-size:15px;margin-bottom:22px;flex:1}
+.offre ul{list-style:none;display:grid;gap:9px;margin-bottom:26px;font-size:14px}
+.offre li{padding-left:22px;position:relative}
+.offre li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:2px;background:var(--terra)}
+.offre a{font-weight:600;font-size:14px;color:var(--terra)}
+.offre.dark{background:var(--nuit);color:#fff;border-color:var(--nuit)}
+.offre.dark p{color:rgba(255,255,255,.72)}
+.offre.dark a{color:#fff}
+
+.methode{background:var(--nuit);color:#fff}
+.methode .label{color:var(--terra)}
+.methode .head p{color:rgba(255,255,255,.7)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:10px}
+.step{border-top:1px solid rgba(255,255,255,.18);padding-top:26px}
+.step b{font-family:'DM Serif Display',serif;font-size:48px;color:var(--terra);display:block;line-height:1;margin-bottom:16px}
+.step h3{font-size:24px;margin-bottom:10px}
+.step p{color:rgba(255,255,255,.72);font-size:15px}
+
+.chiffres{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.chiffre{background:#fff;border-radius:16px;padding:32px 28px;border:1px solid var(--ligne)}
+.chiffre b{font-family:'DM Serif Display',serif;font-size:50px;display:block;line-height:1;color:var(--nuit);margin-bottom:10px}
+.chiffre b em{color:var(--terra);font-style:normal}
+.chiffre p{color:var(--gris);font-size:15px}
+
+.cas{background:var(--sauge)}
+.cas-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.cas .ph{aspect-ratio:5/4;border-radius:16px}
+.cas h2{font-size:clamp(30px,3.4vw,44px);margin-bottom:16px}
+.cas p{color:#4A5260;font-size:17px;margin-bottom:16px}
+.cas .res{display:flex;gap:40px;margin:26px 0 30px}
+.cas .res b{font-family:'DM Serif Display',serif;font-size:38px;display:block;line-height:1}
+.cas .res small{font-size:13px;color:#4A5260}
+
+.temoignages{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+.temo{background:#fff;border-radius:16px;padding:40px;border:1px solid var(--ligne)}
+.temo.big{background:var(--terra);color:#fff;border:0}
+.temo p{font-family:'DM Serif Display',serif;font-size:24px;line-height:1.35;margin-bottom:24px}
+.temo.big p{font-size:30px}
+.temo b{display:block;font-weight:600;font-size:15px}
+.temo small{color:var(--gris);font-size:14px}
+.temo.big small{color:rgba(255,255,255,.8)}
+
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.about-grid .ph{aspect-ratio:4/5;border-radius:16px}
+.about-grid h2{font-size:clamp(30px,3.4vw,44px);margin-bottom:18px}
+.about-grid p{color:var(--gris);font-size:17px;margin-bottom:16px}
+.about-grid .tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 28px}
+.about-grid .tags span{padding:7px 14px;border:1px solid var(--ligne);border-radius:999px;font-size:13px;font-weight:500;background:#fff}
+
+.ressources{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.art{display:block;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--ligne);transition:.3s}
+.art:hover{transform:translateY(-5px)}
+.art .ph{aspect-ratio:16/10}
+.art div.txt{padding:22px}
+.art small{font-size:12px;color:var(--terra);font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.art h3{font-size:21px;margin:8px 0 8px}
+.art p{font-size:14px;color:var(--gris)}
+
+.contact{background:var(--nuit);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.contact h2{font-size:clamp(32px,3.8vw,50px);margin-bottom:16px}
+.contact p{color:rgba(255,255,255,.72);font-size:17px;margin-bottom:28px}
+.contact .label{color:var(--terra)}
+.contact .list{display:grid;gap:14px;font-size:15px}
+.contact .list b{color:var(--terra);display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+form{background:#fff;color:var(--nuit);border-radius:16px;padding:34px;display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:13px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid var(--ligne);border-radius:8px;background:var(--lin);width:100%}
+textarea{min-height:110px;resize:vertical}
+form .btn{justify-content:center;margin-top:6px}
+form small{text-align:center;color:var(--gris);font-size:12px}
+
+footer{background:var(--nuit-deep);color:rgba(255,255,255,.65);padding:50px 0 28px;font-size:14px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:34px}
+.foot .logo{color:#fff}
+.foot .links{display:flex;gap:16px 26px;flex-wrap:wrap}
+.foot a:hover{color:#fff}
+.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
+
+@media (max-width:900px){
+  .menu{display:none}
+  .hero-grid,.cas-grid,.about-grid,.contact-grid,.temoignages{grid-template-columns:1fr}
+  .offres,.steps,.ressources{grid-template-columns:1fr}
+  .chiffres{grid-template-columns:1fr 1fr}
+  .portrait .card{left:12px}
+}
+@media (max-width:600px){.chiffres,.row{grid-template-columns:1fr}section{padding:64px 0}}
+.ph{background-size:cover;background-position:center}.ph::after{background:linear-gradient(0deg,rgba(21,33,59,.25),transparent 55%)!important}.ph>span:not(.new):not(.tag){display:none}
+@media (max-width:600px){nav{height:66px}.logo{font-size:18px}nav .btn{padding:10px 14px!important;font-size:13px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+.label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;text-transform:none;font-weight:500}
+.label::before{content:"— "}
+.btn,.offre,.chiffre,.temo,.art,.art .ph,.cas .ph,.about-grid .ph,.portrait .ph,.portrait .card,form,input,select,textarea,.about-grid .tags span,.hero .trust .faces i{border-radius:0!important}
+.hero h1{font-size:clamp(44px,6vw,84px)}
+.hero h1 i{font-style:normal;color:var(--nuit);background:linear-gradient(transparent 62%,rgba(210,105,74,.45) 62%)}
+.portrait .card{border-left:6px solid var(--terra)}
+.portrait .ph{outline:1px solid var(--nuit);outline-offset:10px}
+.logos b{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+section{border-top:1px solid rgba(21,33,59,.15)}
+.hero{border-top:0}
+.head h2{letter-spacing:-.02em}
+.offre{border:1px solid var(--nuit);box-shadow:none}
+.offre:hover{transform:none;box-shadow:8px 8px 0 var(--terra)}
+.offre .num{font-family:'IBM Plex Mono',monospace}
+.offre li::before{width:14px}
+.methode{border-top:0}
+.step{border-top:1px solid rgba(255,255,255,.35)}
+.step b{font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:.1em;margin-bottom:60px}
+.step b::before{content:"0"}
+.chiffres{border-top:0}
+.chiffre{border:0;border-left:2px solid var(--nuit);background:transparent;padding:10px 0 10px 22px}
+.chiffre b{font-size:66px}
+.cas{background:var(--sauge)}
+.cas .res b{font-family:'DM Serif Display',serif}
+.temo{border:1px solid var(--nuit)}
+.temo.big{background:var(--nuit);color:#fff}
+.temo.big small{color:rgba(255,255,255,.7)}
+.art{border:1px solid var(--nuit)}
+.art small{font-family:'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:none}
+.about-grid .tags span{border:1px solid var(--nuit);font-family:'IBM Plex Mono',monospace;font-size:12px}
+.contact .list b{font-family:'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:none}
+.contact .list b::before{content:"— "}
+input,select,textarea{border:1px solid var(--nuit);background:#fff}
+@media (max-width:600px){.hero h1{font-size:40px}.chiffre b{font-size:48px}}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#" class="logo"><i></i>Léa Marchand</a>
+      <div class="menu"><a href="#offres">Accompagnements</a><a href="#methode">Méthode</a><a href="lea-marchand-cas-vinatis.html">Cas clients</a><a href="#apropos">À propos</a><a href="#ressources">Ressources</a></div>
+      <a href="#contact" class="btn btn-nuit" style="padding:12px 22px">Réserver un diagnostic</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="label">Consultante stratégie & organisation · Bordeaux</span>
+      <h1>Votre entreprise a grandi. <i>Son organisation doit suivre.</i></h1>
+      <p>J'accompagne les dirigeants de PME et de scale-ups de Nouvelle-Aquitaine à clarifier leur stratégie, structurer leurs équipes et passer les caps de croissance sans s'épuiser.</p>
+      <div class="btns"><a href="#contact" class="btn btn-nuit">Diagnostic offert de 45 min →</a><a href="#offres" class="btn btn-line">Voir les accompagnements</a></div>
+      <div class="trust"><div class="faces"><i></i><i></i><i></i></div><span><b>42 dirigeants</b> accompagnés depuis 2018</span></div>
+    </div>
+    <div class="portrait">
+      <div class="ph" style="background-image:url(img/lea-portrait.jpg)"><span>Portrait — Léa Marchand</span></div>
+      <div class="card"><b>+31 %</b><small>de marge opérationnelle en moyenne 18 mois après la mission</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="logos">
+  <div class="wrap">
+    <small>Ils m'ont fait confiance</small>
+    <b>Vinatis</b><b>Alios Pharma</b><b>Bordeaux Métropole</b><b>Groupe Lafitte</b><b>Nestor</b>
+  </div>
+</div>
+
+<section id="offres">
+  <div class="wrap">
+    <div class="head"><span class="label">Accompagnements</span><h2>Trois façons de travailler ensemble.</h2><p>Du diagnostic ponctuel à l'accompagnement sur douze mois, chaque format répond à un moment précis de la vie de l'entreprise.</p></div>
+    <div class="offres">
+      <div class="offre"><div class="num">01 — 3 semaines</div><h3>Diagnostic stratégique</h3><p>Un regard extérieur, structuré et sans complaisance sur votre organisation, votre offre et vos priorités.</p><ul><li>12 entretiens avec vos équipes</li><li>Cartographie des flux de décision</li><li>Rapport et plan d'action priorisé</li></ul><a href="#contact">Découvrir →</a></div>
+      <div class="offre dark"><div class="num" style="color:var(--terra)">02 — 6 à 12 mois</div><h3>Accompagnement de croissance</h3><p>Je rejoins votre comité de direction un jour par semaine pour structurer la croissance : recrutements clés, process, gouvernance.</p><ul><li>Feuille de route trimestrielle</li><li>Pilotage des chantiers prioritaires</li><li>Coaching du dirigeant</li></ul><a href="#contact">Découvrir →</a></div>
+      <div class="offre"><div class="num">03 — 2 jours</div><h3>Séminaire stratégique</h3><p>Deux jours hors les murs avec votre équipe de direction pour aligner vision, objectifs et organisation sur 3 ans.</p><ul><li>Préparation individuelle</li><li>Animation et arbitrages</li><li>Plan à 90 jours</li></ul><a href="#contact">Découvrir →</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="methode" class="methode">
+  <div class="wrap">
+    <div class="head"><span class="label">Méthode</span><h2>Comprendre, décider, ancrer.</h2><p>Pas de slides de 80 pages. Des décisions prises avec vous, puis mises en œuvre avec vos équipes.</p></div>
+    <div class="steps">
+      <div class="step"><b>1</b><h3>Comprendre</h3><p>J'écoute vos équipes avant de vous écouter. Les problèmes d'organisation se voient dans le quotidien, pas dans l'organigramme.</p></div>
+      <div class="step"><b>2</b><h3>Décider</h3><p>Trois priorités, pas quinze. Nous arbitrons ensemble ce qui change, ce qui s'arrête et ce qui attend.</p></div>
+      <div class="step"><b>3</b><h3>Ancrer</h3><p>Rituels, indicateurs, responsabilités claires : je reste jusqu'à ce que la nouvelle organisation tourne sans moi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap chiffres">
+    <div class="chiffre"><b>42</b><p>dirigeants accompagnés depuis 2018</p></div>
+    <div class="chiffre"><b>+31<em>%</em></b><p>de marge opérationnelle en moyenne à 18 mois</p></div>
+    <div class="chiffre"><b>94<em>%</em></b><p>des clients recommandent ou renouvellent</p></div>
+    <div class="chiffre"><b>12</b><p>ans en direction d'entreprise avant le conseil</p></div>
+  </div>
+</section>
+
+<section id="cas" class="cas">
+  <div class="wrap cas-grid">
+    <div class="ph sauge" style="background-image:url(img/lea-cas.jpg)"><span>Photo — atelier avec l'équipe Vinatis</span></div>
+    <div>
+      <span class="label">Cas client</span>
+      <h2>Vinatis : passer de 40 à 110 salariés sans perdre l'esprit d'équipe.</h2>
+      <p>Un e-commerçant bordelais en forte croissance, un fondateur qui prenait encore toutes les décisions. En neuf mois : création d'un comité de direction, délégation structurée, recrutement d'un DAF et d'une DRH.</p>
+      <div class="res"><div><b>9 mois</b><small>de mission</small></div><div><b>-40 %</b><small>de décisions remontées au fondateur</small></div><div><b>×2,1</b><small>chiffre d'affaires à 2 ans</small></div></div>
+      <a href="lea-marchand-cas-vinatis.html" class="btn btn-nuit">Lire le cas complet</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head"><span class="label">Témoignages</span><h2>Ce que disent les dirigeants.</h2></div>
+    <div class="temoignages">
+      <div class="temo big"><p>« Léa a mis des mots sur ce que je sentais depuis deux ans sans réussir à le formuler. Et surtout, elle est restée pour le mettre en place. »</p><b>Thomas Berger</b><small>Fondateur, Vinatis</small></div>
+      <div class="temo"><p>« Un séminaire de deux jours qui nous a fait gagner six mois de réunions. »</p><b>Camille Rouxel</b><small>DG, Alios Pharma</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="apropos" style="padding-top:0">
+  <div class="wrap about-grid">
+    <div class="ph terra" style="background-image:url(img/lea-about.jpg);background-position:right center"><span>Portrait — bureau, Bordeaux</span></div>
+    <div>
+      <span class="label">À propos</span>
+      <h2>Douze ans à diriger, huit ans à conseiller.</h2>
+      <p>Avant de créer mon cabinet en 2018, j'ai dirigé les opérations d'une PME industrielle de 200 personnes puis d'une scale-up bordelaise. Je sais ce qu'un dirigeant vit entre deux comités : le doute, la fatigue, l'envie de bien faire.</p>
+      <p>Mon travail n'est pas de produire des recommandations, c'est d'aider à décider et à tenir la décision.</p>
+      <div class="tags"><span>Stratégie</span><span>Gouvernance</span><span>Organisation</span><span>Croissance</span><span>Transmission</span><span>HEC Paris</span></div>
+      <a href="#contact" class="btn btn-line">Prendre rendez-vous</a>
+    </div>
+  </div>
+</section>
+
+<section id="ressources" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><span class="label">Ressources</span><h2>Notes de terrain.</h2></div>
+    <div class="ressources">
+      <a href="#" class="art"><div class="ph sauge" style="background-image:url(img/lea-a1.jpg);background-position:center 65%"><span>Article</span></div><div class="txt"><small>Organisation</small><h3>Le fondateur goulot : 5 signes et 3 remèdes</h3><p>Quand toutes les décisions passent encore par une seule personne.</p></div></a>
+      <a href="#" class="art"><div class="ph" style="background-image:url(img/lea-a2.jpg)"><span>Guide</span></div><div class="txt"><small>Gouvernance</small><h3>Monter son premier comité de direction</h3><p>Qui, quand, quelle fréquence, et ce qu'il ne doit surtout pas devenir.</p></div></a>
+      <a href="#" class="art"><div class="ph terra" style="background-image:url(img/lea-a3.jpg);background-position:center 70%"><span>Podcast</span></div><div class="txt"><small>Croissance</small><h3>De 10 à 50 salariés : ce qui casse en premier</h3><p>Un épisode avec trois dirigeants de Nouvelle-Aquitaine.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="label">Diagnostic offert</span>
+      <h2>45 minutes pour poser le problème.</h2>
+      <p>Un échange sans engagement, en visio ou à mon bureau à Bordeaux. Vous repartez avec une première lecture de votre situation, que nous travaillions ensemble ou non.</p>
+      <div class="list">
+        <div><b>Email</b>lea@leamarchand-conseil.fr</div>
+        <div><b>Téléphone</b>06 00 00 00 00</div>
+        <div><b>Bureau</b>8 cours de l'Intendance, 33000 Bordeaux</div>
+      </div>
+    </div>
+    <form onsubmit="event.preventDefault()">
+      <div class="row"><label>Prénom & nom<input placeholder="Votre nom"></label><label>Entreprise<input placeholder="Nom de l'entreprise"></label></div>
+      <div class="row"><label>Email<input placeholder="vous@entreprise.fr"></label><label>Effectif<select><option>1 – 10</option><option>10 – 50</option><option>50 – 200</option><option>200+</option></select></label></div>
+      <label>Votre situation<textarea placeholder="En quelques lignes, où en est votre entreprise et ce qui coince…"></textarea></label>
+      <button class="btn btn-nuit">Réserver mon diagnostic</button>
+      <small>Réponse sous 24 h ouvrées</small>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="logo"><i></i>Léa Marchand</div>
+      <div class="links"><a href="#">Accompagnements</a><a href="#">Méthode</a><a href="#">Cas clients</a><a href="#">Ressources</a><a href="#">LinkedIn</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Léa Marchand Conseil — Bordeaux</span><span><a href="lea-marchand-mentions-legales.html">Mentions légales</a> · Confidentialité</span></div>
+  </div>
+</footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

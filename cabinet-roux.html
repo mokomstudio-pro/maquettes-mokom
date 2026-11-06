@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour praticien & profession libérale</title>
+<meta name="description" content="Camille Roux, ostéopathe D.O. à Pessac. Adultes, sportifs, femmes enceintes, nourrissons. Prise de rendez-vous en ligne, cabinet accessible.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+<style>
+:root{--eau:#D9E6E1;--eau2:#EEF4F1;--profond:#1F3A4D;--blanc:#FBFCFB;--sable:#F1ECE3;--corail:#D98B74;--gris:#6B7A80}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;background:var(--blanc);color:var(--profond);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Source Serif 4',serif;font-weight:500;line-height:1.1;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92%);margin:0 auto}
+.label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--corail);font-weight:700;display:block;margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 26px;border-radius:12px;font-weight:700;font-size:15px;transition:.25s;border:1.5px solid transparent}
+.btn-profond{background:var(--profond);color:#fff}
+.btn-profond:hover{background:var(--corail)}
+.btn-line{border-color:var(--profond);color:var(--profond)}
+.btn-line:hover{background:var(--profond);color:#fff}
+.ph{position:relative;overflow:hidden;background:var(--eau) center/cover no-repeat}
+
+header{position:sticky;top:0;z-index:50;background:rgba(251,252,251,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(31,58,77,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:12px;font-family:'Source Serif 4',serif;font-size:21px;font-weight:500}
+.logo i{width:36px;height:36px;border-radius:50%;background:var(--eau);display:grid;place-items:center}
+.logo i svg{width:20px;height:20px}
+.logo small{display:block;font-family:'Nunito Sans',sans-serif;font-size:11px;color:var(--gris);font-weight:600;letter-spacing:.06em}
+.menu{display:flex;gap:28px;font-weight:600;font-size:15px}
+.menu a:hover{color:var(--corail)}
+
+.hero{background:var(--eau2);padding:80px 0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(40px,5vw,64px);margin-bottom:22px}
+.hero h1 i{font-style:italic;color:var(--corail)}
+.hero p{font-size:18px;color:var(--gris);max-width:520px;margin-bottom:30px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.hero .quick{display:flex;gap:26px;flex-wrap:wrap;font-size:14px;font-weight:600}
+.hero .quick span::before{content:"✓ ";color:var(--corail)}
+.hero .ph{aspect-ratio:4/5;border-radius:24px 24px 24px 120px}
+
+section{padding:90px 0}
+.head{max-width:620px;margin-bottom:46px}
+.head h2{font-size:clamp(32px,3.8vw,48px);margin-bottom:12px}
+.head p{color:var(--gris)}
+
+.pourqui{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pq{background:#fff;border:1px solid rgba(31,58,77,.08);border-radius:18px;padding:26px}
+.pq i{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--eau);margin-bottom:16px;font-style:normal;font-size:20px}
+.pq h3{font-size:20px;margin-bottom:8px}
+.pq p{font-size:14px;color:var(--gris)}
+
+.approche{background:var(--profond);color:#fff}
+.approche .label{color:var(--eau)}
+.approche .head p{color:rgba(255,255,255,.72)}
+.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.app-grid .ph{aspect-ratio:5/4;border-radius:20px}
+.app-grid p{color:rgba(255,255,255,.8);margin-bottom:14px}
+.app-grid h2{font-size:clamp(32px,3.8vw,48px);margin-bottom:16px}
+
+.deroule{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.etape{border-top:2px solid var(--eau);padding-top:22px}
+.etape b{font-family:'Source Serif 4',serif;font-size:40px;color:var(--corail);display:block;line-height:1;margin-bottom:12px;font-weight:500}
+.etape h3{font-size:21px;margin-bottom:8px}
+.etape p{font-size:15px;color:var(--gris)}
+
+.tarifs{background:var(--sable)}
+.tarif-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.tarif{background:#fff;border-radius:18px;padding:30px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.tarif b{display:block;font-family:'Source Serif 4',serif;font-size:21px;font-weight:500}
+.tarif small{color:var(--gris);font-size:14px}
+.tarif em{font-family:'Source Serif 4',serif;font-style:normal;font-size:30px;white-space:nowrap}
+.tarifs .mentions{font-size:14px;color:var(--gris);margin-top:16px}
+.remb{background:var(--eau);border-radius:18px;padding:28px}
+.remb h3{font-size:22px;margin-bottom:10px}
+.remb p{font-size:15px;margin-bottom:10px}
+
+.faq{max-width:760px}
+details{border-bottom:1px solid rgba(31,58,77,.12);padding:18px 0}
+summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::after{content:"+";font-size:24px;color:var(--corail);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{color:var(--gris);margin-top:10px;font-size:15px}
+
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}
+.about .ph{aspect-ratio:4/5;border-radius:20px}
+.about h2{font-size:clamp(32px,3.8vw,48px);margin-bottom:16px}
+.about p{color:var(--gris);margin-bottom:14px}
+.about .dipl{display:grid;gap:8px;margin:22px 0 26px;font-size:14px;font-weight:600}
+.about .dipl span::before{content:"◆ ";color:var(--corail);font-size:10px}
+
+.rdv{background:var(--eau2)}
+.rdv-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.rdv h2{font-size:clamp(32px,4vw,52px);margin-bottom:14px}
+.rdv p{color:var(--gris);margin-bottom:26px}
+.rdv .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.rdv dl{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px}
+.rdv dt{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--corail);font-weight:700;margin-bottom:4px}
+.rdv dd{font-size:15px}
+.rdv .ph{aspect-ratio:5/4;border-radius:20px}
+
+footer{background:var(--profond);color:rgba(255,255,255,.7);padding:46px 0 26px;font-size:14px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:30px}
+.foot .logo{color:#fff}
+.foot .logo small{color:rgba(255,255,255,.6)}
+.foot .links{display:flex;gap:24px;flex-wrap:wrap}
+.copy{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
+
+@media (max-width:900px){
+  .menu{display:none}
+  .hero-grid,.app-grid,.tarif-grid,.about,.rdv-grid{grid-template-columns:1fr}
+  .pourqui{grid-template-columns:1fr 1fr}
+  .deroule{grid-template-columns:1fr}
+}
+@media (max-width:600px){.pourqui,.rdv dl{grid-template-columns:1fr}section{padding:60px 0}}
+@media (max-width:600px){nav{height:66px}.logo{font-size:17px;gap:8px}.logo i{width:30px;height:30px}.logo small{font-size:10px}nav .btn{padding:10px 12px!important;font-size:12px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+.btn{border-radius:999px;padding:15px 28px}
+header{border-bottom:0}
+.hero{position:relative;overflow:hidden;padding-bottom:120px}
+.hero::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-40px;height:110px;background:var(--blanc);border-radius:50% 50% 0 0}
+.hero .ph{border-radius:200px 200px 40px 40px;outline:1px solid var(--eau);outline-offset:10px}
+.hero .quick span{background:#fff;padding:8px 14px;border-radius:999px;border:1px solid rgba(31,58,77,.08)}
+.pq{border-radius:28px;border:0;box-shadow:0 18px 50px rgba(31,58,77,.08)}
+.pq i{background:var(--profond);color:#fff}
+.approche{border-radius:48px;width:min(1240px,96%);margin:0 auto}
+.app-grid .ph{border-radius:40px}
+.etape{border-top:0;background:var(--eau2);border-radius:28px;padding:30px}
+.etape b{background:var(--profond);color:#fff;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:22px;margin-bottom:16px}
+.tarifs{background:transparent}
+.tarif{border-radius:28px;box-shadow:0 18px 50px rgba(31,58,77,.08)}
+.remb{border-radius:28px}
+details{background:#fff;border-radius:18px;padding:16px 22px;border:1px solid rgba(31,58,77,.08);margin-bottom:10px}
+details summary::after{width:30px;height:30px;border-radius:50%;background:var(--eau);display:grid;place-items:center;font-size:18px;color:var(--profond)}
+.about .ph{border-radius:40px 200px 40px 40px}
+.rdv{border-radius:48px 48px 0 0}
+.rdv .ph{border-radius:40px}
+.rdv .btn-line{background:#fff}
+footer{border-radius:0}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#" class="logo"><i><svg viewBox="0 0 24 24" fill="none" stroke="#1F3A4D" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M7 8c0 3 5 3 5 6s5 3 5 6"/></svg></i><span>Camille Roux<small>Ostéopathe D.O. · Pessac</small></span></a>
+      <div class="menu"><a href="#pourqui">Pour qui</a><a href="#approche">Mon approche</a><a href="#seance">Une séance</a><a href="#tarifs">Tarifs</a><a href="#faq">Questions</a><a href="#apropos">À propos</a></div>
+      <a href="#rdv" class="btn btn-profond" style="padding:11px 20px">Prendre rendez-vous</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="label">Ostéopathe diplômée · Pessac, Bordeaux Métropole</span>
+      <h1>Retrouver un corps <i>qui ne vous freine plus.</i></h1>
+      <p>Douleurs de dos, tensions, troubles du sommeil, préparation sportive ou suivi de grossesse : une prise en charge douce, précise et expliquée, à chaque étape.</p>
+      <div class="btns"><a href="#rdv" class="btn btn-profond">Prendre rendez-vous en ligne</a><a href="#seance" class="btn btn-line">Comment se passe une séance</a></div>
+      <div class="quick"><span>Rendez-vous sous 48 h</span><span>Cabinet accessible PMR</span><span>Remboursement mutuelle</span></div>
+    </div>
+    <div class="ph" style="background-image:url(img/osteo-hero.jpg)"></div>
+  </div>
+</section>
+
+<section id="pourqui">
+  <div class="wrap">
+    <div class="head"><span class="label">Pour qui</span><h2>L'ostéopathie à chaque âge de la vie.</h2><p>Chaque consultation est adaptée à votre situation, votre histoire et votre rythme.</p></div>
+    <div class="pourqui">
+      <div class="pq"><i>◎</i><h3>Adultes</h3><p>Mal de dos, cervicales, migraines, troubles digestifs, stress et fatigue.</p></div>
+      <a href="cabinet-roux-sportifs.html" class="pq" style="display:block"><i>◈</i><h3>Sportifs</h3><p>Prévention, récupération, préparation à une échéance, suivi de blessure.</p><p style="margin-top:10px;color:var(--corail);font-weight:700">En savoir plus →</p></a>
+      <div class="pq"><i>◐</i><h3>Femmes enceintes</h3><p>Accompagnement de la grossesse, confort du bassin, préparation à l'accouchement.</p></div>
+      <div class="pq"><i>○</i><h3>Nourrissons & enfants</h3><p>Torticolis, reflux, sommeil, suites d'accouchement. En douceur, avec les parents.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="approche" class="approche">
+  <div class="wrap app-grid">
+    <div class="ph" style="background-image:url(img/osteo-seance.jpg)"></div>
+    <div>
+      <span class="label">Mon approche</span>
+      <h2>Comprendre avant d'agir.</h2>
+      <p>Une douleur n'est jamais isolée. Je prends le temps d'écouter votre histoire, d'observer votre posture et de tester les mobilités avant de poser les mains.</p>
+      <p>Les techniques sont douces, jamais forcées. Je vous explique ce que je fais et pourquoi, et je vous donne des conseils simples à appliquer entre deux séances.</p>
+      <p>Si votre situation relève d'un autre professionnel, je vous le dis et je vous oriente.</p>
+    </div>
+  </div>
+</section>
+
+<section id="seance">
+  <div class="wrap">
+    <div class="head"><span class="label">Une séance</span><h2>Comment ça se passe, concrètement.</h2></div>
+    <div class="deroule">
+      <div class="etape"><b>1</b><h3>On discute</h3><p>Vos douleurs, vos antécédents, votre quotidien. Environ 10 minutes, sans jargon.</p></div>
+      <div class="etape"><b>2</b><h3>J'observe et je teste</h3><p>Posture, mobilité, zones de tension. Vous restez en tenue légère et confortable.</p></div>
+      <div class="etape"><b>3</b><h3>Je traite et j'explique</h3><p>Techniques douces adaptées à vous. Conseils et exercices pour la suite. Durée totale : 45 à 50 minutes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tarifs" class="tarifs">
+  <div class="wrap">
+    <div class="head"><span class="label">Tarifs</span><h2>Simples et affichés.</h2></div>
+    <div class="tarif-grid">
+      <div>
+        <div class="tarif"><div><b>Consultation adulte</b><small>45 à 50 minutes</small></div><em>60 €</em></div>
+        <div class="tarif"><div><b>Nourrisson, enfant & étudiant</b><small>30 à 40 minutes</small></div><em>50 €</em></div>
+        <div class="tarif"><div><b>Consultation à domicile</b><small>Pessac et communes limitrophes</small></div><em>80 €</em></div>
+        <p class="mentions">Paiement par carte, chèque ou espèces. Facture remise à chaque séance pour votre mutuelle.</p>
+      </div>
+      <div class="remb">
+        <h3>Remboursement</h3>
+        <p>L'ostéopathie n'est pas remboursée par la Sécurité sociale, mais la plupart des mutuelles prennent en charge 2 à 5 séances par an, entre 30 et 60 € par séance.</p>
+        <p>Vérifiez votre contrat ou demandez-moi : je connais les forfaits des principales mutuelles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="head"><span class="label">Questions fréquentes</span><h2>Ce que l'on me demande souvent.</h2></div>
+    <div class="faq">
+      <details open><summary>Est-ce que ça fait mal ?</summary><p>Non. Les techniques que j'utilise sont douces. Certaines zones sensibles peuvent être inconfortables quelques secondes, mais je m'adapte toujours à votre ressenti.</p></details>
+      <details><summary>Faut-il une ordonnance ?</summary><p>Non, l'ostéopathie est en accès direct. Vous pouvez prendre rendez-vous sans passer par votre médecin.</p></details>
+      <details><summary>Combien de séances sont nécessaires ?</summary><p>Souvent une à trois. Pour une douleur aiguë, une séance suffit généralement. Pour un suivi (sport, grossesse), on espace les rendez-vous selon vos besoins.</p></details>
+      <details><summary>Comment m'habiller ?</summary><p>Une tenue souple et confortable (legging, short, t-shirt). Vous ne serez jamais dévêtu plus que nécessaire.</p></details>
+      <details><summary>Et après la séance ?</summary><p>Une légère fatigue ou des courbatures sont possibles pendant 24 à 48 h. Buvez de l'eau, évitez le sport intense le jour même.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="apropos" style="padding-top:0">
+  <div class="wrap about">
+    <div class="ph" style="background-image:url(img/osteo-seance2.jpg)"></div>
+    <div>
+      <span class="label">À propos</span>
+      <h2>Camille Roux, ostéopathe D.O.</h2>
+      <p>Diplômée du Collège Ostéopathique de Bordeaux en 2016, j'ai exercé quatre ans dans un cabinet pluridisciplinaire à Mérignac avant d'ouvrir le mien à Pessac en 2021.</p>
+      <p>Formée à l'ostéopathie périnatale et à la prise en charge du sportif, j'accompagne aussi le club d'athlétisme de Pessac depuis 2019.</p>
+      <div class="dipl"><span>Diplôme d'ostéopathe (D.O.), COB Bordeaux — 2016</span><span>Formation périnatalité & pédiatrie — 2018</span><span>Formation ostéopathie du sport — 2019</span><span>Inscrite au registre ADELI</span></div>
+      <a href="#rdv" class="btn btn-line">Prendre rendez-vous</a>
+    </div>
+  </div>
+</section>
+
+<section id="rdv" class="rdv">
+  <div class="wrap rdv-grid">
+    <div>
+      <span class="label">Rendez-vous</span>
+      <h2>Prenez rendez-vous en ligne, 24 h/24.</h2>
+      <p>Choisissez votre créneau en quelques clics. Rappel par SMS la veille. Si vous ne trouvez pas de disponibilité, appelez-moi : je garde des créneaux d'urgence chaque jour.</p>
+      <div class="btns"><a href="#" class="btn btn-profond">Réserver sur Doctolib</a><a href="#" class="btn btn-line">06 00 00 00 00</a></div>
+      <dl>
+        <div><dt>Cabinet</dt><dd>5 avenue Pasteur, 33600 Pessac<br>Rez-de-chaussée, accessible PMR</dd></div>
+        <div><dt>Horaires</dt><dd>Lun – Ven : 8 h – 19 h<br>Samedi : 9 h – 13 h</dd></div>
+        <div><dt>Accès</dt><dd>Tram B arrêt Pessac Centre à 4 min<br>Parking gratuit sur place</dd></div>
+        <div><dt>Urgences</dt><dd>Créneaux réservés chaque jour pour les douleurs aiguës</dd></div>
+      </dl>
+    </div>
+    <div class="ph" style="background-image:url(img/osteo-cabinet.jpg)"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="logo"><span>Camille Roux<small>Ostéopathe D.O. · Pessac</small></span></div>
+      <div class="links"><a href="#">Pour qui</a><a href="#">Tarifs</a><a href="#">Questions</a><a href="#">Prendre rendez-vous</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Camille Roux — Ostéopathe D.O. — ADELI 33 000 000 0</span><span><a href="cabinet-roux-mentions-legales.html">Mentions légales</a> · Confidentialité</span></div>
+  </div>
+</footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

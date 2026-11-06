@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La carte — La Cantine du Port, bistrot à La Rochelle</title>
+<meta name="description" content="La Cantine du Port, bistrot de quartier à La Rochelle. Cuisine de marché, poissons du jour, terrasse sur le Vieux-Port. Réservation en ligne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--tomate:#C8472E;--creme:#FBF5EA;--olive:#5F6B3A;--encre:#1F1D1A;--paille:#EFE3C9;--gris:#6B665C}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',sans-serif;background:var(--creme);color:var(--encre);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Instrument Serif',serif;font-weight:400;line-height:1;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,92%);margin:0 auto}
+.label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--tomate);font-weight:700;display:block;margin-bottom:14px}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:.25s;border:2px solid transparent}
+.btn-tomate{background:var(--tomate);color:#fff}
+.btn-tomate:hover{background:var(--encre)}
+.btn-line{border-color:var(--encre);color:var(--encre)}
+.btn-line:hover{background:var(--encre);color:#fff}
+.btn-line.light{border-color:#fff;color:#fff}
+.ph{position:relative;overflow:hidden;background:#D8CDB8 center/cover no-repeat}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(31,29,26,.35),transparent 55%)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(251,245,234,.94);backdrop-filter:blur(10px);border-bottom:2px solid var(--encre)}
+nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{font-family:'Instrument Serif',serif;font-size:28px;line-height:1}
+.logo i{font-style:italic;color:var(--tomate)}
+.menu{display:flex;gap:30px;font-weight:500;font-size:15px}
+.menu a:hover{color:var(--tomate)}
+.nav-r{display:flex;align-items:center;gap:18px;font-weight:700}
+
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff}
+.hero .ph{position:absolute;inset:0}
+.hero .ph::after{background:linear-gradient(0deg,rgba(31,29,26,.85) 0%,rgba(31,29,26,.2) 60%)}
+.hero .wrap{position:relative;z-index:1;padding:80px 0 70px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end}
+.hero h1{font-size:clamp(54px,7vw,104px);margin-bottom:18px}
+.hero h1 i{color:var(--paille)}
+.hero p{font-size:19px;max-width:520px;color:rgba(255,255,255,.85);margin-bottom:30px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+.hours{background:var(--creme);color:var(--encre);padding:26px;border-radius:16px;font-size:15px}
+.hours b{display:block;font-family:'Instrument Serif',serif;font-size:24px;margin-bottom:10px}
+.hours div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed rgba(31,29,26,.2)}
+.hours div:last-child{border:0}
+.hours .today{color:var(--tomate);font-weight:700}
+
+.ticker{background:var(--tomate);color:#fff;padding:14px 0;overflow:hidden;white-space:nowrap;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
+.ticker div{display:inline-block;animation:t 28s linear infinite}
+.ticker span{margin:0 30px}
+@keyframes t{to{transform:translateX(-50%)}}
+
+section{padding:96px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:46px}
+.head h2{font-size:clamp(40px,4.6vw,66px)}
+.head p{max-width:400px;color:var(--gris)}
+
+.carte{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.carte .col h3{font-size:30px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--encre)}
+.plat{display:flex;justify-content:space-between;gap:18px;padding:16px 0;border-bottom:1px dashed rgba(31,29,26,.2)}
+.plat b{font-weight:700;display:block;font-size:16px}
+.plat small{color:var(--gris);font-size:14px}
+.plat em{font-family:'Instrument Serif',serif;font-style:normal;font-size:22px;white-space:nowrap}
+.carte .note{margin-top:26px;font-size:14px;color:var(--gris)}
+.formule{background:var(--encre);color:var(--creme);border-radius:16px;padding:26px;margin-top:30px}
+.formule b{font-family:'Instrument Serif',serif;font-size:28px;display:block}
+.formule em{color:var(--paille);font-style:normal;font-size:30px;font-family:'Instrument Serif',serif}
+
+.photos{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:14px}
+.photos .ph{border-radius:12px}
+.photos .ph:nth-child(1){grid-column:span 2;grid-row:span 2}
+.photos .ph:nth-child(4){grid-row:span 2}
+
+.chef{background:var(--olive);color:#fff}
+.chef-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.chef .ph{aspect-ratio:4/5;border-radius:16px}
+.chef .label{color:var(--paille)}
+.chef h2{font-size:clamp(38px,4.4vw,60px);margin-bottom:20px}
+.chef p{color:rgba(255,255,255,.85);font-size:17px;margin-bottom:16px}
+.chef .btn{margin-top:14px}
+
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.infos .ph{aspect-ratio:5/4;border-radius:16px}
+.infos h2{font-size:clamp(38px,4.4vw,60px);margin-bottom:20px}
+.infos dl{display:grid;grid-template-columns:1fr 1fr;gap:20px 30px;margin:26px 0 30px}
+.infos dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tomate);font-weight:700;margin-bottom:6px}
+.infos dd{font-size:15px}
+
+.resa{background:var(--encre);color:var(--creme)}
+.resa-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.resa h2{font-size:clamp(38px,4.6vw,66px);margin-bottom:16px}
+.resa p{color:rgba(251,245,234,.75);font-size:17px;margin-bottom:24px}
+.resa .label{color:var(--paille)}
+form{background:var(--creme);color:var(--encre);border-radius:16px;padding:30px;display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:13px;font-weight:700;display:grid;gap:6px}
+input,select{font:inherit;padding:13px 14px;border:1px solid rgba(31,29,26,.2);border-radius:10px;background:#fff;width:100%}
+form .btn{text-align:center;margin-top:4px}
+form small{text-align:center;color:var(--gris);font-size:12px}
+
+.avis{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.avis div{background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(31,29,26,.08)}
+.avis .stars{color:var(--tomate);letter-spacing:3px;margin-bottom:10px}
+.avis p{font-family:'Instrument Serif',serif;font-size:21px;line-height:1.3;margin-bottom:16px}
+.avis b{font-size:14px}
+.avis small{color:var(--gris);display:block;font-size:13px}
+
+footer{background:var(--encre);color:rgba(251,245,234,.7);padding:50px 0 28px;font-size:14px;border-top:1px solid rgba(255,255,255,.1)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:34px}
+.foot .logo{color:var(--creme)}
+.foot .links{display:flex;gap:24px;flex-wrap:wrap}
+.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
+
+@media (max-width:900px){
+  .menu,.nav-r span{display:none}
+  .hero .wrap,.carte,.chef-grid,.infos,.resa-grid{grid-template-columns:1fr}
+  .photos{grid-template-columns:1fr 1fr}
+  .avis{grid-template-columns:1fr}
+  .head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:600px){.photos{grid-template-columns:1fr}.photos .ph{grid-column:auto!important;grid-row:auto!important}.row,.infos dl{grid-template-columns:1fr}section{padding:64px 0}}
+@media (max-width:600px){nav{height:66px}.logo{font-size:22px}.nav-r .btn{padding:10px 16px!important;font-size:13px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+.label{font-family:'Caveat',cursive;font-size:24px;letter-spacing:0;text-transform:none;font-weight:600}
+header{border-bottom:0}
+header::after{content:"";display:block;height:12px;background-color:var(--creme);background-image:linear-gradient(45deg,rgba(200,71,46,.55) 25%,transparent 25%,transparent 75%,rgba(200,71,46,.55) 75%),linear-gradient(45deg,rgba(200,71,46,.55) 25%,transparent 25%,transparent 75%,rgba(200,71,46,.55) 75%);background-size:12px 12px;background-position:0 0,6px 6px}
+.hours{transform:rotate(2deg);border:3px solid var(--encre);border-radius:4px;box-shadow:8px 8px 0 var(--tomate)}
+.hours b{font-family:'Caveat',cursive;font-size:32px}
+.ticker{font-family:'Caveat',cursive;font-size:24px;text-transform:none;letter-spacing:.02em;font-weight:600}
+#carte{background:#1E2A22;color:var(--creme);background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.06),transparent 40%),radial-gradient(circle at 80% 70%,rgba(255,255,255,.05),transparent 40%)}
+#carte .head h2{color:#fff}
+#carte .head p{color:rgba(251,245,234,.7)}
+.carte .col h3{font-family:'Caveat',cursive;font-size:44px;color:#F5E6A8;border-bottom:2px dashed rgba(255,255,255,.35);font-weight:600}
+.plat{border-bottom:1px dashed rgba(255,255,255,.25)}
+.plat b{color:#fff}
+.plat small{color:rgba(251,245,234,.65)}
+.plat em{color:#F5E6A8;font-family:'Caveat',cursive;font-size:32px;font-weight:600}
+.formule{background:var(--tomate);border-radius:4px;transform:rotate(-1.5deg)}
+.formule b{font-family:'Caveat',cursive;font-size:34px}
+.formule em{color:#fff;font-family:'Caveat',cursive;font-size:40px}
+.carte .note{color:rgba(251,245,234,.6)}
+.photos .ph{border-radius:3px;border:8px solid #fff;border-bottom-width:8px;box-shadow:0 12px 30px rgba(31,29,26,.18)}
+.photos .ph:nth-child(2){transform:rotate(-2deg)}
+.photos .ph:nth-child(3){transform:rotate(1.5deg)}
+.photos .ph:nth-child(5){transform:rotate(2deg)}
+.photos .ph:nth-child(6){transform:rotate(-1.5deg)}
+.chef .ph{border-radius:4px;border:8px solid var(--creme);transform:rotate(-2deg)}
+.chef h2 i{font-style:italic}
+.infos .ph{border-radius:4px;border:8px solid #fff;box-shadow:0 12px 30px rgba(31,29,26,.18);transform:rotate(1.5deg)}
+.btn{border-radius:4px}
+form{border-radius:4px;border:3px solid var(--encre);box-shadow:8px 8px 0 var(--tomate)}
+input,select{border-radius:4px}
+.avis div{border-radius:4px;border:2px dashed var(--tomate);background:var(--paille)}
+.avis p{font-family:'Caveat',cursive;font-size:26px;font-weight:500}
+.resa{background:#1E2A22}
+
+
+/* page intérieure */
+
+.cave .col h3{color:var(--tomate)}.cave .plat{border-bottom-color:rgba(31,29,26,.2)}.cave .plat b{color:var(--encre)}.cave .plat small{color:var(--gris)}.cave .plat em{color:var(--encre)}
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="cantine-du-port.html" class="logo">La Cantine <i>du Port</i></a>
+      <div class="menu"><a href="cantine-du-port.html#carte">La carte</a><a href="cantine-du-port.html#ambiance">L'ambiance</a><a href="cantine-du-port.html#chef">La cuisine</a><a href="cantine-du-port.html#infos">Infos</a><a href="cantine-du-port.html#avis">Avis</a></div>
+      <div class="nav-r"><span>05 46 00 00 00</span><a href="cantine-du-port.html#reserver" class="btn btn-tomate" style="padding:11px 22px">Réserver</a></div>
+    </nav>
+  </div>
+</header>
+
+<section id="carte" style="padding-top:70px">
+  <div class="wrap">
+    <div class="head"><div><span class="label">La carte</span><h2>La carte complète.</h2></div><p>Mise à jour chaque matin après la criée. Les plats marqués ◎ changent selon l'arrivage.</p></div>
+    <div class="carte">
+      <div class="col">
+        <h3>Pour commencer</h3>
+        <div class="plat"><div><b>Huîtres de Marennes n°3</b><small>Les 6 · citron, vinaigre à l'échalote</small></div><em>12 €</em></div><div class="plat"><div><b>Velouté de potimarron</b><small>Noisettes torréfiées, huile de courge</small></div><em>9 €</em></div><div class="plat"><div><b>Tartare de daurade ◎</b><small>Agrumes, coriandre, huile d'olive de Ré</small></div><em>13 €</em></div><div class="plat"><div><b>Œuf parfait</b><small>Crème de champignons, pain grillé</small></div><em>10 €</em></div><div class="plat"><div><b>Planche du port</b><small>Jambon de Bayonne, chèvre de l'île, pickles</small></div><em>14 €</em></div>
+        <h3 style="margin-top:36px">Desserts</h3>
+        <div class="plat"><div><b>Tarte fine aux pommes</b><small>Crème crue, caramel au beurre salé</small></div><em>8 €</em></div><div class="plat"><div><b>Mousse au chocolat</b><small>Fleur de sel, tuile au sarrasin</small></div><em>8 €</em></div><div class="plat"><div><b>Riz au lait</b><small>Confiture de lait, noisettes</small></div><em>7 €</em></div><div class="plat"><div><b>Fromages de l'île de Ré</b><small>Les 3, confiture de figue</small></div><em>9 €</em></div>
+      </div>
+      <div class="col">
+        <h3>Plats</h3>
+        <div class="plat"><div><b>Bar de ligne rôti ◎</b><small>Beurre blanc, pommes de terre de Noirmoutier</small></div><em>26 €</em></div><div class="plat"><div><b>Moules de bouchot</b><small>Crème, échalotes, frites maison</small></div><em>17 €</em></div><div class="plat"><div><b>Pièce de bœuf de Parthenay</b><small>Jus corsé, légumes rôtis</small></div><em>24 €</em></div><div class="plat"><div><b>Risotto aux champignons</b><small>Parmesan 24 mois, persil plat</small></div><em>18 €</em></div><div class="plat"><div><b>Sole meunière ◎</b><small>Épinards frais, citron confit</small></div><em>29 €</em></div><div class="plat"><div><b>Burger de la Cantine</b><small>Bœuf, cheddar, oignons confits, frites</small></div><em>16 €</em></div>
+        <div class="formule"><b>Menu déjeuner</b>Entrée + plat ou plat + dessert, du mardi au vendredi midi. <em>19 €</em></div>
+        <div class="formule" style="background:var(--olive);transform:rotate(1deg)"><b>Menu enfant</b>Plat + dessert + sirop, jusqu'à 10 ans. <em>11 €</em></div>
+        <p class="note">Prix nets, service compris. Liste des allergènes disponible sur demande. Viande bovine née, élevée et abattue en France.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cave">
+  <div class="wrap">
+    <div class="head"><div><span class="label">La cave</span><h2>Quarante références, quinze au verre.</h2></div><p>Choisies par Inès chez des vignerons de Charente, du Val de Loire et du Bordelais.</p></div>
+    <div class="carte">
+      <div class="col"><h3>Au verre</h3><div class="plat"><div><b>Muscadet Sèvre-et-Maine · Dom. de la Pépière</b><small>Blanc, vif, iodé — parfait avec les huîtres</small></div><em>5 €</em></div><div class="plat"><div><b>Chinon · Dom. Baudry</b><small>Rouge, fruité, léger</small></div><em>6 €</em></div><div class="plat"><div><b>Bordeaux blanc · Ch. Reynon</b><small>Blanc sec, rond</small></div><em>6 €</em></div><div class="plat"><div><b>Pineau des Charentes</b><small>Apéritif, 5 cl</small></div><em>5 €</em></div></div>
+      <div class="col"><h3>Bouteilles</h3><div class="plat"><div><b>Sancerre · Vacheron</b><small>Blanc</small></div><em>42 €</em></div><div class="plat"><div><b>Saint-Émilion · Ch. Fonroque</b><small>Rouge</small></div><em>48 €</em></div><div class="plat"><div><b>Crémant de Loire · Dom. des Varinelles</b><small>Bulles</small></div><em>32 €</em></div><div class="plat"><div><b>Cognac XO · Maison Frapin</b><small>Digestif, 4 cl</small></div><em>12 €</em></div></div>
+    </div>
+    <p style="text-align:center;margin-top:40px"><a href="cantine-du-port.html#reserver" class="btn btn-tomate">Réserver une table</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="logo">La Cantine <i>du Port</i></div><p style="margin-top:8px">Bistrot de quartier, 14 quai Duperré, La Rochelle.</p></div>
+      <div class="links"><a href="cantine-du-port.html">La carte</a><a href="cantine-du-port.html">Réserver</a><a href="cantine-du-port.html">Privatiser</a><a href="cantine-du-port.html">Instagram</a><a href="cantine-du-port.html">Facebook</a></div>
+    </div>
+    <div class="copy"><span>© 2026 La Cantine du Port</span><span>Mentions légales · L'abus d'alcool est dangereux pour la santé</span></div>
+  </div>
+</footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

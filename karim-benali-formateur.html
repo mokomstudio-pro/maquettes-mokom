@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour indépendant & expert — exemple B</title>
+<meta name="description" content="Karim Benali, formateur IA et productivité pour les PME. Ateliers, formations certifiées Qualiopi, accompagnement. Bordeaux et à distance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#15213B;--nuit-deep:#0E1629;--lin:#F3F0EA;--terra:#D2694A;--gris:#6E7480;--sauge:#D9E0D6;--blanc:#fff;--ligne:rgba(21,33,59,.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--lin);color:var(--nuit);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.08;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1140px,92%);margin:0 auto}
+.label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);font-weight:600;display:block;margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 28px;border-radius:8px;font-weight:600;font-size:15px;transition:.25s;border:1.5px solid transparent}
+.btn-nuit{background:var(--nuit);color:#fff}
+.btn-nuit:hover{background:var(--terra)}
+.btn-line{border-color:var(--nuit);color:var(--nuit)}
+.btn-line:hover{background:var(--nuit);color:#fff}
+.ph{position:relative;overflow:hidden;background:linear-gradient(160deg,#2A3A5E 0%,#15213B 60%,#0E1629 100%)}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(210,105,74,.35),transparent 45%),radial-gradient(circle at 20% 90%,rgba(217,224,214,.25),transparent 45%)}
+.ph span{position:absolute;left:16px;bottom:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8);z-index:1}
+.ph.sauge{background:linear-gradient(160deg,#E6ECE3 0%,#D9E0D6 60%,#BFC9BB 100%)}
+.ph.sauge span{color:var(--nuit)}
+.ph.terra{background:linear-gradient(160deg,#E68A6E 0%,#D2694A 60%,#A84B31 100%)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(243,240,234,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--ligne)}
+nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:'DM Serif Display',serif;font-size:22px;display:flex;align-items:center;gap:10px}
+.logo i{width:10px;height:10px;border-radius:50%;background:var(--terra)}
+.menu{display:flex;gap:32px;font-size:15px;font-weight:500}
+.menu a:hover{color:var(--terra)}
+
+.hero{padding:90px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.hero h1{font-size:clamp(42px,5.4vw,70px);margin-bottom:24px}
+.hero h1 i{color:var(--terra)}
+.hero p{font-size:19px;color:var(--gris);max-width:520px;margin-bottom:34px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.hero .trust{display:flex;align-items:center;gap:14px;font-size:14px;color:var(--gris)}
+.hero .trust .faces{display:flex}
+.hero .trust .faces i{width:34px;height:34px;border-radius:50%;border:2px solid var(--lin);margin-left:-8px;background:var(--sauge)}
+.hero .trust .faces i:nth-child(2){background:var(--terra)}
+.hero .trust .faces i:nth-child(3){background:var(--nuit)}
+.portrait{position:relative}
+.portrait .ph{aspect-ratio:4/5;border-radius:18px 18px 18px 120px}
+.portrait .card{position:absolute;left:-40px;bottom:40px;background:#fff;padding:20px 24px;border-radius:12px;box-shadow:0 20px 50px rgba(21,33,59,.15);max-width:260px}
+.portrait .card b{font-family:'DM Serif Display',serif;font-size:30px;display:block;color:var(--terra);line-height:1}
+.portrait .card small{font-size:14px;color:var(--gris)}
+
+.logos{border-top:1px solid var(--ligne);border-bottom:1px solid var(--ligne);padding:28px 0}
+.logos .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.logos small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.logos b{font-family:'DM Serif Display',serif;font-size:20px;opacity:.55;letter-spacing:.02em}
+
+section{padding:100px 0}
+.head{max-width:640px;margin-bottom:50px}
+.head h2{font-size:clamp(32px,3.8vw,48px);margin-bottom:14px}
+.head p{color:var(--gris);font-size:17px}
+
+.offres{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.offre{background:#fff;border-radius:16px;padding:34px;border:1px solid var(--ligne);display:flex;flex-direction:column;transition:.3s}
+.offre:hover{transform:translateY(-6px);box-shadow:0 26px 50px rgba(21,33,59,.1)}
+.offre .num{font-family:'DM Serif Display',serif;font-size:14px;color:var(--terra);margin-bottom:22px}
+.offre h3{font-size:26px;margin-bottom:12px}
+.offre p{color:var(--gris);font-size:15px;margin-bottom:22px;flex:1}
+.offre ul{list-style:none;display:grid;gap:9px;margin-bottom:26px;font-size:14px}
+.offre li{padding-left:22px;position:relative}
+.offre li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:2px;background:var(--terra)}
+.offre a{font-weight:600;font-size:14px;color:var(--terra)}
+.offre.dark{background:var(--nuit);color:#fff;border-color:var(--nuit)}
+.offre.dark p{color:rgba(255,255,255,.72)}
+.offre.dark a{color:#fff}
+
+.methode{background:var(--nuit);color:#fff}
+.methode .label{color:var(--terra)}
+.methode .head p{color:rgba(255,255,255,.7)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:10px}
+.step{border-top:1px solid rgba(255,255,255,.18);padding-top:26px}
+.step b{font-family:'DM Serif Display',serif;font-size:48px;color:var(--terra);display:block;line-height:1;margin-bottom:16px}
+.step h3{font-size:24px;margin-bottom:10px}
+.step p{color:rgba(255,255,255,.72);font-size:15px}
+
+.chiffres{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.chiffre{background:#fff;border-radius:16px;padding:32px 28px;border:1px solid var(--ligne)}
+.chiffre b{font-family:'DM Serif Display',serif;font-size:50px;display:block;line-height:1;color:var(--nuit);margin-bottom:10px}
+.chiffre b em{color:var(--terra);font-style:normal}
+.chiffre p{color:var(--gris);font-size:15px}
+
+.cas{background:var(--sauge)}
+.cas-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.cas .ph{aspect-ratio:5/4;border-radius:16px}
+.cas h2{font-size:clamp(30px,3.4vw,44px);margin-bottom:16px}
+.cas p{color:#4A5260;font-size:17px;margin-bottom:16px}
+.cas .res{display:flex;gap:40px;margin:26px 0 30px}
+.cas .res b{font-family:'DM Serif Display',serif;font-size:38px;display:block;line-height:1}
+.cas .res small{font-size:13px;color:#4A5260}
+
+.temoignages{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+.temo{background:#fff;border-radius:16px;padding:40px;border:1px solid var(--ligne)}
+.temo.big{background:var(--terra);color:#fff;border:0}
+.temo p{font-family:'DM Serif Display',serif;font-size:24px;line-height:1.35;margin-bottom:24px}
+.temo.big p{font-size:30px}
+.temo b{display:block;font-weight:600;font-size:15px}
+.temo small{color:var(--gris);font-size:14px}
+.temo.big small{color:rgba(255,255,255,.8)}
+
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.about-grid .ph{aspect-ratio:4/5;border-radius:16px}
+.about-grid h2{font-size:clamp(30px,3.4vw,44px);margin-bottom:18px}
+.about-grid p{color:var(--gris);font-size:17px;margin-bottom:16px}
+.about-grid .tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 28px}
+.about-grid .tags span{padding:7px 14px;border:1px solid var(--ligne);border-radius:999px;font-size:13px;font-weight:500;background:#fff}
+
+.ressources{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.art{display:block;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--ligne);transition:.3s}
+.art:hover{transform:translateY(-5px)}
+.art .ph{aspect-ratio:16/10}
+.art div.txt{padding:22px}
+.art small{font-size:12px;color:var(--terra);font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.art h3{font-size:21px;margin:8px 0 8px}
+.art p{font-size:14px;color:var(--gris)}
+
+.contact{background:var(--nuit);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.contact h2{font-size:clamp(32px,3.8vw,50px);margin-bottom:16px}
+.contact p{color:rgba(255,255,255,.72);font-size:17px;margin-bottom:28px}
+.contact .label{color:var(--terra)}
+.contact .list{display:grid;gap:14px;font-size:15px}
+.contact .list b{color:var(--terra);display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+form{background:#fff;color:var(--nuit);border-radius:16px;padding:34px;display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:13px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid var(--ligne);border-radius:8px;background:var(--lin);width:100%}
+textarea{min-height:110px;resize:vertical}
+form .btn{justify-content:center;margin-top:6px}
+form small{text-align:center;color:var(--gris);font-size:12px}
+
+footer{background:var(--nuit-deep);color:rgba(255,255,255,.65);padding:50px 0 28px;font-size:14px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:34px}
+.foot .logo{color:#fff}
+.foot .links{display:flex;gap:16px 26px;flex-wrap:wrap}
+.foot a:hover{color:#fff}
+.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
+
+@media (max-width:900px){
+  .menu{display:none}
+  .hero-grid,.cas-grid,.about-grid,.contact-grid,.temoignages{grid-template-columns:1fr}
+  .offres,.steps,.ressources{grid-template-columns:1fr}
+  .chiffres{grid-template-columns:1fr 1fr}
+  .portrait .card{left:12px}
+}
+@media (max-width:600px){.chiffres,.row{grid-template-columns:1fr}section{padding:64px 0}}
+.ph{background-size:cover;background-position:center}.ph::after{background:linear-gradient(0deg,rgba(21,33,59,.25),transparent 55%)!important}.ph>span:not(.new):not(.tag){display:none}
+@media (max-width:600px){nav{height:66px}.logo{font-size:18px}nav .btn{padding:10px 14px!important;font-size:13px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+.label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;text-transform:none;font-weight:500}
+.label::before{content:"— "}
+.btn,.offre,.chiffre,.temo,.art,.art .ph,.cas .ph,.about-grid .ph,.portrait .ph,.portrait .card,form,input,select,textarea,.about-grid .tags span,.hero .trust .faces i{border-radius:0!important}
+.hero h1{font-size:clamp(44px,6vw,84px)}
+.hero h1 i{font-style:normal;color:var(--nuit);background:linear-gradient(transparent 62%,rgba(210,105,74,.45) 62%)}
+.portrait .card{border-left:6px solid var(--terra)}
+.portrait .ph{outline:1px solid var(--nuit);outline-offset:10px}
+.logos b{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+section{border-top:1px solid rgba(21,33,59,.15)}
+.hero{border-top:0}
+.head h2{letter-spacing:-.02em}
+.offre{border:1px solid var(--nuit);box-shadow:none}
+.offre:hover{transform:none;box-shadow:8px 8px 0 var(--terra)}
+.offre .num{font-family:'IBM Plex Mono',monospace}
+.offre li::before{width:14px}
+.methode{border-top:0}
+.step{border-top:1px solid rgba(255,255,255,.35)}
+.step b{font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:.1em;margin-bottom:60px}
+.step b::before{content:"0"}
+.chiffres{border-top:0}
+.chiffre{border:0;border-left:2px solid var(--nuit);background:transparent;padding:10px 0 10px 22px}
+.chiffre b{font-size:66px}
+.cas{background:var(--sauge)}
+.cas .res b{font-family:'DM Serif Display',serif}
+.temo{border:1px solid var(--nuit)}
+.temo.big{background:var(--nuit);color:#fff}
+.temo.big small{color:rgba(255,255,255,.7)}
+.art{border:1px solid var(--nuit)}
+.art small{font-family:'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:none}
+.about-grid .tags span{border:1px solid var(--nuit);font-family:'IBM Plex Mono',monospace;font-size:12px}
+.contact .list b{font-family:'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:none}
+.contact .list b::before{content:"— "}
+input,select,textarea{border:1px solid var(--nuit);background:#fff}
+@media (max-width:600px){.hero h1{font-size:40px}.chiffre b{font-size:48px}}
+
+
+/* ===== VARIANTE B : couleurs & typos ===== */
+:root{--nuit:#4B2AA8;--nuit-deep:#2A1763;--lin:#F6F4FB;--terra:#C8F135;--gris:#6B6880;--sauge:#ECE8F8;--blanc:#fff;--ligne:rgba(75,42,168,.12)}
+body{font-family:'Manrope',sans-serif}
+h1,h2,h3{font-family:'Unbounded',sans-serif;font-weight:700;letter-spacing:-.02em}
+.hero h1{font-size:clamp(36px,4.8vw,64px)}
+.hero h1 i{background:linear-gradient(transparent 62%,rgba(200,241,53,.9) 62%)}
+.label{color:var(--nuit)}
+.btn-nuit:hover{background:var(--nuit-deep)}
+.btn,.offre,.chiffre,.temo,.art,.art .ph,.cas .ph,.about-grid .ph,.portrait .ph,.portrait .card,form,input,select,textarea,.about-grid .tags span{border-radius:14px!important}
+.portrait .ph{border-radius:200px 200px 14px 14px!important;outline:0}
+.portrait .card{border-left:6px solid var(--terra)}
+.offre:hover{box-shadow:8px 8px 0 var(--terra)}
+.offre.dark{background:var(--nuit)}.offre.dark .num{color:var(--terra)!important}
+.methode .label,.methode .step b{color:var(--terra)}
+.temo.big{background:var(--nuit)}
+.contact .label,.contact .list b{color:var(--terra)}
+.chiffre b em{color:var(--nuit)}
+.cas{background:var(--sauge)}
+.hero .trust .faces i:nth-child(2){background:var(--terra)}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <a href="#" class="logo"><i style="background:var(--terra)"></i>Karim Benali</a>
+  <div class="menu"><a href="#offres">Formations</a><a href="#methode">Méthode</a><a href="#cas">Retours</a><a href="#apropos">À propos</a><a href="#ressources">Ressources</a></div>
+  <a href="#contact" class="btn btn-nuit" style="padding:12px 22px">Demander un programme</a>
+</nav></div></header>
+
+<section class="hero"><div class="wrap hero-grid">
+  <div><span class="label">Formateur IA & productivité · Bordeaux & à distance</span>
+    <h1>Vos équipes gagnent <i>une journée par semaine</i> avec l'IA.</h1>
+    <p>Des formations concrètes, sur vos vrais fichiers et vos vrais outils. Pas de théorie : à la fin de la journée, chacun repart avec trois tâches automatisées.</p>
+    <div class="btns"><a href="#contact" class="btn btn-nuit">Demander un programme →</a><a href="#offres" class="btn btn-line">Voir les formations</a></div>
+    <div class="trust"><div class="faces"><i></i><i></i><i></i></div><span><b>1 400 personnes</b> formées depuis 2022 · Certifié Qualiopi</span></div></div>
+  <div class="portrait"><div class="ph" style="background-image:url(img/form-portrait.jpg)"></div><div class="card"><b>4,8/5</b><small>note moyenne sur 212 sessions évaluées</small></div></div>
+</div></section>
+
+<div class="logos"><div class="wrap"><small>Ils ont formé leurs équipes</small><b>Cdiscount</b><b>Région Nouvelle-Aquitaine</b><b>Ceva</b><b>Betclic</b><b>Cultura</b></div></div>
+
+<section id="offres"><div class="wrap">
+  <div class="head"><span class="label">Formations</span><h2>Trois formats, du déclic au déploiement.</h2><p>Toutes éligibles OPCO. Groupes de 6 à 12 personnes, en présentiel à Bordeaux ou à distance.</p></div>
+  <div class="offres">
+    <div class="offre"><div class="num">01 — 1 journée</div><h3>Déclic IA</h3><p>Comprendre ce que l'IA fait vraiment, et l'appliquer le jour même à ses propres tâches : mails, comptes rendus, tableaux, présentations.</p><ul><li>Prise en main de ChatGPT, Claude, Copilot</li><li>Atelier sur vos documents réels</li><li>Charte d'usage et bonnes pratiques</li></ul><a href="#contact">Programme →</a></div>
+    <div class="offre dark"><div class="num">02 — 3 jours répartis</div><h3>Automatiser son métier</h3><p>Pour une équipe (vente, RH, compta, marketing) : on cartographie les tâches répétitives et on en automatise dix, avec des outils no-code.</p><ul><li>Audit des tâches de l'équipe</li><li>Make, Zapier, agents IA</li><li>Suivi à 30 jours inclus</li></ul><a href="#contact">Programme →</a></div>
+    <div class="offre"><div class="num">03 — 3 mois</div><h3>Accompagnement direction</h3><p>Pour le comité de direction : feuille de route IA, choix d'outils, conformité RGPD, formation des managers.</p><ul><li>Diagnostic de maturité</li><li>Plan à 12 mois</li><li>2 demi-journées par mois</li></ul><a href="#contact">Programme →</a></div>
+  </div>
+</div></section>
+
+<section id="methode" class="methode"><div class="wrap">
+  <div class="head"><span class="label">Méthode</span><h2>Montrer, faire faire, laisser faire.</h2><p>Une formation réussie, c'est une formation dont on n'a plus besoin.</p></div>
+  <div class="steps">
+    <div class="step"><b>1</b><h3>Montrer</h3><p>Une heure de démonstration sur des cas de votre secteur. Pas de slides, des écrans partagés.</p></div>
+    <div class="step"><b>2</b><h3>Faire faire</h3><p>Chacun travaille sur ses propres fichiers. Je passe de poste en poste. On débloque, on recommence.</p></div>
+    <div class="step"><b>3</b><h3>Laisser faire</h3><p>Fiches mémo, bibliothèque de prompts, canal de questions pendant 30 jours. Vous êtes autonomes.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap chiffres">
+  <div class="chiffre"><b>1 400</b><p>personnes formées depuis 2022</p></div>
+  <div class="chiffre"><b>212</b><p>sessions, en entreprise et en ligne</p></div>
+  <div class="chiffre"><b>4,8<em>/5</em></b><p>note moyenne des participants</p></div>
+  <div class="chiffre"><b>6 h</b><p>gagnées par semaine, en moyenne, 3 mois après</p></div>
+</div></section>
+
+<section id="cas" class="cas"><div class="wrap cas-grid">
+  <div class="ph" style="background-image:url(img/form-cas.jpg)"></div>
+  <div><span class="label">Retour d'expérience</span><h2>Cultura : 80 acheteurs formés en deux mois.</h2>
+    <p>Les équipes achats passaient des heures à comparer des fiches fournisseurs et à rédiger des synthèses. Après trois jours de formation « Automatiser son métier », elles ont mis en place douze automatisations.</p>
+    <div class="res"><div><b>2 mois</b><small>de déploiement</small></div><div><b>-35 %</b><small>de temps sur les synthèses</small></div><div><b>12</b><small>automatisations en production</small></div></div>
+    <a href="#" class="btn btn-nuit">Lire le retour complet</a></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="head"><span class="label">Témoignages</span><h2>Ce que disent les participants.</h2></div>
+  <div class="temoignages">
+    <div class="temo big"><p>« Karim ne vend pas de la magie. Il nous a fait gagner du temps sur des choses qu'on détestait faire, dès le premier après-midi. »</p><b>Sophie Lemaire</b><small>Directrice achats, Cultura</small></div>
+    <div class="temo"><p>« Enfin une formation IA où on touche au clavier plus qu'on n'écoute. »</p><b>Julien Faure</b><small>DRH, Ceva</small></div>
+  </div>
+</div></section>
+
+<section id="apropos" style="padding-top:0"><div class="wrap about-grid">
+  <div class="ph" style="background-image:url(img/form-about.jpg)"></div>
+  <div><span class="label">À propos</span><h2>Dix ans de produit, quatre ans de formation.</h2>
+    <p>Chef de produit chez Cdiscount puis dans deux start-up bordelaises, j'ai passé dix ans à automatiser ce qui pouvait l'être. En 2022, j'ai commencé à former les équipes qui me le demandaient. Je n'ai plus arrêté.</p>
+    <p>Je forme les gens qui n'ont pas le temps : pas de jargon, pas de prérequis, des résultats le jour même.</p>
+    <div class="tags"><span>IA générative</span><span>Automatisation</span><span>No-code</span><span>RGPD</span><span>Qualiopi</span><span>Bordeaux</span></div>
+    <a href="#contact" class="btn btn-line">Discuter de votre besoin</a></div>
+</div></section>
+
+<section id="ressources" style="padding-top:0"><div class="wrap">
+  <div class="head"><span class="label">Ressources</span><h2>Gratuit, à télécharger.</h2></div>
+  <div class="ressources">
+    <a href="#" class="art"><div class="ph" style="background-image:url(img/form-a1.jpg)"></div><div class="txt"><small>Guide</small><h3>50 prompts pour les PME</h3><p>Classés par métier : vente, RH, compta, support, marketing.</p></div></a>
+    <a href="#" class="art"><div class="ph" style="background-image:url(img/form-a2.jpg)"></div><div class="txt"><small>Modèle</small><h3>Charte d'usage de l'IA en entreprise</h3><p>Le document à signer avant de donner accès aux outils.</p></div></a>
+    <a href="#" class="art"><div class="ph" style="background-image:url(img/form-a3.jpg)"></div><div class="txt"><small>Webinaire</small><h3>IA et RGPD : ce qui est permis</h3><p>45 minutes avec une juriste, replay disponible.</p></div></a>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap contact-grid">
+  <div><span class="label">Programme sur mesure</span><h2>Dites-moi qui vous formez.</h2><p>Je vous renvoie sous 48 h un programme adapté à votre équipe, avec les dates possibles et le devis, prêt pour votre OPCO.</p>
+    <div class="list"><div><b>Email</b>karim@benali-formation.fr</div><div><b>Téléphone</b>06 00 00 00 00</div><div><b>Lieu</b>Bordeaux, dans vos locaux, ou à distance</div></div></div>
+  <form onsubmit="event.preventDefault()">
+    <div class="row"><label>Prénom & nom<input placeholder="Votre nom"></label><label>Entreprise<input placeholder="Nom de l'entreprise"></label></div>
+    <div class="row"><label>Email<input placeholder="vous@entreprise.fr"></label><label>Personnes à former<select><option>1 – 6</option><option>6 – 12</option><option>12 – 30</option><option>30+</option></select></label></div>
+    <label>Votre besoin<textarea placeholder="Quelle équipe, quels outils, quel objectif…"></textarea></label>
+    <button class="btn btn-nuit">Recevoir un programme</button><small>Réponse sous 48 h ouvrées · Éligible OPCO</small>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot"><div class="logo"><i style="background:var(--terra)"></i>Karim Benali</div>
+    <div class="links"><a href="#">Formations</a><a href="#">Méthode</a><a href="#">Ressources</a><a href="#">LinkedIn</a><a href="#">Certificat Qualiopi</a></div></div>
+  <div class="copy"><span>© 2026 Karim Benali Formation — Bordeaux — NDA 75 33 00000 33</span><span>Mentions légales · Confidentialité</span></div>
+</div></footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

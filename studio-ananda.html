@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour sport & cours — exemple B</title>
+<meta name="description" content="Studio Ananda, yoga et pilates à Bordeaux Chartrons. Cours collectifs, reformer, prénatal. Premier cours offert, réservation en ligne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0F0F10;--gris:#1B1B1F;--gris2:#2A2A30;--lime:#D7FF3E;--blanc:#F5F5F2;--muted:#9A9AA3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;background:var(--noir);color:var(--blanc);line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased;max-width:430px;margin:0 auto;position:relative}
+h1,h2,h3,.cond{font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+.pad{padding:0 20px}
+.label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);font-weight:700;display:block;margin-bottom:10px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 22px;border-radius:14px;font-weight:700;font-size:15px;transition:.25s}
+.btn-lime{background:var(--lime);color:var(--noir)}
+.btn-line{border:1.5px solid rgba(245,245,242,.25);color:var(--blanc)}
+.ph{position:relative;overflow:hidden;background:linear-gradient(160deg,#3A3A42 0%,#1B1B1F 60%,#0F0F10 100%)}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(215,255,62,.25),transparent 50%),linear-gradient(0deg,rgba(15,15,16,.9),transparent 50%)}
+.ph span{position:absolute;left:14px;bottom:12px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,245,242,.7);z-index:1}
+.ph.lime{background:linear-gradient(160deg,#E8FF8A 0%,#D7FF3E 60%,#A6CC1E 100%)}
+.ph.lime::after{background:none}
+.ph.lime span{color:var(--noir)}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:rgba(15,15,16,.9);backdrop-filter:blur(10px)}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:26px;letter-spacing:.06em;display:flex;align-items:center;gap:8px}
+.logo i{width:12px;height:12px;background:var(--lime);transform:skewX(-12deg)}
+.burger{width:40px;height:40px;border-radius:12px;background:var(--gris);display:grid;place-items:center;gap:4px;padding:12px}
+.burger b{display:block;height:2px;width:100%;background:var(--blanc)}
+
+/* hero */
+.hero{position:relative;padding:28px 20px 30px}
+.hero .ph{height:420px;border-radius:24px}
+.hero .over{position:absolute;left:40px;right:40px;bottom:60px;z-index:2}
+.hero h1{font-size:56px;margin-bottom:12px}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p{color:var(--muted);font-size:14px;margin-bottom:18px}
+.hero .btn{margin-top:6px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.pills span{font-size:11px;font-weight:600;padding:6px 10px;border-radius:999px;background:rgba(245,245,242,.1);backdrop-filter:blur(6px)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 20px 36px}
+.stats div{background:var(--gris);border-radius:16px;padding:16px 12px;text-align:center}
+.stats b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:800;color:var(--lime);line-height:1}
+.stats small{font-size:11px;color:var(--muted);font-weight:600}
+
+section{padding:36px 0}
+h2{font-size:38px;margin-bottom:8px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+
+/* séances — horizontal scroll */
+.scroller{display:flex;gap:12px;overflow-x:auto;padding:0 20px 8px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.scroller::-webkit-scrollbar{display:none}
+.card{flex:0 0 240px;scroll-snap-align:start;background:var(--gris);border-radius:20px;overflow:hidden}
+.card .ph{height:150px}
+.card .txt{padding:16px}
+.card h3{font-size:24px;margin-bottom:6px}
+.card p{font-size:13px;color:var(--muted);margin-bottom:12px}
+.card .row{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700}
+.card .row em{font-style:normal;color:var(--lime)}
+
+/* coach */
+.coach{padding:36px 20px}
+.coach-box{background:var(--gris);border-radius:24px;overflow:hidden}
+.coach .ph{height:300px}
+.coach .txt{padding:22px}
+.coach .txt h2{font-size:34px}
+.coach .txt p{color:var(--muted);font-size:14px;margin-bottom:14px}
+.coach ul{list-style:none;display:grid;gap:8px;font-size:13px;font-weight:600;margin-bottom:18px}
+.coach li{display:flex;gap:10px;align-items:center}
+.coach li::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--lime);flex:none;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.5'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center/70% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.5'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center/70% no-repeat}
+
+/* semaine */
+.semaine{padding:36px 20px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:14px}
+.days div{text-align:center;padding:12px 0;border-radius:12px;background:var(--gris);font-size:12px;font-weight:700}
+.days div small{display:block;font-size:10px;color:var(--muted);font-weight:600}
+.days div.on{background:var(--lime);color:var(--noir)}
+.days div.on small{color:rgba(15,15,16,.6)}
+.slot{display:flex;align-items:center;gap:14px;background:var(--gris);border-radius:16px;padding:14px 16px;margin-bottom:8px}
+.slot b.time{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;color:var(--lime);width:54px}
+.slot div{flex:1}
+.slot strong{display:block;font-size:14px}
+.slot small{color:var(--muted);font-size:12px}
+.slot a{font-size:12px;font-weight:700;padding:8px 12px;border-radius:999px;background:var(--gris2)}
+
+/* résultats */
+.results{padding:36px 20px}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.ba .ph{height:220px;border-radius:18px}
+.quote{background:var(--gris);border-radius:20px;padding:20px}
+.quote p{font-size:15px;font-weight:500;margin-bottom:10px}
+.quote b{font-size:13px}
+.quote small{color:var(--muted);display:block;font-size:12px}
+
+/* tarifs */
+.tarifs{padding:36px 20px}
+.plan{background:var(--gris);border-radius:20px;padding:20px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.plan.best{background:var(--lime);color:var(--noir)}
+.plan h3{font-size:24px;margin-bottom:2px}
+.plan p{font-size:12px;color:var(--muted)}
+.plan.best p{color:rgba(15,15,16,.65)}
+.plan b{font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:800;line-height:1}
+.plan b small{font-family:'Manrope',sans-serif;font-size:11px;font-weight:600}
+.plan .badge{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;background:var(--noir);color:var(--lime);padding:4px 8px;border-radius:999px;margin-left:8px;vertical-align:middle}
+
+/* avis */
+.avis{padding:36px 0}
+.avis .scroller .card{flex:0 0 260px;padding:18px}
+.avis .stars{color:var(--lime);letter-spacing:2px;margin-bottom:8px;font-size:13px}
+.avis p{font-size:13px;margin-bottom:10px}
+.avis b{font-size:13px}
+.avis small{color:var(--muted);font-size:11px;display:block}
+
+/* cta */
+.cta{margin:36px 20px 0;background:var(--lime);color:var(--noir);border-radius:24px;padding:28px 22px}
+.cta h2{font-size:42px;margin-bottom:8px}
+.cta p{font-size:14px;color:rgba(15,15,16,.7);margin-bottom:18px}
+.cta .btn{background:var(--noir);color:var(--lime)}
+
+footer{padding:36px 20px 110px;color:var(--muted);font-size:12px}
+footer .logo{color:var(--blanc);margin-bottom:10px}
+footer .links{display:flex;flex-wrap:wrap;gap:14px;margin:14px 0}
+footer .zone{margin-bottom:14px}
+
+/* bottom nav */
+.bottom{position:sticky;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr 1fr 1.4fr;gap:6px;padding:10px 14px 16px;background:rgba(15,15,16,.95);backdrop-filter:blur(10px);border-top:1px solid rgba(245,245,242,.08)}
+.bottom a{display:grid;place-items:center;gap:4px;font-size:10px;font-weight:700;padding:8px 4px;border-radius:12px;color:var(--muted)}
+.bottom a svg{width:20px;height:20px}
+.bottom a.on{color:var(--blanc)}
+.bottom a.book{background:var(--lime);color:var(--noir);font-size:12px}
+.ph{background-size:cover;background-position:center}.ph::after{background:linear-gradient(0deg,rgba(15,15,16,.85),rgba(15,15,16,.1) 55%)!important}.ph.lime::after{background:none!important}.ph>span:not(.new):not(.tag){display:none}
+
+/* ===== Version ordinateur ===== */
+.desk-menu{display:none}
+@media (min-width:900px){
+  body{max-width:none}
+  .top{padding:16px max(20px,calc((100% - 1100px)/2))}
+  .burger{display:none}
+  .desk-menu{display:flex;align-items:center;gap:30px;font-weight:700;font-size:14px}
+  .desk-menu a:hover{color:var(--lime)}
+  .desk-menu .btn{padding:12px 20px;border-radius:12px}
+  .hero{width:min(1100px,92%);margin:0 auto;padding:40px 0 30px!important;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .hero .ph{height:560px;border-radius:28px;order:2}
+  .hero .over{position:static;order:1}
+  .hero h1{font-size:96px}
+  .hero p{font-size:17px;max-width:420px}
+  .hero .btn{display:inline-flex}
+  .stats{width:min(1100px,92%);margin:0 auto;padding:0 0 40px;gap:16px}
+  .stats div{padding:26px 16px}
+  .stats b{font-size:44px}
+  section{width:min(1100px,92%);margin:0 auto;padding:40px 0}
+  section .pad{padding:0}
+  h2{font-size:52px}
+  .scroller{padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;overflow:visible}
+  .card{flex:auto}
+  .coach,.semaine,.results,.tarifs{width:min(1100px,92%);margin:0 auto;padding:40px 0}
+  .coach-box{display:grid;grid-template-columns:1fr 1fr}
+  .coach .ph{height:100%;min-height:460px}
+  .coach .txt{padding:40px}
+  .semaine{display:grid;grid-template-columns:1fr 1fr;gap:10px 30px}
+  .semaine>.label,.semaine>h2,.semaine>.sub,.semaine>.days{grid-column:1/-1}
+  .semaine>.sub{margin-bottom:6px}
+  .days{gap:10px;margin-bottom:10px}
+  .results{display:grid;grid-template-columns:1.2fr .8fr;gap:10px 30px;align-items:stretch}
+  .results>.label,.results>h2,.results>.sub{grid-column:1/-1}
+  .results .ba{margin:0}
+  .results .ba .ph{height:320px}
+  .results .quote{display:flex;flex-direction:column;justify-content:center;padding:30px}
+  .results .quote p{font-size:19px}
+  .tarifs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 16px}
+  .tarifs>.label,.tarifs>h2,.tarifs>.sub{grid-column:1/-1}
+  .plan{flex-direction:column;align-items:flex-start;gap:16px;padding:28px;margin:0}
+  .plan b{font-size:40px}
+  .avis .scroller{grid-template-columns:repeat(3,1fr)}
+  .avis .scroller .card{padding:26px}
+  .cta{width:min(1100px,92%);margin:40px auto 0;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;padding:48px}
+  .cta h2{font-size:64px}
+  .cta .btn{padding:18px 32px}
+  footer{width:min(1100px,92%);margin:0 auto;padding:50px 0 40px;display:grid;grid-template-columns:1fr 1fr;gap:20px 40px;align-items:center}
+  footer .logo{grid-column:1/-1}
+  footer .links{margin:0;justify-content:flex-end}
+  .bottom{display:none}
+}
+
+/* ===== VIBE ===== */
+
+body{background-image:repeating-linear-gradient(-45deg,transparent 0 42px,rgba(215,255,62,.045) 42px 44px)}
+.label::before{content:"// ";color:var(--lime)}
+.btn{border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:19px;letter-spacing:.05em;text-transform:uppercase;font-weight:700}
+.hero .ph{border-radius:8px;clip-path:polygon(0 0,100% 0,100% 94%,0 100%)}
+.stats div{border-radius:4px;transform:skewX(-7deg);border-left:3px solid var(--lime)}
+.stats div>*{transform:skewX(7deg);display:block}
+.card,.coach-box,.plan,.slot,.quote,.ba .ph,.cta,.burger{border-radius:4px!important}
+.card{border-left:3px solid var(--lime)}
+.card .ph{clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
+h2{font-style:italic}
+.days div{border-radius:4px;transform:skewX(-7deg)}
+.days div>*{display:block;transform:skewX(7deg)}
+.days div small{display:block}
+.slot b.time{font-style:italic}
+.plan.best{box-shadow:0 0 0 4px var(--noir),0 0 0 6px var(--lime)}
+.cta{transform:skewY(-1.5deg)}
+.cta>*{transform:skewY(1.5deg)}
+.cta h2{-webkit-text-stroke:0}
+.top{border-bottom:2px solid var(--lime)}
+.results .ba .ph:first-child{filter:grayscale(1)}
+
+
+/* ===== VARIANTE B : couleurs & typos ===== */
+:root{--noir:#F3E7DC;--gris:#FFFFFF;--gris2:#EFE2D4;--lime:#C8694F;--blanc:#2E2A26;--muted:#8A7C70}
+body{font-family:'Mulish',sans-serif;color:var(--blanc);background-image:none}
+h1,h2,h3,.cond{font-family:'Marcellus',serif;font-weight:400;text-transform:none;letter-spacing:0;line-height:1.05;font-style:normal!important}
+.hero h1{font-size:50px}
+.label{color:var(--lime)}.label::before{content:"";margin:0}
+.btn{border-radius:999px;font-family:'Mulish',sans-serif;text-transform:none;letter-spacing:0;font-size:15px;font-weight:700}
+.btn-lime{background:var(--lime);color:#fff}
+.btn-line{border-color:rgba(46,42,38,.3)}
+.top{background:rgba(243,231,220,.92);border-bottom:1px solid rgba(46,42,38,.1)}
+.logo i{background:var(--lime);transform:none;border-radius:50%}
+.burger{background:#fff}.burger b{background:var(--blanc)}
+.hero .ph{clip-path:none;border-radius:24px}
+.hero .ph::after{background:linear-gradient(0deg,rgba(46,42,38,.75),transparent 55%)}
+.hero .over{color:#fff}.hero p{color:rgba(255,255,255,.85)}.hero h1 em{color:#F3E7DC}
+.pills span{background:rgba(255,255,255,.25)}
+.stats div{transform:none;border-radius:16px;border-left:0;box-shadow:0 10px 30px rgba(46,42,38,.06)}.stats div>*{transform:none}
+.stats b{color:var(--lime)}
+.card{border-radius:20px!important;border-left:0;box-shadow:0 10px 30px rgba(46,42,38,.06)}.card .ph{clip-path:none}
+.card .row em{color:var(--lime)}
+.coach-box{border-radius:24px!important}.coach li::before{background:var(--lime)}
+.days div{transform:none;border-radius:12px;background:#fff}.days div>*{transform:none}.days div.on{background:var(--lime);color:#fff}.days div.on small{color:rgba(255,255,255,.75)}
+.slot{border-radius:16px!important;background:#fff}.slot b.time{font-style:normal;color:var(--lime)}.slot a{background:var(--gris2)}
+.ba .ph{border-radius:18px!important}.results .ba .ph:first-child{filter:none}
+.quote{border-radius:20px!important;background:#fff}
+.plan{border-radius:20px!important;background:#fff}.plan.best{background:var(--lime);color:#fff;box-shadow:none}.plan.best p{color:rgba(255,255,255,.8)}.plan .badge{background:#fff;color:var(--lime)}
+.avis .stars{color:var(--lime)}
+.cta{transform:none;border-radius:24px!important;background:var(--lime);color:#fff}.cta>*{transform:none}.cta p{color:rgba(255,255,255,.85)}.cta .btn{background:#fff;color:var(--lime)}
+.bottom{background:rgba(243,231,220,.96);border-top:1px solid rgba(46,42,38,.1)}.bottom a.on{color:var(--blanc)}.bottom a.book{background:var(--lime);color:#fff}
+.desk-menu a:hover{color:var(--lime)}
+.ph{background:var(--gris2) center/cover no-repeat}
+footer .logo{color:var(--blanc)}
+.hero .ph::after{background:linear-gradient(0deg,rgba(46,42,38,.92),rgba(46,42,38,.2) 70%)}
+@media(min-width:900px){.hero .over{color:var(--blanc)}.hero p{color:var(--muted)}.hero h1 em{color:var(--lime)}.pills span{background:#fff}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <a href="#" class="logo"><i></i>Ananda</a>
+  <div class="desk-menu"><a href="#seances">Cours</a><a href="#coach">Les profs</a><a href="#planning">Planning</a><a href="#tarifs">Tarifs</a><a href="#reserver" class="btn btn-lime">Premier cours offert</a></div>
+  <div class="burger"><b></b><b></b><b></b></div>
+</div>
+
+<section class="hero" style="padding-top:12px">
+  <div class="ph" style="background-image:url(img/yoga-hero.jpg)"></div>
+  <div class="over">
+    <div class="pills"><span>Chartrons</span><span>Yoga</span><span>Pilates</span></div>
+    <h1>Respirer,<br>ici, <em>maintenant.</em></h1>
+    <p>Yoga, pilates et méditation dans un studio lumineux aux Chartrons. Petits groupes, tous niveaux.</p>
+    <a href="#reserver" class="btn btn-lime">Premier cours offert →</a>
+  </div>
+</section>
+
+<div class="stats"><div><b>12</b><small>personnes max par cours</small></div><div><b>4,9</b><small>note Google</small></div><div><b>38</b><small>cours par semaine</small></div></div>
+
+<section id="seances">
+  <div class="pad"><span class="label">Les cours</span><h2>Choisissez votre pratique</h2><p class="sub">Du dynamique au très doux. Nos profs vous conseillent le bon cours lors de votre première venue.</p></div>
+  <div class="scroller">
+    <div class="card"><div class="ph" style="background-image:url(img/yoga-s4.jpg)"></div><div class="txt"><h3>Vinyasa</h3><p>Fluide et tonique. Pour bouger, transpirer un peu, se vider la tête.</p><div class="row"><span>60 min</span><em>dès 18 €</em></div></div></div>
+    <div class="card"><div class="ph" style="background-image:url(img/yoga-s1.jpg)"></div><div class="txt"><h3>Pilates reformer</h3><p>Sur machine, 6 personnes max. Gainage profond, posture.</p><div class="row"><span>50 min</span><em>dès 28 €</em></div></div></div>
+    <div class="card"><div class="ph" style="background-image:url(img/yoga-s2.jpg)"></div><div class="txt"><h3>Yin & méditation</h3><p>Postures tenues longtemps, souffle, silence. Le cours du dimanche soir.</p><div class="row"><span>75 min</span><em>dès 18 €</em></div></div></div>
+    <div class="card"><div class="ph" style="background-image:url(img/yoga-s3.jpg)"></div><div class="txt"><h3>Prénatal & postnatal</h3><p>Avec une sage-femme formée au yoga. Bébés bienvenus au postnatal.</p><div class="row"><span>60 min</span><em>dès 20 €</em></div></div></div>
+  </div>
+</section>
+
+<section class="coach" id="coach">
+  <div class="coach-box">
+    <div class="ph" style="background-image:url(img/yoga-coach.jpg)"></div>
+    <div class="txt"><span class="label">Les profs</span><h2>Six enseignants, une même attention</h2>
+      <p>Le studio a été fondé en 2019 par Claire Ménard, professeure de yoga depuis quinze ans. Elle a réuni une équipe de six enseignants, tous certifiés, tous attentifs à chaque corps dans la salle.</p>
+      <ul><li>Certifications Yoga Alliance 500 h</li><li>Pilates : formation Polestar / Stott</li><li>Cours adaptés aux débutants et aux blessures</li></ul>
+      <a href="#reserver" class="btn btn-line">Rencontrer l'équipe</a></div>
+  </div>
+</section>
+
+<section class="semaine" id="planning">
+  <span class="label">Planning</span><h2>Cette semaine au studio</h2><p class="sub">Réservez votre tapis. Annulation gratuite jusqu'à 4 h avant.</p>
+  <div class="days"><div>L<small>9</small></div><div>M<small>10</small></div><div class="on">M<small>11</small></div><div>J<small>12</small></div><div>V<small>13</small></div><div>S<small>14</small></div><div>D<small>15</small></div></div>
+  <div class="slot"><b class="time">07:30</b><div><strong>Vinyasa réveil</strong><small>Claire · 60 min</small></div><a href="#">Réserver</a></div>
+  <div class="slot"><b class="time">12:15</b><div><strong>Pilates reformer</strong><small>Inès · 50 min · 2 places</small></div><a href="#">Réserver</a></div>
+  <div class="slot"><b class="time">18:30</b><div><strong>Vinyasa</strong><small>Tom · 60 min</small></div><a href="#">Réserver</a></div>
+  <div class="slot"><b class="time">20:00</b><div><strong>Yin & méditation</strong><small>Claire · 75 min</small></div><a href="#">Réserver</a></div>
+</section>
+
+<section class="results">
+  <span class="label">Le studio</span><h2>Un lieu pour ralentir</h2><p class="sub">140 m² sous verrière, parquet, deux salles, vestiaires et douches.</p>
+  <div class="ba"><div class="ph" style="background-image:url(img/yoga-g1.jpg)"></div><div class="ph lime" style="background-image:url(img/yoga-g2.jpg)"></div></div>
+  <div class="quote"><p>« J'étais venue pour le dos. Je suis restée pour le calme. Trois ans que je viens deux fois par semaine. »</p><b>Nathalie, 52 ans</b><small>Abonnée depuis 2023</small></div>
+</section>
+
+<section class="tarifs" id="tarifs">
+  <span class="label">Tarifs</span><h2>Simples et sans engagement</h2><p class="sub">Premier cours offert. Tarif réduit étudiants et demandeurs d'emploi.</p>
+  <div class="plan"><div><h3>Cours à l'unité</h3><p>Yoga 20 € · Reformer 32 €</p></div><b>20 €<small>/cours</small></b></div>
+  <div class="plan best"><div><h3>Carte 10 cours <span class="badge">Populaire</span></h3><p>Valable 6 mois, tous cours</p></div><b>180 €<small> · 18 €/cours</small></b></div>
+  <div class="plan"><div><h3>Illimité mensuel</h3><p>Tous les cours, sans engagement</p></div><b>89 €<small>/mois</small></b></div>
+</section>
+
+<section class="avis">
+  <div class="pad"><span class="label">Avis</span><h2>Ce qu'ils en disent</h2></div>
+  <div class="scroller">
+    <div class="card"><div class="stars">★★★★★</div><p>« Petits groupes, profs qui corrigent vraiment. On n'est pas un numéro. »</p><b>Élise P.</b><small>Chartrons</small></div>
+    <div class="card"><div class="stars">★★★★★</div><p>« Le reformer du midi a changé mon dos. Et la verrière est magnifique. »</p><b>Romain D.</b><small>Bordeaux centre</small></div>
+    <div class="card"><div class="stars">★★★★★</div><p>« Prénatal avec une sage-femme, c'est rassurant. J'y suis retournée après l'accouchement. »</p><b>Maud L.</b><small>Bastide</small></div>
+  </div>
+</section>
+
+<div class="cta" id="reserver">
+  <h2>Votre premier cours est offert</h2>
+  <p>Choisissez un cours, venez avec une tenue souple. On vous prête le tapis.</p>
+  <a href="#" class="btn">Réserver mon cours offert</a>
+</div>
+
+<footer>
+  <div class="logo"><i></i>Ananda</div>
+  <p class="zone">Studio de yoga et pilates, 18 rue Notre-Dame, 33000 Bordeaux (Chartrons). Tram B arrêt Chartrons.</p>
+  <div class="links"><a href="#">Cours</a><a href="#">Tarifs</a><a href="#">Instagram</a><a href="#">Mentions légales</a></div>
+  <p>© 2026 Studio Ananda — 05 56 00 00 00 — bonjour@studio-ananda.fr</p>
+</footer>
+
+<nav class="bottom">
+  <a href="#" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 3l9 8v10H3z"/></svg>Accueil</a>
+  <a href="#seances"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M7 6v12M17 6v12"/></svg>Cours</a>
+  <a href="#planning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Planning</a>
+  <a href="#reserver" class="book">Réserver</a>
+</nav>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

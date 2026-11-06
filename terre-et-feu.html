@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour petite boutique en ligne — exemple B</title>
+<meta name="description" content="Terre & Feu, atelier de céramique à Saint-Émilion. Bols, assiettes, tasses et vases en grès, tournés et émaillés à la main. Petites séries, expédition en France.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ecume:#F4F4F0;--brume:#E9E7E0;--sable:#DCD3C4;--galet:#7E807A;--oyat:#5F6148;--ardoise:#2B2D29}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Instrument Sans',sans-serif;background:var(--ecume);color:var(--ardoise);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:15px}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92%);margin:0 auto}
+.label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--galet);font-weight:500}
+.btn{display:inline-block;padding:15px 30px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;transition:.3s}
+.btn-dark{background:var(--ardoise);color:var(--ecume)}
+.btn-dark:hover{background:var(--oyat)}
+.btn-line{border:1px solid var(--ardoise);color:var(--ardoise)}
+.btn-line:hover{background:var(--ardoise);color:var(--ecume)}
+.ph{position:relative;overflow:hidden;background:linear-gradient(170deg,#D9D8D2 0%,#B9BAB3 50%,#8F918A 100%)}
+.ph::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse at 50% 110%,rgba(244,244,240,.55),transparent 60%),
+  linear-gradient(180deg,rgba(255,255,255,.25),transparent 40%)}
+.ph span{position:absolute;left:14px;bottom:12px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(43,45,41,.7);z-index:1}
+.ph.sand{background:linear-gradient(170deg,#E9E2D4 0%,#DCD3C4 60%,#C3B8A4 100%)}
+.ph.sky{background:linear-gradient(180deg,#E4E6E3 0%,#C9CCC6 70%,#AEB1AA 100%)}
+.ph.moss{background:linear-gradient(170deg,#8A8C73 0%,#5F6148 100%)}
+
+/* top bar */
+.topbar{background:var(--ardoise);color:var(--ecume);text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:9px 0}
+header{position:sticky;top:0;z-index:40;background:rgba(244,244,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--brume)}
+nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:72px}
+.menu{display:flex;gap:30px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.logo{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;letter-spacing:.42em;text-align:center;padding-left:.42em}
+.icons{display:flex;justify-content:flex-end;gap:22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:640px}
+.hero .ph{min-height:640px}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:80px 8% 80px 9%}
+.hero-text h1{font-size:clamp(44px,5vw,74px);margin:18px 0 22px}
+.hero-text h1 i{font-style:italic}
+.hero-text p{color:var(--galet);font-size:16px;max-width:420px;margin-bottom:36px;line-height:1.75}
+.hero-text .btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* marquee */
+.strip{border-top:1px solid var(--sable);border-bottom:1px solid var(--sable);padding:16px 0;overflow:hidden;white-space:nowrap}
+.strip div{display:inline-block;animation:slide 30s linear infinite}
+.strip span{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;margin:0 40px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:100px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:46px;gap:30px}
+.head h2{font-size:clamp(34px,3.6vw,52px);margin-top:12px}
+.head p{color:var(--galet);max-width:380px}
+
+/* products */
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 22px}
+.product .ph{aspect-ratio:3/4;margin-bottom:14px;transition:.4s}
+.product:hover .ph{opacity:.88}
+.product h3{font-size:22px;margin-bottom:4px}
+.product .meta{display:flex;justify-content:space-between;font-size:13px}
+.product .meta em{font-style:normal;color:var(--galet)}
+.product .new{position:absolute;top:12px;bottom:auto;left:12px;color:var(--ardoise);background:var(--ecume);padding:5px 9px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;z-index:1}
+.center{text-align:center;margin-top:50px}
+
+/* manifesto */
+.manifesto{background:var(--brume);text-align:center}
+.manifesto .inner{max-width:760px;margin:0 auto}
+.manifesto p.big{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.2vw,42px);font-weight:300;line-height:1.3;margin:22px 0 28px}
+.manifesto p.big i{font-style:italic}
+.manifesto p{color:var(--galet);font-size:16px;line-height:1.8}
+
+/* matières */
+.mat-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.mat-grid .ph{aspect-ratio:4/5}
+.mat-list{display:grid;gap:0}
+.mat-list div{padding:26px 0;border-bottom:1px solid var(--sable)}
+.mat-list div:first-child{border-top:1px solid var(--sable)}
+.mat-list h3{font-size:28px;margin-bottom:6px}
+.mat-list p{color:var(--galet);font-size:15px}
+.mat-grid h2{font-size:clamp(34px,3.4vw,48px);margin:12px 0 30px}
+
+/* editorial */
+.edito{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;height:620px}
+.edito .ph{height:100%}
+.edito .col{display:grid;grid-template-rows:1fr auto;gap:22px}
+.edito .quote{background:var(--oyat);color:var(--ecume);padding:36px;display:flex;flex-direction:column;justify-content:flex-end}
+.edito .quote p{font-family:'Cormorant Garamond',serif;font-size:26px;font-style:italic;line-height:1.3;margin-bottom:14px}
+.edito .quote small{font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.8}
+
+/* maison */
+.maison{background:var(--sable)}
+.maison-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.maison h2{font-size:clamp(34px,3.4vw,48px);margin:12px 0 24px}
+.maison p{color:#5B5D56;line-height:1.8;margin-bottom:16px;font-size:16px}
+.maison .ph{aspect-ratio:1}
+.maison .btn{margin-top:14px}
+
+/* newsletter */
+.news{text-align:center;border-top:1px solid var(--sable)}
+.news h2{font-size:clamp(30px,3vw,44px);margin:12px 0 10px}
+.news p{color:var(--galet);margin-bottom:30px}
+.news form{display:flex;max-width:480px;margin:0 auto;border-bottom:1px solid var(--ardoise)}
+.news input{flex:1;border:0;background:transparent;font:inherit;padding:14px 0;font-size:15px;outline:0}
+.news button{border:0;background:transparent;font:inherit;font-size:11px;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;color:var(--ardoise)}
+
+footer{background:var(--ardoise);color:rgba(244,244,240,.75);padding:70px 0 30px;font-size:13px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+.foot .logo{text-align:left;padding:0;color:var(--ecume);margin-bottom:14px;font-size:24px}
+.foot h4{font-family:'Instrument Sans',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ecume);margin-bottom:16px;font-weight:500}
+.foot a{display:block;margin-bottom:9px}
+.foot a:hover{color:var(--ecume)}
+.copy{border-top:1px solid rgba(244,244,240,.15);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
+
+@media (max-width:900px){
+  .menu,.icons{display:none}
+  nav{grid-template-columns:1fr}
+  .hero,.mat-grid,.maison-grid{grid-template-columns:1fr}
+  .hero .ph{min-height:420px}
+  .products{grid-template-columns:1fr 1fr}
+  .edito{grid-template-columns:1fr;height:auto}
+  .edito .ph{height:380px}
+  .foot{grid-template-columns:1fr 1fr}
+  .head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:600px){section{padding:64px 0}.products{gap:22px 14px}.hero-text{padding:50px 6%}}
+.ph{background-size:cover;background-position:center}.ph::after{background:linear-gradient(180deg,rgba(244,244,240,.06),rgba(233,231,224,.12))!important}.ph>span:not(.new):not(.tag){display:none}
+@media (max-width:600px){nav{grid-template-columns:1fr auto;height:62px}.logo{text-align:left;padding:0;font-size:22px;letter-spacing:.3em}.icons{display:flex;gap:0}.icons a:not(:last-child){display:none}.topbar{font-size:9px;padding:7px 10px;letter-spacing:.08em}}
+
+/* ===== VIBE ===== */
+
+.ph{filter:saturate(.72) contrast(.97) brightness(1.02)}
+.hero-text h1{font-weight:300;font-size:clamp(48px,5.6vw,82px)}
+.label{position:relative;padding-left:34px}
+.label::before{content:"";position:absolute;left:0;top:50%;width:24px;height:1px;background:var(--galet)}
+.products{gap:52px 22px}
+.product h3{font-style:italic;font-size:24px}
+.product .ph{transition:.6s}
+.product:hover .ph{filter:saturate(.9) contrast(1)}
+.manifesto p.big{font-size:clamp(32px,3.8vw,52px);line-height:1.25}
+.mat-list h3{font-style:italic}
+.edito .quote{background:transparent;color:var(--ardoise);border:1px solid var(--galet)}
+.edito .quote small{color:var(--galet)}
+.maison h2 i{font-style:italic}
+.news h2{font-style:italic}
+.head h2{font-style:italic}
+
+
+/* ===== VARIANTE B : couleurs & typos ===== */
+:root{--ecume:#F5F0E8;--brume:#EDE4D8;--sable:#D9C9B6;--galet:#8A7F74;--oyat:#B5654A;--ardoise:#3B332E}
+body{font-family:'Karla',sans-serif;font-size:16px}
+h1,h2,h3,.serif,.logo{font-family:'DM Serif Text',serif;font-weight:400}
+.logo{letter-spacing:.08em;font-size:24px;text-transform:uppercase}
+.label{letter-spacing:.14em;font-weight:700;color:var(--oyat)}
+.label::before{background:var(--oyat)}
+.btn{letter-spacing:.12em;font-weight:700;border-radius:999px}
+.btn-dark{background:var(--ardoise)}.btn-dark:hover{background:var(--oyat)}
+.ph{filter:none;border-radius:6px}
+.hero .ph{border-radius:0}
+.hero-text h1{font-weight:400;font-size:clamp(44px,5.2vw,76px)}
+.hero-text h1 i{color:var(--oyat)}
+.strip span{font-family:'DM Serif Text',serif;font-style:italic}
+.product h3{font-style:normal;font-size:22px}
+.product .new{background:var(--oyat);color:#fff;border-radius:999px;padding:6px 10px}
+.manifesto{background:var(--oyat);color:#fff}.manifesto .label{color:#F5F0E8}.manifesto .label::before{background:#F5F0E8}.manifesto p{color:rgba(255,255,255,.85)}
+.mat-list h3{font-style:normal}
+.edito .quote{border-color:var(--sable)}
+.maison{background:var(--brume)}
+.topbar{background:var(--oyat)}
+.news h2,.head h2,.maison h2 i{font-style:normal}
+.manifesto p.big i{font-style:italic}
+footer{background:var(--ardoise)}
+</style>
+</head>
+<body>
+
+<div class="topbar">Expédition soignée sous 3 jours · Livraison offerte dès 90 € · Chaque pièce est unique</div>
+<header><div class="wrap"><nav>
+  <div class="menu"><a href="#collection">Boutique</a><a href="#matieres">Le grès</a><a href="#maison">L'atelier</a><a href="#">Stages</a></div>
+  <a href="#" class="logo">Terre & Feu</a>
+  <div class="icons"><a href="#">Recherche</a><a href="#">Compte</a><a href="#">Panier (0)</a></div>
+</nav></div></header>
+
+<section class="hero" style="padding:0">
+  <div class="ph" style="background-image:url(img/cera-hero.jpg)"></div>
+  <div class="hero-text">
+    <span class="label">Nouvelle fournée — Novembre 2026</span>
+    <h1>Du grès, du feu, <i>et deux mains.</i></h1>
+    <p>Bols, assiettes, tasses et vases tournés à Saint-Émilion, émaillés avec les cendres de nos sarments. Trente pièces par fournée, jamais deux fois les mêmes.</p>
+    <div class="btns"><a href="#collection" class="btn btn-dark">Voir la fournée</a><a href="#maison" class="btn btn-line">L'atelier</a></div>
+  </div>
+</section>
+
+<div class="strip"><div><span>Grès de Gironde</span><span>·</span><span>Émail aux cendres</span><span>·</span><span>Cuisson à 1 280 °C</span><span>·</span><span>Lave-vaisselle OK</span><span>·</span><span>Tourné à la main</span><span>·</span><span>Grès de Gironde</span><span>·</span><span>Émail aux cendres</span><span>·</span><span>Cuisson à 1 280 °C</span><span>·</span><span>Lave-vaisselle OK</span><span>·</span><span>Tourné à la main</span><span>·</span></div></div>
+
+<section id="collection"><div class="wrap">
+  <div class="head"><div><span class="label">La fournée</span><h2>Novembre 2026</h2></div><p>Trente pièces sorties du four le 3 novembre. Quand c'est parti, c'est parti : la prochaine fournée est en décembre.</p></div>
+  <div class="products">
+    <a href="#" class="product"><div class="ph" style="background-image:url(img/cera-p1.jpg)"><span class="new">Nouveau</span></div><h3>Bol Vendange</h3><div class="meta"><em>Grès, émail cendre</em><b>38 €</b></div></a>
+    <a href="#" class="product"><div class="ph" style="background-image:url(img/cera-p2.jpg)"></div><h3>Assiette Calcaire · 26 cm</h3><div class="meta"><em>Grès blanc, émail mat</em><b>44 €</b></div></a>
+    <a href="#" class="product"><div class="ph" style="background-image:url(img/cera-p3.jpg)"></div><h3>Tasse Matin</h3><div class="meta"><em>Grès, anse pincée</em><b>29 €</b></div></a>
+    <a href="#" class="product"><div class="ph" style="background-image:url(img/cera-p4.jpg)"></div><h3>Saladier Dordogne</h3><div class="meta"><em>Grès, émail tenmoku</em><b>85 €</b></div></a>
+    <a href="#" class="product"><div class="ph" style="background-image:url(img/cera-p5.jpg)"></div><h3>Pichet Brume</h3><div class="meta"><em>Grès, 1 litre</em><b>72 €</b></div></a>
+    <a href="#" class="product"><div class="ph" style="background-image:url(img/cera-p6.jpg)"></div><h3>Vase Sarment</h3><div class="meta"><em>Grès chamotté</em><b>95 €</b></div></a>
+    <a href="#" class="product"><div class="ph" style="background-image:url(img/cera-p7.jpg)"></div><h3>Coffret 4 bols</h3><div class="meta"><em>Grès, émaux assortis</em><b>140 €</b></div></a>
+    <a href="#" class="product"><div class="ph" style="background-image:url(img/cera-p8.jpg)"></div><h3>Plat à four</h3><div class="meta"><em>Grès, 30 cm</em><b>68 €</b></div></a>
+  </div>
+  <div class="center"><a href="#" class="btn btn-line">Voir les 30 pièces</a></div>
+</div></section>
+
+<section class="manifesto"><div class="wrap inner">
+  <span class="label">Pourquoi des fournées</span>
+  <p class="big">On ne fabrique pas sur commande. On tourne, on sèche, on cuit, <i>et on vous montre ce qui est sorti du four.</i></p>
+  <p>Chaque fournée est photographiée pièce par pièce. Ce que vous voyez est exactement ce que vous recevrez, avec ses coulures d'émail et ses marques de tour.</p>
+</div></section>
+
+<section id="matieres"><div class="wrap mat-grid">
+  <div class="ph" style="background-image:url(img/cera-matiere.jpg)"></div>
+  <div><span class="label">Le grès</span><h2>Ce qu'il y a dans vos mains.</h2>
+    <div class="mat-list">
+      <div><h3>Grès de Gironde</h3><p>Une terre à grès du Fronsadais, chamottée pour résister aux chocs thermiques. Four et lave-vaisselle sans souci.</p></div>
+      <div><h3>Émail aux cendres</h3><p>Cendres de sarments de vigne, feldspath, kaolin. Vert-gris, moucheté, différent sur chaque pièce.</p></div>
+      <div><h3>Cuisson 1 280 °C</h3><p>Haute température, 14 heures de montée, 36 heures de refroidissement. C'est long, c'est solide.</p></div>
+      <div><h3>Sans plomb, sans cadmium</h3><p>Tous nos émaux sont testés alimentaires. On y mange, on y boit, tous les jours.</p></div>
+    </div></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap edito">
+  <div class="ph" style="background-image:url(img/cera-tour.jpg)"></div>
+  <div class="col"><div class="ph" style="background-image:url(img/cera-profil.jpg)"></div>
+    <div class="quote"><p>« Le bol Vendange est devenu mon bol du matin. Il a une petite coulure d'émail que je cherche à chaque fois. »</p><small>Hélène — Lyon</small></div></div>
+</div></section>
+
+<section id="maison" class="maison"><div class="wrap maison-grid">
+  <div><span class="label">L'atelier</span><h2>Deux céramistes, un four, un village.</h2>
+    <p>Terre & Feu est né en 2020 dans une ancienne grange de Saint-Émilion, quand Julie et Marc ont quitté leurs postes d'ingénieurs pour tourner à plein temps. Le four à gaz de 400 litres est arrivé l'année suivante.</p>
+    <p>L'atelier se visite le samedi, et accueille des stages de tournage d'une journée, pour six personnes, une fois par mois.</p>
+    <a href="#" class="btn btn-dark">Réserver un stage</a></div>
+  <div class="ph" style="background-image:url(img/cera-atelier.jpg)"></div>
+</div></section>
+
+<section class="news"><div class="wrap">
+  <span class="label">La prochaine fournée</span><h2>Soyez prévenu avant tout le monde.</h2>
+  <p>Un mail par fournée, avec les photos de chaque pièce 24 h avant la mise en ligne.</p>
+  <form onsubmit="event.preventDefault()"><input placeholder="Votre adresse e-mail"><button>S'inscrire</button></form>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div><div class="logo">Terre & Feu</div><p>Atelier de céramique, 7 chemin des Grangères, 33330 Saint-Émilion.</p></div>
+    <div><h4>Boutique</h4><a href="#">La fournée</a><a href="#">Bols & tasses</a><a href="#">Assiettes & plats</a><a href="#">Vases</a></div>
+    <div><h4>L'atelier</h4><a href="#">Notre histoire</a><a href="#">Le grès</a><a href="#">Stages</a><a href="#">Visites</a></div>
+    <div><h4>Aide & services</h4><a href="#">Livraison & retours</a><a href="#">Entretien</a><a href="#">Casse pendant le transport</a><a href="#">Contact</a></div>
+  </div>
+  <div class="copy"><span>© 2026 Terre & Feu — Saint-Émilion</span><span>Mentions légales · CGV · Confidentialité</span></div>
+</div></footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

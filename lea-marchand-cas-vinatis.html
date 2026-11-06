@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cas client Vinatis — Léa Marchand, consultante à Bordeaux</title>
+<meta name="description" content="Léa Marchand accompagne les PME et scale-ups de Nouvelle-Aquitaine dans leur stratégie, leur organisation et leurs transitions de croissance. Diagnostic offert.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#15213B;--nuit-deep:#0E1629;--lin:#F3F0EA;--terra:#D2694A;--gris:#6E7480;--sauge:#D9E0D6;--blanc:#fff;--ligne:rgba(21,33,59,.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--lin);color:var(--nuit);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.08;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1140px,92%);margin:0 auto}
+.label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);font-weight:600;display:block;margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 28px;border-radius:8px;font-weight:600;font-size:15px;transition:.25s;border:1.5px solid transparent}
+.btn-nuit{background:var(--nuit);color:#fff}
+.btn-nuit:hover{background:var(--terra)}
+.btn-line{border-color:var(--nuit);color:var(--nuit)}
+.btn-line:hover{background:var(--nuit);color:#fff}
+.ph{position:relative;overflow:hidden;background:linear-gradient(160deg,#2A3A5E 0%,#15213B 60%,#0E1629 100%)}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(210,105,74,.35),transparent 45%),radial-gradient(circle at 20% 90%,rgba(217,224,214,.25),transparent 45%)}
+.ph span{position:absolute;left:16px;bottom:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8);z-index:1}
+.ph.sauge{background:linear-gradient(160deg,#E6ECE3 0%,#D9E0D6 60%,#BFC9BB 100%)}
+.ph.sauge span{color:var(--nuit)}
+.ph.terra{background:linear-gradient(160deg,#E68A6E 0%,#D2694A 60%,#A84B31 100%)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(243,240,234,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--ligne)}
+nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:'DM Serif Display',serif;font-size:22px;display:flex;align-items:center;gap:10px}
+.logo i{width:10px;height:10px;border-radius:50%;background:var(--terra)}
+.menu{display:flex;gap:32px;font-size:15px;font-weight:500}
+.menu a:hover{color:var(--terra)}
+
+.hero{padding:90px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.hero h1{font-size:clamp(42px,5.4vw,70px);margin-bottom:24px}
+.hero h1 i{color:var(--terra)}
+.hero p{font-size:19px;color:var(--gris);max-width:520px;margin-bottom:34px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.hero .trust{display:flex;align-items:center;gap:14px;font-size:14px;color:var(--gris)}
+.hero .trust .faces{display:flex}
+.hero .trust .faces i{width:34px;height:34px;border-radius:50%;border:2px solid var(--lin);margin-left:-8px;background:var(--sauge)}
+.hero .trust .faces i:nth-child(2){background:var(--terra)}
+.hero .trust .faces i:nth-child(3){background:var(--nuit)}
+.portrait{position:relative}
+.portrait .ph{aspect-ratio:4/5;border-radius:18px 18px 18px 120px}
+.portrait .card{position:absolute;left:-40px;bottom:40px;background:#fff;padding:20px 24px;border-radius:12px;box-shadow:0 20px 50px rgba(21,33,59,.15);max-width:260px}
+.portrait .card b{font-family:'DM Serif Display',serif;font-size:30px;display:block;color:var(--terra);line-height:1}
+.portrait .card small{font-size:14px;color:var(--gris)}
+
+.logos{border-top:1px solid var(--ligne);border-bottom:1px solid var(--ligne);padding:28px 0}
+.logos .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.logos small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.logos b{font-family:'DM Serif Display',serif;font-size:20px;opacity:.55;letter-spacing:.02em}
+
+section{padding:100px 0}
+.head{max-width:640px;margin-bottom:50px}
+.head h2{font-size:clamp(32px,3.8vw,48px);margin-bottom:14px}
+.head p{color:var(--gris);font-size:17px}
+
+.offres{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.offre{background:#fff;border-radius:16px;padding:34px;border:1px solid var(--ligne);display:flex;flex-direction:column;transition:.3s}
+.offre:hover{transform:translateY(-6px);box-shadow:0 26px 50px rgba(21,33,59,.1)}
+.offre .num{font-family:'DM Serif Display',serif;font-size:14px;color:var(--terra);margin-bottom:22px}
+.offre h3{font-size:26px;margin-bottom:12px}
+.offre p{color:var(--gris);font-size:15px;margin-bottom:22px;flex:1}
+.offre ul{list-style:none;display:grid;gap:9px;margin-bottom:26px;font-size:14px}
+.offre li{padding-left:22px;position:relative}
+.offre li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:2px;background:var(--terra)}
+.offre a{font-weight:600;font-size:14px;color:var(--terra)}
+.offre.dark{background:var(--nuit);color:#fff;border-color:var(--nuit)}
+.offre.dark p{color:rgba(255,255,255,.72)}
+.offre.dark a{color:#fff}
+
+.methode{background:var(--nuit);color:#fff}
+.methode .label{color:var(--terra)}
+.methode .head p{color:rgba(255,255,255,.7)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:10px}
+.step{border-top:1px solid rgba(255,255,255,.18);padding-top:26px}
+.step b{font-family:'DM Serif Display',serif;font-size:48px;color:var(--terra);display:block;line-height:1;margin-bottom:16px}
+.step h3{font-size:24px;margin-bottom:10px}
+.step p{color:rgba(255,255,255,.72);font-size:15px}
+
+.chiffres{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.chiffre{background:#fff;border-radius:16px;padding:32px 28px;border:1px solid var(--ligne)}
+.chiffre b{font-family:'DM Serif Display',serif;font-size:50px;display:block;line-height:1;color:var(--nuit);margin-bottom:10px}
+.chiffre b em{color:var(--terra);font-style:normal}
+.chiffre p{color:var(--gris);font-size:15px}
+
+.cas{background:var(--sauge)}
+.cas-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.cas .ph{aspect-ratio:5/4;border-radius:16px}
+.cas h2{font-size:clamp(30px,3.4vw,44px);margin-bottom:16px}
+.cas p{color:#4A5260;font-size:17px;margin-bottom:16px}
+.cas .res{display:flex;gap:40px;margin:26px 0 30px}
+.cas .res b{font-family:'DM Serif Display',serif;font-size:38px;display:block;line-height:1}
+.cas .res small{font-size:13px;color:#4A5260}
+
+.temoignages{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+.temo{background:#fff;border-radius:16px;padding:40px;border:1px solid var(--ligne)}
+.temo.big{background:var(--terra);color:#fff;border:0}
+.temo p{font-family:'DM Serif Display',serif;font-size:24px;line-height:1.35;margin-bottom:24px}
+.temo.big p{font-size:30px}
+.temo b{display:block;font-weight:600;font-size:15px}
+.temo small{color:var(--gris);font-size:14px}
+.temo.big small{color:rgba(255,255,255,.8)}
+
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.about-grid .ph{aspect-ratio:4/5;border-radius:16px}
+.about-grid h2{font-size:clamp(30px,3.4vw,44px);margin-bottom:18px}
+.about-grid p{color:var(--gris);font-size:17px;margin-bottom:16px}
+.about-grid .tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 28px}
+.about-grid .tags span{padding:7px 14px;border:1px solid var(--ligne);border-radius:999px;font-size:13px;font-weight:500;background:#fff}
+
+.ressources{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.art{display:block;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--ligne);transition:.3s}
+.art:hover{transform:translateY(-5px)}
+.art .ph{aspect-ratio:16/10}
+.art div.txt{padding:22px}
+.art small{font-size:12px;color:var(--terra);font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.art h3{font-size:21px;margin:8px 0 8px}
+.art p{font-size:14px;color:var(--gris)}
+
+.contact{background:var(--nuit);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.contact h2{font-size:clamp(32px,3.8vw,50px);margin-bottom:16px}
+.contact p{color:rgba(255,255,255,.72);font-size:17px;margin-bottom:28px}
+.contact .label{color:var(--terra)}
+.contact .list{display:grid;gap:14px;font-size:15px}
+.contact .list b{color:var(--terra);display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+form{background:#fff;color:var(--nuit);border-radius:16px;padding:34px;display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:13px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid var(--ligne);border-radius:8px;background:var(--lin);width:100%}
+textarea{min-height:110px;resize:vertical}
+form .btn{justify-content:center;margin-top:6px}
+form small{text-align:center;color:var(--gris);font-size:12px}
+
+footer{background:var(--nuit-deep);color:rgba(255,255,255,.65);padding:50px 0 28px;font-size:14px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:34px}
+.foot .logo{color:#fff}
+.foot .links{display:flex;gap:16px 26px;flex-wrap:wrap}
+.foot a:hover{color:#fff}
+.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
+
+@media (max-width:900px){
+  .menu{display:none}
+  .hero-grid,.cas-grid,.about-grid,.contact-grid,.temoignages{grid-template-columns:1fr}
+  .offres,.steps,.ressources{grid-template-columns:1fr}
+  .chiffres{grid-template-columns:1fr 1fr}
+  .portrait .card{left:12px}
+}
+@media (max-width:600px){.chiffres,.row{grid-template-columns:1fr}section{padding:64px 0}}
+.ph{background-size:cover;background-position:center}.ph::after{background:linear-gradient(0deg,rgba(21,33,59,.25),transparent 55%)!important}.ph>span:not(.new):not(.tag){display:none}
+@media (max-width:600px){nav{height:66px}.logo{font-size:18px}nav .btn{padding:10px 14px!important;font-size:13px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+.label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;text-transform:none;font-weight:500}
+.label::before{content:"— "}
+.btn,.offre,.chiffre,.temo,.art,.art .ph,.cas .ph,.about-grid .ph,.portrait .ph,.portrait .card,form,input,select,textarea,.about-grid .tags span,.hero .trust .faces i{border-radius:0!important}
+.hero h1{font-size:clamp(44px,6vw,84px)}
+.hero h1 i{font-style:normal;color:var(--nuit);background:linear-gradient(transparent 62%,rgba(210,105,74,.45) 62%)}
+.portrait .card{border-left:6px solid var(--terra)}
+.portrait .ph{outline:1px solid var(--nuit);outline-offset:10px}
+.logos b{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+section{border-top:1px solid rgba(21,33,59,.15)}
+.hero{border-top:0}
+.head h2{letter-spacing:-.02em}
+.offre{border:1px solid var(--nuit);box-shadow:none}
+.offre:hover{transform:none;box-shadow:8px 8px 0 var(--terra)}
+.offre .num{font-family:'IBM Plex Mono',monospace}
+.offre li::before{width:14px}
+.methode{border-top:0}
+.step{border-top:1px solid rgba(255,255,255,.35)}
+.step b{font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:.1em;margin-bottom:60px}
+.step b::before{content:"0"}
+.chiffres{border-top:0}
+.chiffre{border:0;border-left:2px solid var(--nuit);background:transparent;padding:10px 0 10px 22px}
+.chiffre b{font-size:66px}
+.cas{background:var(--sauge)}
+.cas .res b{font-family:'DM Serif Display',serif}
+.temo{border:1px solid var(--nuit)}
+.temo.big{background:var(--nuit);color:#fff}
+.temo.big small{color:rgba(255,255,255,.7)}
+.art{border:1px solid var(--nuit)}
+.art small{font-family:'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:none}
+.about-grid .tags span{border:1px solid var(--nuit);font-family:'IBM Plex Mono',monospace;font-size:12px}
+.contact .list b{font-family:'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:none}
+.contact .list b::before{content:"— "}
+input,select,textarea{border:1px solid var(--nuit);background:#fff}
+@media (max-width:600px){.hero h1{font-size:40px}.chiffre b{font-size:48px}}
+
+
+/* page intérieure */
+
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="lea-marchand.html" class="logo"><i></i>Léa Marchand</a>
+      <div class="menu"><a href="lea-marchand.html#offres">Accompagnements</a><a href="lea-marchand.html#methode">Méthode</a><a href="lea-marchand.html#cas">Cas clients</a><a href="lea-marchand.html#apropos">À propos</a><a href="lea-marchand.html#ressources">Ressources</a></div>
+      <a href="lea-marchand.html#contact" class="btn btn-nuit" style="padding:12px 22px">Réserver un diagnostic</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:40px">
+  <div class="wrap">
+    <span class="label">Cas client · E-commerce · Bordeaux</span>
+    <h1 style="font-size:clamp(38px,5vw,66px);max-width:900px">Vinatis : passer de 40 à 110 salariés <i>sans perdre l'esprit d'équipe.</i></h1>
+    <p style="font-size:18px;color:var(--gris);max-width:640px;margin-top:20px">Neuf mois d'accompagnement de croissance, entre janvier et septembre 2024. Comment un fondateur qui prenait toutes les décisions a construit une direction qui tourne sans lui.</p>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="wrap chiffres">
+    <div class="chiffre"><b>9 mois</b><p>de mission, un jour par semaine</p></div>
+    <div class="chiffre"><b>-40<em>%</em></b><p>de décisions remontées au fondateur</p></div>
+    <div class="chiffre"><b>×2,1</b><p>chiffre d'affaires à deux ans</p></div>
+    <div class="chiffre"><b>4</b><p>recrutements clés : DAF, DRH, 2 responsables d'équipe</p></div>
+  </div>
+</section>
+<section class="cas">
+  <div class="wrap cas-grid">
+    <div>
+      <span class="label">01 · Le contexte</span>
+      <h2>Une croissance plus rapide que l'organisation.</h2>
+      <p>Vinatis vend du vin en ligne depuis 2016. En 2023, l'entreprise double ses effectifs en dix-huit mois. Le fondateur, Thomas Berger, reste l'unique décideur : recrutements, prix, campagnes, litiges clients. Les réunions s'allongent, les décisions attendent, les meilleurs éléments commencent à partir.</p>
+      <p>Thomas me contacte en décembre 2023 avec une phrase : « Je suis devenu le goulot de ma propre boîte. »</p>
+    </div>
+    <div class="ph" style="background-image:url(img/lea-cas.jpg)"></div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="head"><span class="label">02 · Ce que nous avons fait</span><h2>Trois chantiers, dans l'ordre.</h2></div>
+    <div class="offres">
+      <div class="offre"><div class="num">Janvier – Février</div><h3>Comprendre</h3><p>Dix-huit entretiens individuels, de la logistique au service client. Cartographie de qui décide quoi, et surtout de ce qui n'est décidé par personne.</p></div>
+      <div class="offre dark"><div class="num" style="color:var(--terra)">Mars – Mai</div><h3>Décider</h3><p>Création d'un comité de direction à cinq. Règles de délégation écrites : ce que chaque responsable décide seul, ce qui remonte, ce qui se discute. Recrutement d'une DAF et d'une DRH.</p></div>
+      <div class="offre"><div class="num">Juin – Septembre</div><h3>Ancrer</h3><p>Rituels hebdomadaires, tableau de bord à douze indicateurs, coaching individuel de Thomas sur la délégation. Je quitte le comité en septembre : il tourne sans moi.</p></div>
+    </div>
+  </div>
+</section>
+<section class="methode">
+  <div class="wrap">
+    <div class="head"><span class="label">03 · Ce qui a changé</span><h2>Dix-huit mois plus tard.</h2><p>Mesuré en avril 2026, avec l'équipe de direction.</p></div>
+    <div class="steps">
+      <div class="step"><b>1</b><h3>Le fondateur fait du fondateur</h3><p>Thomas consacre 60 % de son temps à la stratégie et aux partenariats, contre 15 % avant la mission.</p></div>
+      <div class="step"><b>2</b><h3>Les équipes décident</h3><p>Les décisions opérationnelles sont prises au niveau des responsables. Le délai moyen de décision est passé de 11 jours à 2.</p></div>
+      <div class="step"><b>3</b><h3>Les gens restent</h3><p>Turnover divisé par deux sur les postes clés. Deux anciens partis sont revenus.</p></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap temoignages">
+    <div class="temo big"><p>« Léa a mis des mots sur ce que je sentais depuis deux ans sans réussir à le formuler. Et surtout, elle est restée pour le mettre en place. Aujourd'hui je dirige une entreprise, plus un service après-vente géant. »</p><b>Thomas Berger</b><small>Fondateur, Vinatis</small></div>
+    <div class="temo"><p>Votre entreprise vit une situation proche ?</p><a href="lea-marchand.html#contact" class="btn btn-nuit">Réserver un diagnostic offert</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="logo"><i></i>Léa Marchand</div>
+      <div class="links"><a href="lea-marchand.html">Accompagnements</a><a href="lea-marchand.html">Méthode</a><a href="lea-marchand.html">Cas clients</a><a href="lea-marchand.html">Ressources</a><a href="lea-marchand.html">LinkedIn</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Léa Marchand Conseil — Bordeaux</span><span>Mentions légales · Confidentialité</span></div>
+  </div>
+</footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

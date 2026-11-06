@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — Atelier Bardou</title>
+<meta name="description" content="Atelier Bardou, menuisier-ébéniste à Bordeaux depuis 2009. Cuisines, dressings, escaliers et menuiseries sur mesure en Gironde. Devis gratuit sous 48 h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#F4EEE4; --sable:#E3D5C1; --bois:#A5693A; --bois-fonce:#7C4C27;
+  --charbon:#1E1B18; --mousse:#4B5A45; --gris:#6F6A63; --blanc:#FFFFFF;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;font-family:'Work Sans',sans-serif;color:var(--charbon);background:var(--creme);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Sora',sans-serif;line-height:1.1;letter-spacing:-0.02em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{width:min(1180px,92%);margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:600;font-size:15px;transition:.25s;cursor:pointer;border:2px solid transparent}
+.btn-primary{background:var(--bois);color:#fff}
+.btn-primary:hover{background:var(--bois-fonce)}
+.btn-ghost{border-color:var(--charbon);color:var(--charbon)}
+.btn-ghost:hover{background:var(--charbon);color:#fff}
+.tag{display:inline-block;font-family:'Sora',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bois);margin-bottom:14px}
+.ph{position:relative;overflow:hidden;background:
+  linear-gradient(135deg,#C99A6B 0%,#A5693A 55%,#7C4C27 100%);}
+.ph::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(100deg,rgba(255,255,255,.06) 0 6px,transparent 6px 22px),
+  radial-gradient(circle at 30% 20%,rgba(255,255,255,.22),transparent 45%)}
+.ph span{position:absolute;left:16px;bottom:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:600}
+.ph.alt{background:linear-gradient(160deg,#5C6B55 0%,#4B5A45 60%,#33402F 100%)}
+.ph.light{background:linear-gradient(160deg,#EFE3D0 0%,#DCC9AC 100%)}
+.ph.light span{color:var(--charbon)}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(244,238,228,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,27,24,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:12px;font-family:'Sora',sans-serif;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.logo i{width:38px;height:38px;border-radius:10px;background:var(--charbon);display:grid;place-items:center}
+.logo i svg{width:22px;height:22px}
+.menu{display:flex;gap:34px;font-weight:500;font-size:15px}
+.menu a{position:relative}
+.menu a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--bois);transition:.25s}
+.menu a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.phone{font-weight:600;font-size:15px}
+
+/* HERO */
+.hero{padding:80px 0 60px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(40px,5.2vw,66px);font-weight:800;margin:0 0 22px}
+.hero h1 em{font-style:normal;color:var(--bois)}
+.hero p{font-size:19px;color:var(--gris);max-width:520px;margin-bottom:32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.hero-badges{display:flex;gap:26px;flex-wrap:wrap;font-size:14px;font-weight:500}
+.hero-badges span{display:flex;align-items:center;gap:8px}
+.hero-badges b{color:var(--bois);font-size:18px}
+.hero-visual{position:relative}
+.hero-visual .ph{height:540px;border-radius:24px}
+.hero-card{position:absolute;left:-30px;bottom:40px;background:#fff;padding:18px 22px;border-radius:16px;box-shadow:0 20px 50px rgba(30,27,24,.18);display:flex;align-items:center;gap:14px}
+.hero-card .stars{color:#E0A33B;font-size:14px;letter-spacing:2px}
+.hero-card b{display:block;font-family:'Sora',sans-serif;font-size:16px}
+.hero-card small{color:var(--gris);font-size:13px}
+
+/* BAND */
+.band{background:var(--charbon);color:#fff;padding:26px 0}
+.band .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.band div{display:flex;align-items:center;gap:12px;font-size:15px}
+.band b{font-family:'Sora',sans-serif;font-size:26px;color:var(--sable)}
+
+/* SERVICES */
+section{padding:96px 0}
+.section-head{max-width:640px;margin-bottom:48px}
+.section-head h2{font-size:clamp(30px,3.6vw,44px);font-weight:700;margin-bottom:14px}
+.section-head p{color:var(--gris);font-size:17px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.service{background:#fff;border-radius:var(--radius);padding:28px;transition:.3s;border:1px solid rgba(30,27,24,.06)}
+.service:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(30,27,24,.12)}
+.service .ph{height:170px;border-radius:10px;margin-bottom:22px}
+.service h3{font-size:19px;margin-bottom:10px}
+.service p{font-size:15px;color:var(--gris);margin-bottom:16px}
+.service a{font-weight:600;color:var(--bois);font-size:14px}
+
+/* REALISATIONS */
+.realisations{background:var(--sable)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:260px;gap:18px}
+.gallery .ph{border-radius:12px}
+.gallery .ph:first-child{grid-column:span 2;grid-row:span 2}
+.gallery .ph:nth-child(4){grid-row:span 2}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step}
+.step{position:relative;padding-top:24px;border-top:2px solid rgba(30,27,24,.12)}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:'Sora',sans-serif;font-weight:800;font-size:40px;color:var(--bois);display:block;margin-bottom:12px}
+.step h3{font-size:19px;margin-bottom:8px}
+.step p{font-size:15px;color:var(--gris)}
+
+/* ABOUT */
+.about{background:var(--mousse);color:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about .tag{color:var(--sable)}
+.about h2{font-size:clamp(30px,3.4vw,42px);margin-bottom:20px}
+.about p{color:rgba(255,255,255,.82);font-size:17px;margin-bottom:18px}
+.about .ph{height:460px;border-radius:20px}
+.about ul{list-style:none;margin:26px 0 32px;display:grid;gap:12px}
+.about li{display:flex;gap:12px;align-items:center;font-weight:500}
+.about li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--sable);flex:none;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center/70% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center/70% no-repeat}
+.about .btn-primary{background:var(--sable);color:var(--charbon)}
+
+/* AVIS */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.review{background:#fff;border-radius:var(--radius);padding:30px;border:1px solid rgba(30,27,24,.06)}
+.review .stars{color:#E0A33B;letter-spacing:3px;margin-bottom:14px}
+.review p{font-size:16px;margin-bottom:20px}
+.review b{font-family:'Sora',sans-serif;font-size:15px;display:block}
+.review small{color:var(--gris)}
+
+/* ZONE */
+.zone{background:#fff}
+.zone-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.zone .ph{height:380px;border-radius:20px}
+.cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.cities span{padding:9px 16px;border:1px solid rgba(30,27,24,.15);border-radius:999px;font-size:14px;font-weight:500}
+
+/* CONTACT */
+.contact{background:var(--charbon);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.contact h2{font-size:clamp(30px,3.6vw,44px);margin-bottom:16px}
+.contact p{color:rgba(255,255,255,.75);font-size:17px;margin-bottom:28px}
+.contact-info{display:grid;gap:16px;font-size:16px}
+.contact-info b{color:var(--sable);display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-family:'Sora',sans-serif}
+form{background:#fff;border-radius:20px;padding:34px;color:var(--charbon);display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:13px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid rgba(30,27,24,.18);border-radius:10px;background:var(--creme);width:100%}
+textarea{min-height:110px;resize:vertical}
+form .btn{justify-content:center;margin-top:6px}
+form small{color:var(--gris);font-size:12px;text-align:center}
+
+footer{background:#15130F;color:rgba(255,255,255,.7);padding:50px 0 30px;font-size:14px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot h4{color:#fff;font-size:14px;margin-bottom:14px;letter-spacing:.06em}
+.foot a{display:block;margin-bottom:8px}
+.foot a:hover{color:#fff}
+.foot .logo{color:#fff;margin-bottom:12px}
+.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (max-width:900px){
+  .menu,.phone{display:none}
+  .hero-grid,.about-grid,.zone-grid,.contact-grid{grid-template-columns:1fr}
+  .services,.steps,.reviews{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  .hero-card{left:12px}
+}
+@media (max-width:600px){
+  .services,.steps,.reviews,.row,.gallery{grid-template-columns:1fr}
+  .gallery .ph:first-child,.gallery .ph:nth-child(4){grid-column:auto;grid-row:auto}
+  section{padding:64px 0}
+}
+.ph{background-size:cover;background-position:center}.ph::before{background:linear-gradient(0deg,rgba(30,27,24,.35),transparent 55%)!important}.ph>span:not(.new):not(.tag){display:none}
+@media (max-width:600px){nav{height:68px}.logo{font-size:16px}.logo i{width:32px;height:32px}nav .btn{padding:10px 14px;font-size:13px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+body{background-color:#F3ECE0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");background-blend-mode:multiply}
+.btn,.service,.review,form,input,select,textarea,.hero-card,.hero-visual .ph,.service .ph,.gallery .ph,.about .ph,.zone .ph,.cities span,.logo i{border-radius:0!important}
+.btn{border:2px solid var(--charbon);box-shadow:4px 4px 0 var(--charbon);font-family:'Sora',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--charbon)}
+.btn-ghost{background:#fff}
+.about .btn-primary{border-color:var(--charbon)}
+header{border-bottom:3px solid var(--charbon);background:#F3ECE0}
+.hero{background-image:repeating-linear-gradient(90deg,transparent 0 39px,rgba(30,27,24,.25) 39px 40px);background-size:40px 16px;background-repeat:repeat-x}
+.hero-visual .ph{border:3px solid var(--charbon);box-shadow:14px 14px 0 var(--bois)}
+.hero-card{border:2px solid var(--charbon);box-shadow:6px 6px 0 var(--charbon);left:-20px;bottom:-24px}
+.stamp{position:absolute;top:-22px;right:-16px;background:var(--mousse);color:#fff;font-family:'Sora',sans-serif;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:12px 16px;border:2px solid var(--charbon);box-shadow:4px 4px 0 var(--charbon);transform:rotate(6deg);z-index:2}
+.tag{background:var(--charbon);color:var(--sable);padding:5px 10px;display:inline-block;font-size:11px}
+.section-head h2{text-transform:uppercase;letter-spacing:-.03em;font-weight:800}
+.band{background:var(--sable);color:var(--charbon);border-top:3px solid var(--charbon);border-bottom:3px solid var(--charbon)}
+.band b{color:var(--bois)}
+.service{border:2px solid var(--charbon);box-shadow:6px 6px 0 var(--charbon);background:#FBF7F0}
+.service:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--charbon)}
+.service .ph{border:2px solid var(--charbon)}
+.gallery .ph{border:3px solid var(--charbon)}
+.realisations{background:var(--sable);border-top:3px solid var(--charbon);border-bottom:3px solid var(--charbon)}
+.step{border-top:3px solid var(--charbon)}
+.step::before{font-size:72px;color:transparent;-webkit-text-stroke:2px var(--charbon)}
+.about{background:var(--mousse)}
+.about .ph{border:3px solid var(--charbon);box-shadow:14px 14px 0 var(--charbon)}
+.review{border:2px solid var(--charbon);box-shadow:6px 6px 0 var(--charbon)}
+.review .stars{color:var(--bois)}
+.zone .ph{border:3px solid var(--charbon)}
+.cities span{border:2px solid var(--charbon);font-weight:600;background:#fff}
+form{border:3px solid var(--charbon);box-shadow:10px 10px 0 var(--bois)}
+input,select,textarea{border:2px solid var(--charbon);background:#fff}
+.contact{background:var(--charbon)}
+.ph{filter:saturate(.85) contrast(1.06)}
+@media (max-width:600px){.stamp{right:6px;top:-14px;font-size:10px;padding:9px 12px}}
+
+
+/* page intérieure */
+.legal{padding:70px 0 90px}.legal h1{font-size:clamp(32px,4vw,48px);margin:10px 0 30px}.legal h2{font-size:22px;margin:34px 0 10px}.legal p{max-width:720px;margin-bottom:12px;opacity:.85;font-size:15px}
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="atelier-bardou.html" class="logo"><i><svg viewBox="0 0 24 24" fill="none" stroke="#E3D5C1" stroke-width="2" stroke-linecap="round"><path d="M4 20 20 4M4 14l6 6M10 8l6 6"/></svg></i>Atelier Bardou</a>
+      <div class="menu">
+        <a href="atelier-bardou.html#savoir-faire">Savoir-faire</a>
+        <a href="atelier-bardou.html#realisations">Réalisations</a>
+        <a href="atelier-bardou.html#atelier">L'atelier</a>
+        <a href="atelier-bardou.html#avis">Avis</a>
+        <a href="atelier-bardou.html#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <span class="phone">05 56 00 12 34</span>
+        <a href="atelier-bardou.html#contact" class="btn btn-primary">Demander un devis</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="legal"><div class="wrap">
+  <span class="tag">Informations légales</span>
+  <h1>Mentions légales</h1>
+  <h2>Éditeur du site</h2>
+  <p>Atelier Bardou — SARL au capital de 20 000 €. Siège : 14 rue des Charpentiers, 33130 Bègles. Contact : contact@atelier-bardou.fr. SIRET : 000 000 000 00000. Directeur de la publication : le représentant légal de l'entreprise.</p>
+  <h2>Hébergement</h2>
+  <p>Le site est hébergé par [nom de l'hébergeur], [adresse de l'hébergeur]. Téléphone : [numéro].</p>
+  <h2>Propriété intellectuelle</h2>
+  <p>L'ensemble des contenus de ce site (textes, photographies, logos, charte graphique) est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p>
+  <h2>Données personnelles</h2>
+  <p>Les informations recueillies via les formulaires sont destinées uniquement à Atelier Bardou pour répondre à vos demandes. Elles ne sont ni vendues ni transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à contact@atelier-bardou.fr.</p>
+  <h2>Cookies</h2>
+  <p>Ce site n'utilise que des cookies techniques nécessaires à son fonctionnement. Aucun cookie publicitaire n'est déposé sans votre consentement.</p>
+  <h2>Crédits</h2>
+  <p>Conception et réalisation : Studio MOKOM. Photographies : Pexels et Atelier Bardou.</p>
+</div></section>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo"><i><svg viewBox="0 0 24 24" fill="none" stroke="#E3D5C1" stroke-width="2" stroke-linecap="round"><path d="M4 20 20 4M4 14l6 6M10 8l6 6"/></svg></i>Atelier Bardou</div>
+        <p>Menuisier-ébéniste à Bordeaux depuis 2009. Fabrication française, bois certifiés, pose garantie.</p>
+      </div>
+      <div><h4>SAVOIR-FAIRE</h4><a href="atelier-bardou-cuisines.html">Cuisines</a><a href="atelier-bardou.html">Dressings</a><a href="atelier-bardou.html">Escaliers</a><a href="atelier-bardou.html">Extérieur</a></div>
+      <div><h4>L'ATELIER</h4><a href="atelier-bardou.html">Notre histoire</a><a href="atelier-bardou.html">Réalisations</a><a href="atelier-bardou.html">Avis clients</a><a href="atelier-bardou.html">Recrutement</a></div>
+      <div><h4>CONTACT</h4><a href="atelier-bardou.html">05 56 00 12 34</a><a href="atelier-bardou.html">contact@atelier-bardou.fr</a><a href="atelier-bardou.html">14 rue des Charpentiers, Bègles</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Atelier Bardou — SIRET 000 000 000 00000</span><span><a href="atelier-bardou-mentions-legales.html">Mentions légales</a> · Politique de confidentialité</span></div>
+  </div>
+</footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

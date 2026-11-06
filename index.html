@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquettes personnalisables — Studio MOKOM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F4EF;--ink:#1B1A17;--muted:#77736A;--line:rgba(27,26,23,.1);--chrome:#ECEAE4;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92%);margin:0 auto}
+.top{padding:70px 0 36px}
+.top small{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.top h1{font-size:clamp(36px,5vw,64px);margin:12px 0 14px}
+.top p{color:var(--muted);max-width:640px;font-size:17px}
+
+/* bouton ordi / téléphone */
+.switch{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px;gap:2px}
+.switch button{font:inherit;font-size:13px;font-weight:600;border:0;background:transparent;padding:8px 14px;border-radius:999px;cursor:pointer;color:var(--muted);display:inline-flex;align-items:center;gap:7px;transition:.2s}
+.switch button svg{width:15px;height:15px}
+.switch button.on{background:var(--ink);color:#fff}
+.global{display:flex;align-items:center;gap:14px;margin-top:26px;font-size:14px;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;padding:20px 0 100px}
+.item{border-top:1px solid rgba(27,26,23,.18);padding:34px 0 48px}
+.item .num{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;margin-bottom:8px}
+.item h2{font-size:26px;margin:0 0 6px}
+.item p.desc{color:var(--muted);font-size:15px;margin-bottom:16px}
+.item .meta{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:14px;gap:12px}
+.item .bar-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:12px}
+.item .tags{display:flex;gap:6px;flex-wrap:wrap}
+.item .tags span{padding:4px 10px;border:1px solid var(--line);border-radius:999px;font-size:12px}
+.item .action{display:inline-block;padding:9px 16px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:600}
+.item .open{font-weight:600;border-bottom:1.5px solid var(--ink);white-space:nowrap;padding-bottom:2px}
+.pages{margin-top:14px;font-size:13.5px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}.pages b{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-right:6px}.pages a{border-bottom:1px solid rgba(27,26,23,.3)}.pages a:hover{border-color:var(--ink)}.pages i{font-style:normal;color:var(--muted)}
+.exname{font-size:13.5px;color:var(--muted);margin-top:14px}.exname b{color:var(--ink);font-weight:600}.exname i{font-style:italic}
+.switch.ex button.on{background:var(--ink)}
+.feats{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 18px}
+.feats summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:14px 0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:600}
+.feats summary::-webkit-details-marker{display:none}
+.feats summary::after{content:"+";font-size:20px;font-weight:400;color:var(--muted)}
+.feats[open] summary::after{content:"–"}
+.feats ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;font-size:13.5px;padding:0 0 16px}
+.feats li{padding-left:16px;position:relative}
+.feats li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--ink)}
+
+/* zone d'aperçu : contient soit le cadre navigateur, soit le cadre téléphone */
+.preview{min-height:460px;display:flex;align-items:flex-start;justify-content:center}
+.browser{width:100%;background:#fff;border-radius:14px;box-shadow:0 2px 0 rgba(27,26,23,.04),0 24px 60px rgba(27,26,23,.14);overflow:hidden;border:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--chrome);border-bottom:1px solid var(--line)}
+.dots{display:flex;gap:6px}
+.dots i{width:11px;height:11px;border-radius:50%}
+.dots i:nth-child(1){background:#F26B5B}.dots i:nth-child(2){background:#F5BE4F}.dots i:nth-child(3){background:#5FCB6B}
+.url{flex:1;background:#fff;border-radius:7px;padding:5px 12px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.url svg{width:11px;height:11px}
+.screen{position:relative;height:420px;overflow:hidden;background:#fff}
+.screen iframe{position:absolute;top:0;left:0;width:1280px;height:100%;border:0;transform-origin:0 0;background:#fff}
+
+.phone{width:300px;background:#111;border-radius:34px;padding:6px;box-shadow:0 0 0 1.5px #2a2a2a,0 30px 70px rgba(27,26,23,.25);position:relative;margin:10px 0}
+.phone::before{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:70px;height:18px;background:#111;border-radius:999px;z-index:2}
+.phone .screen{height:620px;border-radius:28px;background:#111}
+.phone .screen iframe{top:30px}
+.phone .screen iframe{width:390px}
+
+/* mode téléphone : on déplace l'iframe dans le cadre téléphone */
+.item.mobile .browser{display:none}
+.item:not(.mobile) .phone{display:none}
+
+@media (max-width:860px){.grid{grid-template-columns:1fr}.screen{height:360px}.feats ul{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="wrap top">
+  <small>Studio MOKOM — Maquettes personnalisables</small>
+  <h1>Onze thèmes, un site adapté à chaque activité.</h1>
+  <p>Chaque maquette est construite autour d'une action principale (demander un devis, réserver, venir en boutique…). Choisissez votre thème, on l'adapte à vos couleurs, vos photos et vos textes. Chaque site existe en version ordinateur et téléphone : utilisez le bouton pour basculer, puis faites défiler dans le cadre. Chaque thème est montré avec deux exemples de clients différents (Exemple A / Exemple B) pour voir la marge de personnalisation : même structure, autres couleurs, autres photos, autres textes. Les liens du menu fonctionnent dans le cadre.</p>
+  <div class="global"><span>Tout afficher en :</span>
+    <div class="switch" id="global-switch">
+      <button class="on" data-mode="desktop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Ordinateur</button>
+      <button data-mode="mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>Téléphone</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap grid" id="grid"></div>
+
+<script>
+var THEMES = [
+ {num:"01",alt:{name:"Delmas Électricité — électricien, Mérignac",file:"delmas-electricite.html",url:"delmas-electricite.fr"},exA:"Atelier Bardou — menuisier, Bègles",pages:[["Accueil","atelier-bardou.html"],["Cuisines sur mesure","atelier-bardou-cuisines.html"],["Mentions légales","atelier-bardou-mentions-legales.html"]],title:"Artisan & services à domicile",file:"atelier-bardou.html",url:"atelier-bardou.fr",action:"Demander un devis",fonts:"Sora + Work Sans",
+  desc:"Plombier, électricien, menuisier, peintre, jardinier, ménage…",
+  feats:["Formulaire de devis avec type de projet","Téléphone cliquable dans le menu","Bandeau de confiance (certifications, chiffres clés)","4 cartes de services","Galerie de réalisations","Déroulé du projet en 4 étapes","Avis clients","Zone d'intervention avec liste des villes (SEO local)"]},
+ {num:"02",alt:{name:"Boulangerie Lacoste — Arcachon",file:"boulangerie-lacoste.html",url:"boulangerie-lacoste.fr"},exA:"Maison Oriol — chocolatier, Bayonne",pages:[["Accueil","maison-oriol.html"],["Nos chocolats (boutique)","maison-oriol-boutique.html"],["Mentions légales","maison-oriol-mentions-legales.html"]],title:"Commerce de proximité",file:"maison-oriol.html",url:"maison-oriol.fr",action:"Venir en boutique",fonts:"Playfair + Jost",
+  desc:"Boulangerie, fleuriste, chocolatier, épicerie, caviste…",
+  feats:["Adresse, horaires et accès bien visibles","Bouton itinéraire","Click & collect et livraison mis en avant","Catégories de produits avec prix « dès »","Best-sellers avec bouton Ajouter","Histoire de la maison + chiffres","Ateliers / événements","Avis clients"]},
+ {num:"03",alt:{name:"Marcel Burger — food truck, Bordeaux",file:"marcel-burger.html",url:"marcelburger.fr"},exA:"La Cantine du Port — bistrot, La Rochelle",pages:[["Accueil","cantine-du-port.html"],["La carte complète","cantine-du-port-carte.html"],["Mentions légales","cantine-du-port-mentions-legales.html"]],title:"Restaurant, bar & food truck",file:"cantine-du-port.html",url:"cantineduport.fr",action:"Réserver une table",fonts:"Instrument Serif + Karla",
+  desc:"Restaurant, café, bar, traiteur…",
+  feats:["Horaires dès l'accueil, jour du moment surligné","Carte complète avec prix + menu du jour","Bandeau d'actualité défilant (arrivage, terrasse…)","Galerie ambiance","Présentation du chef / de l'équipe","Formulaire de réservation (date, heure, couverts)","Infos pratiques + itinéraire + carte à emporter","Avis Google / TripAdvisor"]},
+ {num:"04",alt:{name:"Costa Barbier — barbershop, Bordeaux",file:"costa-barbier.html",url:"costabarbier.fr"},exA:"Maison Louve — salon & institut, Anglet",pages:[["Accueil","maison-louve.html"],["Prestations & tarifs","maison-louve-tarifs.html"],["Mentions légales","maison-louve-mentions-legales.html"]],title:"Beauté & bien-être",file:"maison-louve.html",url:"maisonlouve.fr",action:"Réserver un créneau",fonts:"Libre Caslon + Mulish",
+  desc:"Coiffeur, esthétique, massage, onglerie, barbier, tatoueur…",
+  feats:["Bouton réservation en ligne (Planity, Treatwell…)","Bandeau offre de bienvenue","4 prestations avec prix « dès »","Grille de tarifs complète","Galerie de réalisations","Présentation de l'équipe","Horaires + sans rendez-vous","Avis clients"]},
+ {num:"05",alt:{name:"Maître Anaïs Verdier — avocate, Bordeaux",file:"anais-verdier-avocate.html",url:"verdier-avocate.fr"},exA:"Camille Roux — ostéopathe, Pessac",pages:[["Accueil","cabinet-roux.html"],["Ostéopathie du sportif","cabinet-roux-sportifs.html"],["Mentions légales","cabinet-roux-mentions-legales.html"]],title:"Praticien & profession libérale",file:"cabinet-roux.html",url:"camilleroux-osteo.fr",action:"Prendre rendez-vous",fonts:"Source Serif + Nunito Sans",
+  desc:"Ostéo, kiné, psy, sophrologue, naturopathe, avocat, comptable…",
+  feats:["Bouton Doctolib (ou formulaire) + téléphone","Section « Pour qui » par profil de patient","Approche et déroulé d'une séance","Tarifs + encart remboursement mutuelle","Questions fréquentes dépliantes","Diplômes et formations","Accès, PMR, parking, transports","Mentions légales / numéro professionnel"]},
+ {num:"06",alt:{name:"Karim Benali — formateur IA, Bordeaux",file:"karim-benali-formateur.html",url:"benali-formation.fr"},exA:"Léa Marchand — consultante, Bordeaux",pages:[["Accueil","lea-marchand.html"],["Cas client Vinatis","lea-marchand-cas-vinatis.html"],["Mentions légales","lea-marchand-mentions-legales.html"]],title:"Indépendant & expert",file:"lea-marchand.html",url:"leamarchand-conseil.fr",action:"Prendre contact",fonts:"DM Serif + DM Sans",
+  desc:"Consultant, formateur, freelance, coach professionnel…",
+  feats:["Formulaire de diagnostic / premier rendez-vous","Logos de clients","3 offres détaillées","Méthode en 3 étapes","Chiffres clés","Cas client avec résultats","Témoignages","Ressources / articles de blog"]},
+ {num:"07",alt:{name:"Studio Ananda — yoga & pilates, Bordeaux",file:"studio-ananda.html",url:"studio-ananda.fr"},exA:"ALTO Coaching — coach sportif, Bordeaux",pages:[["Accueil","alto-coaching.html"],["Formules & planning","alto-coaching-formules.html"],["Mentions légales","alto-coaching-mentions-legales.html"]],title:"Sport & cours",file:"alto-coaching.html",url:"alto-coaching.fr",action:"Réserver une séance",fonts:"Barlow Condensed + Manrope",
+  desc:"Coach sportif, yoga, pilates, danse, musique…",
+  feats:["Bouton « première séance offerte »","Formules de séances avec durée et prix","Planning de la semaine avec créneaux réservables","Portrait du coach + diplômes","Résultats avant / après","3 tarifs (séance, pack, mensuel)","Avis clients","Barre de navigation fixe sur téléphone"]},
+ {num:"08",alt:{name:"Camping Les Dunes — Lacanau-Océan",file:"camping-les-dunes.html",url:"camping-lesdunes.fr"},exA:"Maison Calmel — hôtel & spa, Saint-Émilion",pages:[["Accueil","maison-calmel.html"],["Suite Chartreuse","maison-calmel-suite-chartreuse.html"],["Mentions légales","maison-calmel-mentions-legales.html"]],title:"Hébergement & tourisme",file:"maison-calmel.html",url:"maisoncalmel.fr",action:"Réserver un séjour",fonts:"Bodoni Moda + Figtree",
+  desc:"Gîte, chambres d'hôtes, hôtel, camping…",
+  feats:["Moteur de réservation (dates, voyageurs)","Chambres avec surface, vue et prix","Sections spa et restaurant","Expériences / activités autour","Citation presse + logos","Accès détaillé (gare, aéroport, horaires d'arrivée)","Newsletter","Sélecteur de langue FR / EN"]},
+ {num:"09",alt:{name:"Nour Haddad — architecte d'intérieur, Bordeaux",file:"nour-haddad-interieur.html",url:"nourhaddad.fr"},exA:"Théo Lanvin — photographe, Bordeaux",pages:[["Accueil","theo-lanvin.html"],["Projet Marion & Hugo","theo-lanvin-projet-marion-hugo.html"],["Mentions légales","theo-lanvin-mentions-legales.html"]],title:"Portfolio créatif",file:"theo-lanvin.html",url:"theolanvin.fr",action:"Voir le travail",fonts:"Syne + Inter",
+  desc:"Photographe, graphiste, architecte d'intérieur, artiste…",
+  feats:["Galerie mosaïque plein écran","Légendes au survol des images","Filtres par catégorie","Services avec tarifs « dès »","À propos + références / publications","Témoignage client","Formulaire de contact avec type de projet et date","Liens Instagram / Behance"]},
+ {num:"10",alt:{name:"Terre & Feu — céramique, Saint-Émilion",file:"terre-et-feu.html",url:"terre-et-feu.fr"},exA:"ÉTALE — prêt-à-porter, Cap-Ferret",pages:[["Accueil","etale.html"],["Fiche produit Robe Étale","etale-robe-etale.html"],["Mentions légales","etale-mentions-legales.html"]],title:"Petite boutique en ligne",file:"etale.html",url:"etale.fr",action:"Acheter",fonts:"Cormorant + Instrument Sans",
+  desc:"Créateurs, prêt-à-porter, objets…",
+  feats:["Bandeau livraison / retours","Menu boutique, recherche, compte, panier","Grille produits avec prix et badge Nouveauté","Bandeau matières défilant","Manifeste de marque","Section matières","Bloc éditorial + citation cliente","Newsletter"]},
+ {num:"11",alt:{name:"Garage Martin — mécanique, Libourne",file:"garage-martin.html",url:"garage-martin-libourne.fr"},exA:"Atelier Pivoine — fleuriste, Libourne",pages:[["Accueil","atelier-pivoine.html"],["Mentions légales","atelier-pivoine-mentions-legales.html"]],title:"Site carte de visite (1 page)",file:"atelier-pivoine.html",url:"atelier-pivoine.fr",action:"Contacter / venir",fonts:"Lora + Nunito",
+  desc:"L'essentiel pour n'importe quelle activité : qui, quoi, où, comment me joindre.",
+  feats:["Pastille « ouvert aujourd'hui » + horaires","3 services en cartes","Galerie 3 photos","Portrait et présentation","Avis clients","Contact complet (adresse, téléphone, email, horaires)","Emplacement carte Google Maps","Boutons Appeler / Itinéraire"]}
+];
+
+var ICON_LOCK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>';
+var ICON_DESK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>';
+var ICON_MOB='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>';
+
+var grid=document.getElementById('grid');
+THEMES.forEach(function(t){
+  var el=document.createElement('div'); el.className='item';
+  el.innerHTML=
+   '<span class="num">Thème '+t.num+'</span><h2>'+t.title+'</h2><p class="desc">'+t.desc+'</p>'+
+   '<div class="bar-top"><div class="switch ex"><button class="on" data-ex="a">Exemple A</button><button data-ex="b">Exemple B</button></div><div class="switch"><button class="on" data-mode="desktop">'+ICON_DESK+'Ordinateur</button><button data-mode="mobile">'+ICON_MOB+'Téléphone</button></div></div>'+
+   '<div class="preview">'+
+     '<div class="browser"><div class="bar"><div class="dots"><i></i><i></i><i></i></div><div class="url">'+ICON_LOCK+t.url+'</div></div><div class="screen"></div></div>'+
+     '<div class="phone"><div class="screen"></div></div>'+
+   '</div>'+
+   '<p class="exname"><b>Exemple A :</b> '+t.exA+'</p>'+
+   '<div class="meta"><span class="action">'+t.action+'</span><a class="open" href="'+t.file+'" target="_blank">Ouvrir la maquette ↗</a></div>'+
+   '<div class="pages"><b>Pages</b>'+t.pages.map(function(p){return '<a href="'+p[1]+'" target="_blank">'+p[0]+'</a>'}).join('<i>·</i>')+'</div>'+
+   '<details class="feats"><summary>Fonctionnalités intégrées</summary><ul>'+t.feats.map(function(f){return '<li>'+f+'</li>'}).join('')+'</ul></details>';
+  var iframe=document.createElement('iframe'); iframe.src=t.file; iframe.title=t.title;
+  el.querySelector('.browser .screen').appendChild(iframe);
+  el.querySelectorAll('.switch button[data-mode]').forEach(function(b){
+    b.addEventListener('click',function(){ setMode(el,b.dataset.mode); });
+  });
+  el.querySelectorAll('.switch.ex button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var ex=b.dataset.ex, f=el.querySelector('iframe');
+      var file = ex==='b' ? t.alt.file : t.file, url = ex==='b' ? t.alt.url : t.url;
+      f.src=file; el.querySelector('.url').lastChild.textContent=url;
+      el.querySelector('.open').href=file;
+      el.querySelector('.exname').innerHTML = ex==='b' ? '<b>Exemple B :</b> '+t.alt.name+' <i>(page d\'accueil)</i>' : '<b>Exemple A :</b> '+t.exA;
+      el.querySelectorAll('.switch.ex button').forEach(function(x){x.classList.toggle('on',x===b)});
+    });
+  });
+  grid.appendChild(el);
+});
+
+// Bascule un cadre : on déplace la même page (iframe) du cadre ordinateur au cadre téléphone.
+function setMode(el,mode){
+  var iframe=el.querySelector('iframe');
+  var target=el.querySelector(mode==='mobile'?'.phone .screen':'.browser .screen');
+  if(iframe.parentNode!==target){ target.appendChild(iframe); }
+  el.classList.toggle('mobile',mode==='mobile');
+  el.querySelectorAll('.switch button').forEach(function(b){ b.classList.toggle('on',b.dataset.mode===mode); });
+  fit();
+}
+document.querySelectorAll('#global-switch button').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('#global-switch button').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('.item').forEach(function(el){ setMode(el,b.dataset.mode); });
+  });
+});
+
+// Réduit la page (1280 px en mode ordinateur, 390 px en mode téléphone) pour qu'elle tienne dans son cadre.
+function fit(){
+  document.querySelectorAll('.screen').forEach(function(s){
+    var f=s.querySelector('iframe'); if(!f) return;
+    var phone = !!s.closest('.phone');
+    var base = phone ? 390 : 1280;
+    var scale = s.clientWidth / base;
+    f.style.width = base+'px';
+    f.style.transform = 'scale(' + scale + ')';
+    f.style.height = ((s.clientHeight - (phone ? 30 : 0)) / scale) + 'px';
+  });
+}
+window.addEventListener('load', fit);
+window.addEventListener('resize', fit);
+fit();
+</script>
+</body>
+</html>

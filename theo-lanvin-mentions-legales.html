@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — Théo Lanvin</title>
+<meta name="description" content="Théo Lanvin, photographe à Bordeaux. Portraits, mariages, architecture et reportages. Disponible en Nouvelle-Aquitaine et au-delà.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0B0B0B;--noir2:#151515;--blanc:#F2F2F2;--gris:#8C8C8C;--ligne:rgba(242,242,242,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;font-family:'Inter',sans-serif;background:var(--noir);color:var(--blanc);line-height:1.6;font-size:15px;font-weight:300;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Syne',sans-serif;font-weight:800;line-height:.95;letter-spacing:-.03em;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1400px,94%);margin:0 auto}
+.label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gris);font-weight:500;display:block;margin-bottom:16px}
+.btn{display:inline-block;padding:14px 26px;border:1px solid var(--blanc);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;transition:.25s}
+.btn:hover{background:var(--blanc);color:var(--noir)}
+.ph{position:relative;overflow:hidden;background:var(--noir2) center/cover no-repeat;transition:.5s}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,11,.55),transparent 50%);opacity:0;transition:.4s}
+.ph:hover::after{opacity:1}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;mix-blend-mode:difference}
+nav{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;text-transform:uppercase}
+.menu{display:flex;gap:30px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+
+.hero{min-height:100vh;display:flex;align-items:flex-end;padding:140px 0 60px}.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;align-items:end;gap:40px}
+.hero h1{font-size:clamp(48px,7.2vw,104px)}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1px var(--blanc)}
+.hero .side{padding-bottom:16px}
+.hero .side p{font-size:17px;max-width:420px;color:var(--gris);margin-bottom:28px}
+.hero .side .ph{aspect-ratio:4/5;max-width:360px;margin-bottom:30px}
+.hero .side .ph::after{display:none}
+
+.marq{border-top:1px solid var(--ligne);border-bottom:1px solid var(--ligne);padding:16px 0;overflow:hidden;white-space:nowrap;max-width:100vw}
+.marq div{display:inline-block;animation:m 32s linear infinite}
+.marq span{font-family:'Syne',sans-serif;font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase;margin:0 36px}
+@keyframes m{to{transform:translateX(-50%)}}
+
+section{padding:100px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px}
+.head h2{font-size:clamp(36px,5vw,72px)}
+.head p{color:var(--gris);max-width:360px}
+
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.filters a{padding:9px 16px;border:1px solid var(--ligne);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.filters a.on{background:var(--blanc);color:var(--noir);border-color:var(--blanc)}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:300px;gap:12px;grid-auto-flow:dense}
+.grid .ph:nth-child(1){grid-column:span 2;grid-row:span 2}
+.grid .ph:nth-child(4){grid-row:span 2}
+.grid .ph:nth-child(7){grid-column:span 2}
+.grid .ph:nth-child(10){grid-row:span 2}
+.grid .ph .cap{position:absolute;left:18px;bottom:16px;z-index:1;font-family:'Syne',sans-serif;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.06em;opacity:0;transform:translateY(8px);transition:.4s}
+.grid .ph .cap small{display:block;font-family:'Inter',sans-serif;font-weight:300;font-size:11px;color:var(--gris);text-transform:none;letter-spacing:0}
+.grid .ph:hover .cap{opacity:1;transform:none}
+
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ligne);border:1px solid var(--ligne)}
+.svc{background:var(--noir);padding:34px 28px}
+.svc b{font-family:'Syne',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--gris);display:block;margin-bottom:22px;font-weight:600}
+.svc h3{font-size:26px;margin-bottom:12px}
+.svc p{color:var(--gris);font-size:14px;margin-bottom:18px}
+.svc em{font-style:normal;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about .ph{aspect-ratio:4/5}
+.about .ph::after{display:none}
+.about h2{font-size:clamp(36px,4.6vw,64px);margin-bottom:22px}
+.about p{color:var(--gris);font-size:16px;margin-bottom:14px}
+.about .refs{display:flex;flex-wrap:wrap;gap:8px 26px;margin:26px 0 30px;font-family:'Syne',sans-serif;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+
+.temo{border-top:1px solid var(--ligne);border-bottom:1px solid var(--ligne);text-align:center}
+.temo p{font-family:'Syne',sans-serif;font-weight:400;font-size:clamp(22px,2.8vw,34px);line-height:1.3;max-width:860px;margin:0 auto 22px;text-transform:none;letter-spacing:-.01em}
+.temo small{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gris)}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact h2{font-size:clamp(44px,6vw,96px);margin-bottom:22px}
+.contact p{color:var(--gris);margin-bottom:26px;max-width:420px}
+.contact .big{font-family:'Syne',sans-serif;font-weight:600;font-size:clamp(18px,2.2vw,28px);display:block;margin-bottom:8px;border-bottom:1px solid var(--blanc);padding-bottom:6px;width:fit-content}
+form{display:grid;gap:18px}
+label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gris);display:grid;gap:8px;font-weight:500}
+input,select,textarea{font:inherit;color:var(--blanc);background:transparent;border:0;border-bottom:1px solid var(--ligne);padding:12px 0;width:100%;outline:0;font-weight:300}
+input:focus,textarea:focus{border-color:var(--blanc)}
+textarea{min-height:100px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form .btn{justify-self:start;background:transparent;cursor:pointer;font-family:inherit;color:var(--blanc)}
+
+footer{padding:40px 0 30px;border-top:1px solid var(--ligne);font-size:12px;color:var(--gris)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.foot .links{display:flex;gap:22px;letter-spacing:.14em;text-transform:uppercase}
+
+@media (max-width:900px){
+  .menu{display:none}
+  .hero .wrap,.about,.contact{grid-template-columns:1fr}
+  .hero{padding-top:110px}
+  .grid{grid-template-columns:1fr 1fr;grid-auto-rows:240px}
+  .grid .ph{grid-column:auto!important;grid-row:auto!important}
+  .services{grid-template-columns:1fr 1fr}
+  .head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:600px){.grid,.services,.row{grid-template-columns:1fr}section{padding:64px 0}.hero h1{font-size:44px}.svc{min-width:0}.contact h2{font-size:40px}.about>*,.contact>*{min-width:0}.about h2{font-size:34px;overflow-wrap:anywhere}}
+@media (max-width:600px){nav{height:64px}.logo{font-size:15px}nav .btn{padding:8px 12px!important;font-size:10px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+body::after{content:"";position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");opacity:.18;pointer-events:none;z-index:999;mix-blend-mode:overlay}
+.grid .ph{filter:grayscale(1) contrast(1.08);transition:.5s}
+.grid .ph:hover{filter:none}
+.hero .side .ph{filter:grayscale(1) contrast(1.1)}
+.svc b{font-size:54px;color:transparent;-webkit-text-stroke:1px var(--gris);letter-spacing:0;font-weight:800;margin-bottom:14px}
+.filters a{border-radius:0}
+.head h2{position:relative}
+.about .ph{filter:grayscale(1);outline:1px solid var(--ligne);outline-offset:12px}
+.marq span{font-style:italic}
+.temo p{font-style:italic;font-weight:400}
+
+
+/* page intérieure */
+.legal{padding:70px 0 90px}.legal h1{font-size:clamp(32px,4vw,48px);margin:10px 0 30px}.legal h2{font-size:22px;margin:34px 0 10px}.legal p{max-width:720px;margin-bottom:12px;opacity:.85;font-size:15px}
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="theo-lanvin.html" class="logo">Théo Lanvin</a>
+      <div class="menu"><a href="theo-lanvin.html#travaux">Travaux</a><a href="theo-lanvin.html#services">Services</a><a href="theo-lanvin.html#apropos">À propos</a><a href="theo-lanvin.html#contact">Contact</a></div>
+      <a href="theo-lanvin.html#contact" class="btn" style="padding:10px 18px">Me contacter</a>
+    </nav>
+  </div>
+</header>
+
+<section class="legal"><div class="wrap">
+  <span class="label">Informations légales</span>
+  <h1>Mentions légales</h1>
+  <h2>Éditeur du site</h2>
+  <p>Théo Lanvin — Entreprise individuelle — photographe auteur. Siège : Bordeaux. Contact : hello@theolanvin.fr. SIRET : 000 000 000 00000. Directeur de la publication : le représentant légal de l'entreprise.</p>
+  <h2>Hébergement</h2>
+  <p>Le site est hébergé par [nom de l'hébergeur], [adresse de l'hébergeur]. Téléphone : [numéro].</p>
+  <h2>Propriété intellectuelle</h2>
+  <p>L'ensemble des contenus de ce site (textes, photographies, logos, charte graphique) est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p>
+  <h2>Données personnelles</h2>
+  <p>Les informations recueillies via les formulaires sont destinées uniquement à Théo Lanvin pour répondre à vos demandes. Elles ne sont ni vendues ni transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à hello@theolanvin.fr.</p>
+  <h2>Cookies</h2>
+  <p>Ce site n'utilise que des cookies techniques nécessaires à son fonctionnement. Aucun cookie publicitaire n'est déposé sans votre consentement.</p>
+  <h2>Crédits</h2>
+  <p>Conception et réalisation : Studio MOKOM. Photographies : Pexels et Théo Lanvin.</p>
+</div></section>
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Théo Lanvin — Photographe, Bordeaux</span>
+    <div class="links"><a href="theo-lanvin.html">Instagram</a><a href="theo-lanvin.html">Behance</a><a href="theo-lanvin-mentions-legales.html">Mentions légales</a></div>
+  </div>
+</footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

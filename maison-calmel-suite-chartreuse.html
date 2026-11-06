@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suite Chartreuse — Maison Calmel, Saint-Émilion</title>
+<meta name="description" content="Maison Calmel, hôtel 5 étoiles et spa au cœur des vignes de Saint-Émilion. 14 chambres et suites, table gastronomique, cave et expériences œnologiques.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Figtree:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#161512;--nuit2:#201F1B;--champagne:#C8A86B;--ivoire:#F1ECE3;--pierre:#D8CFC0;--cypres:#2F3A33;--gris:#8C877C}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;font-family:'Figtree',sans-serif;font-weight:300;background:var(--ivoire);color:var(--nuit);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Bodoni Moda',serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1280px,92%);margin:0 auto}
+.label{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--champagne);font-weight:500;display:block;margin-bottom:18px}
+.btn{display:inline-block;padding:16px 34px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;transition:.35s;border:1px solid transparent}
+.btn-gold{background:var(--champagne);color:var(--nuit)}
+.btn-gold:hover{background:var(--ivoire)}
+.btn-line{border-color:var(--nuit);color:var(--nuit)}
+.btn-line:hover{background:var(--nuit);color:var(--ivoire)}
+.btn-line.light{border-color:rgba(241,236,227,.6);color:var(--ivoire)}
+.btn-line.light:hover{background:var(--ivoire);color:var(--nuit)}
+.ph{position:relative;overflow:hidden;background:linear-gradient(165deg,#4A5A50 0%,#2F3A33 55%,#1B2220 100%)}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 60% 0%,rgba(200,168,107,.4),transparent 55%),linear-gradient(0deg,rgba(22,21,18,.55),transparent 50%)}
+.ph span{position:absolute;left:18px;bottom:16px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(241,236,227,.75);z-index:1}
+.ph.gold{background:linear-gradient(165deg,#E0C48F 0%,#C8A86B 55%,#9C7F47 100%)}
+.ph.stone{background:linear-gradient(165deg,#E6DED0 0%,#D8CFC0 55%,#BDB2A0 100%)}
+.ph.stone span{color:var(--nuit)}
+.ph.night{background:linear-gradient(165deg,#3A3934 0%,#201F1B 55%,#161512 100%)}
+
+header{position:absolute;top:0;left:0;right:0;z-index:50;color:var(--ivoire)}
+nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:96px}
+.menu{display:flex;gap:34px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+.logo{text-align:center;font-family:'Bodoni Moda',serif;font-size:28px;letter-spacing:.2em;text-transform:uppercase}
+.logo small{display:block;font-family:'Figtree',sans-serif;font-size:9px;letter-spacing:.4em;margin-top:2px;color:var(--champagne)}
+.right{display:flex;justify-content:flex-end;align-items:center;gap:26px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+.right .btn{padding:12px 22px}
+
+.hero{position:relative;height:100vh;min-height:720px;display:flex;align-items:flex-end;color:var(--ivoire)}
+.hero .ph{position:absolute;inset:0}
+.hero .ph::after{background:linear-gradient(0deg,rgba(22,21,18,.9) 0%,rgba(22,21,18,.25) 50%,rgba(22,21,18,.35) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:90px;display:grid;grid-template-columns:1.2fr .8fr;align-items:end;gap:40px}
+.hero h1{font-size:clamp(50px,6.4vw,96px);margin-bottom:22px}
+.hero h1 i{font-style:italic;font-weight:400}
+.hero p{font-size:17px;color:rgba(241,236,227,.8);max-width:480px}
+.booking{background:rgba(241,236,227,.96);color:var(--nuit);padding:28px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:14px;align-items:end}
+.booking label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gris);display:grid;gap:6px;font-weight:500}
+.booking input,.booking select{font:inherit;border:0;border-bottom:1px solid var(--pierre);background:transparent;padding:8px 0;font-size:14px;width:100%}
+.booking .btn{padding:14px 22px}
+
+section{padding:120px 0}
+.intro{text-align:center}
+.intro .inner{max-width:780px;margin:0 auto}
+.intro h2{font-size:clamp(34px,3.8vw,56px);margin-bottom:24px}
+.intro h2 i{font-style:italic}
+.intro p{font-size:17px;color:#5C574D;max-width:600px;margin:0 auto 32px}
+.intro .marks{display:flex;justify-content:center;gap:30px 50px;flex-wrap:wrap;margin-top:40px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gris)}
+.intro .marks b{display:block;font-family:'Bodoni Moda',serif;font-size:30px;color:var(--nuit);letter-spacing:0;text-transform:none;margin-bottom:4px}
+
+.chambres{background:var(--nuit);color:var(--ivoire)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px}
+.head h2{font-size:clamp(34px,3.8vw,56px)}
+.head p{max-width:400px;color:var(--gris);font-size:15px}
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.room .ph{aspect-ratio:4/5;margin-bottom:22px;transition:.6s}
+.room:hover .ph{transform:scale(1.02)}
+.room h3{font-size:30px;margin-bottom:8px}
+.room p{color:var(--gris);font-size:14px;margin-bottom:12px}
+.room .meta{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.room .meta b{color:var(--champagne);font-weight:500}
+
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:720px}
+.split .ph{min-height:720px}
+.split .txt{display:flex;flex-direction:column;justify-content:center;padding:100px 10%}
+.split h2{font-size:clamp(34px,3.6vw,54px);margin-bottom:22px}
+.split h2 i{font-style:italic}
+.split p{color:#5C574D;font-size:16px;margin-bottom:16px}
+.split .btn{margin-top:20px;align-self:flex-start}
+.split.rev .ph{order:2}
+.split.cypres{background:var(--cypres);color:var(--ivoire)}
+.split.cypres p{color:rgba(241,236,227,.75)}
+
+.exp{background:var(--pierre)}
+.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.exp-card{display:block;position:relative}
+.exp-card .ph{aspect-ratio:3/4}
+.exp-card .over{position:absolute;left:0;right:0;bottom:0;padding:26px;color:var(--ivoire);z-index:2}
+.exp-card .over small{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--champagne)}
+.exp-card .over h3{font-size:26px;margin-top:6px}
+
+.quote{text-align:center}
+.quote p{font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(28px,3.4vw,46px);max-width:900px;margin:0 auto 26px;line-height:1.3}
+.quote small{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris)}
+
+.presse{border-top:1px solid var(--pierre);border-bottom:1px solid var(--pierre);padding:34px 0}
+.presse .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px}
+.presse b{font-family:'Bodoni Moda',serif;font-size:22px;font-weight:400;opacity:.6;letter-spacing:.06em}
+
+.acces{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.acces .ph{aspect-ratio:5/4}
+.acces h2{font-size:clamp(32px,3.4vw,48px);margin-bottom:20px}
+.acces dl{display:grid;grid-template-columns:1fr 1fr;gap:22px 30px;margin:26px 0 32px}
+.acces dt{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--champagne);font-weight:500;margin-bottom:6px}
+.acces dd{font-size:15px}
+
+footer{background:var(--nuit);color:rgba(241,236,227,.7);padding:90px 0 36px;font-size:14px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:50px;margin-bottom:60px}
+.foot .logo{text-align:left;color:var(--ivoire);margin-bottom:16px}
+.foot .logo small{text-align:left}
+.foot h4{font-family:'Figtree',sans-serif;font-weight:500;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--champagne);margin-bottom:18px}
+.foot a{display:block;margin-bottom:10px}
+.foot a:hover{color:var(--ivoire)}
+.foot form{display:flex;border-bottom:1px solid rgba(241,236,227,.3);margin-top:8px}
+.foot input{flex:1;background:transparent;border:0;color:var(--ivoire);font:inherit;padding:10px 0;outline:0}
+.foot button{background:transparent;border:0;color:var(--champagne);font:inherit;font-size:10px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
+.copy{border-top:1px solid rgba(241,236,227,.12);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:11px;letter-spacing:.1em}
+
+@media (max-width:900px){
+  .menu,.right span{display:none}
+  nav{grid-template-columns:1fr auto}
+  .hero .wrap{grid-template-columns:1fr}
+  .booking{grid-template-columns:1fr 1fr}
+  .rooms,.exp-grid{grid-template-columns:1fr 1fr}
+  .split,.acces{grid-template-columns:1fr}
+  .split .ph{min-height:420px;order:0!important}
+  .split .txt{padding:70px 8%}
+  .foot{grid-template-columns:1fr 1fr}
+  .head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:600px){.rooms,.exp-grid,.booking,.acces dl,.foot{grid-template-columns:1fr}section{padding:72px 0}.hero{min-height:620px}}
+.ph{background-size:cover;background-position:center}.ph::after{background:linear-gradient(0deg,rgba(22,21,18,.45),transparent 55%)!important}.hero .ph::after{background:linear-gradient(0deg,rgba(22,21,18,.9) 0%,rgba(22,21,18,.25) 50%,rgba(22,21,18,.4) 100%)!important}.ph>span:not(.new):not(.tag){display:none}
+@media (max-width:600px){nav{height:76px}.logo{font-size:22px}.logo small{font-size:8px}.right .btn{padding:10px 14px;font-size:10px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+.rooms .ph,.split .ph,.exp-card .ph,.acces .ph,.hero .ph{outline:1px solid rgba(200,168,107,.6);outline-offset:-16px}
+.hero .ph{outline-offset:-28px}
+.intro .label::before,.intro .label::after,.quote .label::before,.ateliers .label::after{content:"";display:inline-block;width:30px;height:1px;background:var(--champagne);vertical-align:middle;margin:0 12px}
+.intro .marks b{font-style:italic}
+.head p{font-style:italic}
+.room h3,.split h2,.exp-card .over h3{font-weight:400}
+.room .meta b{border-bottom:1px solid var(--champagne);padding-bottom:3px}
+.btn{letter-spacing:.32em;font-size:10px}
+.quote p{font-size:clamp(30px,3.8vw,54px);font-weight:400}
+.presse b{font-style:italic}
+.exp-card .over{padding:30px;border-left:1px solid rgba(200,168,107,.6);margin:0 0 20px 20px}
+footer .logo{font-size:34px}
+.booking{outline:1px solid var(--champagne);outline-offset:-8px}
+
+
+/* page intérieure */
+
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="menu"><a href="maison-calmel.html#chambres">Chambres</a><a href="maison-calmel.html#spa">Spa</a><a href="maison-calmel.html#table">La table</a><a href="maison-calmel.html#experiences">Expériences</a></div>
+      <a href="maison-calmel.html" class="logo">Calmel<small>Saint-Émilion</small></a>
+      <div class="right"><span>FR / EN</span><a href="maison-calmel.html" class="btn btn-line light">Réserver</a></div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="min-height:70vh">
+  <div class="ph" style="background-image:url(img/calmel-r3.jpg)"></div>
+  <div class="wrap" style="grid-template-columns:1fr">
+    <div><span class="label">Chambres & suites ····· 62 m²</span><h1 style="font-size:clamp(44px,6vw,86px)">Suite <i>Chartreuse.</i></h1><p>Au premier étage de la chartreuse, la suite ouvre sur 180° de vignes. Un salon avec cheminée, une chambre sous les poutres, une salle de bain en pierre blonde.</p></div>
+  </div>
+</section>
+<section class="intro">
+  <div class="wrap inner">
+    <span class="label">La suite</span>
+    <h2>Le silence, la cheminée, <i>les vignes</i> jusqu'à l'horizon.</h2>
+    <p>Lit king size en lin lavé, baignoire îlot face aux ceps, douche à l'italienne, dressing, bureau d'écriture. Petit déjeuner servi dans la suite sur demande.</p>
+    <div class="marks"><div><b>62 m²</b>salon & chambre</div><div><b>180°</b>vue vignoble</div><div><b>2 + 1</b>adultes + enfant</div><div><b>1<sup>er</sup></b>étage, ascenseur</div></div>
+  </div>
+</section>
+<section class="chambres" style="padding-top:0">
+  <div class="wrap">
+    <div class="rooms">
+      <div class="room"><div class="ph" style="background-image:url(img/calmel-r1.jpg)"></div><h3>Le salon</h3><p>Cheminée en pierre, canapé en velours, cave à vin privée garnie de la propriété.</p></div>
+      <div class="room"><div class="ph" style="background-image:url(img/calmel-r2.jpg)"></div><h3>La chambre</h3><p>Sous les poutres d'origine. Literie Treca, lin lavé, oreillers au choix.</p></div>
+      <div class="room"><div class="ph" style="background-image:url(img/calmel-spa.jpg)"></div><h3>La salle de bain</h3><p>Pierre de Frontenac, baignoire îlot, produits de bain Officine Universelle Buly.</p></div>
+    </div>
+  </div>
+</section>
+<section class="split cypres" style="padding:0">
+  <div class="ph" style="background-image:url(img/calmel-hero.jpg);background-position:center 35%"></div>
+  <div class="txt">
+    <span class="label">Tarifs & réservation</span>
+    <h2>Selon <i>la saison.</i></h2>
+    <p>Basse saison (nov. – mars) : 690 € la nuit · Moyenne saison (avril – juin, sept. – oct.) : 790 € · Haute saison (juillet – août, vendanges) : 890 €.</p>
+    <p>Petit déjeuner, accès au spa et parking inclus. Séjour minimum de deux nuits les week-ends et en haute saison. Annulation gratuite jusqu'à 7 jours avant l'arrivée.</p>
+    <a href="maison-calmel.html#" class="btn btn-line light">Vérifier les disponibilités</a>
+  </div>
+</section>
+<section class="quote">
+  <div class="wrap"><p>« Nous avons regardé la brume se lever sur les vignes depuis la baignoire. Je ne sais pas comment on fait pour redescendre après ça. »</p><small>Claire & Antoine — Suite Chartreuse, octobre 2026</small></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="logo">Calmel<small>Saint-Émilion</small></div><p>Hôtel & Spa cinq étoiles, table étoilée, au cœur du vignoble de Saint-Émilion. Membre Relais & Châteaux.</p></div>
+      <div><h4>La maison</h4><a href="maison-calmel.html">Chambres & suites</a><a href="maison-calmel.html">Le spa</a><a href="maison-calmel.html">La table</a><a href="maison-calmel.html">Expériences</a></div>
+      <div><h4>Informations</h4><a href="maison-calmel.html">Venir</a><a href="maison-calmel.html">Événements privés</a><a href="maison-calmel.html">Cartes cadeaux</a><a href="maison-calmel.html">Presse</a></div>
+      <div><h4>Lettres de la maison</h4><p>Les saisons, les vendanges, les dates d'ouverture.</p><form onsubmit="event.preventDefault()"><input placeholder="Votre e-mail"><button>S'inscrire</button></form></div>
+    </div>
+    <div class="copy"><span>© 2026 Maison Calmel — Saint-Émilion</span><span>Mentions légales · Confidentialité · CGV</span></div>
+  </div>
+</footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

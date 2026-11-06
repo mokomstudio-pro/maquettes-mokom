@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour beauté & bien-être</title>
+<meta name="description" content="Maison Louve, salon de coiffure et institut à Anglet. Coupe, couleur, soins visage, onglerie. Réservation en ligne 24 h/24.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Mulish:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+:root{--poudre:#EBD9D2;--terra:#B9705A;--creme:#FAF6F2;--noir:#26211F;--sable:#E9DFD5;--gris:#8A7F78}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Mulish',sans-serif;background:var(--creme);color:var(--noir);line-height:1.65;font-size:16px;font-weight:300;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Libre Caslon Display',serif;font-weight:400;line-height:1.05}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,92%);margin:0 auto}
+.label{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--terra);font-weight:700;display:block;margin-bottom:14px}
+.btn{display:inline-block;padding:15px 30px;border-radius:999px;font-weight:600;font-size:14px;letter-spacing:.04em;transition:.25s;border:1px solid transparent}
+.btn-noir{background:var(--noir);color:#fff}
+.btn-noir:hover{background:var(--terra)}
+.btn-line{border-color:var(--noir);color:var(--noir)}
+.btn-line:hover{background:var(--noir);color:#fff}
+.ph{position:relative;overflow:hidden;background:var(--sable) center/cover no-repeat}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(38,33,31,.25),transparent 55%)}
+
+.topbar{background:var(--noir);color:#fff;text-align:center;font-size:12px;letter-spacing:.1em;padding:9px 0}
+.topbar b{color:var(--poudre)}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,242,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(38,33,31,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{font-family:'Libre Caslon Display',serif;font-size:26px;letter-spacing:.08em;text-transform:uppercase}
+.logo small{display:block;font-family:'Mulish',sans-serif;font-size:9px;letter-spacing:.34em;color:var(--terra);font-weight:700;margin-top:-2px}
+.menu{display:flex;gap:30px;font-size:14px;font-weight:600}
+.menu a:hover{color:var(--terra)}
+
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:640px}
+.hero .ph{min-height:640px}
+.hero .ph::after{background:none}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:80px 8% 80px 0}
+.hero h1{font-size:clamp(46px,5.4vw,78px);margin-bottom:22px}
+.hero h1 i{color:var(--terra)}
+.hero p{font-size:18px;color:var(--gris);max-width:460px;margin-bottom:32px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.hero .trust{display:flex;gap:30px;font-size:14px}
+.hero .trust b{display:block;font-family:'Libre Caslon Display',serif;font-size:24px;font-weight:400}
+
+section{padding:96px 0}
+.head{text-align:center;max-width:600px;margin:0 auto 50px}
+.head h2{font-size:clamp(36px,4.2vw,56px);margin-bottom:14px}
+.head p{color:var(--gris)}
+
+.prestas{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.presta{background:#fff;border-radius:18px;overflow:hidden;border:1px solid rgba(38,33,31,.06);transition:.3s}
+.presta:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(38,33,31,.1)}
+.presta .ph{aspect-ratio:4/3}
+.presta .txt{padding:22px}
+.presta h3{font-size:24px;margin-bottom:8px}
+.presta p{font-size:14px;color:var(--gris);margin-bottom:14px}
+.presta .row{display:flex;justify-content:space-between;align-items:center;font-size:14px}
+.presta .row b{font-weight:700}
+.presta .row a{color:var(--terra);font-weight:700}
+
+.tarifs{background:var(--poudre)}
+.tarifs-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.tarifs h3{font-size:28px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(38,33,31,.2)}
+.line{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed rgba(38,33,31,.2);font-size:15px}
+.line b{font-weight:600}
+.line span{color:var(--noir)}
+.tarifs .note{margin-top:20px;font-size:13px;color:var(--gris)}
+.tarifs .cta{text-align:center;margin-top:46px}
+
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.galerie .ph{aspect-ratio:4/5;border-radius:16px}
+
+.equipe{background:#fff}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.team .ph{aspect-ratio:4/5;border-radius:200px 200px 18px 18px;margin-bottom:18px}
+.team h3{font-size:24px;text-align:center}
+.team p{text-align:center;color:var(--gris);font-size:14px}
+.team em{display:block;text-align:center;font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:6px}
+
+.salon{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.salon .ph{aspect-ratio:4/5;border-radius:18px}
+.salon h2{font-size:clamp(36px,4.2vw,54px);margin-bottom:18px}
+.salon p{color:var(--gris);margin-bottom:14px}
+.salon ul{list-style:none;display:grid;gap:10px;margin:22px 0 28px;font-weight:600;font-size:15px}
+.salon li::before{content:"— ";color:var(--terra)}
+
+.resa{background:var(--noir);color:#fff;text-align:center}
+.resa .label{color:var(--poudre)}
+.resa h2{font-size:clamp(38px,4.6vw,62px);margin-bottom:14px}
+.resa p{color:rgba(255,255,255,.75);max-width:520px;margin:0 auto 30px}
+.resa .btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.resa .btn-noir{background:var(--poudre);color:var(--noir)}
+.resa .btn-line{border-color:rgba(255,255,255,.5);color:#fff}
+.resa .infos{display:flex;justify-content:center;gap:50px;margin-top:50px;font-size:14px;flex-wrap:wrap}
+.resa .infos b{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--poudre);margin-bottom:6px}
+
+.avis{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.avis div{background:#fff;border-radius:16px;padding:28px;border:1px solid rgba(38,33,31,.06)}
+.avis .stars{color:var(--terra);letter-spacing:3px;margin-bottom:10px}
+.avis p{font-size:15px;margin-bottom:14px}
+.avis b{font-weight:700;font-size:14px}
+.avis small{color:var(--gris);display:block;font-size:12px}
+
+footer{background:var(--sable);padding:50px 0 28px;font-size:14px;color:var(--gris)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:34px}
+.foot .logo{color:var(--noir)}
+.foot .links{display:flex;gap:24px;flex-wrap:wrap}
+.copy{border-top:1px solid rgba(38,33,31,.1);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
+
+@media (max-width:900px){
+  .menu{display:none}
+  .hero,.tarifs-grid,.salon{grid-template-columns:1fr}
+  .hero .ph{min-height:420px}
+  .hero-text{padding:50px 0}
+  .prestas{grid-template-columns:1fr 1fr}
+  .galerie,.team,.avis{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){.prestas,.galerie,.team,.avis{grid-template-columns:1fr}section{padding:64px 0}}
+@media (max-width:600px){nav{height:66px}.logo{font-size:18px;letter-spacing:.06em}.logo small{display:none}nav .btn{padding:10px 14px!important;font-size:12px;white-space:nowrap}.topbar{font-size:10px;padding:7px 10px}}
+
+/* ===== VIBE ===== */
+
+body{background:linear-gradient(180deg,#FAF6F2 0%,#F5EAE5 50%,#FAF6F2 100%)}
+.label{font-family:'Libre Caslon Display',serif;font-style:italic;text-transform:none;letter-spacing:0;font-size:19px;font-weight:400}
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-8%;top:-20%;width:58%;height:140%;background:radial-gradient(circle at 50% 50%,#F1D9D1 0%,rgba(241,217,209,0) 65%);pointer-events:none}
+.hero .ph{min-height:0;height:560px;align-self:center;margin:40px 60px 40px 0;border-radius:48% 52% 42% 58% / 55% 45% 55% 45%;position:relative;z-index:1}
+.hero h1{font-weight:400}
+.hero .trust b{font-style:italic}
+.btn{border-radius:999px;padding:16px 34px}
+.presta{border-radius:28px;border:0;box-shadow:0 24px 60px rgba(185,112,90,.14)}
+.presta .ph{border-radius:28px 28px 0 0}
+.presta h3{font-style:italic}
+.tarifs{background:transparent}
+.tarifs-grid{background:#fff;border-radius:36px;padding:44px;box-shadow:0 24px 60px rgba(185,112,90,.12)}
+.tarifs h3{font-style:italic;border-bottom:1px solid var(--poudre)}
+.line{border-bottom:1px dotted rgba(38,33,31,.3)}
+.galerie .ph:nth-child(1){border-radius:200px 200px 28px 28px}
+.galerie .ph:nth-child(2){border-radius:28px}
+.galerie .ph:nth-child(3){border-radius:28px 28px 200px 200px}
+.equipe{background:transparent}
+.team .ph{border-radius:50%;aspect-ratio:1;outline:1px solid var(--terra);outline-offset:10px;margin-bottom:28px}
+.team h3{font-style:italic}
+.salon .ph{border-radius:52% 48% 40% 60% / 45% 55% 45% 55%}
+.resa{border-radius:48px 48px 0 0;background:var(--noir)}
+.resa h2{font-style:italic;font-weight:400}
+.avis div{border-radius:28px;border:0;box-shadow:0 20px 50px rgba(185,112,90,.1)}
+footer{background:transparent;border-top:1px solid var(--poudre)}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">Réservation en ligne 24 h/24 · <b>-20 % sur votre première visite</b> avec le code BIENVENUE</div>
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#" class="logo">Maison Louve<small>Coiffure · Soins · Anglet</small></a>
+      <div class="menu"><a href="#prestations">Prestations</a><a href="maison-louve-tarifs.html">Tarifs</a><a href="#galerie">Galerie</a><a href="#equipe">L'équipe</a><a href="#salon">Le salon</a></div>
+      <a href="#reserver" class="btn btn-noir" style="padding:12px 24px">Réserver en ligne</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <div class="wrap hero-text" style="margin:0 0 0 auto;width:min(580px,calc(92% - 20px))">
+    <span class="label">Salon de coiffure & institut · Anglet</span>
+    <h1>Prendre soin de vous, <i>sans attendre.</i></h1>
+    <p>Coupe, couleur, soins visage et onglerie dans un salon lumineux à deux pas de la plage des Sables d'Or. Réservez votre créneau en ligne, même à minuit.</p>
+    <div class="btns"><a href="#reserver" class="btn btn-noir">Réserver un créneau</a><a href="#prestations" class="btn btn-line">Voir les prestations</a></div>
+    <div class="trust"><div><b>4,9/5</b>412 avis Google</div><div><b>7 j/7</b>sauf dimanche</div><div><b>5</b>coiffeuses & esthéticiennes</div></div>
+  </div>
+  <div class="ph" style="background-image:url(img/louve-hero.jpg)"></div>
+</section>
+
+<section id="prestations">
+  <div class="wrap">
+    <div class="head"><span class="label">Prestations</span><h2>Ce que nous faisons de mieux.</h2><p>Chaque rendez-vous commence par un diagnostic. On vous écoute, puis on vous propose.</p></div>
+    <div class="prestas">
+      <div class="presta"><div class="ph" style="background-image:url(img/louve-coupe.jpg)"></div><div class="txt"><h3>Coupe & coiffage</h3><p>Femme, homme, enfant. Shampoing, coupe, brushing ou coiffage.</p><div class="row"><b>dès 32 €</b><a href="#reserver">Réserver →</a></div></div></div>
+      <div class="presta"><div class="ph" style="background-image:url(img/louve-couleur.jpg)"></div><div class="txt"><h3>Couleur & balayage</h3><p>Couleur végétale, balayage, patine, gloss. Diagnostic offert.</p><div class="row"><b>dès 65 €</b><a href="#reserver">Réserver →</a></div></div></div>
+      <div class="presta"><div class="ph" style="background-image:url(img/louve-soin.jpg)"></div><div class="txt"><h3>Soins visage & corps</h3><p>Soin éclat, hydratation profonde, massage relaxant 30 ou 60 min.</p><div class="row"><b>dès 45 €</b><a href="#reserver">Réserver →</a></div></div></div>
+      <div class="presta"><div class="ph" style="background-image:url(img/louve-ongles.jpg)"></div><div class="txt"><h3>Onglerie</h3><p>Manucure, semi-permanent, gel, pose et dépose soignée.</p><div class="row"><b>dès 28 €</b><a href="#reserver">Réserver →</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="tarifs" class="tarifs">
+  <div class="wrap">
+    <div class="head"><span class="label">Tarifs</span><h2>Clairs, affichés, sans surprise.</h2></div>
+    <div class="tarifs-grid">
+      <div>
+        <h3>Coiffure</h3>
+        <div class="line"><b>Shampoing · coupe · brushing femme</b><span>48 €</span></div>
+        <div class="line"><b>Coupe homme</b><span>32 €</span></div>
+        <div class="line"><b>Coupe enfant (-12 ans)</b><span>22 €</span></div>
+        <div class="line"><b>Balayage + patine</b><span>dès 95 €</span></div>
+        <div class="line"><b>Couleur végétale</b><span>dès 65 €</span></div>
+        <div class="line"><b>Soin profond Kérastase</b><span>25 €</span></div>
+      </div>
+      <div>
+        <h3>Institut</h3>
+        <div class="line"><b>Soin visage éclat 45 min</b><span>55 €</span></div>
+        <div class="line"><b>Soin hydratation 60 min</b><span>72 €</span></div>
+        <div class="line"><b>Massage relaxant 30 / 60 min</b><span>45 / 80 €</span></div>
+        <div class="line"><b>Manucure semi-permanent</b><span>38 €</span></div>
+        <div class="line"><b>Pose gel</b><span>55 €</span></div>
+        <div class="line"><b>Épilation sourcils</b><span>12 €</span></div>
+      </div>
+    </div>
+    <p class="note" style="text-align:center">Tarifs TTC. Les longueurs et épaisseurs importantes peuvent faire l'objet d'un supplément annoncé avant la prestation.</p>
+    <div class="cta"><a href="#reserver" class="btn btn-noir">Réserver en ligne</a></div>
+  </div>
+</section>
+
+<section id="galerie">
+  <div class="wrap">
+    <div class="head"><span class="label">Galerie</span><h2>Nos dernières réalisations.</h2></div>
+    <div class="galerie">
+      <div class="ph" style="background-image:url(img/louve-g1.jpg)"></div>
+      <div class="ph" style="background-image:url(img/louve-g2.jpg)"></div>
+      <div class="ph" style="background-image:url(img/louve-g3.jpg)"></div>
+    </div>
+  </div>
+</section>
+
+<section id="equipe" class="equipe">
+  <div class="wrap">
+    <div class="head"><span class="label">L'équipe</span><h2>Cinq mains expertes, un seul mot d'ordre : vous.</h2></div>
+    <div class="team">
+      <div><div class="ph" style="background-image:url(img/louve-t1.jpg)"></div><em>Fondatrice · Coloriste</em><h3>Léa</h3><p>15 ans de salon, formée chez Wella. Spécialiste balayage et couleur végétale.</p></div>
+      <div><div class="ph" style="background-image:url(img/louve-t2.jpg)"></div><em>Coiffeuse · Coupe & coiffage</em><h3>Sofia</h3><p>Coupes courtes, textures bouclées et chignons de mariage.</p></div>
+      <div><div class="ph" style="background-image:url(img/louve-t3.jpg)"></div><em>Esthéticienne</em><h3>Maëva</h3><p>Soins visage, massages et onglerie. Formée en dermo-cosmétique.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="salon">
+  <div class="wrap salon">
+    <div class="ph" style="background-image:url(img/louve-g2.jpg);background-position:left center"></div>
+    <div>
+      <span class="label">Le salon</span>
+      <h2>Un lieu lumineux, calme, à deux pas de la plage.</h2>
+      <p>Ouvert en 2021 dans une ancienne maison basque, Maison Louve a été pensé comme un salon où l'on prend le temps : lumière naturelle, fauteuils confortables, thé et café offerts.</p>
+      <ul><li>Produits Kérastase, Davines et couleur végétale</li><li>Accessible PMR, parking gratuit devant</li><li>Espace enfants avec livres et tablettes</li></ul>
+      <a href="#reserver" class="btn btn-line">Nous trouver</a>
+    </div>
+  </div>
+</section>
+
+<section id="reserver" class="resa">
+  <div class="wrap">
+    <span class="label">Réservation</span>
+    <h2>Votre créneau, en 30 secondes.</h2>
+    <p>Choisissez votre prestation, votre coiffeuse et votre horaire. Confirmation immédiate par SMS, rappel la veille.</p>
+    <div class="btns"><a href="#" class="btn btn-noir">Réserver sur Planity</a><a href="#" class="btn btn-line">Appeler le 05 59 00 00 00</a></div>
+    <div class="infos">
+      <div><b>Adresse</b>12 avenue de la Chambre d'Amour, 64600 Anglet</div>
+      <div><b>Horaires</b>Lun – Sam : 9 h – 19 h · Nocturne jeudi jusqu'à 21 h</div>
+      <div><b>Sans rendez-vous</b>Coupe homme et enfant, selon disponibilité</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head"><span class="label">Avis</span><h2>Elles en parlent.</h2></div>
+    <div class="avis">
+      <div><div class="stars">★★★★★</div><p>« Mon balayage est exactement celui que je voulais. Léa a pris le temps de comprendre, c'est rare. »</p><b>Camille B.</b><small>Avis Google</small></div>
+      <div><div class="stars">★★★★★</div><p>« Réservé à 23 h pour le lendemain 9 h, rappel SMS, zéro attente. Et la coupe est parfaite. »</p><b>Thomas L.</b><small>Avis Google</small></div>
+      <div><div class="stars">★★★★★</div><p>« Le soin visage de Maëva est une parenthèse. J'y retourne tous les mois. »</p><b>Nadia K.</b><small>Avis Planity</small></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="logo">Maison Louve<small>Coiffure · Soins · Anglet</small></div></div>
+      <div class="links"><a href="#prestations">Prestations</a><a href="maison-louve-tarifs.html">Tarifs</a><a href="#">Réserver</a><a href="#">Cartes cadeaux</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Maison Louve — 12 av. de la Chambre d'Amour, Anglet</span><span><a href="maison-louve-mentions-legales.html">Mentions légales</a> · Confidentialité</span></div>
+  </div>
+</footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

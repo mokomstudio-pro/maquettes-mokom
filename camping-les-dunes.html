@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour hébergement & tourisme — exemple B</title>
+<meta name="description" content="Camping Les Dunes à Lacanau-Océan. Emplacements sous les pins, mobil-homes, piscine chauffée, plage à 300 m. Réservation en ligne, ouvert d'avril à octobre.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#161512;--nuit2:#201F1B;--champagne:#C8A86B;--ivoire:#F1ECE3;--pierre:#D8CFC0;--cypres:#2F3A33;--gris:#8C877C}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;font-family:'Figtree',sans-serif;font-weight:300;background:var(--ivoire);color:var(--nuit);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Bodoni Moda',serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1280px,92%);margin:0 auto}
+.label{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--champagne);font-weight:500;display:block;margin-bottom:18px}
+.btn{display:inline-block;padding:16px 34px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;transition:.35s;border:1px solid transparent}
+.btn-gold{background:var(--champagne);color:var(--nuit)}
+.btn-gold:hover{background:var(--ivoire)}
+.btn-line{border-color:var(--nuit);color:var(--nuit)}
+.btn-line:hover{background:var(--nuit);color:var(--ivoire)}
+.btn-line.light{border-color:rgba(241,236,227,.6);color:var(--ivoire)}
+.btn-line.light:hover{background:var(--ivoire);color:var(--nuit)}
+.ph{position:relative;overflow:hidden;background:linear-gradient(165deg,#4A5A50 0%,#2F3A33 55%,#1B2220 100%)}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 60% 0%,rgba(200,168,107,.4),transparent 55%),linear-gradient(0deg,rgba(22,21,18,.55),transparent 50%)}
+.ph span{position:absolute;left:18px;bottom:16px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(241,236,227,.75);z-index:1}
+.ph.gold{background:linear-gradient(165deg,#E0C48F 0%,#C8A86B 55%,#9C7F47 100%)}
+.ph.stone{background:linear-gradient(165deg,#E6DED0 0%,#D8CFC0 55%,#BDB2A0 100%)}
+.ph.stone span{color:var(--nuit)}
+.ph.night{background:linear-gradient(165deg,#3A3934 0%,#201F1B 55%,#161512 100%)}
+
+header{position:absolute;top:0;left:0;right:0;z-index:50;color:var(--ivoire)}
+nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:96px}
+.menu{display:flex;gap:34px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+.logo{text-align:center;font-family:'Bodoni Moda',serif;font-size:28px;letter-spacing:.2em;text-transform:uppercase}
+.logo small{display:block;font-family:'Figtree',sans-serif;font-size:9px;letter-spacing:.4em;margin-top:2px;color:var(--champagne)}
+.right{display:flex;justify-content:flex-end;align-items:center;gap:26px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+.right .btn{padding:12px 22px}
+
+.hero{position:relative;height:100vh;min-height:720px;display:flex;align-items:flex-end;color:var(--ivoire)}
+.hero .ph{position:absolute;inset:0}
+.hero .ph::after{background:linear-gradient(0deg,rgba(22,21,18,.9) 0%,rgba(22,21,18,.25) 50%,rgba(22,21,18,.35) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:90px;display:grid;grid-template-columns:1.2fr .8fr;align-items:end;gap:40px}
+.hero h1{font-size:clamp(50px,6.4vw,96px);margin-bottom:22px}
+.hero h1 i{font-style:italic;font-weight:400}
+.hero p{font-size:17px;color:rgba(241,236,227,.8);max-width:480px}
+.booking{background:rgba(241,236,227,.96);color:var(--nuit);padding:28px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:14px;align-items:end}
+.booking label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gris);display:grid;gap:6px;font-weight:500}
+.booking input,.booking select{font:inherit;border:0;border-bottom:1px solid var(--pierre);background:transparent;padding:8px 0;font-size:14px;width:100%}
+.booking .btn{padding:14px 22px}
+
+section{padding:120px 0}
+.intro{text-align:center}
+.intro .inner{max-width:780px;margin:0 auto}
+.intro h2{font-size:clamp(34px,3.8vw,56px);margin-bottom:24px}
+.intro h2 i{font-style:italic}
+.intro p{font-size:17px;color:#5C574D;max-width:600px;margin:0 auto 32px}
+.intro .marks{display:flex;justify-content:center;gap:30px 50px;flex-wrap:wrap;margin-top:40px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gris)}
+.intro .marks b{display:block;font-family:'Bodoni Moda',serif;font-size:30px;color:var(--nuit);letter-spacing:0;text-transform:none;margin-bottom:4px}
+
+.chambres{background:var(--nuit);color:var(--ivoire)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px}
+.head h2{font-size:clamp(34px,3.8vw,56px)}
+.head p{max-width:400px;color:var(--gris);font-size:15px}
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.room .ph{aspect-ratio:4/5;margin-bottom:22px;transition:.6s}
+.room:hover .ph{transform:scale(1.02)}
+.room h3{font-size:30px;margin-bottom:8px}
+.room p{color:var(--gris);font-size:14px;margin-bottom:12px}
+.room .meta{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.room .meta b{color:var(--champagne);font-weight:500}
+
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:720px}
+.split .ph{min-height:720px}
+.split .txt{display:flex;flex-direction:column;justify-content:center;padding:100px 10%}
+.split h2{font-size:clamp(34px,3.6vw,54px);margin-bottom:22px}
+.split h2 i{font-style:italic}
+.split p{color:#5C574D;font-size:16px;margin-bottom:16px}
+.split .btn{margin-top:20px;align-self:flex-start}
+.split.rev .ph{order:2}
+.split.cypres{background:var(--cypres);color:var(--ivoire)}
+.split.cypres p{color:rgba(241,236,227,.75)}
+
+.exp{background:var(--pierre)}
+.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.exp-card{display:block;position:relative}
+.exp-card .ph{aspect-ratio:3/4}
+.exp-card .over{position:absolute;left:0;right:0;bottom:0;padding:26px;color:var(--ivoire);z-index:2}
+.exp-card .over small{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--champagne)}
+.exp-card .over h3{font-size:26px;margin-top:6px}
+
+.quote{text-align:center}
+.quote p{font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(28px,3.4vw,46px);max-width:900px;margin:0 auto 26px;line-height:1.3}
+.quote small{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris)}
+
+.presse{border-top:1px solid var(--pierre);border-bottom:1px solid var(--pierre);padding:34px 0}
+.presse .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px}
+.presse b{font-family:'Bodoni Moda',serif;font-size:22px;font-weight:400;opacity:.6;letter-spacing:.06em}
+
+.acces{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.acces .ph{aspect-ratio:5/4}
+.acces h2{font-size:clamp(32px,3.4vw,48px);margin-bottom:20px}
+.acces dl{display:grid;grid-template-columns:1fr 1fr;gap:22px 30px;margin:26px 0 32px}
+.acces dt{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--champagne);font-weight:500;margin-bottom:6px}
+.acces dd{font-size:15px}
+
+footer{background:var(--nuit);color:rgba(241,236,227,.7);padding:90px 0 36px;font-size:14px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:50px;margin-bottom:60px}
+.foot .logo{text-align:left;color:var(--ivoire);margin-bottom:16px}
+.foot .logo small{text-align:left}
+.foot h4{font-family:'Figtree',sans-serif;font-weight:500;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--champagne);margin-bottom:18px}
+.foot a{display:block;margin-bottom:10px}
+.foot a:hover{color:var(--ivoire)}
+.foot form{display:flex;border-bottom:1px solid rgba(241,236,227,.3);margin-top:8px}
+.foot input{flex:1;background:transparent;border:0;color:var(--ivoire);font:inherit;padding:10px 0;outline:0}
+.foot button{background:transparent;border:0;color:var(--champagne);font:inherit;font-size:10px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
+.copy{border-top:1px solid rgba(241,236,227,.12);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:11px;letter-spacing:.1em}
+
+@media (max-width:900px){
+  .menu,.right span{display:none}
+  nav{grid-template-columns:1fr auto}
+  .hero .wrap{grid-template-columns:1fr}
+  .booking{grid-template-columns:1fr 1fr}
+  .rooms,.exp-grid{grid-template-columns:1fr 1fr}
+  .split,.acces{grid-template-columns:1fr}
+  .split .ph{min-height:420px;order:0!important}
+  .split .txt{padding:70px 8%}
+  .foot{grid-template-columns:1fr 1fr}
+  .head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:600px){.rooms,.exp-grid,.booking,.acces dl,.foot{grid-template-columns:1fr}section{padding:72px 0}.hero{min-height:620px}}
+.ph{background-size:cover;background-position:center}.ph::after{background:linear-gradient(0deg,rgba(22,21,18,.45),transparent 55%)!important}.hero .ph::after{background:linear-gradient(0deg,rgba(22,21,18,.9) 0%,rgba(22,21,18,.25) 50%,rgba(22,21,18,.4) 100%)!important}.ph>span:not(.new):not(.tag){display:none}
+@media (max-width:600px){nav{height:76px}.logo{font-size:22px}.logo small{font-size:8px}.right .btn{padding:10px 14px;font-size:10px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+.rooms .ph,.split .ph,.exp-card .ph,.acces .ph,.hero .ph{outline:1px solid rgba(200,168,107,.6);outline-offset:-16px}
+.hero .ph{outline-offset:-28px}
+.intro .label::before,.intro .label::after,.quote .label::before,.ateliers .label::after{content:"";display:inline-block;width:30px;height:1px;background:var(--champagne);vertical-align:middle;margin:0 12px}
+.intro .marks b{font-style:italic}
+.head p{font-style:italic}
+.room h3,.split h2,.exp-card .over h3{font-weight:400}
+.room .meta b{border-bottom:1px solid var(--champagne);padding-bottom:3px}
+.btn{letter-spacing:.32em;font-size:10px}
+.quote p{font-size:clamp(30px,3.8vw,54px);font-weight:400}
+.presse b{font-style:italic}
+.exp-card .over{padding:30px;border-left:1px solid rgba(200,168,107,.6);margin:0 0 20px 20px}
+footer .logo{font-size:34px}
+.booking{outline:1px solid var(--champagne);outline-offset:-8px}
+
+
+/* ===== VARIANTE B : couleurs & typos ===== */
+:root{--nuit:#2A6F97;--nuit2:#1F5577;--champagne:#F08A24;--ivoire:#FBF3E4;--pierre:#F4E3C1;--cypres:#3C6E47;--gris:#6E7F86}
+body{font-family:'Nunito',sans-serif;font-weight:400;color:#1F3A4A}
+h1,h2,h3{font-family:'Baloo 2',sans-serif;font-weight:800;letter-spacing:0;line-height:1}
+.hero h1 i,.split h2 i,.intro h2 i{font-style:normal;color:var(--champagne)}
+.label{letter-spacing:.12em;font-weight:800;font-size:12px}
+.label::before,.label::after{display:none!important}
+.btn{border-radius:999px;letter-spacing:.04em;text-transform:none;font-size:15px;font-weight:800;padding:14px 28px}
+.btn-gold{background:var(--champagne);color:#fff}.btn-gold:hover{background:var(--nuit)}
+.btn-line.light{border-color:#fff}
+header .logo{font-family:'Baloo 2',sans-serif;letter-spacing:0;text-transform:none;font-size:30px}
+header .logo small{color:var(--pierre);letter-spacing:.2em}
+.hero .ph{outline:0}
+.hero .ph::after{background:linear-gradient(0deg,rgba(42,111,151,.9) 0%,rgba(42,111,151,.2) 50%,rgba(42,111,151,.3) 100%)!important}
+.booking{border-radius:20px;outline:0}
+.rooms .ph,.split .ph,.exp-card .ph,.acces .ph{outline:0;border-radius:20px}
+.room h3,.exp-card .over h3{font-weight:800}
+.room .meta b{color:var(--champagne);border-color:var(--champagne)}
+.chambres{background:var(--nuit)}.chambres .head p,.chambres .room p{color:rgba(255,255,255,.8)}
+.split.cypres{background:var(--cypres)}
+.exp{background:var(--pierre)}
+.exp-card .over{border:0;margin:0}
+.quote p{font-family:'Baloo 2',sans-serif;font-style:normal;font-weight:600}
+.presse b{font-family:'Baloo 2',sans-serif;font-style:normal}
+.intro .marks b{font-style:normal;font-family:'Baloo 2',sans-serif}
+.head p{font-style:normal}
+footer{background:var(--nuit2)}footer h4{color:var(--pierre)}
+.wave{height:40px;background:var(--ivoire);border-radius:50% 50% 0 0/100% 100% 0 0;margin-top:-40px;position:relative;z-index:2}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <div class="menu"><a href="#chambres">Hébergements</a><a href="#spa">Piscine</a><a href="#table">Snack</a><a href="#experiences">Activités</a></div>
+  <a href="#" class="logo">Les Dunes<small>Lacanau-Océan</small></a>
+  <div class="right"><span>FR / EN / NL</span><a href="#" class="btn btn-line light" style="padding:10px 18px">Réserver</a></div>
+</nav></div></header>
+
+<section class="hero" style="padding:0">
+  <div class="ph" style="background-image:url(img/camp-hero.jpg)"></div>
+  <div class="wrap">
+    <div><span class="label">Camping 3 étoiles · plage à 300 m</span><h1>Les pins, <i>l'océan</i>, et rien d'autre à faire.</h1><p>240 emplacements ombragés et 60 mobil-homes entre la forêt et la plage de Lacanau. Piscine chauffée, snack, club enfants. Ouvert du 1<sup>er</sup> avril au 15 octobre.</p></div>
+    <form class="booking" onsubmit="event.preventDefault()">
+      <label>Arrivée<input value="12 juil. 2027"></label><label>Départ<input value="19 juil. 2027"></label>
+      <label>Hébergement<select><option>Emplacement tente</option><option>Emplacement camping-car</option><option>Mobil-home 4 pers.</option><option>Mobil-home 6 pers.</option></select></label>
+      <button class="btn btn-gold">Voir les prix</button>
+    </form>
+  </div>
+</section>
+<div class="wave"></div>
+
+<section class="intro"><div class="wrap inner">
+  <span class="label">Bienvenue</span>
+  <h2>Un camping familial, <i>tenu par une famille.</i></h2>
+  <p>Les Dunes, c'est la famille Lartigue depuis 1978. Pas de parc aquatique géant, pas d'animation à 2 h du matin : des emplacements spacieux sous les pins, une piscine chauffée, un snack qui fait de vraies frites, et l'océan au bout du chemin.</p>
+  <a href="#chambres" class="btn btn-gold">Choisir mon hébergement</a>
+  <div class="marks"><div><b>300 m</b>de la plage</div><div><b>240</b>emplacements</div><div><b>60</b>mobil-homes</div><div><b>1978</b>même famille</div></div>
+</div></section>
+
+<section id="chambres" class="chambres"><div class="wrap">
+  <div class="head"><div><span class="label">Hébergements</span><h2>Tente, camping-car ou mobil-home.</h2></div><p>Tous les emplacements sont ombragés et délimités par des haies. Les mobil-homes ont une terrasse couverte.</p></div>
+  <div class="rooms">
+    <a href="#" class="room"><div class="ph" style="background-image:url(img/camp-r1.jpg)"></div><h3>Emplacement tente</h3><p>100 m² · Ombragé · Électricité 10 A · Sanitaires à 50 m</p><div class="meta"><span>Dès 24 € / nuit</span><b>Réserver</b></div></a>
+    <a href="#" class="room"><div class="ph" style="background-image:url(img/camp-r2.jpg)"></div><h3>Emplacement camping-car</h3><p>120 m² · Stabilisé · Eau + vidange · Électricité 16 A</p><div class="meta"><span>Dès 32 € / nuit</span><b>Réserver</b></div></a>
+    <a href="#" class="room"><div class="ph" style="background-image:url(img/camp-r3.jpg)"></div><h3>Mobil-home Océan 4–6 pers.</h3><p>32 m² · 2 ou 3 chambres · Terrasse couverte · Clim</p><div class="meta"><span>Dès 79 € / nuit</span><b>Réserver</b></div></a>
+  </div>
+</div></section>
+
+<section id="spa" class="split" style="padding:0">
+  <div class="ph" style="background-image:url(img/camp-piscine.jpg)"></div>
+  <div class="txt"><span class="label">La piscine</span><h2>Chauffée à 28 °C, <i>d'avril à octobre.</i></h2>
+    <p>Un bassin de 25 m, une pataugeoire pour les petits, des transats sous les pins. Ouverte de 10 h à 20 h, surveillée en juillet-août.</p>
+    <p>Et quand il fait trop chaud pour la piscine, l'océan est à cinq minutes à pied par le sentier des dunes.</p>
+    <a href="#" class="btn btn-line">Voir les horaires</a></div>
+</section>
+
+<section id="table" class="split rev cypres" style="padding:0">
+  <div class="ph" style="background-image:url(img/resto-g3.jpg)"></div>
+  <div class="txt"><span class="label">Le snack</span><h2>Pizzas au feu de bois, <i>frites maison.</i></h2>
+    <p>Ouvert midi et soir en juillet-août, le soir en basse saison. Pain et viennoiseries livrés chaque matin de 8 h à 10 h. Épicerie dépannage sur place.</p>
+    <p>Le mercredi soir : moules-frites et concert sur la terrasse.</p>
+    <a href="#" class="btn btn-line light">Voir la carte</a></div>
+</section>
+
+<section id="experiences" class="exp"><div class="wrap">
+  <div class="head"><div><span class="label">Activités</span><h2>Pour les enfants, et les grands.</h2></div><p>Club enfants gratuit de 4 à 12 ans en juillet-août. Vélos en location à l'accueil.</p></div>
+  <div class="exp-grid">
+    <a href="#" class="exp-card"><div class="ph" style="background-image:url(img/camp-e1.jpg)"></div><div class="over"><small>Plage</small><h3>Surf & école de surf</h3></div></a>
+    <a href="#" class="exp-card"><div class="ph" style="background-image:url(img/camp-e2.jpg)"></div><div class="over"><small>Soir</small><h3>Veillées au feu de camp</h3></div></a>
+    <a href="#" class="exp-card"><div class="ph" style="background-image:url(img/camp-e3.jpg)"></div><div class="over"><small>Famille</small><h3>Club enfants 4–12 ans</h3></div></a>
+    <a href="#" class="exp-card"><div class="ph" style="background-image:url(img/camp-e4.jpg)"></div><div class="over"><small>Forêt</small><h3>Piste cyclable vers le lac</h3></div></a>
+  </div>
+</div></section>
+
+<section class="quote"><div class="wrap"><p>« Dix ans qu'on vient en juillet. Les enfants ont grandi ici, entre la piscine et la plage. »</p><small>Famille Rousseau — Nantes</small></div></section>
+
+<div class="presse"><div class="wrap"><b>Camping Qualité</b><b>Clef Verte</b><b>ACSI</b><b>Guide du Routard</b><b>Gironde Tourisme</b></div></div>
+
+<section><div class="wrap acces">
+  <div><span class="label">Venir</span><h2>À 50 minutes de Bordeaux, à 300 mètres de l'océan.</h2>
+    <p>Depuis Bordeaux, prenez la D6 jusqu'à Lacanau-Océan ; le camping est fléché depuis le rond-point d'entrée. Bus Transgironde 702 depuis la gare Saint-Jean, arrêt « Les Dunes ».</p>
+    <dl><div><dt>Adresse</dt><dd>Route du Lion, 33680 Lacanau-Océan</dd></div><div><dt>Réservations</dt><dd>05 56 00 00 00<br>contact@camping-lesdunes.fr</dd></div><div><dt>Arrivée / Départ</dt><dd>Mobil-homes : 16 h / 10 h<br>Emplacements : 14 h / 12 h</dd></div><div><dt>Ouverture</dt><dd>Du 1<sup>er</sup> avril au 15 octobre</dd></div></dl>
+    <a href="#" class="btn btn-line">Itinéraire</a></div>
+  <div class="ph" style="background-image:url(img/camp-e4.jpg)"></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div><div class="logo">Les Dunes<small>Lacanau-Océan</small></div><p>Camping familial 3 étoiles entre forêt et océan, depuis 1978.</p></div>
+    <div><h4>Le camping</h4><a href="#">Hébergements</a><a href="#">Piscine</a><a href="#">Snack</a><a href="#">Activités</a></div>
+    <div><h4>Informations</h4><a href="#">Tarifs</a><a href="#">Venir</a><a href="#">Règlement</a><a href="#">Groupes</a></div>
+    <div><h4>Newsletter</h4><p>Les dates d'ouverture et les offres de basse saison.</p><form onsubmit="event.preventDefault()"><input placeholder="Votre e-mail"><button>OK</button></form></div>
+  </div>
+  <div class="copy"><span>© 2026 Camping Les Dunes — Lacanau-Océan</span><span>Mentions légales · Confidentialité · CGV</span></div>
+</div></footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

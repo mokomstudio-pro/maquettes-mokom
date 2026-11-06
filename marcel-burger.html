@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour restaurant, bar & food truck — exemple B</title>
+<meta name="description" content="Marcel Burger, food truck à Bordeaux. Burgers maison, bœuf de Bazas, frites fraîches. Retrouvez le camion chaque jour à un emplacement différent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik:ital,wght@0,400;0,500;0,700;1,400&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--tomate:#C8472E;--creme:#FBF5EA;--olive:#5F6B3A;--encre:#1F1D1A;--paille:#EFE3C9;--gris:#6B665C}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',sans-serif;background:var(--creme);color:var(--encre);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Instrument Serif',serif;font-weight:400;line-height:1;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,92%);margin:0 auto}
+.label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--tomate);font-weight:700;display:block;margin-bottom:14px}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:.25s;border:2px solid transparent}
+.btn-tomate{background:var(--tomate);color:#fff}
+.btn-tomate:hover{background:var(--encre)}
+.btn-line{border-color:var(--encre);color:var(--encre)}
+.btn-line:hover{background:var(--encre);color:#fff}
+.btn-line.light{border-color:#fff;color:#fff}
+.ph{position:relative;overflow:hidden;background:#D8CDB8 center/cover no-repeat}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(31,29,26,.35),transparent 55%)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(251,245,234,.94);backdrop-filter:blur(10px);border-bottom:2px solid var(--encre)}
+nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{font-family:'Instrument Serif',serif;font-size:28px;line-height:1}
+.logo i{font-style:italic;color:var(--tomate)}
+.menu{display:flex;gap:30px;font-weight:500;font-size:15px}
+.menu a:hover{color:var(--tomate)}
+.nav-r{display:flex;align-items:center;gap:18px;font-weight:700}
+
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff}
+.hero .ph{position:absolute;inset:0}
+.hero .ph::after{background:linear-gradient(0deg,rgba(31,29,26,.85) 0%,rgba(31,29,26,.2) 60%)}
+.hero .wrap{position:relative;z-index:1;padding:80px 0 70px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end}
+.hero h1{font-size:clamp(54px,7vw,104px);margin-bottom:18px}
+.hero h1 i{color:var(--paille)}
+.hero p{font-size:19px;max-width:520px;color:rgba(255,255,255,.85);margin-bottom:30px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+.hours{background:var(--creme);color:var(--encre);padding:26px;border-radius:16px;font-size:15px}
+.hours b{display:block;font-family:'Instrument Serif',serif;font-size:24px;margin-bottom:10px}
+.hours div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed rgba(31,29,26,.2)}
+.hours div:last-child{border:0}
+.hours .today{color:var(--tomate);font-weight:700}
+
+.ticker{background:var(--tomate);color:#fff;padding:14px 0;overflow:hidden;white-space:nowrap;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
+.ticker div{display:inline-block;animation:t 28s linear infinite}
+.ticker span{margin:0 30px}
+@keyframes t{to{transform:translateX(-50%)}}
+
+section{padding:96px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:46px}
+.head h2{font-size:clamp(40px,4.6vw,66px)}
+.head p{max-width:400px;color:var(--gris)}
+
+.carte{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.carte .col h3{font-size:30px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--encre)}
+.plat{display:flex;justify-content:space-between;gap:18px;padding:16px 0;border-bottom:1px dashed rgba(31,29,26,.2)}
+.plat b{font-weight:700;display:block;font-size:16px}
+.plat small{color:var(--gris);font-size:14px}
+.plat em{font-family:'Instrument Serif',serif;font-style:normal;font-size:22px;white-space:nowrap}
+.carte .note{margin-top:26px;font-size:14px;color:var(--gris)}
+.formule{background:var(--encre);color:var(--creme);border-radius:16px;padding:26px;margin-top:30px}
+.formule b{font-family:'Instrument Serif',serif;font-size:28px;display:block}
+.formule em{color:var(--paille);font-style:normal;font-size:30px;font-family:'Instrument Serif',serif}
+
+.photos{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:14px}
+.photos .ph{border-radius:12px}
+.photos .ph:nth-child(1){grid-column:span 2;grid-row:span 2}
+.photos .ph:nth-child(4){grid-row:span 2}
+
+.chef{background:var(--olive);color:#fff}
+.chef-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.chef .ph{aspect-ratio:4/5;border-radius:16px}
+.chef .label{color:var(--paille)}
+.chef h2{font-size:clamp(38px,4.4vw,60px);margin-bottom:20px}
+.chef p{color:rgba(255,255,255,.85);font-size:17px;margin-bottom:16px}
+.chef .btn{margin-top:14px}
+
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.infos .ph{aspect-ratio:5/4;border-radius:16px}
+.infos h2{font-size:clamp(38px,4.4vw,60px);margin-bottom:20px}
+.infos dl{display:grid;grid-template-columns:1fr 1fr;gap:20px 30px;margin:26px 0 30px}
+.infos dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tomate);font-weight:700;margin-bottom:6px}
+.infos dd{font-size:15px}
+
+.resa{background:var(--encre);color:var(--creme)}
+.resa-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.resa h2{font-size:clamp(38px,4.6vw,66px);margin-bottom:16px}
+.resa p{color:rgba(251,245,234,.75);font-size:17px;margin-bottom:24px}
+.resa .label{color:var(--paille)}
+form{background:var(--creme);color:var(--encre);border-radius:16px;padding:30px;display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:13px;font-weight:700;display:grid;gap:6px}
+input,select{font:inherit;padding:13px 14px;border:1px solid rgba(31,29,26,.2);border-radius:10px;background:#fff;width:100%}
+form .btn{text-align:center;margin-top:4px}
+form small{text-align:center;color:var(--gris);font-size:12px}
+
+.avis{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.avis div{background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(31,29,26,.08)}
+.avis .stars{color:var(--tomate);letter-spacing:3px;margin-bottom:10px}
+.avis p{font-family:'Instrument Serif',serif;font-size:21px;line-height:1.3;margin-bottom:16px}
+.avis b{font-size:14px}
+.avis small{color:var(--gris);display:block;font-size:13px}
+
+footer{background:var(--encre);color:rgba(251,245,234,.7);padding:50px 0 28px;font-size:14px;border-top:1px solid rgba(255,255,255,.1)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:34px}
+.foot .logo{color:var(--creme)}
+.foot .links{display:flex;gap:24px;flex-wrap:wrap}
+.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
+
+@media (max-width:900px){
+  .menu,.nav-r span{display:none}
+  .hero .wrap,.carte,.chef-grid,.infos,.resa-grid{grid-template-columns:1fr}
+  .photos{grid-template-columns:1fr 1fr}
+  .avis{grid-template-columns:1fr}
+  .head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:600px){.photos{grid-template-columns:1fr}.photos .ph{grid-column:auto!important;grid-row:auto!important}.row,.infos dl{grid-template-columns:1fr}section{padding:64px 0}}
+@media (max-width:600px){nav{height:66px}.logo{font-size:22px}.nav-r .btn{padding:10px 16px!important;font-size:13px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+.label{font-family:'Caveat',cursive;font-size:24px;letter-spacing:0;text-transform:none;font-weight:600}
+header{border-bottom:0}
+header::after{content:"";display:block;height:12px;background-color:var(--creme);background-image:linear-gradient(45deg,rgba(200,71,46,.55) 25%,transparent 25%,transparent 75%,rgba(200,71,46,.55) 75%),linear-gradient(45deg,rgba(200,71,46,.55) 25%,transparent 25%,transparent 75%,rgba(200,71,46,.55) 75%);background-size:12px 12px;background-position:0 0,6px 6px}
+.hours{transform:rotate(2deg);border:3px solid var(--encre);border-radius:4px;box-shadow:8px 8px 0 var(--tomate)}
+.hours b{font-family:'Caveat',cursive;font-size:32px}
+.ticker{font-family:'Caveat',cursive;font-size:24px;text-transform:none;letter-spacing:.02em;font-weight:600}
+#carte{background:#1E2A22;color:var(--creme);background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.06),transparent 40%),radial-gradient(circle at 80% 70%,rgba(255,255,255,.05),transparent 40%)}
+#carte .head h2{color:#fff}
+#carte .head p{color:rgba(251,245,234,.7)}
+.carte .col h3{font-family:'Caveat',cursive;font-size:44px;color:#F5E6A8;border-bottom:2px dashed rgba(255,255,255,.35);font-weight:600}
+.plat{border-bottom:1px dashed rgba(255,255,255,.25)}
+.plat b{color:#fff}
+.plat small{color:rgba(251,245,234,.65)}
+.plat em{color:#F5E6A8;font-family:'Caveat',cursive;font-size:32px;font-weight:600}
+.formule{background:var(--tomate);border-radius:4px;transform:rotate(-1.5deg)}
+.formule b{font-family:'Caveat',cursive;font-size:34px}
+.formule em{color:#fff;font-family:'Caveat',cursive;font-size:40px}
+.carte .note{color:rgba(251,245,234,.6)}
+.photos .ph{border-radius:3px;border:8px solid #fff;border-bottom-width:8px;box-shadow:0 12px 30px rgba(31,29,26,.18)}
+.photos .ph:nth-child(2){transform:rotate(-2deg)}
+.photos .ph:nth-child(3){transform:rotate(1.5deg)}
+.photos .ph:nth-child(5){transform:rotate(2deg)}
+.photos .ph:nth-child(6){transform:rotate(-1.5deg)}
+.chef .ph{border-radius:4px;border:8px solid var(--creme);transform:rotate(-2deg)}
+.chef h2 i{font-style:italic}
+.infos .ph{border-radius:4px;border:8px solid #fff;box-shadow:0 12px 30px rgba(31,29,26,.18);transform:rotate(1.5deg)}
+.btn{border-radius:4px}
+form{border-radius:4px;border:3px solid var(--encre);box-shadow:8px 8px 0 var(--tomate)}
+input,select{border-radius:4px}
+.avis div{border-radius:4px;border:2px dashed var(--tomate);background:var(--paille)}
+.avis p{font-family:'Caveat',cursive;font-size:26px;font-weight:500}
+.resa{background:#1E2A22}
+
+
+/* ===== VARIANTE B : couleurs & typos ===== */
+:root{--tomate:#F2B705;--creme:#161616;--olive:#D7263D;--encre:#FFF6E5;--paille:#2A2A2A;--gris:#B9B2A6}
+body{font-family:'Rubik',sans-serif;color:var(--encre)}
+h1,h2,h3{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.hero h1 i,.chef h2 i{font-style:normal;color:var(--tomate)}
+header{background:rgba(22,22,22,.94);border-bottom:0}
+header::after{background-color:var(--creme);background-image:linear-gradient(45deg,rgba(242,183,5,.6) 25%,transparent 25%,transparent 75%,rgba(242,183,5,.6) 75%),linear-gradient(45deg,rgba(242,183,5,.6) 25%,transparent 25%,transparent 75%,rgba(242,183,5,.6) 75%)}
+.logo i{color:var(--tomate)}
+.btn-tomate{background:var(--tomate);color:#161616}.btn-tomate:hover{background:var(--olive);color:#fff}
+.btn-line{border-color:var(--encre);color:var(--encre)}.btn-line:hover{background:var(--encre);color:var(--creme)}
+.hours{background:var(--tomate);color:#161616;border-color:#161616;box-shadow:8px 8px 0 var(--olive)}.hours div{border-color:rgba(0,0,0,.25)}.hours .today{color:var(--olive)}
+.ticker{background:var(--olive);color:#fff}
+#carte{background:#1E1E1E}.carte .col h3{color:var(--tomate)}.plat em{color:var(--tomate)}
+.formule{background:var(--olive);color:#fff}.formule em{color:#fff}
+.photos .ph{border-color:#2A2A2A}
+.chef{background:var(--olive)}.chef .label{color:var(--tomate)}.chef .ph{border-color:#161616}
+.infos .ph{border-color:#2A2A2A}
+.infos dt{color:var(--tomate)}
+.resa{background:#1E1E1E}.resa .label{color:var(--tomate)}
+form{background:var(--paille);color:var(--encre);border-color:var(--tomate);box-shadow:8px 8px 0 var(--olive)}
+input,select{background:#161616;color:var(--encre);border-color:#444}
+.avis div{background:var(--paille);border-color:var(--tomate)}.avis .stars{color:var(--tomate)}.avis small{color:var(--gris)}
+.head p,.plat small,.carte .note{color:var(--gris)}
+footer{background:#111;border-color:#2A2A2A}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <a href="#" class="logo">Marcel <i>Burger</i></a>
+  <div class="menu"><a href="#carte">La carte</a><a href="#ambiance">Le camion</a><a href="#chef">L'équipe</a><a href="#infos">Où nous trouver</a><a href="#avis">Avis</a></div>
+  <div class="nav-r"><span>06 00 00 00 00</span><a href="#reserver" class="btn btn-tomate" style="padding:11px 22px">Commander</a></div>
+</nav></div></header>
+
+<section class="hero" style="padding:0">
+  <div class="ph" style="background-image:url(img/burger-hero.jpg)"></div>
+  <div class="wrap">
+    <div><span class="label" style="color:var(--tomate)">Food truck · Bordeaux & métropole</span>
+      <h1>Le burger qui <i>tourne</i> en ville.</h1>
+      <p>Bœuf de Bazas haché le matin, buns briochés d'un boulanger de Caudéran, frites fraîches coupées à la main. Un camion, cinq emplacements, zéro congélateur.</p>
+      <div class="btns"><a href="#reserver" class="btn btn-tomate">Commander à l'avance</a><a href="#infos" class="btn btn-line">Où est le camion ?</a></div></div>
+    <div class="hours"><b>Cette semaine</b>
+      <div><span>Lundi</span><span>Repos</span></div>
+      <div><span>Mardi</span><span>Quai des Chartrons · 11 h 30 – 14 h</span></div>
+      <div class="today"><span>Mercredi</span><span>Place Nansouty · 11 h 30 – 14 h</span></div>
+      <div><span>Jeu – Ven</span><span>Pessac Centre · 11 h 30 – 14 h 30</span></div>
+      <div><span>Samedi</span><span>Darwin · 12 h – 22 h</span></div></div>
+  </div>
+</section>
+
+<div class="ticker"><div><span>Le burger du mois : chèvre-miel-noix</span><span>·</span><span>Samedi soir à Darwin</span><span>·</span><span>Menu 12 €</span><span>·</span><span>Frites fraîches</span><span>·</span><span>Le burger du mois : chèvre-miel-noix</span><span>·</span><span>Samedi soir à Darwin</span><span>·</span><span>Menu 12 €</span><span>·</span><span>Frites fraîches</span><span>·</span></div></div>
+
+<section id="carte"><div class="wrap">
+  <div class="head"><div><span class="label">La carte</span><h2>Six burgers, pas un de plus.</h2></div><p>Tout est fait dans le camion. Sauces maison, pain du jour, viande hachée le matin même.</p></div>
+  <div class="carte">
+    <div class="col"><h3>Burgers</h3>
+      <div class="plat"><div><b>Le Marcel</b><small>Bœuf de Bazas 150 g, cheddar affiné, oignons confits, sauce Marcel</small></div><em>9,50 €</em></div>
+      <div class="plat"><div><b>Le Chèvre-miel</b><small>Bœuf, chèvre du Périgord, miel, noix, roquette</small></div><em>10 €</em></div>
+      <div class="plat"><div><b>Le Fumé</b><small>Bœuf, bacon fumé, cheddar, pickles, barbecue maison</small></div><em>10,50 €</em></div>
+      <div class="plat"><div><b>Le Poulet croustillant</b><small>Poulet fermier pané, coleslaw, sauce ranch</small></div><em>9,50 €</em></div>
+      <div class="plat"><div><b>Le Veggie</b><small>Galette haricots rouges-betterave, feta, avocat</small></div><em>9 €</em></div>
+      <div class="plat"><div><b>Le Mini (enfant)</b><small>Bœuf 80 g, cheddar, ketchup</small></div><em>6 €</em></div></div>
+    <div class="col"><h3>À côté</h3>
+      <div class="plat"><div><b>Frites fraîches</b><small>Agria de Gironde, double cuisson</small></div><em>3,50 €</em></div>
+      <div class="plat"><div><b>Frites de patate douce</b><small>Mayo paprika</small></div><em>4 €</em></div>
+      <div class="plat"><div><b>Cookie maison</b><small>Chocolat noir, fleur de sel</small></div><em>2,50 €</em></div>
+      <div class="plat"><div><b>Limonade artisanale</b><small>Citron, gingembre</small></div><em>3 €</em></div>
+      <div class="formule"><b>Menu Marcel</b>Burger + frites + boisson, tous les midis. <em>12 €</em></div>
+      <p class="note">Viande bovine née, élevée et abattue en Gironde. Allergènes sur le camion. Paiement CB, espèces, tickets resto.</p></div>
+  </div>
+</div></section>
+
+<section id="ambiance" style="padding-top:0"><div class="wrap">
+  <div class="head"><div><span class="label">Le camion</span><h2>Un Citroën HY de 1972, et une plancha.</h2></div></div>
+  <div class="photos">
+    <div class="ph" style="background-image:url(img/burger-rue.jpg)"></div><div class="ph" style="background-image:url(img/burger-p1.jpg)"></div><div class="ph" style="background-image:url(img/burger-p2.jpg)"></div><div class="ph" style="background-image:url(img/burger-g1.jpg)"></div><div class="ph" style="background-image:url(img/burger-p3.jpg)"></div><div class="ph" style="background-image:url(img/burger-g3.jpg)"></div>
+  </div>
+</div></section>
+
+<section id="chef" class="chef"><div class="wrap chef-grid">
+  <div class="ph" style="background-image:url(img/burger-chef.jpg)"></div>
+  <div><span class="label">L'équipe</span><h2>Marcel, c'est Paul et Lucie.</h2>
+    <p>Paul a passé huit ans en cuisine de bistrot avant d'acheter le camion en 2021. Lucie tient la caisse, le compte Instagram et la liste des emplacements.</p>
+    <p>On privatise le camion pour vos mariages, anniversaires et soirées d'entreprise, de 30 à 200 personnes.</p>
+    <a href="#reserver" class="btn btn-line">Privatiser le camion</a></div>
+</div></section>
+
+<section id="infos"><div class="wrap infos">
+  <div><span class="label">Où nous trouver</span><h2>Cinq emplacements, un camion.</h2>
+    <dl><div><dt>Mardi</dt><dd>Quai des Chartrons, face au n° 42</dd></div><div><dt>Mercredi</dt><dd>Place Nansouty</dd></div><div><dt>Jeudi – Vendredi</dt><dd>Pessac Centre, parvis de la mairie</dd></div><div><dt>Samedi</dt><dd>Darwin, midi et soir</dd></div></dl>
+    <a href="#" class="btn btn-tomate">Suivre le camion sur Instagram</a></div>
+  <div class="ph" style="background-image:url(img/burger-g2.jpg)"></div>
+</div></section>
+
+<section id="reserver" class="resa"><div class="wrap resa-grid">
+  <div><span class="label">Commander</span><h2>Pas de file d'attente.</h2><p>Commandez avant 11 h, votre burger est prêt à l'heure que vous choisissez. Paiement sur place.</p></div>
+  <form onsubmit="event.preventDefault()">
+    <div class="row"><label>Emplacement<select><option>Mercredi · Place Nansouty</option><option>Jeudi · Pessac</option><option>Samedi · Darwin</option></select></label><label>Heure de retrait<select><option>12 h 00</option><option>12 h 30</option><option>13 h 00</option><option>13 h 30</option></select></label></div>
+    <div class="row"><label>Burger<select><option>Le Marcel</option><option>Le Chèvre-miel</option><option>Le Fumé</option><option>Le Poulet croustillant</option><option>Le Veggie</option></select></label><label>Menu ?<select><option>Oui, avec frites + boisson</option><option>Non, burger seul</option></select></label></div>
+    <label>Prénom & téléphone<input placeholder="Paul · 06 00 00 00 00"></label>
+    <button class="btn btn-tomate">Valider ma commande</button><small>Confirmation par SMS</small>
+  </form>
+</div></section>
+
+<section id="avis"><div class="wrap">
+  <div class="head"><div><span class="label">Avis</span><h2>Ils reviennent chaque semaine.</h2></div></div>
+  <div class="avis">
+    <div><div class="stars">★★★★★</div><p>« Le meilleur burger de Bordeaux, et il n'est même pas dans un restaurant. »</p><b>Hugo B.</b><small>Avis Google</small></div>
+    <div><div class="stars">★★★★★</div><p>« Commandé à 10 h 45, prêt à 12 h 30 pile. Frites incroyables. »</p><b>Sarah M.</b><small>Avis Google</small></div>
+    <div><div class="stars">★★★★★</div><p>« Ils ont fait notre mariage pour 120 personnes. Tout le monde a redemandé. »</p><b>Clara & Tom</b><small>Avis Google</small></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot"><div><div class="logo">Marcel <i>Burger</i></div><p style="margin-top:8px">Food truck à Bordeaux depuis 2021. Bœuf de Bazas, frites fraîches.</p></div>
+    <div class="links"><a href="#">La carte</a><a href="#">Commander</a><a href="#">Privatiser</a><a href="#">Instagram</a><a href="#">TikTok</a></div></div>
+  <div class="copy"><span>© 2026 Marcel Burger — Bordeaux</span><span>Mentions légales</span></div>
+</div></footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour artisan & services à domicile — exemple B</title>
+<meta name="description" content="Delmas Électricité, électricien à Mérignac. Dépannage, mise aux normes, tableaux, bornes de recharge. Intervention sous 24 h sur Bordeaux Métropole.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#F4EEE4; --sable:#E3D5C1; --bois:#A5693A; --bois-fonce:#7C4C27;
+  --charbon:#1E1B18; --mousse:#4B5A45; --gris:#6F6A63; --blanc:#FFFFFF;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;font-family:'Work Sans',sans-serif;color:var(--charbon);background:var(--creme);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Sora',sans-serif;line-height:1.1;letter-spacing:-0.02em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{width:min(1180px,92%);margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:600;font-size:15px;transition:.25s;cursor:pointer;border:2px solid transparent}
+.btn-primary{background:var(--bois);color:#fff}
+.btn-primary:hover{background:var(--bois-fonce)}
+.btn-ghost{border-color:var(--charbon);color:var(--charbon)}
+.btn-ghost:hover{background:var(--charbon);color:#fff}
+.tag{display:inline-block;font-family:'Sora',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bois);margin-bottom:14px}
+.ph{position:relative;overflow:hidden;background:
+  linear-gradient(135deg,#C99A6B 0%,#A5693A 55%,#7C4C27 100%);}
+.ph::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(100deg,rgba(255,255,255,.06) 0 6px,transparent 6px 22px),
+  radial-gradient(circle at 30% 20%,rgba(255,255,255,.22),transparent 45%)}
+.ph span{position:absolute;left:16px;bottom:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:600}
+.ph.alt{background:linear-gradient(160deg,#5C6B55 0%,#4B5A45 60%,#33402F 100%)}
+.ph.light{background:linear-gradient(160deg,#EFE3D0 0%,#DCC9AC 100%)}
+.ph.light span{color:var(--charbon)}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(244,238,228,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,27,24,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:12px;font-family:'Sora',sans-serif;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.logo i{width:38px;height:38px;border-radius:10px;background:var(--charbon);display:grid;place-items:center}
+.logo i svg{width:22px;height:22px}
+.menu{display:flex;gap:34px;font-weight:500;font-size:15px}
+.menu a{position:relative}
+.menu a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--bois);transition:.25s}
+.menu a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.phone{font-weight:600;font-size:15px}
+
+/* HERO */
+.hero{padding:80px 0 60px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(40px,5.2vw,66px);font-weight:800;margin:0 0 22px}
+.hero h1 em{font-style:normal;color:var(--bois)}
+.hero p{font-size:19px;color:var(--gris);max-width:520px;margin-bottom:32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.hero-badges{display:flex;gap:26px;flex-wrap:wrap;font-size:14px;font-weight:500}
+.hero-badges span{display:flex;align-items:center;gap:8px}
+.hero-badges b{color:var(--bois);font-size:18px}
+.hero-visual{position:relative}
+.hero-visual .ph{height:540px;border-radius:24px}
+.hero-card{position:absolute;left:-30px;bottom:40px;background:#fff;padding:18px 22px;border-radius:16px;box-shadow:0 20px 50px rgba(30,27,24,.18);display:flex;align-items:center;gap:14px}
+.hero-card .stars{color:#E0A33B;font-size:14px;letter-spacing:2px}
+.hero-card b{display:block;font-family:'Sora',sans-serif;font-size:16px}
+.hero-card small{color:var(--gris);font-size:13px}
+
+/* BAND */
+.band{background:var(--charbon);color:#fff;padding:26px 0}
+.band .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.band div{display:flex;align-items:center;gap:12px;font-size:15px}
+.band b{font-family:'Sora',sans-serif;font-size:26px;color:var(--sable)}
+
+/* SERVICES */
+section{padding:96px 0}
+.section-head{max-width:640px;margin-bottom:48px}
+.section-head h2{font-size:clamp(30px,3.6vw,44px);font-weight:700;margin-bottom:14px}
+.section-head p{color:var(--gris);font-size:17px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.service{background:#fff;border-radius:var(--radius);padding:28px;transition:.3s;border:1px solid rgba(30,27,24,.06)}
+.service:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(30,27,24,.12)}
+.service .ph{height:170px;border-radius:10px;margin-bottom:22px}
+.service h3{font-size:19px;margin-bottom:10px}
+.service p{font-size:15px;color:var(--gris);margin-bottom:16px}
+.service a{font-weight:600;color:var(--bois);font-size:14px}
+
+/* REALISATIONS */
+.realisations{background:var(--sable)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:260px;gap:18px}
+.gallery .ph{border-radius:12px}
+.gallery .ph:first-child{grid-column:span 2;grid-row:span 2}
+.gallery .ph:nth-child(4){grid-row:span 2}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step}
+.step{position:relative;padding-top:24px;border-top:2px solid rgba(30,27,24,.12)}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:'Sora',sans-serif;font-weight:800;font-size:40px;color:var(--bois);display:block;margin-bottom:12px}
+.step h3{font-size:19px;margin-bottom:8px}
+.step p{font-size:15px;color:var(--gris)}
+
+/* ABOUT */
+.about{background:var(--mousse);color:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about .tag{color:var(--sable)}
+.about h2{font-size:clamp(30px,3.4vw,42px);margin-bottom:20px}
+.about p{color:rgba(255,255,255,.82);font-size:17px;margin-bottom:18px}
+.about .ph{height:460px;border-radius:20px}
+.about ul{list-style:none;margin:26px 0 32px;display:grid;gap:12px}
+.about li{display:flex;gap:12px;align-items:center;font-weight:500}
+.about li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--sable);flex:none;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center/70% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center/70% no-repeat}
+.about .btn-primary{background:var(--sable);color:var(--charbon)}
+
+/* AVIS */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.review{background:#fff;border-radius:var(--radius);padding:30px;border:1px solid rgba(30,27,24,.06)}
+.review .stars{color:#E0A33B;letter-spacing:3px;margin-bottom:14px}
+.review p{font-size:16px;margin-bottom:20px}
+.review b{font-family:'Sora',sans-serif;font-size:15px;display:block}
+.review small{color:var(--gris)}
+
+/* ZONE */
+.zone{background:#fff}
+.zone-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.zone .ph{height:380px;border-radius:20px}
+.cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.cities span{padding:9px 16px;border:1px solid rgba(30,27,24,.15);border-radius:999px;font-size:14px;font-weight:500}
+
+/* CONTACT */
+.contact{background:var(--charbon);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.contact h2{font-size:clamp(30px,3.6vw,44px);margin-bottom:16px}
+.contact p{color:rgba(255,255,255,.75);font-size:17px;margin-bottom:28px}
+.contact-info{display:grid;gap:16px;font-size:16px}
+.contact-info b{color:var(--sable);display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-family:'Sora',sans-serif}
+form{background:#fff;border-radius:20px;padding:34px;color:var(--charbon);display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:13px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid rgba(30,27,24,.18);border-radius:10px;background:var(--creme);width:100%}
+textarea{min-height:110px;resize:vertical}
+form .btn{justify-content:center;margin-top:6px}
+form small{color:var(--gris);font-size:12px;text-align:center}
+
+footer{background:#15130F;color:rgba(255,255,255,.7);padding:50px 0 30px;font-size:14px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot h4{color:#fff;font-size:14px;margin-bottom:14px;letter-spacing:.06em}
+.foot a{display:block;margin-bottom:8px}
+.foot a:hover{color:#fff}
+.foot .logo{color:#fff;margin-bottom:12px}
+.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (max-width:900px){
+  .menu,.phone{display:none}
+  .hero-grid,.about-grid,.zone-grid,.contact-grid{grid-template-columns:1fr}
+  .services,.steps,.reviews{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  .hero-card{left:12px}
+}
+@media (max-width:600px){
+  .services,.steps,.reviews,.row,.gallery{grid-template-columns:1fr}
+  .gallery .ph:first-child,.gallery .ph:nth-child(4){grid-column:auto;grid-row:auto}
+  section{padding:64px 0}
+}
+.ph{background-size:cover;background-position:center}.ph::before{background:linear-gradient(0deg,rgba(30,27,24,.35),transparent 55%)!important}.ph>span:not(.new):not(.tag){display:none}
+@media (max-width:600px){nav{height:68px}.logo{font-size:16px}.logo i{width:32px;height:32px}nav .btn{padding:10px 14px;font-size:13px;white-space:nowrap}}
+
+/* ===== VIBE ===== */
+
+body{background-color:#F3ECE0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");background-blend-mode:multiply}
+.btn,.service,.review,form,input,select,textarea,.hero-card,.hero-visual .ph,.service .ph,.gallery .ph,.about .ph,.zone .ph,.cities span,.logo i{border-radius:0!important}
+.btn{border:2px solid var(--charbon);box-shadow:4px 4px 0 var(--charbon);font-family:'Sora',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--charbon)}
+.btn-ghost{background:#fff}
+.about .btn-primary{border-color:var(--charbon)}
+header{border-bottom:3px solid var(--charbon);background:#F3ECE0}
+.hero{background-image:repeating-linear-gradient(90deg,transparent 0 39px,rgba(30,27,24,.25) 39px 40px);background-size:40px 16px;background-repeat:repeat-x}
+.hero-visual .ph{border:3px solid var(--charbon);box-shadow:14px 14px 0 var(--bois)}
+.hero-card{border:2px solid var(--charbon);box-shadow:6px 6px 0 var(--charbon);left:-20px;bottom:-24px}
+.stamp{position:absolute;top:-22px;right:-16px;background:var(--mousse);color:#fff;font-family:'Sora',sans-serif;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:12px 16px;border:2px solid var(--charbon);box-shadow:4px 4px 0 var(--charbon);transform:rotate(6deg);z-index:2}
+.tag{background:var(--charbon);color:var(--sable);padding:5px 10px;display:inline-block;font-size:11px}
+.section-head h2{text-transform:uppercase;letter-spacing:-.03em;font-weight:800}
+.band{background:var(--sable);color:var(--charbon);border-top:3px solid var(--charbon);border-bottom:3px solid var(--charbon)}
+.band b{color:var(--bois)}
+.service{border:2px solid var(--charbon);box-shadow:6px 6px 0 var(--charbon);background:#FBF7F0}
+.service:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--charbon)}
+.service .ph{border:2px solid var(--charbon)}
+.gallery .ph{border:3px solid var(--charbon)}
+.realisations{background:var(--sable);border-top:3px solid var(--charbon);border-bottom:3px solid var(--charbon)}
+.step{border-top:3px solid var(--charbon)}
+.step::before{font-size:72px;color:transparent;-webkit-text-stroke:2px var(--charbon)}
+.about{background:var(--mousse)}
+.about .ph{border:3px solid var(--charbon);box-shadow:14px 14px 0 var(--charbon)}
+.review{border:2px solid var(--charbon);box-shadow:6px 6px 0 var(--charbon)}
+.review .stars{color:var(--bois)}
+.zone .ph{border:3px solid var(--charbon)}
+.cities span{border:2px solid var(--charbon);font-weight:600;background:#fff}
+form{border:3px solid var(--charbon);box-shadow:10px 10px 0 var(--bois)}
+input,select,textarea{border:2px solid var(--charbon);background:#fff}
+.contact{background:var(--charbon)}
+.ph{filter:saturate(.85) contrast(1.06)}
+@media (max-width:600px){.stamp{right:6px;top:-14px;font-size:10px;padding:9px 12px}}
+
+
+/* ===== VARIANTE B : couleurs & typos ===== */
+:root{--creme:#F2F5FA;--sable:#DCE5F3;--bois:#1E4FD8;--bois-fonce:#13349A;--charbon:#121A2B;--mousse:#F5C400;--gris:#5B6472}
+body{font-family:'Inter',sans-serif;background-color:#F2F5FA;background-image:none}
+h1,h2,h3,h4,.btn,.stamp,.step::before,.hero-card b,.band b,.review b,.logo{font-family:'Space Grotesk',sans-serif}
+.hero h1 em{color:var(--bois)}
+.about{background:var(--charbon)}.about .tag{color:var(--mousse)}.about li::before{background:var(--mousse)}.about .btn-primary{background:var(--mousse);color:var(--charbon)}
+.band{background:var(--mousse);color:var(--charbon)}.band b{color:var(--charbon)}
+.stamp{background:var(--mousse);color:var(--charbon)}
+.hero-visual .ph{box-shadow:14px 14px 0 var(--bois)}
+.review .stars{color:var(--mousse)}
+form{box-shadow:10px 10px 0 var(--bois)}
+.ph{filter:none}
+.hero{background-image:repeating-linear-gradient(90deg,transparent 0 39px,rgba(30,79,216,.3) 39px 40px)}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <a href="#" class="logo"><i style="background:var(--bois)"><svg viewBox="0 0 24 24" fill="none" stroke="#F5C400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></i>Delmas Électricité</a>
+  <div class="menu"><a href="#savoir-faire">Prestations</a><a href="#realisations">Chantiers</a><a href="#atelier">L'entreprise</a><a href="#avis">Avis</a><a href="#contact">Contact</a></div>
+  <div class="nav-cta"><span class="phone">05 56 00 98 76</span><a href="#contact" class="btn btn-primary">Devis gratuit</a></div>
+</nav></div></header>
+
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="tag">Électricien · Mérignac & Bordeaux Métropole</span>
+    <h1>Une installation <em>sûre, aux normes</em>, sans mauvaise surprise.</h1>
+    <p>Dépannage sous 24 h, rénovation complète, tableaux électriques, bornes de recharge et domotique. Devis chiffré poste par poste, intervention propre.</p>
+    <div class="hero-actions"><a href="#contact" class="btn btn-primary">Demander un devis →</a><a href="tel:0556009876" class="btn btn-ghost">Urgence : 05 56 00 98 76</a></div>
+    <div class="hero-badges"><span><b>24 h</b> délai de dépannage</span><span><b>900+</b> interventions</span><span><b>4,8/5</b> sur Google</span></div>
+  </div>
+  <div class="hero-visual"><div class="stamp">Qualifelec · IRVE</div><div class="ph" style="background-image:url(img/elec-hero.jpg)"></div>
+    <div class="hero-card"><div><div class="stars" style="color:var(--mousse)">★★★★★</div><b>« Rapide et carré »</b><small>Nicolas T., Mérignac</small></div></div></div>
+</div></section>
+
+<div class="band"><div class="wrap"><div><b>Qualifelec</b> Entreprise qualifiée</div><div><b>IRVE</b> Bornes de recharge certifiées</div><div><b>10 ans</b> de garantie décennale</div><div><b>Consuel</b> Attestations fournies</div></div></div>
+
+<section id="savoir-faire"><div class="wrap">
+  <div class="section-head"><span class="tag">Prestations</span><h2>Du dépannage à la rénovation complète.</h2><p>Particuliers, copropriétés et petits commerces. Une équipe de 4 électriciens, tous salariés.</p></div>
+  <div class="services">
+    <article class="service"><div class="ph" style="background-image:url(img/elec-s1.jpg)"></div><h3>Dépannage & petits travaux</h3><p>Panne, disjoncteur qui saute, prise à ajouter : on intervient sous 24 h, souvent le jour même.</p><a href="#contact">En savoir plus →</a></article>
+    <article class="service"><div class="ph" style="background-image:url(img/elec-s2.jpg)"></div><h3>Mise aux normes & tableau</h3><p>Remplacement du tableau, mise à la terre, diagnostic NF C 15-100. Attestation Consuel incluse.</p><a href="#contact">En savoir plus →</a></article>
+    <article class="service"><div class="ph" style="background-image:url(img/elec-s3.jpg)"></div><h3>Bornes de recharge</h3><p>Installation de bornes 7 à 22 kW, maison ou copropriété. Certifiés IRVE, éligible aux aides.</p><a href="#contact">En savoir plus →</a></article>
+    <article class="service"><div class="ph" style="background-image:url(img/elec-s4.jpg)"></div><h3>Rénovation & domotique</h3><p>Installation complète en rénovation, éclairage, volets, chauffage connecté.</p><a href="#contact">En savoir plus →</a></article>
+  </div>
+</div></section>
+
+<section id="realisations" class="realisations"><div class="wrap">
+  <div class="section-head"><span class="tag">Chantiers</span><h2>Nos dernières interventions</h2></div>
+  <div class="gallery">
+    <div class="ph" style="background-image:url(img/elec-g1.jpg)"></div><div class="ph" style="background-image:url(img/elec-g2.jpg)"></div><div class="ph" style="background-image:url(img/elec-g3.jpg)"></div><div class="ph" style="background-image:url(img/elec-g4.jpg)"></div><div class="ph" style="background-image:url(img/elec-g5.jpg)"></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="section-head"><span class="tag">Comment ça se passe</span><h2>Quatre étapes, un seul interlocuteur.</h2></div>
+  <div class="steps">
+    <div class="step"><h3>Vous appelez</h3><p>On vous pose trois questions et on fixe un créneau. Pour les urgences, on vient dans la journée.</p></div>
+    <div class="step"><h3>Diagnostic sur place</h3><p>Gratuit pour tout devis. On vous explique ce qui pose problème et ce qui peut attendre.</p></div>
+    <div class="step"><h3>Devis détaillé</h3><p>Sous 48 h, poste par poste, avec les références du matériel. Pas de ligne « divers ».</p></div>
+    <div class="step"><h3>Travaux & attestation</h3><p>Chantier propre, test complet, Consuel ou PV de réception remis le jour même.</p></div>
+  </div>
+</div></section>
+
+<section id="atelier" class="about"><div class="wrap about-grid">
+  <div class="ph" style="background-image:url(img/elec-portrait.jpg)"></div>
+  <div><span class="tag">L'entreprise</span><h2>Fondée en 2012 par Karim Delmas, électricien depuis 20 ans.</h2>
+    <p>Après dix ans chez un grand installateur, Karim a créé Delmas Électricité pour faire du travail soigné, à taille humaine, dans un rayon de 25 km autour de Mérignac.</p>
+    <ul><li>4 électriciens salariés, formés chaque année</li><li>Matériel Legrand, Schneider, Hager</li><li>Véhicules équipés pour intervenir sans retour atelier</li></ul>
+    <a href="#contact" class="btn btn-primary">Nous contacter</a></div>
+</div></section>
+
+<section id="avis"><div class="wrap">
+  <div class="section-head"><span class="tag">Avis clients</span><h2>Ils nous ont fait confiance.</h2></div>
+  <div class="reviews">
+    <div class="review"><div class="stars">★★★★★</div><p>« Tableau remplacé en une journée, tout expliqué, pas un fil qui dépasse. »</p><b>Nicolas T.</b><small>Mérignac — Mise aux normes</small></div>
+    <div class="review"><div class="stars">★★★★★</div><p>« Borne de recharge posée en 3 h, dossier d'aide rempli avec moi. Parfait. »</p><b>Aurélie M.</b><small>Pessac — Borne IRVE</small></div>
+    <div class="review"><div class="stars">★★★★★</div><p>« Dépannage un samedi matin, en 40 minutes. Prix annoncé = prix payé. »</p><b>Jean-Marc R.</b><small>Le Haillan — Dépannage</small></div>
+  </div>
+</div></section>
+
+<section class="zone"><div class="wrap zone-grid">
+  <div><span class="tag">Zone d'intervention</span><h2 style="font-size:clamp(28px,3.2vw,40px);margin-bottom:14px">Électricien à Mérignac et dans toute la métropole</h2><p style="color:var(--gris);font-size:17px">Basés à Mérignac, nous intervenons dans un rayon de 25 km, y compris le week-end pour les urgences.</p>
+    <div class="cities"><span>Mérignac</span><span>Bordeaux</span><span>Pessac</span><span>Le Haillan</span><span>Eysines</span><span>Saint-Médard</span><span>Talence</span><span>Bègles</span><span>Le Bouscat</span><span>Gradignan</span><span>Martignas</span><span>Saint-Jean-d'Illac</span></div></div>
+  <div class="ph" style="background-image:url(img/bardou-zone.jpg);background-position:center bottom"></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap contact-grid">
+  <div><span class="tag" style="background:var(--mousse);color:var(--charbon)">Devis gratuit</span><h2>Décrivez-nous le problème.</h2><p>Un diagnostic gratuit, un devis sous 48 h. Pour une panne, appelez directement : on décroche de 7 h à 20 h.</p>
+    <div class="contact-info"><div><b>Téléphone</b>05 56 00 98 76 — 7 j/7 pour les urgences</div><div><b>Email</b>contact@delmas-electricite.fr</div><div><b>Siège</b>8 avenue de la Somme, 33700 Mérignac</div></div></div>
+  <form onsubmit="event.preventDefault()">
+    <div class="row"><label>Nom<input placeholder="Votre nom"></label><label>Téléphone<input placeholder="06 00 00 00 00"></label></div>
+    <label>Email<input placeholder="vous@exemple.fr"></label>
+    <label>Besoin<select><option>Dépannage / urgence</option><option>Mise aux normes / tableau</option><option>Borne de recharge</option><option>Rénovation complète</option><option>Autre</option></select></label>
+    <label>Détails<textarea placeholder="Type de logement, symptômes, délais…"></textarea></label>
+    <button class="btn btn-primary">Envoyer ma demande</button><small>Réponse sous 48 h · Diagnostic gratuit</small>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div><div class="logo"><i style="background:var(--bois)"><svg viewBox="0 0 24 24" fill="none" stroke="#F5C400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></i>Delmas Électricité</div><p>Électricien à Mérignac depuis 2012. Qualifelec, IRVE, garantie décennale.</p></div>
+    <div><h4>PRESTATIONS</h4><a href="#">Dépannage</a><a href="#">Mise aux normes</a><a href="#">Bornes de recharge</a><a href="#">Rénovation</a></div>
+    <div><h4>L'ENTREPRISE</h4><a href="#">Qui sommes-nous</a><a href="#">Chantiers</a><a href="#">Avis</a><a href="#">Recrutement</a></div>
+    <div><h4>CONTACT</h4><a href="#">05 56 00 98 76</a><a href="#">contact@delmas-electricite.fr</a><a href="#">8 av. de la Somme, Mérignac</a></div>
+  </div>
+  <div class="copy"><span>© 2026 Delmas Électricité — SIRET 000 000 000 00000</span><span>Mentions légales · Confidentialité</span></div>
+</div></footer>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>
