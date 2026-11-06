@@ -204,7 +204,7 @@ input,select,textarea{border:1px solid var(--nuit);background:#fff}
 body{font-family:'Manrope',sans-serif}
 h1,h2,h3{font-family:'Unbounded',sans-serif;font-weight:700;letter-spacing:-.02em}
 .hero h1{font-size:clamp(36px,4.8vw,64px)}
-.hero h1 i{background:linear-gradient(transparent 62%,rgba(200,241,53,.9) 62%)}
+.hero h1 i{background:linear-gradient(transparent 62%,rgba(200,241,53,.8) 62%)}
 .label{color:var(--nuit)}
 .btn-nuit:hover{background:var(--nuit-deep)}
 .btn,.offre,.chiffre,.temo,.art,.art .ph,.cas .ph,.about-grid .ph,.portrait .ph,.portrait .card,form,input,select,textarea,.about-grid .tags span{border-radius:14px!important}
@@ -218,6 +218,18 @@ h1,h2,h3{font-family:'Unbounded',sans-serif;font-weight:700;letter-spacing:-.02e
 .chiffre b em{color:var(--nuit)}
 .cas{background:var(--sauge)}
 .hero .trust .faces i:nth-child(2){background:var(--terra)}
+/* lime fluo : en fond / surlignage sur clair, en texte seulement sur violet */
+.label,.art small,.offre .num,.offre a,.portrait .card b,.step b{color:var(--nuit)}
+.label::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--terra);margin-right:8px;vertical-align:middle;box-shadow:0 0 0 2px var(--nuit)}
+.chiffre b em{color:var(--nuit);background:linear-gradient(transparent 58%,var(--terra) 58%)}
+.offre .num{background:var(--terra);display:inline-block;padding:3px 8px;border-radius:4px}
+.offre.dark .num{color:var(--nuit)!important}
+.methode .label,.methode .step b,.contact .label,.contact .list b,.methode .label::before{color:var(--terra)}
+.methode .label::before,.contact .label::before{box-shadow:none}
+.portrait .card b{background:linear-gradient(transparent 60%,var(--terra) 60%);display:inline-block}
+.btn-nuit:hover{background:var(--terra);color:var(--nuit)}
+.temo.big{background:var(--nuit);color:#fff}
+.logo i{box-shadow:0 0 0 2px var(--nuit)}
 </style>
 </head>
 <body>

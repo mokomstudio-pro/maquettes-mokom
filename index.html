@@ -71,7 +71,7 @@ a{color:inherit;text-decoration:none}
 .item.mobile .browser{display:none}
 .item:not(.mobile) .phone{display:none}
 
-@media (max-width:860px){.grid{grid-template-columns:1fr}.screen{height:360px}.feats ul{grid-template-columns:1fr}}
+@media (max-width:860px){.grid{grid-template-columns:1fr}.screen{height:360px}.feats ul{grid-template-columns:1fr}.bar-top{flex-wrap:wrap}.switch button{padding:7px 10px;font-size:12px}.item,.wrap{min-width:0;max-width:100%}.browser,.phone{max-width:100%}body{overflow-x:hidden}}
 </style>
 </head>
 <body>
@@ -101,7 +101,7 @@ var THEMES = [
  {num:"03",alt:{name:"Marcel Burger — food truck, Bordeaux",file:"marcel-burger.html",url:"marcelburger.fr"},exA:"La Cantine du Port — bistrot, La Rochelle",pages:[["Accueil","cantine-du-port.html"],["La carte complète","cantine-du-port-carte.html"],["Mentions légales","cantine-du-port-mentions-legales.html"]],title:"Restaurant, bar & food truck",file:"cantine-du-port.html",url:"cantineduport.fr",action:"Réserver une table",fonts:"Instrument Serif + Karla",
   desc:"Restaurant, café, bar, traiteur…",
   feats:["Horaires dès l'accueil, jour du moment surligné","Carte complète avec prix + menu du jour","Bandeau d'actualité défilant (arrivage, terrasse…)","Galerie ambiance","Présentation du chef / de l'équipe","Formulaire de réservation (date, heure, couverts)","Infos pratiques + itinéraire + carte à emporter","Avis Google / TripAdvisor"]},
- {num:"04",alt:{name:"Costa Barbier — barbershop, Bordeaux",file:"costa-barbier.html",url:"costabarbier.fr"},exA:"Maison Louve — salon & institut, Anglet",pages:[["Accueil","maison-louve.html"],["Prestations & tarifs","maison-louve-tarifs.html"],["Mentions légales","maison-louve-mentions-legales.html"]],title:"Beauté & bien-être",file:"maison-louve.html",url:"maisonlouve.fr",action:"Réserver un créneau",fonts:"Libre Caslon + Mulish",
+ {num:"04",alt:{name:"Rituel d'Orient — massages & hammam, Bordeaux",file:"rituel-dorient.html",url:"rituel-dorient.fr"},exA:"Costa Barber & Ink — barbier & tatoueur, Bordeaux",pages:[["Accueil","costa-barbier.html"],["Tarifs","costa-barbier-tarifs.html"],["Mentions légales","costa-barbier-mentions-legales.html"]],title:"Beauté & bien-être",file:"costa-barbier.html",url:"costabarber.fr",action:"Réserver un créneau",fonts:"Alfa Slab One + Work Sans",
   desc:"Coiffeur, esthétique, massage, onglerie, barbier, tatoueur…",
   feats:["Bouton réservation en ligne (Planity, Treatwell…)","Bandeau offre de bienvenue","4 prestations avec prix « dès »","Grille de tarifs complète","Galerie de réalisations","Présentation de l'équipe","Horaires + sans rendez-vous","Avis clients"]},
  {num:"05",alt:{name:"Maître Anaïs Verdier — avocate, Bordeaux",file:"anais-verdier-avocate.html",url:"verdier-avocate.fr"},exA:"Camille Roux — ostéopathe, Pessac",pages:[["Accueil","cabinet-roux.html"],["Ostéopathie du sportif","cabinet-roux-sportifs.html"],["Mentions légales","cabinet-roux-mentions-legales.html"]],title:"Praticien & profession libérale",file:"cabinet-roux.html",url:"camilleroux-osteo.fr",action:"Prendre rendez-vous",fonts:"Source Serif + Nunito Sans",
@@ -110,8 +110,8 @@ var THEMES = [
  {num:"06",alt:{name:"Karim Benali — formateur IA, Bordeaux",file:"karim-benali-formateur.html",url:"benali-formation.fr"},exA:"Léa Marchand — consultante, Bordeaux",pages:[["Accueil","lea-marchand.html"],["Cas client Vinatis","lea-marchand-cas-vinatis.html"],["Mentions légales","lea-marchand-mentions-legales.html"]],title:"Indépendant & expert",file:"lea-marchand.html",url:"leamarchand-conseil.fr",action:"Prendre contact",fonts:"DM Serif + DM Sans",
   desc:"Consultant, formateur, freelance, coach professionnel…",
   feats:["Formulaire de diagnostic / premier rendez-vous","Logos de clients","3 offres détaillées","Méthode en 3 étapes","Chiffres clés","Cas client avec résultats","Témoignages","Ressources / articles de blog"]},
- {num:"07",alt:{name:"Studio Ananda — yoga & pilates, Bordeaux",file:"studio-ananda.html",url:"studio-ananda.fr"},exA:"ALTO Coaching — coach sportif, Bordeaux",pages:[["Accueil","alto-coaching.html"],["Formules & planning","alto-coaching-formules.html"],["Mentions légales","alto-coaching-mentions-legales.html"]],title:"Sport & cours",file:"alto-coaching.html",url:"alto-coaching.fr",action:"Réserver une séance",fonts:"Barlow Condensed + Manrope",
-  desc:"Coach sportif, yoga, pilates, danse, musique…",
+ {num:"07",alt:{name:"Studio Velvet — danse heels & cabaret, Bordeaux",file:"studio-velvet.html",url:"studiovelvet.fr"},exA:"ALTO Coaching — coach sportif, Bordeaux",pages:[["Accueil","alto-coaching.html"],["Formules & planning","alto-coaching-formules.html"],["Mentions légales","alto-coaching-mentions-legales.html"]],title:"Sport & cours",file:"alto-coaching.html",url:"alto-coaching.fr",action:"Réserver une séance",fonts:"Barlow Condensed + Manrope",
+  desc:"Coach sportif, studio de danse, yoga, pilates, musique…",
   feats:["Bouton « première séance offerte »","Formules de séances avec durée et prix","Planning de la semaine avec créneaux réservables","Portrait du coach + diplômes","Résultats avant / après","3 tarifs (séance, pack, mensuel)","Avis clients","Barre de navigation fixe sur téléphone"]},
  {num:"08",alt:{name:"Camping Les Dunes — Lacanau-Océan",file:"camping-les-dunes.html",url:"camping-lesdunes.fr"},exA:"Maison Calmel — hôtel & spa, Saint-Émilion",pages:[["Accueil","maison-calmel.html"],["Suite Chartreuse","maison-calmel-suite-chartreuse.html"],["Mentions légales","maison-calmel-mentions-legales.html"]],title:"Hébergement & tourisme",file:"maison-calmel.html",url:"maisoncalmel.fr",action:"Réserver un séjour",fonts:"Bodoni Moda + Figtree",
   desc:"Gîte, chambres d'hôtes, hôtel, camping…",

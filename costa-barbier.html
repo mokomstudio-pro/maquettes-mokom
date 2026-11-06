@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maquette personnalisable pour beauté & bien-être — exemple B</title>
-<meta name="description" content="Costa Barbier, barbershop rue Sainte-Catherine à Bordeaux. Coupe, barbe, rasage à l'ancienne. Réservation en ligne, sans rendez-vous le samedi.">
+<title>Maquette personnalisable pour beauté & bien-être</title>
+<meta name="description" content="Costa Barber & Ink, barbier et salon de tatouage rue Sainte-Catherine à Bordeaux. Coupe, barbe, rasage à l'ancienne, tatouage. Réservation en ligne.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--poudre:#EBD9D2;--terra:#B9705A;--creme:#FAF6F2;--noir:#26211F;--sable:#E9DFD5;--gris:#8A7F78}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -152,49 +152,64 @@ body{background:linear-gradient(180deg,#FAF6F2 0%,#F5EAE5 50%,#FAF6F2 100%)}
 footer{background:transparent;border-top:1px solid var(--poudre)}
 
 
-/* ===== VARIANTE B : couleurs & typos ===== */
-:root{--poudre:#2B2520;--terra:#B87333;--creme:#F2EDE4;--noir:#1A1715;--sable:#E4DCCF;--gris:#7A7169}
-body{font-family:'Work Sans',sans-serif;font-weight:400;background:var(--creme)}
-h1,h2,h3{font-family:'Prata',serif;font-weight:400}
-.label{font-family:'Work Sans',sans-serif;font-style:normal;font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:600}
-.hero::before{background:radial-gradient(circle at 50% 50%,#E4DCCF 0%,rgba(228,220,207,0) 65%)}
-.hero .ph{border-radius:0;margin:0;height:auto;min-height:640px;align-self:stretch}
-.hero h1{font-weight:400}
-.presta{border-radius:0;box-shadow:none;border:1px solid var(--noir)}.presta .ph{border-radius:0}.presta h3{font-style:normal}
-.tarifs-grid{border-radius:0;box-shadow:none;border:1px solid var(--noir);background:var(--creme)}
-.tarifs h3{font-style:normal}
-.galerie .ph{border-radius:0!important;filter:grayscale(.3) contrast(1.05)}
-.team .ph{border-radius:0;outline:1px solid var(--terra);outline-offset:8px}.team h3{font-style:normal}
-.salon .ph{border-radius:0}
-.resa{border-radius:0;background:var(--noir)}.resa h2{font-style:normal}.resa .btn-noir{background:var(--terra);color:#fff}
-.avis div{border-radius:0;box-shadow:none;border:1px solid rgba(26,23,21,.15)}
-.btn{border-radius:0;letter-spacing:.14em;text-transform:uppercase;font-size:12px}
-.topbar{background:var(--terra)}.topbar b{color:#fff}
-footer{background:var(--sable)}
+/* ===== VARIANTE : couleurs & typos ===== */
+:root{--poudre:#1F1B16;--terra:#B87333;--creme:#15130F;--noir:#EDE6D8;--sable:#0E0C0A;--gris:#9A9083}
+body{font-family:'Work Sans',sans-serif;font-weight:400;background:var(--creme);color:var(--noir);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+h1,h2,h3{font-family:'Alfa Slab One',serif;font-weight:400;letter-spacing:.01em}
+.label{font-family:'Work Sans',sans-serif;font-style:normal;font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:700;color:var(--terra)}
+.topbar{background:var(--terra);color:#15130F}.topbar b{color:#15130F}
+header{background:rgba(21,19,15,.95);border-bottom:3px double var(--terra)}
+.logo{color:var(--noir);letter-spacing:.1em}.logo small{color:var(--terra)}
+.menu{color:var(--noir)}.menu a:hover{color:var(--terra)}
+.btn{border-radius:0;letter-spacing:.16em;text-transform:uppercase;font-size:12px;font-weight:700}
+.btn-noir{background:var(--terra);color:#15130F}.btn-noir:hover{background:var(--noir);color:#15130F}
+.btn-line{border-color:var(--noir);color:var(--noir)}.btn-line:hover{background:var(--noir);color:#15130F}
+.hero::before{display:none}
+.hero .ph{border-radius:0;margin:0;height:auto;min-height:640px;align-self:stretch;outline:3px double var(--terra);outline-offset:-18px;filter:grayscale(.25) contrast(1.08)}
+.hero h1{font-size:clamp(40px,4.8vw,64px);line-height:1.05}.hero h1 i{font-style:normal;color:var(--terra)}
+.hero p,.head p,.presta p,.team p,.salon p,.avis small,.tarifs .note{color:var(--gris)}
+.hero .trust b{font-family:'Alfa Slab One',serif;font-style:normal;color:var(--terra)}
+.presta{border-radius:0;box-shadow:none;border:1px solid rgba(237,230,216,.18);background:var(--poudre)}.presta .ph{border-radius:0;filter:grayscale(.3) contrast(1.05)}
+.presta h3{font-style:normal;font-size:20px}.presta .row b{color:var(--noir)}.presta .row a{color:var(--terra)}
+.tarifs{background:var(--sable);border-top:3px double var(--terra);border-bottom:3px double var(--terra)}
+.tarifs-grid{border-radius:0;box-shadow:none;background:transparent;padding:0;border:0}
+.tarifs h3{font-style:normal;border-bottom:1px solid var(--terra);font-size:22px}
+.line{border-bottom:1px dotted rgba(237,230,216,.3)}.line b{color:var(--noir)}.line span{color:var(--terra);font-weight:700}
+.galerie .ph{border-radius:0!important;filter:grayscale(1) contrast(1.1);transition:.4s}.galerie .ph:hover{filter:none}
+.equipe{background:var(--creme)}
+.team .ph{border-radius:0;outline:3px double var(--terra);outline-offset:-14px;filter:grayscale(.4)}.team h3{font-style:normal}.team em{color:var(--terra)}
+.salon .ph{border-radius:0;outline:3px double var(--terra);outline-offset:-14px}.salon li::before{color:var(--terra)}
+.resa{border-radius:0;background:var(--terra);color:#15130F}.resa .label{color:#15130F}.resa h2{font-style:normal}.resa p{color:rgba(21,19,15,.8)}
+.resa .btn-noir{background:#15130F;color:var(--terra)}.resa .btn-line{border-color:#15130F;color:#15130F}.resa .infos b{color:#15130F}
+.avis div{border-radius:0;box-shadow:none;border:1px solid rgba(237,230,216,.18);background:var(--poudre)}.avis .stars{color:var(--terra)}
+footer{background:var(--sable);color:var(--gris);border-top:3px double var(--terra)}.foot .logo{color:var(--noir)}
+.flash{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:30px}
+.flash div{aspect-ratio:1;border:1px solid rgba(237,230,216,.2);display:grid;place-items:center;font-family:'Alfa Slab One',serif;font-size:13px;letter-spacing:.1em;color:var(--terra);text-transform:uppercase;background:var(--poudre);text-align:center;padding:10px}
+@media(max-width:900px){.flash{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.flash{grid-template-columns:repeat(2,1fr);gap:10px}.flash div{font-size:11px}}
 </style>
 </head>
 <body>
 
-<div class="topbar">Sans rendez-vous le samedi · <b>Coupe + barbe 38 €</b> du mardi au jeudi</div>
+<div class="topbar">Sans rendez-vous le samedi · <b>Coupe + barbe 38 €</b> du mardi au jeudi · Flash tattoo dès 80 €</div>
 <header><div class="wrap"><nav>
-  <a href="#" class="logo">Costa Barbier<small>Barbershop · Bordeaux · 2016</small></a>
-  <div class="menu"><a href="#prestations">Prestations</a><a href="#tarifs">Tarifs</a><a href="#galerie">Galerie</a><a href="#equipe">Les barbiers</a><a href="#salon">Le shop</a></div>
-  <a href="#reserver" class="btn btn-noir" style="padding:12px 24px">Réserver</a>
+  <a href="#" class="logo">Costa Barber & Ink<small>Barbier · Tatoueur · Bordeaux · 2016</small></a>
+  <div class="menu"><a href="#prestations">Barbier</a><a href="#tattoo">Tatouage</a><a href="costa-barbier-tarifs.html">Tarifs</a><a href="#galerie">Galerie</a><a href="#equipe">L'équipe</a></div>
+  <a href="#reserver" class="btn btn-noir" style="padding:12px 22px">Réserver</a>
 </nav></div></header>
 
 <section class="hero" style="padding:0">
   <div class="wrap hero-text" style="margin:0 0 0 auto;width:min(580px,calc(92% - 20px))">
-    <span class="label">Barbershop · rue Sainte-Catherine, Bordeaux</span>
-    <h1>La coupe nette, <i>le rasage à l'ancienne.</i></h1>
-    <p>Coupe aux ciseaux, dégradé à la tondeuse, barbe sculptée au rasoir et serviette chaude. Un shop de quartier avec de vrais fauteuils, du bon café et pas de musique trop forte.</p>
-    <div class="btns"><a href="#reserver" class="btn btn-noir">Réserver un créneau</a><a href="#tarifs" class="btn btn-line">Voir les tarifs</a></div>
-    <div class="trust"><div><b>4,9/5</b>1 120 avis Google</div><div><b>3</b>barbiers</div><div><b>Sans RDV</b>le samedi</div></div>
+    <span class="label">Barbier & salon de tatouage · Bordeaux</span>
+    <h1>Lames, encre <i>& bon café.</i></h1>
+    <p>Coupe aux ciseaux, barbe sculptée au coupe-chou, et un studio de tatouage à l'étage. Un shop de quartier où l'on vient pour une coupe et où l'on reste pour discuter.</p>
+    <div class="btns"><a href="#reserver" class="btn btn-noir">Réserver un créneau</a><a href="costa-barbier-tarifs.html" class="btn btn-line">Voir les tarifs</a></div>
+    <div class="trust"><div><b>4,9/5</b>1 120 avis Google</div><div><b>2 + 1</b>barbiers & tatoueur</div><div><b>Sans RDV</b>le samedi</div></div>
   </div>
   <div class="ph" style="background-image:url(img/barb-hero.jpg)"></div>
 </section>
 
 <section id="prestations"><div class="wrap">
-  <div class="head"><span class="label">Prestations</span><h2>Quatre gestes, bien faits.</h2><p>Chaque passage commence par un café et une question : « Qu'est-ce qu'on fait aujourd'hui ? »</p></div>
+  <div class="head"><span class="label">Côté barbier</span><h2>Quatre gestes, bien faits.</h2><p>Chaque passage commence par un café et une question : « Qu'est-ce qu'on fait aujourd'hui ? »</p></div>
   <div class="prestas">
     <div class="presta"><div class="ph" style="background-image:url(img/barb-s1.jpg)"></div><div class="txt"><h3>Coupe</h3><p>Ciseaux, tondeuse ou les deux. Shampoing et coiffage inclus.</p><div class="row"><b>25 €</b><a href="#reserver">Réserver →</a></div></div></div>
     <div class="presta"><div class="ph" style="background-image:url(img/barb-s2.jpg)"></div><div class="txt"><h3>Barbe</h3><p>Taille, contours au rasoir, huile. Le détail qui change un visage.</p><div class="row"><b>18 €</b><a href="#reserver">Réserver →</a></div></div></div>
@@ -203,60 +218,59 @@ footer{background:var(--sable)}
   </div>
 </div></section>
 
-<section id="tarifs" class="tarifs"><div class="wrap">
-  <div class="head"><span class="label">Tarifs</span><h2>Affichés, nets, sans surprise.</h2></div>
-  <div class="tarifs-grid">
-    <div><h3>Cheveux</h3>
-      <div class="line"><b>Coupe classique</b><span>25 €</span></div><div class="line"><b>Coupe + barbe</b><span>40 €</span></div><div class="line"><b>Dégradé à blanc (skin fade)</b><span>28 €</span></div><div class="line"><b>Coupe enfant (-12 ans)</b><span>16 €</span></div><div class="line"><b>Tonte simple</b><span>14 €</span></div></div>
-    <div><h3>Barbe & rasage</h3>
-      <div class="line"><b>Taille de barbe</b><span>18 €</span></div><div class="line"><b>Rasage à l'ancienne</b><span>28 €</span></div><div class="line"><b>Contours seuls</b><span>10 €</span></div><div class="line"><b>Soin barbe (gommage, huile, massage)</b><span>22 €</span></div><div class="line"><b>Le Grand Costa (coupe + rasage + soin)</b><span>65 €</span></div></div>
+<section id="tattoo" class="tarifs"><div class="wrap">
+  <div class="head"><span class="label">Côté encre</span><h2>Le studio de tatouage, à l'étage.</h2><p>Marco tatoue depuis 2012 : traditionnel américain, blackwork, fine line. Hygiène certifiée, matériel à usage unique.</p></div>
+  <div class="prestas" style="grid-template-columns:repeat(3,1fr)">
+    <div class="presta"><div class="ph" style="background-image:url(img/tat-1.jpg)"></div><div class="txt"><h3>Flash</h3><p>Dessins prêts à tatouer, affichés au mur et sur Instagram. Petit format, sans attente.</p><div class="row"><b>dès 80 €</b><a href="#reserver">Réserver →</a></div></div></div>
+    <div class="presta"><div class="ph" style="background-image:url(img/tat-2.jpg)"></div><div class="txt"><h3>Pièce sur mesure</h3><p>Rendez-vous conseil gratuit, dessin dans la semaine, séance de 2 à 6 h.</p><div class="row"><b>120 €/h</b><a href="#reserver">Réserver →</a></div></div></div>
+    <div class="presta"><div class="ph" style="background-image:url(img/tat-5.jpg)"></div><div class="txt"><h3>Recouvrement & retouche</h3><p>On regarde ensemble ce qui est possible. Retouches gratuites sous 3 mois.</p><div class="row"><b>Sur devis</b><a href="#reserver">Réserver →</a></div></div></div>
   </div>
-  <p class="note" style="text-align:center">Du mardi au jeudi : coupe + barbe à 38 €. Carte de fidélité : la 10<sup>e</sup> coupe offerte.</p>
-  <div class="cta"><a href="#reserver" class="btn btn-noir">Réserver en ligne</a></div>
+  <div class="flash"><div>Ancre</div><div>Dague</div><div>Hirondelle</div><div>Rose</div><div>Serpent</div><div>Tête de tigre</div></div>
+  <p class="note" style="text-align:center">Acompte de 50 € à la réservation, déduit de la séance. Tatouage interdit aux mineurs.</p>
 </div></section>
 
 <section id="galerie"><div class="wrap">
   <div class="head"><span class="label">Galerie</span><h2>Le travail de la semaine.</h2></div>
-  <div class="galerie"><div class="ph" style="background-image:url(img/barb-g1.jpg)"></div><div class="ph" style="background-image:url(img/barb-g2.jpg)"></div><div class="ph" style="background-image:url(img/barb-g3.jpg)"></div></div>
+  <div class="galerie"><div class="ph" style="background-image:url(img/barb-g1.jpg)"></div><div class="ph" style="background-image:url(img/tat-3.jpg)"></div><div class="ph" style="background-image:url(img/barb-g3.jpg)"></div></div>
 </div></section>
 
 <section id="equipe" class="equipe"><div class="wrap">
-  <div class="head"><span class="label">Les barbiers</span><h2>Trois fauteuils, trois mains.</h2></div>
+  <div class="head"><span class="label">L'équipe</span><h2>Deux fauteuils, une table d'encre.</h2></div>
   <div class="team">
-    <div><div class="ph" style="background-image:url(img/barb-t1.jpg)"></div><em>Fondateur</em><h3>Marco</h3><p>Formé à Lisbonne, quinze ans de métier. Le rasage à l'ancienne, c'est lui.</p></div>
-    <div><div class="ph" style="background-image:url(img/barb-t2.jpg)"></div><em>Barbier</em><h3>Yanis</h3><p>Spécialiste des dégradés et des coupes texturées.</p></div>
+    <div><div class="ph" style="background-image:url(img/tat-4.jpg)"></div><em>Fondateur · Tatoueur</em><h3>Marco</h3><p>Formé à Lisbonne, tatoueur depuis 2012. Traditionnel, blackwork, lettrage.</p></div>
+    <div><div class="ph" style="background-image:url(img/barb-t2.jpg)"></div><em>Barbier</em><h3>Yanis</h3><p>Dégradés, coupes texturées, et le meilleur rasage à l'ancienne de la rue.</p></div>
     <div><div class="ph" style="background-image:url(img/barb-t3.jpg)"></div><em>Barbier</em><h3>Léo</h3><p>Le plus jeune de l'équipe, le plus demandé par les enfants.</p></div>
   </div>
 </div></section>
 
 <section id="salon"><div class="wrap salon">
   <div class="ph" style="background-image:url(img/barb-g2.jpg)"></div>
-  <div><span class="label">Le shop</span><h2>Trois fauteuils de 1950, un comptoir en zinc.</h2>
-    <p>Ouvert en 2016 au 212 rue Sainte-Catherine, à l'étage d'une ancienne mercerie. Fauteuils Belmont d'époque, café de chez Piha, bière locale le vendredi soir.</p>
-    <ul><li>Produits Proraso, Reuzel, Captain Fawcett</li><li>Vente de soins et peignes sur place</li><li>Accès escalier uniquement (1<sup>er</sup> étage)</li></ul>
+  <div><span class="label">Le shop</span><h2>Fauteuils de 1950, comptoir en zinc, néon rouge.</h2>
+    <p>Ouvert en 2016 au 212 rue Sainte-Catherine, à l'étage d'une ancienne mercerie. Le studio de tatouage a pris le dernier étage en 2021.</p>
+    <ul><li>Produits Proraso, Reuzel, Captain Fawcett</li><li>Studio tattoo déclaré à l'ARS, hygiène certifiée</li><li>Bière locale le vendredi soir</li></ul>
     <a href="#reserver" class="btn btn-line">Nous trouver</a></div>
 </div></section>
 
 <section id="reserver" class="resa"><div class="wrap">
   <span class="label">Réservation</span><h2>Choisis ton barbier, ton créneau.</h2>
-  <p>Réservation en ligne 24 h/24, rappel SMS. Le samedi, c'est sans rendez-vous : viens, prends un café, attends ton tour.</p>
-  <div class="btns"><a href="#" class="btn btn-noir">Réserver sur Planity</a><a href="#" class="btn btn-line">05 56 00 00 00</a></div>
-  <div class="infos"><div><b>Adresse</b>212 rue Sainte-Catherine, 1<sup>er</sup> étage, 33000 Bordeaux</div><div><b>Horaires</b>Mar – Ven : 10 h – 19 h 30 · Sam : 9 h – 18 h</div><div><b>Sans rendez-vous</b>Samedi toute la journée</div></div>
+  <p>Barbier : réservation en ligne 24 h/24, sans rendez-vous le samedi. Tatouage : rendez-vous conseil gratuit, sur place ou par message.</p>
+  <div class="btns"><a href="#" class="btn btn-noir">Réserver sur Planity</a><a href="#" class="btn btn-line">Projet tatouage par message</a></div>
+  <div class="infos"><div><b>Adresse</b>212 rue Sainte-Catherine, 1<sup>er</sup> étage, 33000 Bordeaux</div><div><b>Horaires</b>Mar – Ven : 10 h – 19 h 30 · Sam : 9 h – 18 h</div><div><b>Téléphone</b>05 56 00 00 00</div></div>
 </div></section>
 
 <section><div class="wrap">
   <div class="head"><span class="label">Avis</span><h2>Ils en parlent.</h2></div>
   <div class="avis">
-    <div><div class="stars">★★★★★</div><p>« Le rasage à l'ancienne de Marco, c'est 30 minutes hors du temps. »</p><b>Antoine G.</b><small>Avis Google</small></div>
-    <div><div class="stars">★★★★★</div><p>« Dégradé parfait à chaque fois, et Yanis se souvient de ce que je veux. »</p><b>Mehdi K.</b><small>Avis Google</small></div>
-    <div><div class="stars">★★★★★</div><p>« Mon fils de 6 ans réclame d'y retourner. C'est dire. »</p><b>Camille R.</b><small>Avis Planity</small></div>
+    <div><div class="stars">★★★★★</div><p>« Le rasage à l'ancienne de Yanis, c'est 30 minutes hors du temps. »</p><b>Antoine G.</b><small>Avis Google</small></div>
+    <div><div class="stars">★★★★★</div><p>« Marco a dessiné exactement ce que j'avais en tête. Cicatrisation nickel, retouche offerte. »</p><b>Mehdi K.</b><small>Avis Google</small></div>
+    <div><div class="stars">★★★★★</div><p>« Coupe en bas, tatouage en haut, café entre les deux. Mon samedi parfait. »</p><b>Camille R.</b><small>Avis Planity</small></div>
   </div>
 </div></section>
 
 <footer><div class="wrap">
-  <div class="foot"><div><div class="logo">Costa Barbier<small>Barbershop · Bordeaux · 2016</small></div></div>
-    <div class="links"><a href="#">Prestations</a><a href="#">Tarifs</a><a href="#">Réserver</a><a href="#">Cartes cadeaux</a><a href="#">Instagram</a></div></div>
-  <div class="copy"><span>© 2026 Costa Barbier — 212 rue Sainte-Catherine, Bordeaux</span><span>Mentions légales · Confidentialité</span></div>
+  <div class="foot"><div><div class="logo">Costa Barber & Ink<small>Barbier · Tatoueur · Bordeaux · 2016</small></div></div>
+    <div class="links"><a href="#prestations">Barbier</a><a href="#tattoo">Tatouage</a><a href="costa-barbier-tarifs.html">Tarifs</a><a href="#reserver">Réserver</a><a href="#">Instagram</a></div></div>
+  <div class="copy"><span>© 2026 Costa Barber & Ink — 212 rue Sainte-Catherine, Bordeaux</span><span><a href="costa-barbier-mentions-legales.html">Mentions légales</a> · Confidentialité</span></div>
 </div></footer>
 
 <div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
