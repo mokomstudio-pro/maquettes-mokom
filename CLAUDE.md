@@ -4,13 +4,13 @@
 Ce dépôt contient le catalogue de maquettes de l'offre « Site Express » de Mokom Studio (Morgane, webdesigner à Bordeaux). Il est publié sur GitHub Pages à l'adresse https://maquettes.mokomstudio.fr (fichier `CNAME`). Morgane n'est pas développeuse : explique en termes simples, propose la meilleure option, ne pose une question que si c'est bloquant.
 
 ## Structure
-- `index.html` : vitrine des 11 thèmes (cadres navigateur / téléphone, sélecteur Exemple A / B, liste des pages, fonctionnalités). Les thèmes sont décrits dans le tableau `THEMES` du script en bas du fichier.
+- `index.html` : vitrine des 12 thèmes (cadres navigateur / téléphone, sélecteur Exemple A / B, liste des pages, fonctionnalités). Les thèmes sont décrits dans le tableau `THEMES` du script en bas du fichier.
 - Un fichier `.html` par page de maquette. Nommage : `<client>.html` (accueil), `<client>-<page>.html` (page intérieure), `<client>-mentions-legales.html`.
 - `img/` : photos Pexels libres de droits, nommées `<prefixe>-<usage>.jpg`, ≤ 1 600 px, qualité 78.
 - `CNAME`, `.nojekyll` : nécessaires à GitHub Pages. Ne pas supprimer.
 
-## Les 11 thèmes (exemple A / exemple B)
-01 artisan `atelier-bardou` / `delmas-electricite` · 02 commerce `maison-oriol` / `boulangerie-lacoste` · 03 restaurant `cantine-du-port` / `marcel-burger` · 04 beauté `costa-barbier` (barbier & tatoueur, pages tarifs + mentions) / `rituel-dorient` (massages, doré/ocre/marron) · 05 praticien `cabinet-roux` / `anais-verdier-avocate` · 06 indépendant `lea-marchand` / `karim-benali-formateur` · 07 sport `alto-coaching` (noir + orange néon) / `studio-velvet` (danse heels & cabaret) · 08 hébergement `maison-calmel` / `camping-les-dunes` · 09 portfolio `theo-lanvin` / `nour-haddad-interieur` · 10 boutique `etale` / `terre-et-feu` · 11 carte de visite `atelier-pivoine` / `garage-martin`.
+## Les 12 thèmes (exemple A / exemple B)
+01 artisan `atelier-bardou` / `delmas-electricite` · 02 commerce `maison-oriol` / `boulangerie-lacoste` · 03 restaurant `cantine-du-port` / `marcel-burger` · 04 beauté `institut-blanche` (institut doux, pages tarifs + mentions) / `barbier-grimaud` (barbier années 1920) · 05 praticien `cabinet-roux` / `anais-verdier-avocate` · 06 indépendant `lea-marchand` / `karim-benali-formateur` · 07 sport `alto-coaching` (noir + orange néon) / `studio-velvet` (danse heels & cabaret) · 08 hébergement `maison-calmel` / `camping-les-dunes` · 09 portfolio `theo-lanvin` / `nour-haddad-interieur` · 10 boutique `etale` / `terre-et-feu` · 11 carte de visite `atelier-pivoine` / `garage-martin` · 12 immobilier `chartrons-immobilier` (agence, pages fiche bien + mentions) / `clara-dupouy-immobilier` (agent indépendant, Bassin).
 
 ## Règles
 - Chaque page est autonome : HTML + CSS dans le même fichier, polices via Google Fonts, aucune autre dépendance externe.

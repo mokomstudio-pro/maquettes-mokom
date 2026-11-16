@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — Chartrons Immobilier</title>
+<meta name="description" content="Mentions légales du site Chartrons Immobilier.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#1B2A41;--pierre:#EDE6DA;--cuivre:#C27C4B;--blanc:#FAF7F2;--gris:#6B6F76;--ligne:#D9D0C2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',sans-serif;color:var(--nuit);background:var(--blanc);line-height:1.6;font-size:16px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Newsreader',serif;font-weight:500;line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(30px,3.4vw,44px)}
+h2 i,h1 i{font-style:italic;color:var(--cuivre)}
+.wrap{width:min(1200px,92%);margin:0 auto}
+.label{display:inline-block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--cuivre);margin-bottom:14px}
+.label::before{content:"";display:inline-block;width:28px;height:1px;background:var(--cuivre);vertical-align:middle;margin-right:10px}
+section{padding:90px 0}
+.head{max-width:620px;margin-bottom:46px}.head p{color:var(--gris);margin-top:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;font-weight:600;font-size:14px;border:1px solid var(--nuit);transition:.2s;white-space:nowrap}
+.btn-nuit{background:var(--nuit);color:#fff}.btn-nuit:hover{background:var(--cuivre);border-color:var(--cuivre)}
+.btn-line{background:transparent;color:var(--nuit)}.btn-line:hover{background:var(--nuit);color:#fff}
+.ph{background-size:cover;background-position:center;background-color:var(--pierre)}
+/* topbar + header */
+.topbar{background:var(--nuit);color:rgba(255,255,255,.8);font-size:12.5px;text-align:center;padding:9px 16px;letter-spacing:.02em}.topbar b{color:var(--cuivre)}
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--ligne)}
+nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.logo{font-family:'Newsreader',serif;font-size:24px;font-weight:500;letter-spacing:.01em;line-height:1}.logo small{display:block;font-family:'Public Sans',sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--cuivre);margin-top:5px;font-weight:600}
+.menu{display:flex;gap:28px;font-size:14px;font-weight:500}.menu a:hover{color:var(--cuivre)}
+/* hero */
+.hero{padding:0;position:relative}
+.hero .ph{height:620px;position:relative}
+.hero .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,42,65,.72) 0%,rgba(27,42,65,.35) 55%,rgba(27,42,65,.1) 100%)}
+.hero .wrap{position:absolute;left:0;right:0;top:0;height:620px;display:flex;flex-direction:column;justify-content:center;color:#fff}
+.hero .label{color:#fff}.hero .label::before{background:#fff}
+.hero h1{font-size:clamp(40px,5.2vw,68px);max-width:720px}
+.hero p{max-width:560px;margin:20px 0 32px;color:rgba(255,255,255,.88);font-size:17px}
+.search{background:#fff;padding:14px;display:grid;grid-template-columns:auto 1fr 1fr 1fr auto;gap:10px;align-items:center;box-shadow:0 20px 50px rgba(27,42,65,.25);max-width:900px;color:var(--nuit)}
+.search .seg{display:flex;border:1px solid var(--ligne)}.search .seg span{padding:12px 16px;font-size:13px;font-weight:600;cursor:pointer}.search .seg span.on{background:var(--nuit);color:#fff}
+.search select,.search input{border:1px solid var(--ligne);padding:12px 14px;font:inherit;font-size:14px;background:#fff;color:var(--nuit);width:100%}
+.search .btn{justify-content:center}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ligne);background:#fff}
+.kpi div{padding:28px 24px;border-right:1px solid var(--ligne)}.kpi div:last-child{border:0}
+.kpi b{display:block;font-family:'Newsreader',serif;font-size:36px;font-weight:500;color:var(--cuivre);line-height:1}.kpi small{color:var(--gris);font-size:13px}
+section.kpis{padding:0;transform:translateY(-50px)}
+/* biens */
+.biens{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.bien{background:#fff;border:1px solid var(--ligne);transition:.25s}.bien:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(27,42,65,.12)}
+.bien .ph{aspect-ratio:4/3;position:relative}
+.bien .tag{position:absolute;top:14px;left:14px;background:var(--nuit);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;font-weight:600}
+.bien .tag.new{background:var(--cuivre)}
+.bien .txt{padding:22px}
+.bien .prix{font-family:'Newsreader',serif;font-size:28px;font-weight:500}
+.bien .prix small{font-family:'Public Sans',sans-serif;font-size:12px;color:var(--gris);font-weight:400;margin-left:6px}
+.bien h3{font-size:17px;font-family:'Public Sans',sans-serif;font-weight:600;margin:6px 0 4px}
+.bien .lieu{color:var(--gris);font-size:14px}
+.bien .specs{display:flex;gap:16px;margin-top:14px;padding-top:14px;border-top:1px solid var(--ligne);font-size:13px;color:var(--gris);align-items:center;flex-wrap:wrap}
+.bien .specs b{color:var(--nuit);font-weight:600}
+.dpe{display:inline-flex;align-items:center;justify-content:center;width:26px;height:22px;font-size:12px;font-weight:700;color:#fff;margin-left:auto}
+.dpe.A{background:#2E9E44}.dpe.B{background:#5CB04C}.dpe.C{background:#C7D32E}.dpe.D{background:#F2C600}.dpe.E{background:#F0A030}.dpe.F{background:#E85D27}.dpe.G{background:#D12A1F}.dpe.B,.dpe.C,.dpe.D,.dpe.E{color:#1B1A17}
+.center{text-align:center;margin-top:40px}
+/* estimation */
+.estim{background:var(--nuit);color:#fff}
+.estim .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.estim .label{color:var(--cuivre)}.estim p{color:rgba(255,255,255,.8);margin:16px 0 26px}
+.estim ul{list-style:none;display:grid;gap:10px;color:rgba(255,255,255,.9);font-size:15px}
+.estim li::before{content:"—";color:var(--cuivre);margin-right:10px}
+.form{background:#fff;color:var(--nuit);padding:34px}
+.form h3{font-size:24px;margin-bottom:6px}.form small{color:var(--gris);display:block;margin-bottom:20px}
+.form label{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin:14px 0 6px}
+.form input,.form select{width:100%;padding:12px 14px;border:1px solid var(--ligne);font:inherit;font-size:15px;background:#fff}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .btn{width:100%;justify-content:center;margin-top:22px}
+.form p.rgpd{font-size:11.5px;color:var(--gris);margin-top:12px;line-height:1.5}
+/* quartiers */
+.quartiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.quartier{border:1px solid var(--ligne);background:#fff;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.quartier h3{font-size:22px}.quartier small{color:var(--gris);font-size:13px;display:block;margin-top:3px}
+.quartier b{font-family:'Newsreader',serif;font-size:24px;color:var(--cuivre);font-weight:500;white-space:nowrap}.quartier b small{display:block;color:var(--gris);font-family:'Public Sans',sans-serif;font-size:11px;text-align:right;margin-top:2px}
+/* équipe */
+.equipe{background:var(--pierre)}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.team .ph{aspect-ratio:4/5;filter:saturate(.9)}
+.team h3{font-size:24px;margin-top:18px}.team em{font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cuivre);font-weight:600}
+.team p{color:var(--gris);font-size:14.5px;margin-top:8px}.team a{display:inline-block;margin-top:10px;font-size:14px;font-weight:600;border-bottom:1px solid var(--cuivre)}
+/* agence */
+.agence .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.agence .ph{aspect-ratio:4/5;outline:1px solid var(--cuivre);outline-offset:14px;margin:14px}
+.agence p{color:var(--gris);margin:16px 0}
+.agence ul{list-style:none;display:grid;gap:10px;margin-bottom:26px}.agence li{padding-left:22px;position:relative}.agence li::before{content:"";position:absolute;left:0;top:11px;width:10px;height:1px;background:var(--cuivre)}
+/* honoraires */
+.hono{background:#fff;border-top:1px solid var(--ligne);border-bottom:1px solid var(--ligne)}
+.hono .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:start}
+.hono p{color:var(--gris);margin-top:12px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:14px 10px;border-bottom:1px solid var(--ligne)}th{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gris);font-weight:600}
+td b{font-family:'Newsreader',serif;font-size:22px;font-weight:500;color:var(--cuivre)}
+.note{font-size:12.5px;color:var(--gris);margin-top:14px}
+/* avis */
+.avis{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.avis>div{background:#fff;border:1px solid var(--ligne);padding:30px}
+.stars{color:var(--cuivre);letter-spacing:3px;margin-bottom:12px}
+.avis p{font-family:'Newsreader',serif;font-size:19px;line-height:1.4;font-style:italic}
+.avis b{display:block;margin-top:16px;font-size:14px}.avis small{color:var(--gris);font-size:12.5px}
+/* cta */
+.cta{background:var(--cuivre);color:#fff;text-align:center}
+.cta h2{color:#fff;max-width:720px;margin:0 auto 14px}.cta p{color:rgba(255,255,255,.9);max-width:560px;margin:0 auto 28px}
+.cta .btn{border-color:#fff}.cta .btn-nuit{background:var(--nuit);border-color:var(--nuit)}.cta .btn-line{color:#fff}.cta .btn-line:hover{background:#fff;color:var(--cuivre)}
+.btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+/* footer */
+footer{background:var(--nuit);color:rgba(255,255,255,.7);padding:60px 0 30px;font-size:14px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot .logo{color:#fff}.foot h4{color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px}
+.foot a{display:block;margin-bottom:8px}.foot a:hover{color:var(--cuivre)}
+.legal{font-size:12px;line-height:1.7;margin-top:14px;color:rgba(255,255,255,.55)}
+.copy{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:22px;font-size:12.5px}
+/* mobile bar */
+.mbar{display:none}
+@media (max-width:980px){
+  .menu{display:none}
+  .kpi{grid-template-columns:repeat(2,1fr)}.kpi div:nth-child(2){border-right:0}.kpi div:nth-child(-n+2){border-bottom:1px solid var(--ligne)}
+  .biens,.quartiers,.team,.avis{grid-template-columns:1fr 1fr}
+  .estim .wrap,.agence .wrap,.hono .wrap{grid-template-columns:1fr;gap:40px}
+  .search{grid-template-columns:1fr 1fr}.search .seg,.search .btn{grid-column:1/-1}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  section{padding:64px 0}
+  nav{height:66px}.logo{font-size:20px}.logo small{font-size:9px;letter-spacing:.22em}
+  nav .btn{padding:10px 14px;font-size:12.5px}
+  .hero .ph,.hero .wrap{height:auto;min-height:600px}.hero .wrap{padding:60px 0 50px;position:relative}
+  .hero .ph{position:absolute;inset:0}.hero .ph::after{background:linear-gradient(180deg,rgba(27,42,65,.78),rgba(27,42,65,.86))}
+  .hero h1{font-size:40px}
+  .search{grid-template-columns:1fr;padding:12px}
+  section.kpis{transform:none;padding-top:40px}
+  .biens,.quartiers,.team,.avis{grid-template-columns:1fr}
+  .form{padding:24px}.form .row{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .agence .ph{margin:10px}
+  body{padding-bottom:64px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1.3fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--ligne)}
+  .mbar a{text-align:center;padding:14px 6px;font-size:12.5px;font-weight:600}.mbar a.main{background:var(--nuit);color:#fff}
+  #mokom-demo{bottom:72px!important}
+}.legal-page{padding:70px 0 90px}.legal-page h1{font-size:clamp(32px,4vw,48px);margin:10px 0 30px}.legal-page h2{font-size:22px;margin:34px 0 10px}.legal-page p{max-width:760px;margin-bottom:12px;color:var(--gris);font-size:15px}
+</style>
+</head>
+<body>
+<div class="topbar">Agence ouverte du lundi au samedi · <b>Estimation gratuite sous 48 h</b> · 42 rue Notre-Dame, Bordeaux Chartrons</div>
+<header><div class="wrap"><nav>
+  <a href="chartrons-immobilier.html" class="logo">Chartrons Immobilier<small>Vente · Location · Bordeaux</small></a>
+  <div class="menu"><a href="chartrons-immobilier.html#biens">Nos biens</a><a href="chartrons-immobilier.html#estimer">Estimer</a><a href="chartrons-immobilier.html#quartiers">Quartiers</a><a href="chartrons-immobilier.html#equipe">L'agence</a><a href="chartrons-immobilier.html#honoraires">Honoraires</a></div>
+  <a href="chartrons-immobilier.html#estimer" class="btn btn-nuit">Estimer mon bien</a>
+</nav></div></header>
+<section class="legal-page"><div class="wrap">
+  <span class="label">Informations légales</span><h1>Mentions légales</h1>
+  <h2>Éditeur du site</h2><p>Chartrons Immobilier, SAS au capital de 20 000 €, immatriculée au RCS de Bordeaux sous le numéro 000 000 000. Siège social : 42 rue Notre-Dame, 33000 Bordeaux. Téléphone : 05 56 00 00 00. Email : contact@chartrons-immobilier.fr. N° TVA intracommunautaire : FR00 000000000. Directrice de la publication : Hélène Dartigues, présidente.</p>
+  <h2>Activité réglementée (loi Hoguet)</h2><p>Carte professionnelle « Transactions sur immeubles et fonds de commerce » et « Gestion immobilière » n° CPI 3301 2026 000 000 000, délivrée par la CCI Bordeaux Gironde. Garantie financière : Caisse Mutuelle de Garantie des Agents (organisme fictif), 12 rue de l'Exemple, 33000 Bordeaux, à hauteur de 120 000 € pour la transaction et 120 000 € pour la gestion. Assurance responsabilité civile professionnelle : Assurance Aquitaine Pro (fictive), contrat n° 000 000, couverture France entière. Les honoraires de l'agence sont affichés sur la page « Honoraires » et dans la vitrine de l'agence.</p>
+  <h2>Médiation de la consommation</h2><p>Conformément aux articles L.611-1 et suivants du Code de la consommation, en cas de litige non résolu, le consommateur peut saisir gratuitement le médiateur de la consommation dont relève l'agence : Médiation Immobilière Exemple (organisme fictif), 1 place de l'Exemple, 75000 Paris, www.mediation-exemple.fr.</p>
+  <h2>Hébergement</h2><p>Le site est hébergé par [nom de l'hébergeur], [adresse de l'hébergeur]. Téléphone : [numéro].</p>
+  <h2>Propriété intellectuelle</h2><p>L'ensemble des contenus de ce site (textes, photographies, plans, logo, charte graphique) est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p>
+  <h2>Données personnelles</h2><p>Les informations recueillies via les formulaires (estimation, demande de visite, contact) sont destinées uniquement à Chartrons Immobilier pour répondre à vos demandes et assurer le suivi de votre projet. Elles sont conservées 12 mois après le dernier contact et ne sont ni vendues ni transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression en écrivant à contact@chartrons-immobilier.fr.</p>
+  <h2>Cookies</h2><p>Ce site n'utilise que des cookies techniques nécessaires à son fonctionnement. Aucun cookie publicitaire n'est déposé sans votre consentement.</p>
+  <h2>Annonces</h2><p>Les informations des annonces sont données à titre indicatif et n'ont pas de valeur contractuelle. Les prix sont indiqués honoraires inclus, à la charge du vendeur sauf mention contraire. Les diagnostics (DPE, GES) sont établis par un diagnostiqueur certifié et tenus à disposition en agence.</p>
+  <h2>Crédits</h2><p>Conception et réalisation : Studio MOKOM. Photographies : Pexels et Chartrons Immobilier.</p>
+</div></section>
+<footer><div class="wrap">
+  <div class="foot">
+    <div><div class="logo">Chartrons Immobilier<small>Vente · Location · Bordeaux</small></div>
+      <p class="legal">42 rue Notre-Dame, 33000 Bordeaux · 05 56 00 00 00 · contact@chartrons-immobilier.fr<br>Carte professionnelle « Transactions sur immeubles et fonds de commerce » n° CPI 3301 2026 000 000 000, délivrée par la CCI Bordeaux Gironde. Garantie financière : Caisse Mutuelle de Garantie des Agents (organisme fictif), 120 000 €. RCP : Assurance Aquitaine Pro (fictive). Absence de maniement de fonds hors séquestre.</p></div>
+    <div><h4>Acheter</h4><a href="#">Appartements</a><a href="#">Maisons</a><a href="#">Immeubles</a><a href="#">Neuf</a></div>
+    <div><h4>Vendre</h4><a href="chartrons-immobilier.html#estimer">Estimation gratuite</a><a href="chartrons-immobilier.html#honoraires">Honoraires</a><a href="#">Notre méthode</a></div>
+    <div><h4>L'agence</h4><a href="chartrons-immobilier.html#equipe">L'équipe</a><a href="chartrons-immobilier.html#quartiers">Quartiers</a><a href="#">Avis clients</a><a href="#">Réseaux sociaux</a></div>
+  </div>
+  <div class="copy"><span>© 2026 Chartrons Immobilier — SAS au capital de 20 000 €, RCS Bordeaux 000 000 000</span><span><a href="chartrons-immobilier-mentions-legales.html">Mentions légales</a> · <a href="#">Honoraires</a> · <a href="#">Confidentialité</a></span></div>
+</div></footer>
+<nav class="mbar"><a href="tel:0556000000">Appeler</a><a href="chartrons-immobilier.html#biens">Nos biens</a><a href="chartrons-immobilier.html#estimer" class="main">Estimer mon bien</a></nav>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration, entreprise fictive · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

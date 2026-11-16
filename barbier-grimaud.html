@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour beauté & bien-être — exemple B</title>
+<meta name="description" content="Barbier Grimaud, salon de barbier à Bordeaux Saint-Pierre depuis 1921 : coupe, barbe, rasage à l'ancienne au coupe-chou. Réservation en ligne, sans rendez-vous le samedi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ft);color:var(--encre);background:var(--fond);line-height:1.65;font-size:16px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--fd);font-weight:var(--fdw,400);line-height:1.1}
+h2{font-size:clamp(30px,3.4vw,44px)}
+h2 i,h1 i{font-style:italic;color:var(--accent)}
+.wrap{width:min(1160px,92%);margin:0 auto}
+.label{display:inline-block;font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:14px}
+section{padding:90px 0}
+.head{max-width:600px;margin-bottom:46px}.head p{color:var(--gris);margin-top:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--encre);transition:.2s;white-space:nowrap;border-radius:var(--r-btn,0)}
+.btn-main{background:var(--encre);color:var(--fond)}.btn-main:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-line{background:transparent;color:var(--encre)}.btn-line:hover{background:var(--encre);color:var(--fond)}
+.ph{background-size:cover;background-position:center;background-color:var(--doux);border-radius:var(--r-ph,0)}
+.topbar{background:var(--encre);color:var(--fond);font-size:12.5px;text-align:center;padding:9px 16px;letter-spacing:.04em}.topbar b{color:var(--accent2,var(--accent))}
+header{position:sticky;top:0;z-index:50;background:var(--fond-nav);backdrop-filter:blur(8px);border-bottom:1px solid var(--ligne)}
+nav{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+.logo{font-family:var(--fd);font-size:26px;line-height:1;letter-spacing:.04em}.logo small{display:block;font-family:var(--ft);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-top:6px;font-weight:600}
+.menu{display:flex;gap:28px;font-size:14px;font-weight:500}.menu a:hover{color:var(--accent)}
+/* hero */
+.hero{padding:0;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:640px}
+.hero-text{padding:70px 60px 70px 0;width:min(560px,100%);margin-left:auto}
+.hero h1{font-size:clamp(40px,5vw,66px)}
+.hero p{color:var(--gris);margin:22px 0 30px;font-size:17px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:30px;margin-top:40px;padding-top:24px;border-top:1px solid var(--ligne)}
+.trust b{display:block;font-family:var(--fd);font-size:26px;color:var(--accent);line-height:1;font-weight:var(--fdw,400)}.trust div{font-size:13px;color:var(--gris)}
+.hero .ph{height:640px;align-self:stretch}
+/* prestations */
+.prestas{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.presta{background:var(--carte);border:1px solid var(--ligne);border-radius:var(--r-card,0);overflow:hidden}
+.presta .ph{aspect-ratio:4/3;border-radius:0}
+.presta{display:flex;flex-direction:column}.presta .txt{padding:22px;display:flex;flex-direction:column;flex:1}.presta .row{margin-top:auto}.presta h3{font-size:22px}.presta p{color:var(--gris);font-size:14.5px;margin:8px 0 14px}
+.presta .row{display:flex;justify-content:space-between;align-items:center;font-size:14px}.presta .row b{font-family:var(--fd);font-size:20px;font-weight:var(--fdw,400)}.presta .row a{color:var(--accent);font-weight:600}
+/* tarifs */
+.tarifs{background:var(--doux)}
+.tarifs-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.tarifs h3{font-size:24px;padding-bottom:12px;border-bottom:1px solid var(--accent);margin-bottom:8px}
+.line{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px dotted var(--ligne2,var(--ligne));font-size:15px}.line b{font-weight:500}.line small{display:block;color:var(--gris);font-size:13px;font-weight:400}.line span{color:var(--accent);font-weight:600;white-space:nowrap}
+.note{font-size:13px;color:var(--gris);margin-top:22px}
+.cta-row{text-align:center;margin-top:36px}
+/* galerie */
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.galerie .ph{aspect-ratio:4/5}
+/* équipe */
+.equipe{background:var(--doux)}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.team .ph{aspect-ratio:4/5}.team em{display:block;font-style:normal;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-top:18px}
+.team h3{font-size:24px;margin:6px 0 8px}.team p{color:var(--gris);font-size:14.5px}
+/* salon */
+.salon{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.salon .ph{aspect-ratio:4/5}
+.salon p{color:var(--gris);margin:16px 0}
+.salon ul{list-style:none;display:grid;gap:10px;margin-bottom:26px}.salon li{padding-left:24px;position:relative}.salon li::before{content:"◦";position:absolute;left:0;color:var(--accent);font-size:20px;line-height:1.1}
+/* résa */
+.resa{background:var(--encre);color:var(--fond);text-align:center}
+.resa .label{color:var(--accent2,var(--accent))}.resa h2{color:var(--fond)}.resa p{max-width:560px;margin:14px auto 28px;color:var(--fond);opacity:.8}
+.resa .btns{justify-content:center}.resa .btn-main{background:var(--accent);border-color:var(--accent);color:#fff}.resa .btn-line{border-color:var(--fond);color:var(--fond)}.resa .btn-line:hover{background:var(--fond);color:var(--encre)}
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px;padding-top:30px;border-top:1px solid rgba(255,255,255,.15);font-size:14px;opacity:.9}.infos b{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent2,var(--accent));margin-bottom:6px}
+/* avis */
+.avis{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.avis>div{background:var(--carte);border:1px solid var(--ligne);padding:30px;border-radius:var(--r-card,0)}
+.stars{color:var(--accent);letter-spacing:3px;margin-bottom:12px}
+.avis p{font-family:var(--fd);font-size:19px;line-height:1.4;font-weight:var(--fdw,400)}.avis b{display:block;margin-top:16px;font-size:14px}.avis small{color:var(--gris);font-size:12.5px}
+/* footer */
+footer{background:var(--encre);color:var(--fond);padding:50px 0 26px;font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.15)}
+.foot .logo{color:var(--fond)}.links{display:flex;gap:22px;flex-wrap:wrap}.links a{opacity:.8}.links a:hover{opacity:1;color:var(--accent2,var(--accent))}
+.copy{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:20px;font-size:12.5px;opacity:.7}
+/* pages intérieures */
+.legal{padding:70px 0 90px}.legal h1{font-size:clamp(30px,4vw,44px);margin:10px 0 30px}.legal h2{font-size:20px;margin:34px 0 10px}.legal p{max-width:720px;margin-bottom:12px;color:var(--gris);font-size:15px}
+.mbar{display:none}
+@media (max-width:980px){
+  .menu{display:none}
+  .hero{grid-template-columns:1fr}.hero-text{padding:60px 0 40px;margin:0 auto;width:92%}.hero .ph{height:420px}
+  .prestas,.team,.avis{grid-template-columns:1fr 1fr}
+  .tarifs-grid,.salon{grid-template-columns:1fr;gap:40px}
+  .infos{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  section{padding:64px 0}
+  nav{height:66px}.logo{font-size:20px}.logo small{font-size:9px;letter-spacing:.22em}nav .btn{padding:10px 14px;font-size:11.5px}
+  .hero h1{font-size:40px}.hero .ph{height:360px}
+  .trust{gap:18px;flex-wrap:wrap}
+  .prestas,.team,.avis,.galerie{grid-template-columns:1fr}
+  .galerie .ph{aspect-ratio:4/3}
+  body{padding-bottom:62px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--fond);border-top:1px solid var(--ligne)}
+  .mbar a{text-align:center;padding:14px 6px;font-size:12.5px;font-weight:600}.mbar a.main{background:var(--encre);color:var(--fond)}
+  #mokom-demo{bottom:70px!important}
+}:root{--fond:#15120F;--fond-nav:rgba(21,18,15,.94);--doux:#1E1915;--carte:#221C17;--encre:#E9DFC9;--gris:#A69B88;--accent:#B8863B;--accent2:#D7A94F;--ligne:#3A3028;--ligne2:#4A3F34;--ft:'Crimson Pro',serif;--fd:'Abril Fatface',serif;--fdw:400;--r-ph:0;--r-card:0;--r-btn:0}
+body{font-size:17px;background-image:radial-gradient(ellipse at 50% 0%,rgba(184,134,59,.12),transparent 60%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+h1,h2,h3{letter-spacing:.01em}
+h2 i,h1 i{font-style:normal;color:var(--accent2)}
+.label{color:var(--accent2);letter-spacing:.36em}
+.label::before,.label::after{content:"—";margin:0 8px;color:var(--accent)}
+.btn{border-width:1px;letter-spacing:.22em;font-size:12px}
+.btn-main{background:var(--accent);border-color:var(--accent);color:#15120F}.btn-main:hover{background:var(--accent2);border-color:var(--accent2);color:#15120F}
+.btn-line{border-color:var(--accent);color:var(--accent2)}.btn-line:hover{background:var(--accent);color:#15120F}
+.ph{filter:sepia(.45) contrast(1.1) brightness(.85);outline:1px solid var(--accent);outline-offset:-12px}
+.ph::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 120px rgba(0,0,0,.65);pointer-events:none}
+.ph{position:relative}
+.topbar{background:var(--accent);color:#15120F;letter-spacing:.14em;text-transform:uppercase;font-size:11px;font-weight:600}.topbar b{color:#15120F;text-decoration:underline}
+header{border-bottom:3px double var(--accent)}
+.logo{font-size:28px;color:var(--encre)}.logo small{color:var(--accent2)}
+.menu{font-size:15px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.hero h1{font-size:clamp(44px,5.6vw,72px);line-height:1}
+.hero .ph{height:640px;outline-offset:-20px;outline-width:2px}
+.trust b{color:var(--accent2)}
+.presta{background:var(--carte);border:1px solid var(--ligne)}.presta .ph{outline-offset:-10px}.presta h3{font-size:24px}.presta .row b{color:var(--accent2)}.presta .row a{color:var(--accent2)}
+.tarifs{border-top:3px double var(--accent);border-bottom:3px double var(--accent);background:var(--doux)}
+.tarifs h3{color:var(--accent2);border-bottom-color:var(--accent)}.line{border-bottom:1px dotted var(--ligne2)}.line span{color:var(--accent2)}
+.galerie .ph{filter:sepia(.7) contrast(1.15) brightness(.75);transition:.4s}.galerie .ph:hover{filter:sepia(.2) contrast(1.05)}
+.team .ph{filter:sepia(.6) contrast(1.1) brightness(.8)}.team h3{color:var(--encre)}
+.salon li::before{content:"✦";color:var(--accent);font-size:14px;top:4px}
+.resa{background:var(--accent);color:#15120F;border-top:6px double #15120F}.resa .label{color:#15120F}.resa h2{color:#15120F}.resa p{color:#15120F;opacity:.85}
+.resa .btn-main{background:#15120F;border-color:#15120F;color:var(--accent2)}.resa .btn-line{border-color:#15120F;color:#15120F}.resa .btn-line:hover{background:#15120F;color:var(--accent2)}
+.infos{border-top-color:rgba(21,18,15,.25)}.infos b{color:#15120F}
+.avis>div{background:var(--carte);border-color:var(--ligne)}.avis .stars{color:var(--accent2)}.avis p{font-style:italic;font-family:'Crimson Pro',serif;font-size:21px}
+footer{border-top:3px double var(--accent);background:#0E0C0A;color:var(--encre)}.foot .logo{color:var(--encre)}.links a:hover{color:var(--accent2)}
+.ornament{text-align:center;color:var(--accent);font-size:22px;letter-spacing:.6em;margin-top:-50px;margin-bottom:50px}
+.mbar{background:#15120F;border-top-color:var(--accent)}.mbar a.main{background:var(--accent);color:#15120F}
+@media (max-width:980px){.hero .ph{height:460px}}
+@media (max-width:700px){.topbar{min-height:72px;display:flex;align-items:center;justify-content:center}}
+@media (max-width:700px){.hero .label{white-space:nowrap;letter-spacing:.2em}}
+</style>
+</head>
+<body>
+<div class="topbar">Maison fondée en 1921 · <b>Sans rendez-vous le samedi</b> · Whisky offert avec le rasage à l'ancienne</div>
+<header><div class="wrap"><nav>
+  <a href="barbier-grimaud.html" class="logo">Grimaud<small>Barbier · Bordeaux · depuis 1921</small></a>
+  <div class="menu"><a href="#prestations">Prestations</a><a href="#tarifs">Tarifs</a><a href="#salon">Le salon</a><a href="#equipe">Les barbiers</a><a href="#avis">Avis</a></div>
+  <a href="barbier-grimaud.html#reserver" class="btn btn-main">Réserver</a>
+</nav></div></header>
+<section class="hero">
+  <div class="hero-text">
+    <span class="label">Barbier · Bordeaux Saint-Pierre</span>
+    <h1>Par ordre <i>du rasoir.</i></h1>
+    <p>Quatre générations de barbiers rue du Parlement Sainte-Catherine. Coupe aux ciseaux, barbe au coupe-chou, serviette chaude et verre de whisky. Comme en 1921, en mieux chauffé.</p>
+    <div class="btns"><a href="#reserver" class="btn btn-main">Réserver un fauteuil</a><a href="#tarifs" class="btn btn-line">Voir les tarifs</a></div>
+    <div class="trust"><div><b>1921</b>année de fondation</div><div><b>4,9/5</b>1 480 avis clients</div><div><b>4</b>barbiers</div></div>
+  </div>
+  <div class="ph" style="background-image:url(img/barb-hero.jpg);background-position:center 20%"></div>
+</section>
+
+<section id="prestations"><div class="wrap">
+  <div class="head"><span class="label">Prestations</span><h2>Quatre gestes, <i>un siècle de métier.</i></h2><p>Chaque passage commence par un café ou un whisky, et une question : « Qu'est-ce qu'on fait aujourd'hui, monsieur ? »</p></div>
+  <div class="prestas">
+    <div class="presta"><div class="ph" style="background-image:url(img/barb-s1.jpg)"></div><div class="txt"><h3>La coupe</h3><p>Ciseaux, tondeuse ou les deux. Shampoing, coiffage, conseils pour tenir jusqu’au prochain passage.</p><div class="row"><b>28 €</b><a href="barbier-grimaud.html#reserver">Réserver →</a></div></div></div>
+    <div class="presta"><div class="ph" style="background-image:url(img/barb-s2.jpg)"></div><div class="txt"><h3>La barbe</h3><p>Taille, contours au rasoir, huile. Le détail qui change un visage.</p><div class="row"><b>20 €</b><a href="barbier-grimaud.html#reserver">Réserver →</a></div></div></div>
+    <div class="presta"><div class="ph" style="background-image:url(img/barb-s3.jpg)"></div><div class="txt"><h3>Le rasage à l’ancienne</h3><p>Serviette chaude, mousse au blaireau, coupe-chou, baume. Trente minutes hors du siècle.</p><div class="row"><b>32 €</b><a href="barbier-grimaud.html#reserver">Réserver →</a></div></div></div>
+    <div class="presta"><div class="ph" style="background-image:url(img/barb-s4.jpg)"></div><div class="txt"><h3>Le Grimaud</h3><p>Coupe, rasage complet, soin du visage. Le rituel du samedi des grands-pères.</p><div class="row"><b>70 €</b><a href="barbier-grimaud.html#reserver">Réserver →</a></div></div></div>
+  </div>
+</div></section>
+
+<section id="tarifs" class="tarifs"><div class="wrap">
+  <div class="head"><span class="label">Tarifs</span><h2>Affichés sur l'ardoise <i>depuis 1921.</i></h2></div>
+  <div class="tarifs-grid">
+    <div><h3>Cheveux</h3><div class="line"><b>Coupe classique<small>30 min · ciseaux ou tondeuse</small></b><span>28 €</span></div><div class="line"><b>Coupe + barbe<small>50 min</small></b><span>44 €</span></div><div class="line"><b>Dégradé à blanc<small>40 min</small></b><span>30 €</span></div><div class="line"><b>Coupe enfant (-12 ans)<small>20 min</small></b><span>18 €</span></div><div class="line"><b>Tonte simple<small>15 min</small></b><span>15 €</span></div></div>
+    <div><h3>Barbe & rasage</h3><div class="line"><b>Taille de barbe<small>20 min</small></b><span>20 €</span></div><div class="line"><b>Rasage à l’ancienne<small>30 min · serviette chaude, coupe-chou</small></b><span>32 €</span></div><div class="line"><b>Contours seuls<small>10 min</small></b><span>10 €</span></div><div class="line"><b>Soin barbe<small>gommage, huile, massage</small></b><span>24 €</span></div><div class="line"><b>Le Grimaud<small>coupe + rasage + soin</small></b><span>70 €</span></div></div>
+  </div>
+  <p class="note" style="text-align:center">Carte de fidélité : la 10<sup>e</sup> coupe offerte. Paiement CB ou espèces.</p>
+  <div class="cta-row"><a href="#reserver" class="btn btn-main">Réserver</a></div>
+</div></section>
+
+<section id="galerie"><div class="wrap">
+  <div class="head"><span class="label">Le travail</span><h2>Ce qui sort <i>de nos fauteuils.</i></h2></div>
+  <div class="galerie"><div class="ph" style="background-image:url(img/barb-g1.jpg)"></div><div class="ph" style="background-image:url(img/barb-g2.jpg)"></div><div class="ph" style="background-image:url(img/barb-g3.jpg)"></div></div>
+</div></section>
+
+<section id="equipe" class="equipe"><div class="wrap">
+  <div class="head"><span class="label">Les barbiers</span><h2>Quatre fauteuils, <i>trois familles.</i></h2></div>
+  <div class="team"><div><div class="ph" style="background-image:url(img/barb-t3.jpg)"></div><em>Maître barbier · 4e génération</em><h3>Auguste Grimaud</h3><p>A repris le salon de son père en 2015. Rasage au coupe-chou, formé à Londres.</p></div><div><div class="ph" style="background-image:url(img/barb-t2.jpg)"></div><em>Barbier</em><h3>Léon Carvalho</h3><p>Dégradés et coupes texturées. Le plus demandé par les moins de trente ans.</p></div><div><div class="ph" style="background-image:url(img/tat-4.jpg);background-position:center 30%"></div><em>Barbier</em><h3>Marius Delorme</h3><p>Le rasage à l’ancienne le plus lent du salon. C’est voulu.</p></div></div>
+</div></section>
+
+<section id="salon"><div class="wrap salon">
+  <div class="ph" style="background-image:url(img/barb-g2.jpg)"></div>
+  <div><span class="label">Le salon</span><h2>Fauteuils de 1930, <i>comptoir en chêne, </i>plafond en étain.</h2>
+    <p>Rien n'a été refait, tout a été entretenu. Les fauteuils sont ceux de l'arrière-grand-père, le miroir vient d'un ancien théâtre bordelais, et le whisky est un single malt des Highlands.</p>
+    <ul><li>Produits de soin professionnels et notre baume maison</li><li>Lames neuves pour chaque client, matériel stérilisé</li><li>Whisky ou café offert, journal du jour sur le comptoir</li></ul>
+    <a href="#reserver" class="btn btn-line">Nous trouver</a></div>
+</div></section>
+
+<section id="reserver" class="resa"><div class="wrap">
+  <span class="label">Réservation</span><h2>Choisissez votre barbier, votre heure.</h2>
+  <p>Réservation en ligne 24 h/24. Sans rendez-vous le samedi, dans l'ordre d'arrivée, avec un verre en attendant.</p>
+  <div class="btns"><a href="#" class="btn btn-main">Réserver en ligne</a><a href="tel:0556000000" class="btn btn-line">05 56 00 00 00</a></div>
+  <div class="infos"><div><b>Adresse</b>7 rue du Parlement Sainte-Catherine, 33000 Bordeaux</div><div><b>Horaires</b>Mar – Ven : 10 h – 19 h 30 · Sam : 9 h – 18 h</div><div><b>Accès</b>Tram A et B Hôtel de Ville</div></div>
+</div></section>
+
+<section id="avis"><div class="wrap">
+  <div class="head"><span class="label">Avis</span><h2>Ils en parlent.</h2></div>
+  <div class="avis"><div><div class="stars">★★★★★</div><p>« Le rasage à l’ancienne d’Auguste, c’est trente minutes dans un autre siècle. Avec un whisky. »</p><b>Antoine G.</b><small>Avis client</small></div><div><div class="stars">★★★★★</div><p>« Mon grand-père y allait, mon père y va, j’y emmène mon fils. Même fauteuil. »</p><b>Pierre L.</b><small>Avis client</small></div><div><div class="stars">★★★★★</div><p>« Le seul endroit où on ne me demande pas si j’ai passé une bonne semaine. »</p><b>Mehdi K.</b><small>Avis client</small></div></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="foot"><div><div class="logo">Grimaud<small>Barbier · Bordeaux · depuis 1921</small></div></div><div class="links"><a href="#prestations">Prestations</a><a href="#tarifs">Tarifs</a><a href="#reserver">Réserver</a><a href="#">Réseaux sociaux</a></div></div>
+  <div class="copy"><span>© 2026 Barbier Grimaud — 7 rue du Parlement Sainte-Catherine, Bordeaux</span><span><a href="#">Mentions légales</a> · Confidentialité</span></div>
+</div></footer>
+<nav class="mbar"><a href="tel:0556000000">Appeler</a><a href="#tarifs">Tarifs</a><a href="#reserver" class="main">Réserver</a></nav>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration, entreprise fictive · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>

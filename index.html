@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maquettes personnalisables — Studio MOKOM</title>
-<meta name="description" content="Onze thèmes de sites à personnaliser, montrés sur des entreprises fictives, en version ordinateur et téléphone. Une création Mokom Studio.">
+<meta name="description" content="Onze thèmes de sites par secteur et l'offre Site Express, montrés sur des entreprises fictives, en version ordinateur et téléphone. Une création Mokom Studio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -32,7 +32,8 @@ a{color:inherit;text-decoration:none}
 .switch button.on{background:var(--ink);color:#fff}
 .global{display:flex;align-items:center;gap:14px;margin-top:26px;font-size:14px;color:var(--muted)}
 
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;padding:20px 0 100px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;padding:20px 0 60px}
+.sect{padding:40px 0 10px;border-top:1px solid var(--line)}.sect small{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}.sect h2{font-size:clamp(28px,3.4vw,42px);margin:10px 0 12px}.sect p{color:var(--muted);max-width:720px;font-size:16px}
 .item{border-top:1px solid rgba(27,26,23,.18);padding:34px 0 48px}
 .item .num{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;margin-bottom:8px}
 .item h2{font-size:26px;margin:0 0 6px}
@@ -67,12 +68,15 @@ a{color:inherit;text-decoration:none}
 .dots i:nth-child(1){background:#F26B5B}.dots i:nth-child(2){background:#F5BE4F}.dots i:nth-child(3){background:#5FCB6B}
 .url{flex:1;background:#fff;border-radius:7px;padding:5px 12px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}
 .url svg{width:11px;height:11px}
-.screen{position:relative;height:420px;overflow:hidden;background:#fff}
-.screen iframe{position:absolute;top:0;left:0;width:1280px;height:100%;border:0;transform-origin:0 0;background:#fff}
+.screen{position:relative;height:420px;overflow:hidden;background:var(--chrome)}
+.screen::before{content:"Chargement de l'aperçu…";position:absolute;inset:0;display:grid;place-items:center;padding:0 24px;text-align:center;font-size:13px;color:var(--muted)}
+.screen iframe{position:absolute;top:0;left:0;width:1280px;height:100%;border:0;transform-origin:0 0;background:transparent}
+.screen iframe.pret{background:#fff}
 
 .phone{width:300px;background:#111;border-radius:34px;padding:6px;box-shadow:0 0 0 1.5px #2a2a2a,0 30px 70px rgba(27,26,23,.25);position:relative;margin:10px 0}
 .phone::before{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:70px;height:18px;background:#111;border-radius:999px;z-index:2}
-.phone .screen{height:620px;border-radius:28px;background:#111}
+.phone .screen{height:620px;border-radius:28px;background:#2a2926}
+.phone .screen::before{color:#CFCBC2}
 .phone .screen iframe{top:30px}
 .phone .screen iframe{width:390px}
 
@@ -87,7 +91,7 @@ a{color:inherit;text-decoration:none}
 
 <div class="wrap top">
   <small>Studio MOKOM — Maquettes personnalisables</small>
-  <h1>Onze thèmes, un site adapté à chaque activité.</h1>
+  <h1>Un site adapté à chaque activité.</h1>
   <p class="fictif">Les entreprises présentées sont fictives : ce sont des exemples de thèmes, pas de vrais clients.</p>
   <p>Chaque maquette est construite autour d'une action principale (demander un devis, réserver, venir en boutique…). Choisissez votre thème, on l'adapte à vos couleurs, vos photos et vos textes. Chaque site existe en version ordinateur et téléphone : utilisez le bouton pour basculer, puis faites défiler dans le cadre. Chaque thème est montré avec deux exemples d'entreprises différentes (Exemple A / Exemple B) pour voir la marge de personnalisation : même structure, autres couleurs, autres photos, autres textes. Les liens du menu fonctionnent dans le cadre.</p>
   <div class="global"><span>Tout afficher en :</span>
@@ -98,7 +102,11 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 
+<div class="wrap sect"><small>Offre 1</small><h2>Modèles de sites préconçus par secteur</h2><p>Onze thèmes, un par type d'activité. Chaque maquette est construite autour de l'action principale de vos visiteurs (demander un devis, réserver, venir en boutique…) et embarque les fonctionnalités de votre métier. Deux exemples par thème pour voir la marge de personnalisation.</p></div>
 <div class="wrap grid" id="grid"></div>
+
+<div class="wrap sect"><small>Offre 2</small><h2>Site Express : le site carte de visite</h2><p>Une offre à part, pour démarrer : une seule page avec le strict minimum pour exister en ligne. Qui vous êtes, ce que vous faites, où vous trouver, comment vous joindre. Le site peut ensuite grandir en ajoutant des pages, au fil de votre activité.</p></div>
+<div class="wrap grid" id="grid-express"></div>
 
 <footer class="foot"><div class="wrap">
   <p>© 2026 <a href="https://mokomstudio.fr">Mokom Studio</a> · Les entreprises présentées sont fictives.</p>
@@ -116,9 +124,9 @@ var THEMES = [
  {num:"03",alt:{name:"Marcel Burger — food truck, Bordeaux",file:"marcel-burger.html",url:"marcelburger.fr"},exA:"La Cantine du Port — bistrot, La Rochelle",pages:[["Accueil","cantine-du-port.html"],["La carte complète","cantine-du-port-carte.html"],["Mentions légales","cantine-du-port-mentions-legales.html"]],title:"Restaurant, bar & food truck",file:"cantine-du-port.html",url:"cantineduport.fr",action:"Réserver une table",fonts:"Instrument Serif + Karla",
   desc:"Restaurant, café, bar, traiteur…",
   feats:["Horaires dès l'accueil, jour du moment surligné","Carte complète avec prix + menu du jour","Bandeau d'actualité défilant (arrivage, terrasse…)","Galerie ambiance","Présentation du chef / de l'équipe","Formulaire de réservation (date, heure, couverts)","Infos pratiques + itinéraire + carte à emporter","Avis clients"]},
- {num:"04",alt:{name:"Rituel d'Orient — massages & hammam, Bordeaux",file:"rituel-dorient.html",url:"rituel-dorient.fr"},exA:"Costa Barber & Ink — barbier & tatoueur, Bordeaux",pages:[["Accueil","costa-barbier.html"],["Tarifs","costa-barbier-tarifs.html"],["Mentions légales","costa-barbier-mentions-legales.html"]],title:"Beauté & bien-être",file:"costa-barbier.html",url:"costabarber.fr",action:"Réserver un créneau",fonts:"Alfa Slab One + Work Sans",
-  desc:"Coiffeur, esthétique, massage, onglerie, barbier, tatoueur…",
-  feats:["Bouton de réservation en ligne (outil de votre choix)","Bandeau offre de bienvenue","4 prestations avec prix « dès »","Grille de tarifs complète","Galerie de réalisations","Présentation de l'équipe","Horaires + sans rendez-vous","Avis clients"]},
+ {num:"04",alt:{name:"Barbier Grimaud — barbier depuis 1921, Bordeaux",file:"barbier-grimaud.html",url:"barbier-grimaud.fr"},exA:"Institut Blanche — institut de beauté, Bordeaux",pages:[["Accueil","institut-blanche.html"],["Tarifs","institut-blanche-tarifs.html"],["Mentions légales","institut-blanche-mentions-legales.html"]],title:"Beauté & bien-être",file:"institut-blanche.html",url:"institut-blanche.fr",action:"Réserver un créneau",fonts:"Cormorant Garamond + Jost",
+  desc:"Institut, coiffeur, barbier, massage, onglerie, spa…",
+  feats:["Bouton de réservation en ligne (outil de votre choix)","Bandeau offre de bienvenue","4 prestations avec prix « dès »","Grille de tarifs + page tarifs complète","Galerie","Présentation de l'équipe","Le lieu et l'approche","Adresse, horaires, accès","Avis clients","Barre fixe Appeler / Tarifs / Réserver sur téléphone"]},
  {num:"05",alt:{name:"Maître Anaïs Verdier — avocate, Bordeaux",file:"anais-verdier-avocate.html",url:"verdier-avocate.fr"},exA:"Camille Roux — ostéopathe, Pessac",pages:[["Accueil","cabinet-roux.html"],["Ostéopathie du sportif","cabinet-roux-sportifs.html"],["Mentions légales","cabinet-roux-mentions-legales.html"]],title:"Praticien & profession libérale",file:"cabinet-roux.html",url:"camilleroux-osteo.fr",action:"Prendre rendez-vous",fonts:"Source Serif + Nunito Sans",
   desc:"Ostéo, kiné, psy, sophrologue, naturopathe, avocat, comptable…",
   feats:["Bouton de prise de rendez-vous en ligne (ou formulaire) + téléphone","Section « Pour qui » par profil de patient","Approche et déroulé d'une séance","Tarifs + encart remboursement mutuelle","Questions fréquentes dépliantes","Diplômes et formations","Accès, PMR, parking, transports","Mentions légales / numéro professionnel"]},
@@ -137,8 +145,13 @@ var THEMES = [
  {num:"10",alt:{name:"Terre & Feu — céramique, Saint-Émilion",file:"terre-et-feu.html",url:"terre-et-feu.fr"},exA:"ÉTALE — prêt-à-porter, Cap-Ferret",pages:[["Accueil","etale.html"],["Fiche produit Robe Étale","etale-robe-etale.html"],["Mentions légales","etale-mentions-legales.html"]],title:"Petite boutique en ligne",file:"etale.html",url:"etale.fr",action:"Acheter",fonts:"Cormorant + Instrument Sans",
   desc:"Créateurs, prêt-à-porter, objets…",
   feats:["Bandeau livraison / retours","Menu boutique, recherche, compte, panier","Grille produits avec prix et badge Nouveauté","Bandeau matières défilant","Manifeste de marque","Section matières","Bloc éditorial + citation cliente","Newsletter"]},
- {num:"11",alt:{name:"Garage Martin — mécanique, Libourne",file:"garage-martin.html",url:"garage-martin-libourne.fr"},exA:"Atelier Pivoine — fleuriste, Libourne",pages:[["Accueil","atelier-pivoine.html"],["Mentions légales","atelier-pivoine-mentions-legales.html"]],title:"Site carte de visite (1 page)",file:"atelier-pivoine.html",url:"atelier-pivoine.fr",action:"Contacter / venir",fonts:"Lora + Nunito",
-  desc:"L'essentiel pour n'importe quelle activité : qui, quoi, où, comment me joindre.",
+ {num:"11",alt:{name:"Clara Dupouy — conseillère immobilière indépendante, Bassin d'Arcachon",file:"clara-dupouy-immobilier.html",url:"dupouy-immobilier.fr"},exA:"Chartrons Immobilier — agence immobilière, Bordeaux",pages:[["Accueil","chartrons-immobilier.html"],["Fiche d'un bien","chartrons-immobilier-bien.html"],["Mentions légales","chartrons-immobilier-mentions-legales.html"]],title:"Immobilier",file:"chartrons-immobilier.html",url:"chartrons-immobilier.fr",action:"Estimer mon bien",fonts:"Newsreader + Public Sans",
+  desc:"Agence immobilière, agent indépendant, chasseur immobilier, promoteur…",
+  feats:["Barre de recherche (acheter / louer, type, budget, quartier)","Biens à la une avec prix, surface, pièces et étiquette DPE","Formulaire d'estimation gratuite","Quartiers couverts avec prix au m² (SEO local)","Équipe de conseillers avec téléphone direct","Barème d'honoraires affiché (obligation légale)","Avis clients","Fiche de bien : galerie, caractéristiques, DPE / GES, carte, demande de visite"]}
+];
+var EXPRESS=[
+ {num:"",lab:"Site Express",alt:{name:"Garage Martin — mécanique, Libourne",file:"garage-martin.html",url:"garage-martin-libourne.fr"},exA:"Atelier Pivoine — fleuriste, Libourne",pages:[["Accueil","atelier-pivoine.html"],["Mentions légales","atelier-pivoine-mentions-legales.html"]],title:"Site carte de visite, une seule page",file:"atelier-pivoine.html",url:"atelier-pivoine.fr",action:"Contacter / venir",fonts:"Lora + Nunito",
+  desc:"Le strict minimum pour exister en ligne, quelle que soit l'activité : qui vous êtes, ce que vous faites, où vous trouver, comment vous joindre. Des pages peuvent être ajoutées ensuite, au fil du temps.",
   feats:["Pastille « ouvert aujourd'hui » + horaires","3 services en cartes","Galerie 3 photos","Portrait et présentation","Avis clients","Contact complet (adresse, téléphone, email, horaires)","Emplacement pour une carte interactive","Boutons Appeler / Itinéraire"]}
 ];
 
@@ -146,11 +159,21 @@ var ICON_LOCK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 var ICON_DESK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>';
 var ICON_MOB='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>';
 
-var grid=document.getElementById('grid');
-THEMES.forEach(function(t){
+function charger(el){
+  var f=el.querySelector('iframe');
+  if(f && !f.getAttribute('src')){ f.src=f.dataset.src; }
+}
+var observer = ('IntersectionObserver' in window)
+  ? new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ charger(e.target); observer.unobserve(e.target); } });
+    },{rootMargin:'200px 0px'})
+  : {observe:function(el){ charger(el); }, unobserve:function(){}};
+
+function render(list,grid){
+list.forEach(function(t){
   var el=document.createElement('div'); el.className='item';
   el.innerHTML=
-   '<span class="num">Thème '+t.num+'</span><h2>'+t.title+'</h2><p class="desc">'+t.desc+'</p>'+
+   '<span class="num">'+(t.lab||'Thème '+t.num)+'</span><h2>'+t.title+'</h2><p class="desc">'+t.desc+'</p>'+
    '<div class="bar-top"><div class="switch ex"><button class="on" data-ex="a">Exemple A</button><button data-ex="b">Exemple B</button></div><div class="switch"><button class="on" data-mode="desktop">'+ICON_DESK+'Ordinateur</button><button data-mode="mobile">'+ICON_MOB+'Téléphone</button></div></div>'+
    '<div class="preview">'+
      '<div class="browser"><div class="bar"><div class="dots"><i></i><i></i><i></i></div><div class="url">'+ICON_LOCK+t.url+'</div></div><div class="screen"></div></div>'+
@@ -161,8 +184,11 @@ THEMES.forEach(function(t){
    '<div class="meta liens"><a class="devis" href="https://mokomstudio.fr">Demander un devis</a><a class="open" href="'+t.file+'" target="_blank">Ouvrir la maquette ↗</a></div>'+
    '<div class="pages"><b>Pages</b>'+t.pages.map(function(p){return '<a href="'+p[1]+'" target="_blank">'+p[0]+'</a>'}).join('<i>·</i>')+'</div>'+
    '<details class="feats"><summary>Fonctionnalités intégrées</summary><ul>'+t.feats.map(function(f){return '<li>'+f+'</li>'}).join('')+'</ul></details>';
-  var iframe=document.createElement('iframe'); iframe.src=t.file; iframe.title=t.title;
+  // Chargement paresseux : la maquette n'est chargée que lorsque son cadre approche de l'écran.
+  var iframe=document.createElement('iframe'); iframe.dataset.src=t.file; iframe.title=t.title; iframe.setAttribute('loading','lazy'); iframe.setAttribute('tabindex','-1');
+  iframe.addEventListener('load',function(){ if(iframe.getAttribute('src')) iframe.classList.add('pret'); });
   el.querySelector('.browser .screen').appendChild(iframe);
+  observer.observe(el);
   el.querySelectorAll('.switch button[data-mode]').forEach(function(b){
     b.addEventListener('click',function(){ setMode(el,b.dataset.mode); });
   });
@@ -170,7 +196,7 @@ THEMES.forEach(function(t){
     b.addEventListener('click',function(){
       var ex=b.dataset.ex, f=el.querySelector('iframe');
       var file = ex==='b' ? t.alt.file : t.file, url = ex==='b' ? t.alt.url : t.url;
-      f.src=file; el.querySelector('.url').lastChild.textContent=url;
+      f.dataset.src=file; f.src=file; el.querySelector('.url').lastChild.textContent=url;
       el.querySelector('.open').href=file;
       el.querySelector('.exname').innerHTML = ex==='b' ? '<b>Exemple B :</b> '+t.alt.name+' <i>(page d\'accueil)</i>' : '<b>Exemple A :</b> '+t.exA;
       el.querySelectorAll('.switch.ex button').forEach(function(x){x.classList.toggle('on',x===b)});
@@ -178,6 +204,9 @@ THEMES.forEach(function(t){
   });
   grid.appendChild(el);
 });
+}
+render(THEMES,document.getElementById('grid'));
+render(EXPRESS,document.getElementById('grid-express'));
 
 // Bascule un cadre : on déplace la même page (iframe) du cadre ordinateur au cadre téléphone.
 function setMode(el,mode){

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette personnalisable pour immobilier — exemple B</title>
+<meta name="description" content="Clara Dupouy, conseillère immobilière indépendante sur le Bassin d'Arcachon : villas, appartements et cabanes à Arcachon, Le Moulleau, Pyla et Andernos. Estimation gratuite en 48 h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#1C2B33;--pierre:#EAF1EE;--cuivre:#2A7F8E;--blanc:#FBF9F4;--gris:#5F6B6E;--ligne:#D8E0DC}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',sans-serif;color:var(--nuit);background:var(--blanc);line-height:1.6;font-size:16px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Newsreader',serif;font-weight:500;line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(30px,3.4vw,44px)}
+h2 i,h1 i{font-style:italic;color:var(--cuivre)}
+.wrap{width:min(1200px,92%);margin:0 auto}
+.label{display:inline-block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--cuivre);margin-bottom:14px}
+.label::before{content:"";display:inline-block;width:28px;height:1px;background:var(--cuivre);vertical-align:middle;margin-right:10px}
+section{padding:90px 0}
+.head{max-width:620px;margin-bottom:46px}.head p{color:var(--gris);margin-top:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;font-weight:600;font-size:14px;border:1px solid var(--nuit);transition:.2s;white-space:nowrap}
+.btn-nuit{background:var(--nuit);color:#fff}.btn-nuit:hover{background:var(--cuivre);border-color:var(--cuivre)}
+.btn-line{background:transparent;color:var(--nuit)}.btn-line:hover{background:var(--nuit);color:#fff}
+.ph{background-size:cover;background-position:center;background-color:var(--pierre)}
+/* topbar + header */
+.topbar{background:var(--nuit);color:rgba(255,255,255,.8);font-size:12.5px;text-align:center;padding:9px 16px;letter-spacing:.02em}.topbar b{color:var(--cuivre)}
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--ligne)}
+nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.logo{font-family:'Newsreader',serif;font-size:24px;font-weight:500;letter-spacing:.01em;line-height:1}.logo small{display:block;font-family:'Public Sans',sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--cuivre);margin-top:5px;font-weight:600}
+.menu{display:flex;gap:28px;font-size:14px;font-weight:500}.menu a:hover{color:var(--cuivre)}
+/* hero */
+.hero{padding:0;position:relative}
+.hero .ph{height:620px;position:relative}
+.hero .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,42,65,.72) 0%,rgba(27,42,65,.35) 55%,rgba(27,42,65,.1) 100%)}
+.hero .wrap{position:absolute;left:0;right:0;top:0;height:620px;display:flex;flex-direction:column;justify-content:center;color:#fff}
+.hero .label{color:#fff}.hero .label::before{background:#fff}
+.hero h1{font-size:clamp(40px,5.2vw,68px);max-width:720px}
+.hero p{max-width:560px;margin:20px 0 32px;color:rgba(255,255,255,.88);font-size:17px}
+.search{background:#fff;padding:14px;display:grid;grid-template-columns:auto 1fr 1fr 1fr auto;gap:10px;align-items:center;box-shadow:0 20px 50px rgba(27,42,65,.25);max-width:900px;color:var(--nuit)}
+.search .seg{display:flex;border:1px solid var(--ligne)}.search .seg span{padding:12px 16px;font-size:13px;font-weight:600;cursor:pointer}.search .seg span.on{background:var(--nuit);color:#fff}
+.search select,.search input{border:1px solid var(--ligne);padding:12px 14px;font:inherit;font-size:14px;background:#fff;color:var(--nuit);width:100%}
+.search .btn{justify-content:center}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ligne);background:#fff}
+.kpi div{padding:28px 24px;border-right:1px solid var(--ligne)}.kpi div:last-child{border:0}
+.kpi b{display:block;font-family:'Newsreader',serif;font-size:36px;font-weight:500;color:var(--cuivre);line-height:1}.kpi small{color:var(--gris);font-size:13px}
+section.kpis{padding:0;transform:translateY(-50px)}
+/* biens */
+.biens{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.bien{background:#fff;border:1px solid var(--ligne);transition:.25s}.bien:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(27,42,65,.12)}
+.bien .ph{aspect-ratio:4/3;position:relative}
+.bien .tag{position:absolute;top:14px;left:14px;background:var(--nuit);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;font-weight:600}
+.bien .tag.new{background:var(--cuivre)}
+.bien .txt{padding:22px}
+.bien .prix{font-family:'Newsreader',serif;font-size:28px;font-weight:500}
+.bien .prix small{font-family:'Public Sans',sans-serif;font-size:12px;color:var(--gris);font-weight:400;margin-left:6px}
+.bien h3{font-size:17px;font-family:'Public Sans',sans-serif;font-weight:600;margin:6px 0 4px}
+.bien .lieu{color:var(--gris);font-size:14px}
+.bien .specs{display:flex;gap:16px;margin-top:14px;padding-top:14px;border-top:1px solid var(--ligne);font-size:13px;color:var(--gris);align-items:center;flex-wrap:wrap}
+.bien .specs b{color:var(--nuit);font-weight:600}
+.dpe{display:inline-flex;align-items:center;justify-content:center;width:26px;height:22px;font-size:12px;font-weight:700;color:#fff;margin-left:auto}
+.dpe.A{background:#2E9E44}.dpe.B{background:#5CB04C}.dpe.C{background:#C7D32E}.dpe.D{background:#F2C600}.dpe.E{background:#F0A030}.dpe.F{background:#E85D27}.dpe.G{background:#D12A1F}.dpe.B,.dpe.C,.dpe.D,.dpe.E{color:#1B1A17}
+.center{text-align:center;margin-top:40px}
+/* estimation */
+.estim{background:var(--nuit);color:#fff}
+.estim .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.estim .label{color:var(--cuivre)}.estim p{color:rgba(255,255,255,.8);margin:16px 0 26px}
+.estim ul{list-style:none;display:grid;gap:10px;color:rgba(255,255,255,.9);font-size:15px}
+.estim li::before{content:"—";color:var(--cuivre);margin-right:10px}
+.form{background:#fff;color:var(--nuit);padding:34px}
+.form h3{font-size:24px;margin-bottom:6px}.form small{color:var(--gris);display:block;margin-bottom:20px}
+.form label{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin:14px 0 6px}
+.form input,.form select{width:100%;padding:12px 14px;border:1px solid var(--ligne);font:inherit;font-size:15px;background:#fff}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .btn{width:100%;justify-content:center;margin-top:22px}
+.form p.rgpd{font-size:11.5px;color:var(--gris);margin-top:12px;line-height:1.5}
+/* quartiers */
+.quartiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.quartier{border:1px solid var(--ligne);background:#fff;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.quartier h3{font-size:22px}.quartier small{color:var(--gris);font-size:13px;display:block;margin-top:3px}
+.quartier b{font-family:'Newsreader',serif;font-size:24px;color:var(--cuivre);font-weight:500;white-space:nowrap}.quartier b small{display:block;color:var(--gris);font-family:'Public Sans',sans-serif;font-size:11px;text-align:right;margin-top:2px}
+/* équipe */
+.equipe{background:var(--pierre)}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.team .ph{aspect-ratio:4/5;filter:saturate(.9)}
+.team h3{font-size:24px;margin-top:18px}.team em{font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cuivre);font-weight:600}
+.team p{color:var(--gris);font-size:14.5px;margin-top:8px}.team a{display:inline-block;margin-top:10px;font-size:14px;font-weight:600;border-bottom:1px solid var(--cuivre)}
+/* agence */
+.agence .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.agence .ph{aspect-ratio:4/5;outline:1px solid var(--cuivre);outline-offset:14px;margin:14px}
+.agence p{color:var(--gris);margin:16px 0}
+.agence ul{list-style:none;display:grid;gap:10px;margin-bottom:26px}.agence li{padding-left:22px;position:relative}.agence li::before{content:"";position:absolute;left:0;top:11px;width:10px;height:1px;background:var(--cuivre)}
+/* honoraires */
+.hono{background:#fff;border-top:1px solid var(--ligne);border-bottom:1px solid var(--ligne)}
+.hono .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:start}
+.hono p{color:var(--gris);margin-top:12px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:14px 10px;border-bottom:1px solid var(--ligne)}th{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gris);font-weight:600}
+td b{font-family:'Newsreader',serif;font-size:22px;font-weight:500;color:var(--cuivre)}
+.note{font-size:12.5px;color:var(--gris);margin-top:14px}
+/* avis */
+.avis{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.avis>div{background:#fff;border:1px solid var(--ligne);padding:30px}
+.stars{color:var(--cuivre);letter-spacing:3px;margin-bottom:12px}
+.avis p{font-family:'Newsreader',serif;font-size:19px;line-height:1.4;font-style:italic}
+.avis b{display:block;margin-top:16px;font-size:14px}.avis small{color:var(--gris);font-size:12.5px}
+/* cta */
+.cta{background:var(--cuivre);color:#fff;text-align:center}
+.cta h2{color:#fff;max-width:720px;margin:0 auto 14px}.cta p{color:rgba(255,255,255,.9);max-width:560px;margin:0 auto 28px}
+.cta .btn{border-color:#fff}.cta .btn-nuit{background:var(--nuit);border-color:var(--nuit)}.cta .btn-line{color:#fff}.cta .btn-line:hover{background:#fff;color:var(--cuivre)}
+.btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+/* footer */
+footer{background:var(--nuit);color:rgba(255,255,255,.7);padding:60px 0 30px;font-size:14px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot .logo{color:#fff}.foot h4{color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px}
+.foot a{display:block;margin-bottom:8px}.foot a:hover{color:var(--cuivre)}
+.legal{font-size:12px;line-height:1.7;margin-top:14px;color:rgba(255,255,255,.55)}
+.copy{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:22px;font-size:12.5px}
+/* mobile bar */
+.mbar{display:none}
+@media (max-width:980px){
+  .menu{display:none}
+  .kpi{grid-template-columns:repeat(2,1fr)}.kpi div:nth-child(2){border-right:0}.kpi div:nth-child(-n+2){border-bottom:1px solid var(--ligne)}
+  .biens,.quartiers,.team,.avis{grid-template-columns:1fr 1fr}
+  .estim .wrap,.agence .wrap,.hono .wrap{grid-template-columns:1fr;gap:40px}
+  .search{grid-template-columns:1fr 1fr}.search .seg,.search .btn{grid-column:1/-1}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  section{padding:64px 0}
+  nav{height:66px}.logo{font-size:20px}.logo small{font-size:9px;letter-spacing:.22em}
+  nav .btn{padding:10px 14px;font-size:12.5px}
+  .hero .ph,.hero .wrap{height:auto;min-height:600px}.hero .wrap{padding:60px 0 50px;position:relative}
+  .hero .ph{position:absolute;inset:0}.hero .ph::after{background:linear-gradient(180deg,rgba(27,42,65,.78),rgba(27,42,65,.86))}
+  .hero h1{font-size:40px}
+  .search{grid-template-columns:1fr;padding:12px}
+  section.kpis{transform:none;padding-top:40px}
+  .biens,.quartiers,.team,.avis{grid-template-columns:1fr}
+  .form{padding:24px}.form .row{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .agence .ph{margin:10px}
+  body{padding-bottom:64px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1.3fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--ligne)}
+  .mbar a{text-align:center;padding:14px 6px;font-size:12.5px;font-weight:600}.mbar a.main{background:var(--nuit);color:#fff}
+  #mokom-demo{bottom:72px!important}
+}
+/* ===== VARIANTE B : typos + arrondis, même structure ===== */
+body{font-family:'Albert Sans',sans-serif}
+h1,h2,h3,.logo,.kpi b,.bien .prix,.quartier b,.fiche .prix,td b{font-family:'Fraunces',serif}
+h1,h2,h3{font-weight:600}
+h2 i,h1 i{font-weight:500}
+.btn,.search,.search select,.search input,.search .seg,.kpi,.bien,.bien .ph,.quartier,.form,.form input,.form select,.avis>div,.team .ph,.agence .ph,.estim .ph,.hono table{border-radius:16px}
+.bien{overflow:hidden}.bien .ph{border-radius:0}
+.btn{border-radius:999px}
+.search .seg{overflow:hidden}
+.bien .tag{border-radius:999px;background:var(--cuivre)}.bien .tag.new{background:#E0A33B;color:var(--nuit)}
+.label::before{width:10px;height:10px;border-radius:50%;background:var(--cuivre)}
+.hero .label::before{background:#fff}
+.hero .ph::after{background:linear-gradient(90deg,rgba(28,43,51,.88) 0%,rgba(28,43,51,.7) 45%,rgba(28,43,51,.25) 100%)}
+.hero h1 i{color:#8FD6DF}
+.topbar{background:var(--cuivre);color:#fff}.topbar b{color:#fff;text-decoration:underline}
+.kpi b{color:var(--cuivre)}
+.agence .ph{outline:0;margin:0;border-radius:24px}
+.team .ph{border-radius:24px}
+.estim{background:var(--nuit)}
+.cta{background:var(--cuivre)}
+footer{background:var(--nuit)}
+@media (max-width:600px){.hero .ph::after{background:linear-gradient(180deg,rgba(28,43,51,.78),rgba(28,43,51,.86))}}
+
+</style>
+</head>
+<body>
+<div class="topbar">Conseillère indépendante sur le Bassin d'Arcachon · <b>Estimation gratuite en 48 h</b> · 06 00 00 00 00</div>
+<header><div class="wrap"><nav>
+  <a href="#" class="logo">Clara Dupouy<small>Immobilier · Bassin d'Arcachon</small></a>
+  <div class="menu"><a href="#biens">Mes biens</a><a href="#estimer">Estimer</a><a href="#quartiers">Secteurs</a><a href="#equipe">Qui suis-je</a><a href="#honoraires">Honoraires</a></div>
+  <a href="#estimer" class="btn btn-nuit">Estimer mon bien</a>
+</nav></div></header>
+<section class="hero">
+  <div class="ph" style="background-image:url(img/agent-hero.jpg);background-position:center 40%"></div>
+  <div class="wrap">
+    <span class="label">Conseillère immobilière indépendante · Bassin d'Arcachon</span>
+    <h1>Votre maison sur le Bassin, <i>vendue par quelqu'un</i> qui y vit.</h1>
+    <p>Je m'appelle Clara, j'habite Le Moulleau et je vends des villas, des appartements et des cabanes du Pyla à Andernos depuis 2017. Une seule interlocutrice, de l'estimation à la signature.</p>
+    <form class="search" onsubmit="return false">
+      <div class="seg"><span class="on">Acheter</span><span>Louer</span></div>
+      <select><option>Type de bien</option><option>Villa</option><option>Appartement</option><option>Cabane</option><option>Terrain</option></select>
+      <select><option>Budget max</option><option>400 000 €</option><option>700 000 €</option><option>1 M€</option><option>1,5 M€ et +</option></select>
+      <select><option>Secteur</option><option>Arcachon</option><option>Le Moulleau</option><option>Pyla-sur-Mer</option><option>La Teste</option><option>Andernos</option></select>
+      <button class="btn btn-nuit">Rechercher</button>
+    </form>
+  </div>
+</section>
+
+<section class="kpis"><div class="wrap"><div class="kpi">
+  <div><b>86</b><small>biens vendus depuis 2017</small></div>
+  <div><b>54 j</b><small>délai moyen de vente</small></div>
+  <div><b>97 %</b><small>du prix estimé obtenu</small></div>
+  <div><b>5/5</b><small>sur 62 avis clients</small></div>
+</div></div></section>
+
+<section id="biens" style="padding-top:30px"><div class="wrap">
+  <div class="head"><span class="label">Mes biens</span><h2>Les biens <i>en vente</i> en ce moment.</h2><p>Je ne prends que des mandats que je peux suivre personnellement : une dizaine de biens à la fois, jamais plus.</p></div>
+  <div class="biens">
+<a href="#biens" class="bien"><div class="ph" style="background-image:url(img/agent-f1.jpg)"><span class="tag new">Nouveauté</span></div><div class="txt"><div class="prix">1 290 000 €<small>honoraires inclus</small></div><h3>Villa les pieds dans l'eau, 4 chambres</h3><div class="lieu">Le Moulleau, boulevard de la Plage</div><div class="specs"><span><b>165 m²</b></span><span><b>6</b> pièces</span><span><b>4</b> ch.</span><span class="dpe C">C</span></div></div></a><a href="#biens" class="bien"><div class="ph" style="background-image:url(img/agent-f3.jpg)"><span class="tag ">Exclusivité</span></div><div class="txt"><div class="prix">895 000 €<small>honoraires inclus</small></div><h3>Maison contemporaine sous les pins</h3><div class="lieu">Pyla-sur-Mer, allée des Dunes</div><div class="specs"><span><b>140 m²</b></span><span><b>5</b> pièces</span><span><b>3</b> ch.</span><span class="dpe B">B</span></div></div></a><a href="#biens" class="bien"><div class="ph" style="background-image:url(img/agent-hero2.jpg)"><span class="tag new">Nouveauté</span></div><div class="txt"><div class="prix">640 000 €<small>honoraires inclus</small></div><h3>Arcachonnaise rénovée, jardin clos</h3><div class="lieu">Arcachon, Ville d'Hiver</div><div class="specs"><span><b>118 m²</b></span><span><b>5</b> pièces</span><span><b>3</b> ch.</span><span class="dpe D">D</span></div></div></a><a href="#biens" class="bien"><div class="ph" style="background-image:url(img/agent-f2.jpg)"><span class="tag ">Vente</span></div><div class="txt"><div class="prix">385 000 €<small>honoraires inclus</small></div><h3>Cabane ostréicole aménagée, vue Bassin</h3><div class="lieu">Andernos, port ostréicole</div><div class="specs"><span><b>48 m²</b></span><span><b>2</b> pièces</span><span><b>1</b> ch.</span><span class="dpe E">E</span></div></div></a><a href="#biens" class="bien"><div class="ph" style="background-image:url(img/agent-f5.jpg)"><span class="tag ">Vente</span></div><div class="txt"><div class="prix">720 000 €<small>honoraires inclus</small></div><h3>Maison de famille avec garage</h3><div class="lieu">La Teste-de-Buch, centre</div><div class="specs"><span><b>132 m²</b></span><span><b>5</b> pièces</span><span><b>4</b> ch.</span><span class="dpe D">D</span></div></div></a><a href="#biens" class="bien"><div class="ph" style="background-image:url(img/agent-f6.jpg)"><span class="tag ">Coup de cœur</span></div><div class="txt"><div class="prix">1 150 000 €<small>honoraires inclus</small></div><h3>Villa d'architecte, piscine, 3 chambres</h3><div class="lieu">Pyla-sur-Mer, Haut-Pyla</div><div class="specs"><span><b>150 m²</b></span><span><b>5</b> pièces</span><span><b>3</b> ch.</span><span class="dpe A">A</span></div></div></a>
+  </div>
+  <div class="center"><a href="#" class="btn btn-line">Voir les 11 biens en vente</a></div>
+</div></section>
+
+<section id="estimer" class="estim"><div class="wrap">
+  <div>
+    <span class="label">Estimation gratuite</span>
+    <h2>Combien vaut <i>votre bien</i> sur le Bassin ?</h2>
+    <p>Je viens chez vous, je compare avec les ventes réellement signées dans votre rue (pas les annonces) et je vous remets une estimation écrite sous 48 h. Sans engagement, et sans relance insistante.</p>
+    <ul><li>Visite sur place, 45 minutes</li><li>Estimation écrite et argumentée sous 48 h</li><li>Plan de vente : photos pro, drone, diffusion, visites</li><li>Vous choisissez ensuite, librement</li></ul>
+    <div class="ph" style="aspect-ratio:16/9;background-image:url(img/agent-bay.jpg);max-width:420px"></div>
+  </div>
+  <form class="form" onsubmit="return false">
+    <h3>Demander mon estimation</h3><small>Je vous rappelle sous 48 h.</small>
+    <label>Adresse du bien</label><input type="text" placeholder="8 allée des Dunes, Pyla-sur-Mer">
+    <div class="row"><div><label>Type</label><select><option>Villa</option><option>Appartement</option><option>Cabane</option><option>Terrain</option></select></div><div><label>Surface</label><input type="text" placeholder="120 m²"></div></div>
+    <div class="row"><div><label>Votre nom</label><input type="text" placeholder="Prénom Nom"></div><div><label>Téléphone</label><input type="tel" placeholder="06 00 00 00 00"></div></div>
+    <button class="btn btn-nuit">Recevoir mon estimation</button>
+    <p class="rgpd">En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter au sujet de votre estimation. Conservation 12 mois. Voir la politique de confidentialité.</p>
+  </form>
+</div></section>
+
+<section id="quartiers"><div class="wrap">
+  <div class="head"><span class="label">Mes secteurs</span><h2>Le Bassin, <i>commune par commune.</i></h2><p>Prix moyens constatés sur les ventes signées des 12 derniers mois. Sur le Bassin, la vue et la distance à la plage changent tout : demandez une estimation précise.</p></div>
+  <div class="quartiers">
+    <div class="quartier"><div><h3>Arcachon</h3><small>Ville d'Hiver, front de mer</small></div><b>7 800 €<small>le m² en moyenne</small></b></div>
+    <div class="quartier"><div><h3>Le Moulleau</h3><small>Villas, jetée, pins</small></div><b>9 400 €<small>le m² en moyenne</small></b></div>
+    <div class="quartier"><div><h3>Pyla-sur-Mer</h3><small>Forêt, dune, maisons d'architecte</small></div><b>9 100 €<small>le m² en moyenne</small></b></div>
+    <div class="quartier"><div><h3>La Teste-de-Buch</h3><small>Centre, familial</small></div><b>5 200 €<small>le m² en moyenne</small></b></div>
+    <div class="quartier"><div><h3>Gujan-Mestras</h3><small>Ports ostréicoles, maisons</small></div><b>4 900 €<small>le m² en moyenne</small></b></div>
+    <div class="quartier"><div><h3>Andernos-les-Bains</h3><small>Nord Bassin, cabanes</small></div><b>5 600 €<small>le m² en moyenne</small></b></div>
+  </div>
+</div></section>
+
+<section id="equipe" class="equipe"><div class="wrap">
+  <div class="head"><span class="label">Qui suis-je</span><h2>Une conseillère, <i>et les bons partenaires</i> autour d'elle.</h2></div>
+  <div class="team">
+    <div><div class="ph" style="background-image:url(img/agent-p3.jpg)"></div><em>Conseillère indépendante</em><h3>Clara Dupouy</h3><p>Née à La Teste, 9 ans d'immobilier dont 5 à mon compte. Je connais les propriétaires, les artisans et le prix réel de chaque rue.</p><a href="#">06 00 00 00 00</a></div>
+    <div><div class="ph" style="background-image:url(img/agent-p2.jpg)"></div><em>Partenaire · Courtier en crédit</em><h3>Thomas Lavigne</h3><p>Il monte le financement de mes acheteurs et sécurise la vente côté vendeur. Premier rendez-vous offert.</p><a href="#">Prendre rendez-vous</a></div>
+    <div><div class="ph" style="background-image:url(img/syndic-t2.jpg)"></div><em>Partenaire · Diagnostiqueur</em><h3>Éric Bonnet</h3><p>Diagnostics sous 72 h sur tout le Bassin, tarif négocié pour mes clients vendeurs.</p><a href="#">Voir les tarifs</a></div>
+  </div>
+</div></section>
+
+<section class="agence"><div class="wrap">
+  <div class="ph" style="background-image:url(img/agent-bike.jpg)"></div>
+  <div>
+    <span class="label">Ma méthode</span>
+    <h2>Peu de mandats, <i>beaucoup de temps</i> pour chacun.</h2>
+    <p>Pas d'agence, pas de vitrine, pas de frais fixes : j'investis dans ce qui vend. Chaque bien a ses photos pro, sa vidéo drone et son dossier complet avant la première visite.</p>
+    <ul><li>Photos professionnelles et vidéo drone incluses</li><li>Diffusion sur les grands portails et mon fichier de 600 acheteurs</li><li>Compte rendu après chaque visite, le soir même</li><li>Honoraires affichés, jamais de frais cachés</li></ul>
+    <a href="#estimer" class="btn btn-nuit">Parler de mon projet</a>
+  </div>
+</div></section>
+
+<section id="honoraires" class="hono"><div class="wrap">
+  <div><span class="label">Honoraires</span><h2>Mes honoraires, <i>affichés.</i></h2><p>Barème applicable au 1<sup>er</sup> janvier 2026, à la charge du vendeur sauf mention contraire dans l'annonce. Sans agence à financer, mes honoraires sont en dessous de la moyenne du Bassin.</p></div>
+  <div>
+    <table><tr><th>Prix de vente</th><th>Honoraires TTC</th></tr>
+      <tr><td>Jusqu'à 200 000 €</td><td><b>7 000 €</b> forfait</td></tr>
+      <tr><td>De 200 001 à 500 000 €</td><td><b>4 %</b> du prix</td></tr>
+      <tr><td>De 500 001 à 1 000 000 €</td><td><b>3,5 %</b> du prix</td></tr>
+      <tr><td>Au-delà de 1 000 000 €</td><td><b>3 %</b> du prix</td></tr>
+      <tr><td>Location (honoraires locataire)</td><td><b>9 €/m²</b> + 3 €/m² état des lieux</td></tr>
+      <tr><td>Recherche pour un acheteur</td><td><b>2 %</b> du prix, au succès</td></tr>
+    </table>
+    <p class="note">Montants TTC, TVA 20 % incluse. Aucun honoraire n'est dû si la vente n'aboutit pas.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="head"><span class="label">Avis clients</span><h2>Ils ont vendu <i>avec moi.</i></h2></div>
+  <div class="avis">
+    <div><div class="stars">★★★★★</div><p>« Clara a vendu la maison de mes parents au Moulleau en un mois, au prix. Un compte rendu le soir de chaque visite. »</p><b>Isabelle F.</b><small>Vente, Le Moulleau · Avis client</small></div>
+    <div><div class="stars">★★★★★</div><p>« On cherchait une cabane à Andernos depuis deux ans. Elle nous a appelés avant la mise en ligne. »</p><b>Julien et Marie P.</b><small>Achat, Andernos · Avis client</small></div>
+    <div><div class="stars">★★★★★</div><p>« Honnête sur le prix dès le départ, alors que deux agences nous avaient promis 20 % de plus… et rien vendu. »</p><b>Bernard L.</b><small>Vente, Pyla · Avis client</small></div>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2>Un projet sur le Bassin d'Arcachon ?</h2>
+  <p>Appelez-moi directement, ou demandez une estimation en ligne. Je réponds sous 48 h, souvent le jour même.</p>
+  <div class="btns"><a href="#estimer" class="btn btn-nuit">Estimer mon bien</a><a href="tel:0600000000" class="btn btn-line">06 00 00 00 00</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="foot">
+    <div><div class="logo">Clara Dupouy<small>Immobilier · Bassin d'Arcachon</small></div>
+      <p class="legal">Agent commercial indépendant en immobilier, RSAC Bordeaux n° 000 000 000. 06 00 00 00 00 · clara@dupouy-immobilier.fr<br>Mandataire du réseau Maisons du Littoral (réseau fictif), titulaire de la carte professionnelle n° CPI 3301 2026 000 000 000 (CCI Bordeaux Gironde). Garantie financière et RCP souscrites par le réseau. Absence de maniement de fonds.</p></div>
+    <div><h4>Acheter</h4><a href="#">Villas</a><a href="#">Appartements</a><a href="#">Cabanes & pieds-à-terre</a><a href="#">Terrains</a></div>
+    <div><h4>Vendre</h4><a href="#estimer">Estimation gratuite</a><a href="#honoraires">Honoraires</a><a href="#">Ma méthode</a></div>
+    <div><h4>Clara</h4><a href="#equipe">Qui suis-je</a><a href="#quartiers">Mes secteurs</a><a href="#">Avis clients</a><a href="#">Réseaux sociaux</a></div>
+  </div>
+  <div class="copy"><span>© 2026 Clara Dupouy Immobilier — Arcachon, Le Moulleau, Pyla, Andernos</span><span>Mentions légales · Honoraires · Confidentialité</span></div>
+</div></footer>
+<nav class="mbar"><a href="tel:0600000000">Appeler</a><a href="#biens">Mes biens</a><a href="#estimer" class="main">Estimer mon bien</a></nav>
+
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration, entreprise fictive · Mokom Studio</div>
+<script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+</body>
+</html>
