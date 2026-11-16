@@ -228,7 +228,8 @@ h1,h2,h3,.cond,.logo,.btn,.stats b,.slot b.time,.plan b{font-family:'Italiana',s
 .btn{border-radius:999px;font-size:17px;letter-spacing:.12em}
 .btn-lime{color:#0B0609;box-shadow:0 0 22px rgba(255,46,136,.7),inset 0 0 0 1px rgba(255,255,255,.3)}
 .btn-line{border-color:#D9A441;color:#D9A441;box-shadow:0 0 12px rgba(217,164,65,.25)}
-.hero h1 em,.cta h2{color:#FF2E88;text-shadow:0 0 12px rgba(255,46,136,.95),0 0 36px rgba(255,46,136,.6)}
+.hero h1 em{color:#FF2E88;text-shadow:0 0 12px rgba(255,46,136,.95),0 0 36px rgba(255,46,136,.6)}
+.cta h2{color:#0B0609;text-shadow:none}
 h2{text-shadow:0 0 24px rgba(255,46,136,.25)}
 .pills span{border-color:rgba(217,164,65,.6);color:#D9A441;border-radius:999px}
 .stats div{transform:none;border-radius:16px;border-left:0;border-top:2px solid #D9A441;box-shadow:0 0 18px rgba(255,46,136,.18)}
@@ -251,6 +252,7 @@ h1,h2,h3,.slot b.time{font-style:normal}
 .stats div>*,.days div,.days div>*,.cta,.cta>*{transform:none}.days div{border-radius:12px}
 h2{font-size:40px}.hero h1{font-size:66px}
 @media(max-width:900px){.hero .ph::after{background:linear-gradient(0deg,rgba(11,6,9,.97) 0%,rgba(11,6,9,.8) 50%,rgba(11,6,9,.2) 100%)!important}.hero .ph{height:460px}}
+@media (max-width:899px){#mokom-demo{bottom:95px!important}}
 </style>
 </head>
 <body>
@@ -275,7 +277,7 @@ h2{font-size:40px}.hero h1{font-size:66px}
 
 <div class="stats">
   <div><b>600+</b><small>danseuses depuis 2022</small></div>
-  <div><b>4,9</b><small>note Google</small></div>
+  <div><b>4,9</b><small>note moyenne</small></div>
   <div><b>0</b><small>niveau requis</small></div>
 </div>
 
@@ -295,7 +297,7 @@ h2{font-size:40px}.hero h1{font-size:66px}
     <div class="txt">
       <span class="label">La fondatrice</span>
       <h2>Shaïna Lopes</h2>
-      <p>Danseuse pro pendant dix ans (Crazy Horse, tournées, clips), j'ai ouvert Velvet en 2022 pour une raison : la scène m'a appris à m'aimer, et je voulais transmettre ça. Ici, personne ne juge ton corps ni ton niveau.</p>
+      <p>Danseuse pro pendant dix ans (cabarets parisiens, tournées, clips), j'ai ouvert Velvet en 2022 pour une raison : la scène m'a appris à m'aimer, et je voulais transmettre ça. Ici, personne ne juge ton corps ni ton niveau.</p>
       <ul><li>Diplôme d'État de professeur de danse</li><li>4 professeures, toutes danseuses pro</li><li>Studio privé, miroirs, vestiaires, parquet</li></ul>
       <a href="#reserver" class="btn btn-line">Rencontrer l'équipe</a>
     </div>
@@ -312,7 +314,7 @@ h2{font-size:40px}.hero h1{font-size:66px}
 </section>
 
 <section class="results">
-  <span class="label">La scène</span><h2>Le show de fin d'année</h2><p class="sub">Chaque juin, nos élèves montent sur scène au Théâtre Fémina. Oui, toi aussi.</p>
+  <span class="label">La scène</span><h2>Le show de fin d'année</h2><p class="sub">Chaque juin, nos élèves montent sur scène dans un vrai théâtre bordelais. Oui, toi aussi.</p>
   <div class="ba"><div class="ph" style="background-image:url(img/velvet-s4.jpg)"><span>Le studio</span></div><div class="ph lime" style="background-image:url(img/velvet-s2.jpg);background-position:center top"><span>Show · juin 2026</span></div></div>
   <div class="quote"><p>« Je suis arrivée en me cachant derrière les autres. Six mois plus tard, j'ouvrais le show. Je ne me reconnais plus, et c'est tant mieux. »</p><b>Maëva, 29 ans</b><small>Cycle débutantes puis Heels · Bordeaux Bastide</small></div>
 </section>
@@ -342,7 +344,7 @@ h2{font-size:40px}.hero h1{font-size:66px}
 <footer>
   <div class="logo"><i></i>Velvet</div>
   <p class="zone">Studio de danse heels & cabaret à Bordeaux — 14 rue de la Devise, quartier Saint-Pierre. Accessible tram A et B.</p>
-  <div class="links"><a href="#cours">Cours</a><a href="#tarifs">Tarifs</a><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Mentions légales</a></div>
+  <div class="links"><a href="#cours">Cours</a><a href="#tarifs">Tarifs</a><a href="#">Réseaux sociaux</a><a href="#">Mentions légales</a></div>
   <p>© 2026 Studio Velvet — 06 00 00 00 00 — hello@studiovelvet.fr</p>
 </footer>
 
@@ -353,7 +355,7 @@ h2{font-size:40px}.hero h1{font-size:66px}
   <a href="#reserver" class="book">Réserver</a>
 </nav>
 
-<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1.35 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none;max-width:calc(100% - 24px)">Maquette de démonstration, entreprise fictive · Mokom Studio</div>
 <script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
 </body>
 </html>

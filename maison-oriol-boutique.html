@@ -164,6 +164,7 @@ footer{border-top:3px double var(--or)}
 
 /* page intérieure */
 .filtres{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.filtres a{padding:10px 18px;border:1px solid var(--or);font-size:12px;letter-spacing:.14em;text-transform:uppercase}.filtres a.on{background:var(--cacao);color:var(--creme);border-color:var(--cacao)}@media(max-width:900px){.grid-prod{grid-template-columns:1fr 1fr!important}}@media(max-width:600px){.grid-prod{grid-template-columns:1fr!important}}
+.process.trois{grid-template-columns:repeat(3,1fr)}@media (max-width:600px){.process.trois{grid-template-columns:1fr}.process.trois div{border-right:0}}
 </style>
 </head>
 <body>
@@ -192,7 +193,7 @@ footer{border-top:3px double var(--or)}
 <section>
   <div class="wrap">
     <div class="head"><span class="label">Bon à savoir</span><h2>Livraison & conservation</h2></div>
-    <div class="process" style="grid-template-columns:repeat(3,1fr)">
+    <div class="process trois">
       <div><i>1</i><h3>Click & collect</h3><p>Commandez avant 16 h, votre colis est prêt en boutique le jour même.</p></div>
       <div><i>2</i><h3>Livraison 48 h</h3><p>Colis isotherme avec pain de glace d'avril à octobre. Offerte dès 60 €.</p></div>
       <div><i>3</i><h3>Conservation</h3><p>16 à 18 °C, à l'abri de la lumière. Jamais au réfrigérateur. Tablettes : 12 mois. Bonbons : 4 semaines.</p></div>
@@ -212,7 +213,7 @@ footer{border-top:3px double var(--or)}
   </div>
 </footer>
 
-<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none">Maquette de démonstration · Mokom Studio</div>
+<div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1.35 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none;max-width:calc(100% - 24px)">Maquette de démonstration, entreprise fictive · Mokom Studio</div>
 <script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
 </body>
 </html>
