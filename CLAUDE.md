@@ -28,7 +28,7 @@ Site carte de visite d'une seule page : `atelier-pivoine` (exemple A, page + men
 1. Dupliquer la page la plus proche, changer `:root`, les polices, les textes, les photos, le `<title>` (« Maquette personnalisable pour [thème] »).
 2. Ajouter les photos dans `img/` (compressées).
 3. Ajouter l'entrée dans `THEMES` de `index.html` (titre, fichier, url fictive, action, description, pages, fonctionnalités, alt pour l'exemple B).
-4. Vérifier à 390 px et 1 280 px, puis `git add . && git commit -m "..." && git push`.
+4. Vérifier à 390 px et 1 280 px, puis vérifier `git status` et n'ajouter que les pages, `img/` et `CLAUDE.md` (`git add *.html img/ CLAUDE.md`, jamais `git add .`), puis `git commit -m "..." && git push`. Les dossiers de travail (`docs/`, `.mokom/`, `.impeccable/`) sont exclus par `.gitignore`.
 
 ## Mise en ligne
 GitHub Pages, branche `main`, racine. Après chaque `git push`, le site est à jour en 1 à 2 minutes.

@@ -1,0 +1,7 @@
+# Fichiers de travail : restent sur l'ordinateur, jamais publiés
+docs/
+.mokom/
+.impeccable/
+*.zip
+__pycache__/
+.DS_Store
