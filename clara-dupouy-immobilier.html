@@ -171,6 +171,17 @@ h2 i,h1 i{font-weight:500}
 footer{background:var(--nuit)}
 @media (max-width:600px){.hero .ph::after{background:linear-gradient(180deg,rgba(28,43,51,.78),rgba(28,43,51,.86))}}
 
+/* Menu toujours visible sous 980 px : seconde ligne sous le logo, défilement au doigt */
+@media (max-width:980px){header nav{flex-wrap:wrap;height:auto!important;row-gap:4px;padding-top:12px;padding-bottom:0}header nav>.menu{display:flex!important;order:9;flex:0 0 100%;grid-column:1/-1;width:100%;height:40px;align-items:center;gap:24px;margin:0;padding:0;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;font-size:14px!important;letter-spacing:.04em!important}header nav>.menu::-webkit-scrollbar{display:none}header nav>.menu>*{flex:none}}
+/* Le logo se resserre plutôt que de pousser le bouton à la ligne */
+@media (max-width:980px){header nav>.logo{flex:1 1 0;min-width:0}}
+/* Les titres de section ne passent pas sous l'en-tête quand on clique un lien du menu */
+html{scroll-padding-top:95px}@media (max-width:980px){html{scroll-padding-top:116px}}
+/* Accessibilité : focus jamais caché en bas, focus visible sur les champs, animations coupées si le visiteur le demande */
+html{scroll-padding-bottom:70px}@media (max-width:980px){html{scroll-padding-bottom:140px}}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media (max-width:980px){header nav>.menu{padding-inline-end:28px;scroll-padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}header nav>.menu a{padding-block:9px}}
 </style>
 </head>
 <body>
@@ -293,7 +304,7 @@ footer{background:var(--nuit)}
 <footer><div class="wrap">
   <div class="foot">
     <div><div class="logo">Clara Dupouy<small>Immobilier · Bassin d'Arcachon</small></div>
-      <p class="legal">Agent commercial indépendant en immobilier, RSAC Bordeaux n° 000 000 000. 06 00 00 00 00 · clara@dupouy-immobilier.fr<br>Mandataire du réseau Maisons du Littoral (réseau fictif), titulaire de la carte professionnelle n° CPI 3301 2026 000 000 000 (CCI Bordeaux Gironde). Garantie financière et RCP souscrites par le réseau. Absence de maniement de fonds.</p></div>
+      <p class="legal">Agent commercial indépendant en immobilier, RSAC Bordeaux n° 000 000 000. 06 00 00 00 00 · clara@exemple.fr<br>Mandataire du réseau Maisons du Littoral (réseau fictif), titulaire de la carte professionnelle n° CPI 3301 2026 000 000 000 (CCI Bordeaux Gironde). Garantie financière et RCP souscrites par le réseau. Absence de maniement de fonds.</p></div>
     <div><h4>Acheter</h4><a href="#">Villas</a><a href="#">Appartements</a><a href="#">Cabanes & pieds-à-terre</a><a href="#">Terrains</a></div>
     <div><h4>Vendre</h4><a href="#estimer">Estimation gratuite</a><a href="#honoraires">Honoraires</a><a href="#">Ma méthode</a></div>
     <div><h4>Clara</h4><a href="#equipe">Qui suis-je</a><a href="#quartiers">Mes secteurs</a><a href="#">Avis clients</a><a href="#">Réseaux sociaux</a></div>

@@ -241,6 +241,15 @@ h2{text-shadow:0 0 22px rgba(255,106,0,.22)}
 .ph::after{background:linear-gradient(0deg,rgba(15,15,16,.85),rgba(255,106,0,.08) 55%)}
 .day h3{text-shadow:0 0 10px rgba(255,106,0,.6)}
 @media (max-width:899px){#mokom-demo{bottom:95px!important}}
+/* Menu toujours visible sous 900 px : seconde ligne sous le logo, défilement au doigt (la barre du bas reste) */
+@media (max-width:899px){.top{flex-wrap:wrap;padding-bottom:2px;row-gap:6px}.burger{display:none}.desk-menu{display:flex;order:9;flex:0 0 100%;height:40px;align-items:center;gap:24px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;font-weight:700;font-size:14px}.desk-menu::-webkit-scrollbar{display:none}.desk-menu a{flex:none}.desk-menu .btn{display:none}}
+/* Les titres de section ne passent pas sous l'en-tête quand on clique un lien du menu */
+html{scroll-padding-top:103px}@media (max-width:899px){html{scroll-padding-top:122px}}
+/* Accessibilité : focus jamais caché en bas, focus visible sur les champs, animations coupées si le visiteur le demande */
+html{scroll-padding-bottom:70px}@media (max-width:899px){html{scroll-padding-bottom:150px}}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media (max-width:899px){.desk-menu{padding-inline-end:28px;scroll-padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}.desk-menu a{padding-block:9px}}
 </style>
 </head>
 <body>
@@ -256,13 +265,13 @@ h2{text-shadow:0 0 22px rgba(255,106,0,.22)}
   <span class="label">Informations légales</span>
   <h1>Mentions légales</h1>
   <h2>Éditeur du site</h2>
-  <p>ALTO Coaching — Entreprise individuelle — carte professionnelle n° 033 00000. Siège : Bordeaux. Contact : hello@alto-coaching.fr. SIRET : 000 000 000 00000. Directeur de la publication : le représentant légal de l'entreprise.</p>
+  <p>ALTO Coaching — Entreprise individuelle — carte professionnelle n° 033 00000. Siège : Bordeaux. Contact : hello@exemple.fr. SIRET : 000 000 000 00000. Directeur de la publication : le représentant légal de l'entreprise.</p>
   <h2>Hébergement</h2>
   <p>Le site est hébergé par [nom de l'hébergeur], [adresse de l'hébergeur]. Téléphone : [numéro].</p>
   <h2>Propriété intellectuelle</h2>
   <p>L'ensemble des contenus de ce site (textes, photographies, logos, charte graphique) est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p>
   <h2>Données personnelles</h2>
-  <p>Les informations recueillies via les formulaires sont destinées uniquement à ALTO Coaching pour répondre à vos demandes. Elles ne sont ni vendues ni transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à hello@alto-coaching.fr.</p>
+  <p>Les informations recueillies via les formulaires sont destinées uniquement à ALTO Coaching pour répondre à vos demandes. Elles ne sont ni vendues ni transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à hello@exemple.fr.</p>
   <h2>Cookies</h2>
   <p>Ce site n'utilise que des cookies techniques nécessaires à son fonctionnement. Aucun cookie publicitaire n'est déposé sans votre consentement.</p>
   <h2>Crédits</h2>
@@ -272,7 +281,7 @@ h2{text-shadow:0 0 22px rgba(255,106,0,.22)}
   <div class="logo"><i></i>ALTO</div>
   <p class="zone">Coach sportif à domicile à Bordeaux, Mérignac, Pessac, Talence, Le Bouscat et en visio partout en France.</p>
   <div class="links"><a href="alto-coaching-formules.html">Séances</a><a href="alto-coaching.html#tarifs">Tarifs</a><a href="alto-coaching.html">Réseaux sociaux</a><a href="alto-coaching-mentions-legales.html">Mentions légales</a></div>
-  <p>© 2026 ALTO Coaching — 06 00 00 00 00 — hello@alto-coaching.fr</p>
+  <p>© 2026 ALTO Coaching — 06 00 00 00 00 — hello@exemple.fr</p>
 </footer>
 
 <nav class="bottom">

@@ -206,6 +206,17 @@ input,select,textarea{border:2px solid var(--charbon);background:#fff}
 
 /* page intérieure */
 
+/* Menu toujours visible sous 900 px : seconde ligne sous le logo, défilement au doigt */
+@media (max-width:900px){header nav{flex-wrap:wrap;height:auto!important;row-gap:4px;padding-top:12px;padding-bottom:0}header nav>.menu{display:flex!important;order:9;flex:0 0 100%;grid-column:1/-1;width:100%;height:40px;align-items:center;gap:24px;margin:0;padding:0;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;font-size:14px!important;letter-spacing:.04em!important}header nav>.menu::-webkit-scrollbar{display:none}header nav>.menu>*{flex:none}}
+/* Le logo se resserre plutôt que de pousser le bouton à la ligne */
+@media (max-width:980px){header nav>.logo{flex:1 1 0;min-width:0}}
+/* Les titres de section ne passent pas sous l'en-tête quand on clique un lien du menu */
+html{scroll-padding-top:97px}@media (max-width:900px){html{scroll-padding-top:126px}}
+/* Accessibilité : focus jamais caché en bas, focus visible sur les champs, animations coupées si le visiteur le demande */
+html{scroll-padding-bottom:70px}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media (max-width:900px){header nav>.menu{padding-inline-end:28px;scroll-padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}header nav>.menu a{padding-block:9px}}
 </style>
 </head>
 <body>
@@ -223,7 +234,7 @@ input,select,textarea{border:2px solid var(--charbon);background:#fff}
         <a href="atelier-bardou.html#contact">Contact</a>
       </div>
       <div class="nav-cta">
-        <span class="phone">05 56 00 12 34</span>
+        <span class="phone">05 56 00 00 00</span>
         <a href="atelier-bardou.html#contact" class="btn btn-primary">Demander un devis</a>
       </div>
     </nav>
@@ -318,9 +329,9 @@ input,select,textarea{border:2px solid var(--charbon);background:#fff}
       </div>
       <div><h4>SAVOIR-FAIRE</h4><a href="atelier-bardou.html">Cuisines</a><a href="atelier-bardou.html">Dressings</a><a href="atelier-bardou.html">Escaliers</a><a href="atelier-bardou.html">Extérieur</a></div>
       <div><h4>L'ATELIER</h4><a href="atelier-bardou.html">Notre histoire</a><a href="atelier-bardou.html">Réalisations</a><a href="atelier-bardou.html">Avis clients</a><a href="atelier-bardou.html">Recrutement</a></div>
-      <div><h4>CONTACT</h4><a href="atelier-bardou.html">05 56 00 12 34</a><a href="atelier-bardou.html">contact@atelier-bardou.fr</a><a href="atelier-bardou.html">14 rue des Charpentiers, Bègles</a></div>
+      <div><h4>CONTACT</h4><a href="atelier-bardou.html">05 56 00 00 00</a><a href="atelier-bardou.html">contact@exemple.fr</a><a href="atelier-bardou.html">14 rue des Charpentiers, Bègles</a></div>
     </div>
-    <div class="copy"><span>© 2026 Atelier Bardou — SIRET 000 000 000 00000</span><span>Mentions légales · Politique de confidentialité</span></div>
+    <div class="copy"><span>© 2026 Atelier Bardou · SIRET 000 000 000 00000</span><span>Mentions légales · Politique de confidentialité</span></div>
   </div>
 </footer>
 

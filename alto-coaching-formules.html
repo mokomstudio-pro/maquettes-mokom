@@ -241,6 +241,17 @@ h2{text-shadow:0 0 22px rgba(255,106,0,.22)}
 .ph::after{background:linear-gradient(0deg,rgba(15,15,16,.85),rgba(255,106,0,.08) 55%)}
 .day h3{text-shadow:0 0 10px rgba(255,106,0,.6)}
 @media (max-width:899px){#mokom-demo{bottom:95px!important}}
+/* Menu toujours visible sous 900 px : seconde ligne sous le logo, défilement au doigt (la barre du bas reste) */
+@media (max-width:899px){.top{flex-wrap:wrap;padding-bottom:2px;row-gap:6px}.burger{display:none}.desk-menu{display:flex;order:9;flex:0 0 100%;height:40px;align-items:center;gap:24px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;font-weight:700;font-size:14px}.desk-menu::-webkit-scrollbar{display:none}.desk-menu a{flex:none}.desk-menu .btn{display:none}}
+/* Titre principal de la page : même apparence que les autres titres de section */
+h1.titre-page{font-size:38px;margin-bottom:8px;font-style:italic;text-shadow:0 0 22px rgba(255,106,0,.22)}@media (min-width:900px){h1.titre-page{font-size:52px}}
+/* Les titres de section ne passent pas sous l'en-tête quand on clique un lien du menu */
+html{scroll-padding-top:103px}@media (max-width:899px){html{scroll-padding-top:122px}}
+/* Accessibilité : focus jamais caché en bas, focus visible sur les champs, animations coupées si le visiteur le demande */
+html{scroll-padding-bottom:70px}@media (max-width:899px){html{scroll-padding-bottom:150px}}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media (max-width:899px){.desk-menu{padding-inline-end:28px;scroll-padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}.desk-menu a{padding-block:9px}}
 </style>
 </head>
 <body>
@@ -253,7 +264,7 @@ h2{text-shadow:0 0 22px rgba(255,106,0,.22)}
 </div>
 
 <section style="padding-top:30px">
-  <div class="pad"><span class="label">Formules</span><h2>Toutes les<br>séances</h2><p class="sub">Chaque formule est adaptée à ton niveau. Première séance offerte, quelle que soit la formule.</p></div>
+  <div class="pad"><span class="label">Formules</span><h1 class="titre-page">Toutes les<br>séances</h1><p class="sub">Chaque formule est adaptée à ton niveau. Première séance offerte, quelle que soit la formule.</p></div>
   <div class="scroller">
     <div class="card"><div class="ph" style="background-image:url(img/alto-s1.jpg)"></div><div class="txt"><h3>Remise en forme</h3><p>Reprendre le sport en douceur. Mobilité, renfo léger, cardio progressif.</p><div class="row"><span>60 min</span><em>55 €</em></div></div></div>
     <div class="card"><div class="ph" style="background-image:url(img/alto-s2.jpg);background-position:center bottom"></div><div class="txt"><h3>Perte de poids</h3><p>Programme 12 semaines, 2 séances/sem, suivi nutrition inclus.</p><div class="row"><span>45–60 min</span><em>55 €</em></div></div></div>
@@ -275,7 +286,7 @@ h2{text-shadow:0 0 22px rgba(255,106,0,.22)}
   <div class="logo"><i></i>ALTO</div>
   <p class="zone">Coach sportif à domicile à Bordeaux, Mérignac, Pessac, Talence, Le Bouscat et en visio partout en France.</p>
   <div class="links"><a href="alto-coaching.html">Séances</a><a href="alto-coaching.html">Tarifs</a><a href="alto-coaching.html">Réseaux sociaux</a><a href="alto-coaching.html">Mentions légales</a></div>
-  <p>© 2026 ALTO Coaching — 06 00 00 00 00 — hello@alto-coaching.fr</p>
+  <p>© 2026 ALTO Coaching — 06 00 00 00 00 — hello@exemple.fr</p>
 </footer>
 
 <nav class="bottom">

@@ -5,6 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maquette personnalisable pour artisan & services à domicile — exemple B</title>
+<link rel="preload" as="image" href="img/elec-hero.jpg" fetchpriority="high" media="(min-width:901px)">
 <meta name="description" content="Delmas Électricité, électricien à Mérignac. Dépannage, mise aux normes, tableaux, bornes de recharge. Intervention sous 24 h sur Bordeaux Métropole.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -218,6 +219,19 @@ h1,h2,h3,h4,.btn,.stamp,.step::before,.hero-card b,.band b,.review b,.logo{font-
 form{box-shadow:10px 10px 0 var(--bois)}
 .ph{filter:none}
 .hero{background-image:repeating-linear-gradient(90deg,transparent 0 39px,rgba(30,79,216,.3) 39px 40px)}
+/* En-tête de la couleur du fond de page */
+header{background:var(--creme)}
+/* Menu toujours visible sous 900 px : seconde ligne sous le logo, défilement au doigt */
+@media (max-width:900px){header nav{flex-wrap:wrap;height:auto!important;row-gap:4px;padding-top:12px;padding-bottom:0}header nav>.menu{display:flex!important;order:9;flex:0 0 100%;grid-column:1/-1;width:100%;height:40px;align-items:center;gap:24px;margin:0;padding:0;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;font-size:14px!important;letter-spacing:.04em!important}header nav>.menu::-webkit-scrollbar{display:none}header nav>.menu>*{flex:none}}
+/* Le logo se resserre plutôt que de pousser le bouton à la ligne */
+@media (max-width:980px){header nav>.logo{flex:1 1 0;min-width:0}}
+/* Les titres de section ne passent pas sous l'en-tête quand on clique un lien du menu */
+html{scroll-padding-top:97px}@media (max-width:900px){html{scroll-padding-top:126px}}
+/* Accessibilité : focus jamais caché en bas, focus visible sur les champs, animations coupées si le visiteur le demande */
+html{scroll-padding-bottom:70px}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media (max-width:900px){header nav>.menu{padding-inline-end:28px;scroll-padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}header nav>.menu a{padding-block:9px}}
 </style>
 </head>
 <body>
@@ -225,7 +239,7 @@ form{box-shadow:10px 10px 0 var(--bois)}
 <header><div class="wrap"><nav>
   <a href="#" class="logo"><i style="background:var(--bois)"><svg viewBox="0 0 24 24" fill="none" stroke="#F5C400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></i>Delmas Électricité</a>
   <div class="menu"><a href="#savoir-faire">Prestations</a><a href="#realisations">Chantiers</a><a href="#atelier">L'entreprise</a><a href="#avis">Avis</a><a href="#contact">Contact</a></div>
-  <div class="nav-cta"><span class="phone">05 56 00 98 76</span><a href="#contact" class="btn btn-primary">Devis gratuit</a></div>
+  <div class="nav-cta"><span class="phone">05 56 00 00 00</span><a href="#contact" class="btn btn-primary">Devis gratuit</a></div>
 </nav></div></header>
 
 <section class="hero"><div class="wrap hero-grid">
@@ -233,7 +247,7 @@ form{box-shadow:10px 10px 0 var(--bois)}
     <span class="tag">Électricien · Mérignac & Bordeaux Métropole</span>
     <h1>Une installation <em>sûre, aux normes</em>, sans mauvaise surprise.</h1>
     <p>Dépannage sous 24 h, rénovation complète, tableaux électriques, bornes de recharge et domotique. Devis chiffré poste par poste, intervention propre.</p>
-    <div class="hero-actions"><a href="#contact" class="btn btn-primary">Demander un devis →</a><a href="tel:0556009876" class="btn btn-ghost">Urgence : 05 56 00 98 76</a></div>
+    <div class="hero-actions"><a href="#contact" class="btn btn-primary">Demander un devis →</a><a href="tel:0556000000" class="btn btn-ghost">Urgence : 05 56 00 00 00</a></div>
     <div class="hero-badges"><span><b>24 h</b> délai de dépannage</span><span><b>900+</b> interventions</span><span><b>4,8/5</b> d'avis clients</span></div>
   </div>
   <div class="hero-visual"><div class="stamp">Courant Sûr · IRVE</div><div class="ph" style="background-image:url(img/elec-hero.jpg)"></div>
@@ -294,7 +308,7 @@ form{box-shadow:10px 10px 0 var(--bois)}
 
 <section id="contact" class="contact"><div class="wrap contact-grid">
   <div><span class="tag" style="background:var(--mousse);color:var(--charbon)">Devis gratuit</span><h2>Décrivez-nous le problème.</h2><p>Un diagnostic gratuit, un devis sous 48 h. Pour une panne, appelez directement : on décroche de 7 h à 20 h.</p>
-    <div class="contact-info"><div><b>Téléphone</b>05 56 00 98 76 — 7 j/7 pour les urgences</div><div><b>Email</b>contact@delmas-electricite.fr</div><div><b>Siège</b>8 avenue de la Somme, 33700 Mérignac</div></div></div>
+    <div class="contact-info"><div><b>Téléphone</b>05 56 00 00 00 — 7 j/7 pour les urgences</div><div><b>Email</b>contact@exemple.fr</div><div><b>Siège</b>8 avenue de la Somme, 33700 Mérignac</div></div></div>
   <form onsubmit="event.preventDefault()">
     <div class="row"><label>Nom<input placeholder="Votre nom"></label><label>Téléphone<input placeholder="06 00 00 00 00"></label></div>
     <label>Email<input placeholder="vous@exemple.fr"></label>
@@ -309,9 +323,9 @@ form{box-shadow:10px 10px 0 var(--bois)}
     <div><div class="logo"><i style="background:var(--bois)"><svg viewBox="0 0 24 24" fill="none" stroke="#F5C400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></i>Delmas Électricité</div><p>Électricien à Mérignac depuis 2012. Label Courant Sûr, IRVE, garantie décennale.</p></div>
     <div><h4>PRESTATIONS</h4><a href="#">Dépannage</a><a href="#">Mise aux normes</a><a href="#">Bornes de recharge</a><a href="#">Rénovation</a></div>
     <div><h4>L'ENTREPRISE</h4><a href="#">Qui sommes-nous</a><a href="#">Chantiers</a><a href="#">Avis</a><a href="#">Recrutement</a></div>
-    <div><h4>CONTACT</h4><a href="#">05 56 00 98 76</a><a href="#">contact@delmas-electricite.fr</a><a href="#">8 av. de la Somme, Mérignac</a></div>
+    <div><h4>CONTACT</h4><a href="#">05 56 00 00 00</a><a href="#">contact@exemple.fr</a><a href="#">8 av. de la Somme, Mérignac</a></div>
   </div>
-  <div class="copy"><span>© 2026 Delmas Électricité — SIRET 000 000 000 00000</span><span>Mentions légales · Confidentialité</span></div>
+  <div class="copy"><span>© 2026 Delmas Électricité · SIRET 000 000 000 00000</span><span>Mentions légales · Confidentialité</span></div>
 </div></footer>
 
 <div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1.35 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none;max-width:calc(100% - 24px)">Maquette de démonstration, entreprise fictive · Mokom Studio</div>

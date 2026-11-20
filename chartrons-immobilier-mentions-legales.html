@@ -148,6 +148,17 @@ footer{background:var(--nuit);color:rgba(255,255,255,.7);padding:60px 0 30px;fon
   .mbar a{text-align:center;padding:14px 6px;font-size:12.5px;font-weight:600}.mbar a.main{background:var(--nuit);color:#fff}
   #mokom-demo{bottom:72px!important}
 }.legal-page{padding:70px 0 90px}.legal-page h1{font-size:clamp(32px,4vw,48px);margin:10px 0 30px}.legal-page h2{font-size:22px;margin:34px 0 10px}.legal-page p{max-width:760px;margin-bottom:12px;color:var(--gris);font-size:15px}
+/* Menu toujours visible sous 980 px : seconde ligne sous le logo, défilement au doigt */
+@media (max-width:980px){header nav{flex-wrap:wrap;height:auto!important;row-gap:4px;padding-top:12px;padding-bottom:0}header nav>.menu{display:flex!important;order:9;flex:0 0 100%;grid-column:1/-1;width:100%;height:40px;align-items:center;gap:24px;margin:0;padding:0;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;font-size:14px!important;letter-spacing:.04em!important}header nav>.menu::-webkit-scrollbar{display:none}header nav>.menu>*{flex:none}}
+/* Le logo se resserre plutôt que de pousser le bouton à la ligne */
+@media (max-width:980px){header nav>.logo{flex:1 1 0;min-width:0}}
+/* Les titres de section ne passent pas sous l'en-tête quand on clique un lien du menu */
+html{scroll-padding-top:95px}@media (max-width:980px){html{scroll-padding-top:136px}}
+/* Accessibilité : focus jamais caché en bas, focus visible sur les champs, animations coupées si le visiteur le demande */
+html{scroll-padding-bottom:70px}@media (max-width:980px){html{scroll-padding-bottom:140px}}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media (max-width:980px){header nav>.menu{padding-inline-end:28px;scroll-padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}header nav>.menu a{padding-block:9px}}
 </style>
 </head>
 <body>
@@ -159,12 +170,12 @@ footer{background:var(--nuit);color:rgba(255,255,255,.7);padding:60px 0 30px;fon
 </nav></div></header>
 <section class="legal-page"><div class="wrap">
   <span class="label">Informations légales</span><h1>Mentions légales</h1>
-  <h2>Éditeur du site</h2><p>Chartrons Immobilier, SAS au capital de 20 000 €, immatriculée au RCS de Bordeaux sous le numéro 000 000 000. Siège social : 42 rue Notre-Dame, 33000 Bordeaux. Téléphone : 05 56 00 00 00. Email : contact@chartrons-immobilier.fr. N° TVA intracommunautaire : FR00 000000000. Directrice de la publication : Hélène Dartigues, présidente.</p>
+  <h2>Éditeur du site</h2><p>Chartrons Immobilier, SAS au capital de 20 000 €, immatriculée au RCS de Bordeaux sous le numéro 000 000 000. Siège social : 42 rue Notre-Dame, 33000 Bordeaux. Téléphone : 05 56 00 00 00. Email : contact@exemple.fr. N° TVA intracommunautaire : FR00 000000000. Directrice de la publication : Hélène Dartigues, présidente.</p>
   <h2>Activité réglementée (loi Hoguet)</h2><p>Carte professionnelle « Transactions sur immeubles et fonds de commerce » et « Gestion immobilière » n° CPI 3301 2026 000 000 000, délivrée par la CCI Bordeaux Gironde. Garantie financière : Caisse Mutuelle de Garantie des Agents (organisme fictif), 12 rue de l'Exemple, 33000 Bordeaux, à hauteur de 120 000 € pour la transaction et 120 000 € pour la gestion. Assurance responsabilité civile professionnelle : Assurance Aquitaine Pro (fictive), contrat n° 000 000, couverture France entière. Les honoraires de l'agence sont affichés sur la page « Honoraires » et dans la vitrine de l'agence.</p>
   <h2>Médiation de la consommation</h2><p>Conformément aux articles L.611-1 et suivants du Code de la consommation, en cas de litige non résolu, le consommateur peut saisir gratuitement le médiateur de la consommation dont relève l'agence : Médiation Immobilière Exemple (organisme fictif), 1 place de l'Exemple, 75000 Paris, www.mediation-exemple.fr.</p>
   <h2>Hébergement</h2><p>Le site est hébergé par [nom de l'hébergeur], [adresse de l'hébergeur]. Téléphone : [numéro].</p>
   <h2>Propriété intellectuelle</h2><p>L'ensemble des contenus de ce site (textes, photographies, plans, logo, charte graphique) est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p>
-  <h2>Données personnelles</h2><p>Les informations recueillies via les formulaires (estimation, demande de visite, contact) sont destinées uniquement à Chartrons Immobilier pour répondre à vos demandes et assurer le suivi de votre projet. Elles sont conservées 12 mois après le dernier contact et ne sont ni vendues ni transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression en écrivant à contact@chartrons-immobilier.fr.</p>
+  <h2>Données personnelles</h2><p>Les informations recueillies via les formulaires (estimation, demande de visite, contact) sont destinées uniquement à Chartrons Immobilier pour répondre à vos demandes et assurer le suivi de votre projet. Elles sont conservées 12 mois après le dernier contact et ne sont ni vendues ni transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression en écrivant à contact@exemple.fr.</p>
   <h2>Cookies</h2><p>Ce site n'utilise que des cookies techniques nécessaires à son fonctionnement. Aucun cookie publicitaire n'est déposé sans votre consentement.</p>
   <h2>Annonces</h2><p>Les informations des annonces sont données à titre indicatif et n'ont pas de valeur contractuelle. Les prix sont indiqués honoraires inclus, à la charge du vendeur sauf mention contraire. Les diagnostics (DPE, GES) sont établis par un diagnostiqueur certifié et tenus à disposition en agence.</p>
   <h2>Crédits</h2><p>Conception et réalisation : Studio MOKOM. Photographies : Pexels et Chartrons Immobilier.</p>
@@ -172,7 +183,7 @@ footer{background:var(--nuit);color:rgba(255,255,255,.7);padding:60px 0 30px;fon
 <footer><div class="wrap">
   <div class="foot">
     <div><div class="logo">Chartrons Immobilier<small>Vente · Location · Bordeaux</small></div>
-      <p class="legal">42 rue Notre-Dame, 33000 Bordeaux · 05 56 00 00 00 · contact@chartrons-immobilier.fr<br>Carte professionnelle « Transactions sur immeubles et fonds de commerce » n° CPI 3301 2026 000 000 000, délivrée par la CCI Bordeaux Gironde. Garantie financière : Caisse Mutuelle de Garantie des Agents (organisme fictif), 120 000 €. RCP : Assurance Aquitaine Pro (fictive). Absence de maniement de fonds hors séquestre.</p></div>
+      <p class="legal">42 rue Notre-Dame, 33000 Bordeaux · 05 56 00 00 00 · contact@exemple.fr<br>Carte professionnelle « Transactions sur immeubles et fonds de commerce » n° CPI 3301 2026 000 000 000, délivrée par la CCI Bordeaux Gironde. Garantie financière : Caisse Mutuelle de Garantie des Agents (organisme fictif), 120 000 €. RCP : Assurance Aquitaine Pro (fictive). Absence de maniement de fonds hors séquestre.</p></div>
     <div><h4>Acheter</h4><a href="#">Appartements</a><a href="#">Maisons</a><a href="#">Immeubles</a><a href="#">Neuf</a></div>
     <div><h4>Vendre</h4><a href="chartrons-immobilier.html#estimer">Estimation gratuite</a><a href="chartrons-immobilier.html#honoraires">Honoraires</a><a href="#">Notre méthode</a></div>
     <div><h4>L'agence</h4><a href="chartrons-immobilier.html#equipe">L'équipe</a><a href="chartrons-immobilier.html#quartiers">Quartiers</a><a href="#">Avis clients</a><a href="#">Réseaux sociaux</a></div>

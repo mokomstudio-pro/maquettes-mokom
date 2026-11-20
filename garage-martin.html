@@ -140,6 +140,17 @@ header{border-bottom:4px solid var(--vert)}
 .contact{background:var(--sable);border-top:0}
 .map{border:0;border-radius:8px;background:#D9E0EA}
 .label{color:var(--rose)}
+/* Menu toujours visible sous 900 px : seconde ligne sous le logo, défilement au doigt */
+@media (max-width:900px){header nav{flex-wrap:wrap;height:auto!important;row-gap:4px;padding-top:12px;padding-bottom:0}header nav>.menu{display:flex!important;order:9;flex:0 0 100%;grid-column:1/-1;width:100%;height:40px;align-items:center;gap:24px;margin:0;padding:0;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;font-size:14px!important;letter-spacing:.04em!important}header nav>.menu::-webkit-scrollbar{display:none}header nav>.menu>*{flex:none}}
+/* Le logo se resserre plutôt que de pousser le bouton à la ligne */
+@media (max-width:980px){header nav>.logo{flex:1 1 0;min-width:0}}
+/* Les titres de section ne passent pas sous l'en-tête quand on clique un lien du menu */
+html{scroll-padding-top:94px}@media (max-width:900px){html{scroll-padding-top:121px}}
+/* Accessibilité : focus jamais caché en bas, focus visible sur les champs, animations coupées si le visiteur le demande */
+html{scroll-padding-bottom:70px}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media (max-width:900px){header nav>.menu{padding-inline-end:28px;scroll-padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}header nav>.menu a{padding-block:9px}}
 </style>
 </head>
 <body>
@@ -147,7 +158,7 @@ header{border-bottom:4px solid var(--vert)}
 <header><div class="wrap"><nav>
   <a href="#" class="logo"><i></i>Garage Martin</a>
   <div class="menu"><a href="#services">Prestations</a><a href="#galerie">L'atelier</a><a href="#apropos">Qui sommes-nous</a><a href="#avis">Avis</a><a href="#contact">Contact</a></div>
-  <div class="nav-r"><span>05 57 00 00 00</span><a href="#contact" class="btn btn-vert" style="padding:10px 20px">Prendre RDV</a></div>
+  <div class="nav-r"><span>05 56 00 00 00</span><a href="#contact" class="btn btn-vert" style="padding:10px 20px">Prendre RDV</a></div>
 </nav></div></header>
 
 <section class="hero"><div class="wrap hero-grid">
@@ -191,7 +202,7 @@ header{border-bottom:4px solid var(--vert)}
 
 <section id="contact" class="contact"><div class="wrap contact-grid">
   <div><span class="label">Contact</span><h2>Route de Saint-Émilion, à la sortie de Libourne.</h2><p>Appelez pour un rendez-vous ou passez directement : on vous dit tout de suite si on peut vous prendre dans la journée.</p>
-    <dl><div><dt>Adresse</dt><dd>142 route de Saint-Émilion, 33500 Libourne</dd></div><div><dt>Téléphone</dt><dd>05 57 00 00 00</dd></div><div><dt>Email</dt><dd>contact@garage-martin-libourne.fr</dd></div><div><dt>Horaires</dt><dd>Lundi – Vendredi : 8 h – 12 h · 14 h – 18 h 30 · Samedi : 8 h – 12 h</dd></div></dl>
+    <dl><div><dt>Adresse</dt><dd>142 route de Saint-Émilion, 33500 Libourne</dd></div><div><dt>Téléphone</dt><dd>05 56 00 00 00</dd></div><div><dt>Email</dt><dd>contact@exemple.fr</dd></div><div><dt>Horaires</dt><dd>Lundi – Vendredi : 8 h – 12 h · 14 h – 18 h 30 · Samedi : 8 h – 12 h</dd></div></dl>
     <div class="btns"><a href="#" class="btn btn-vert">Appeler</a><a href="#" class="btn btn-line">Itinéraire</a></div></div>
   <div class="map">Carte interactive</div>
 </div></section>

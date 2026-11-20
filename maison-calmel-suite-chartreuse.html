@@ -154,6 +154,22 @@ footer .logo{font-size:34px}
 
 /* page intérieure */
 
+/* Menu toujours visible sous 900 px : seconde ligne sous le logo, défilement au doigt */
+@media (max-width:900px){header nav{flex-wrap:wrap;height:auto!important;row-gap:4px;padding-top:12px;padding-bottom:0}header nav>.menu{display:flex!important;order:9;flex:0 0 100%;grid-column:1/-1;width:100%;height:40px;align-items:center;gap:24px;margin:0;padding:0;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;font-size:14px!important;letter-spacing:.04em!important}header nav>.menu::-webkit-scrollbar{display:none}header nav>.menu>*{flex:none}}
+/* En-tête toujours visible : fixe, avec un fond dès qu'on fait défiler */
+header{position:fixed;transition:background-color .3s}header.colle{background:var(--nuit);box-shadow:0 1px 0 rgba(0,0,0,.08)}
+/* Le logo se resserre plutôt que de pousser le bouton à la ligne */
+@media (max-width:980px){header nav>.logo{flex:1 1 0;min-width:0}}
+/* La photo du haut s'agrandit pour que le titre ne passe pas sous l'en-tête */
+@media (max-width:900px){.hero{height:auto;min-height:100vh;padding-top:150px!important}}
+/* Les titres de section ne passent pas sous l'en-tête quand on clique un lien du menu */
+html{scroll-padding-top:112px}@media (max-width:900px){html{scroll-padding-top:125px}}
+/* Accessibilité : focus jamais caché en bas, focus visible sur les champs, animations coupées si le visiteur le demande */
+html{scroll-padding-bottom:70px}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media (max-width:900px){header nav>.menu{padding-inline-end:28px;scroll-padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}header nav>.menu a{padding-block:9px}}
+header:not(.colle){background:linear-gradient(180deg,rgba(15,14,12,.72) 0%,rgba(15,14,12,.45) 70%,rgba(15,14,12,0) 100%)}@media (max-width:900px){header,header:not(.colle){background:var(--nuit)}}
 </style>
 </head>
 <body>
@@ -220,5 +236,6 @@ footer .logo{font-size:34px}
 
 <div id="mokom-demo" style="position:fixed;right:12px;bottom:12px;z-index:9999;background:rgba(27,26,23,.85);color:#fff;font:600 11px/1.35 system-ui,sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:999px;pointer-events:none;max-width:calc(100% - 24px)">Maquette de démonstration, entreprise fictive · Mokom Studio</div>
 <script>if(window.self!==window.top){var d=document.getElementById('mokom-demo');if(d)d.style.display='none';}</script>
+<script>(function(){var h=document.querySelector('header');function f(){h.classList.toggle('colle',window.scrollY>30)}addEventListener('scroll',f,{passive:true});f()})();</script>
 </body>
 </html>

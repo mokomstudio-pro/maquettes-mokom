@@ -121,6 +121,20 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
 
 /* page intérieure */
 .legal{padding:70px 0 90px}.legal h1{font-size:clamp(32px,4vw,48px);margin:10px 0 30px}.legal h2{font-size:22px;margin:34px 0 10px}.legal p{max-width:720px;margin-bottom:12px;opacity:.85;font-size:15px}
+/* Menu toujours visible sous 900 px : seconde ligne sous le logo, défilement au doigt */
+@media (max-width:900px){header nav{flex-wrap:wrap;height:auto!important;row-gap:4px;padding-top:12px;padding-bottom:0}header nav>.menu{display:flex!important;order:9;flex:0 0 100%;grid-column:1/-1;width:100%;height:40px;align-items:center;gap:24px;margin:0;padding:0;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;font-size:14px!important;letter-spacing:.04em!important}header nav>.menu::-webkit-scrollbar{display:none}header nav>.menu>*{flex:none}}
+/* Lisible jusqu'à 320 px */
+.hero .wrap>*{min-width:0}#fit{max-width:100%}@media (max-width:360px){.svc h3{font-size:19px}h1[style*="clamp(48px"]{font-size:40px!important}h2{overflow-wrap:break-word;hyphens:auto}}
+/* Le logo se resserre plutôt que de pousser le bouton à la ligne */
+@media (max-width:980px){header nav>.logo{flex:1 1 0;min-width:0}}
+/* Les titres de section ne passent pas sous l'en-tête quand on clique un lien du menu */
+html{scroll-padding-top:96px}@media (max-width:900px){html{scroll-padding-top:120px}}
+/* Accessibilité : focus jamais caché en bas, focus visible sur les champs, animations coupées si le visiteur le demande */
+html{scroll-padding-bottom:70px}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media (max-width:900px){header nav>.menu{padding-inline-end:28px;scroll-padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}header nav>.menu a{padding-block:9px}}
+@media (max-width:900px){header{mix-blend-mode:normal;background:var(--noir)}}
 </style>
 </head>
 <body>
@@ -140,13 +154,13 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
   <span class="label">Informations légales</span>
   <h1>Mentions légales</h1>
   <h2>Éditeur du site</h2>
-  <p>Théo Lanvin — Entreprise individuelle — photographe auteur. Siège : Bordeaux. Contact : hello@theolanvin.fr. SIRET : 000 000 000 00000. Directeur de la publication : le représentant légal de l'entreprise.</p>
+  <p>Théo Lanvin — Entreprise individuelle — photographe auteur. Siège : Bordeaux. Contact : hello@exemple.fr. SIRET : 000 000 000 00000. Directeur de la publication : le représentant légal de l'entreprise.</p>
   <h2>Hébergement</h2>
   <p>Le site est hébergé par [nom de l'hébergeur], [adresse de l'hébergeur]. Téléphone : [numéro].</p>
   <h2>Propriété intellectuelle</h2>
   <p>L'ensemble des contenus de ce site (textes, photographies, logos, charte graphique) est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p>
   <h2>Données personnelles</h2>
-  <p>Les informations recueillies via les formulaires sont destinées uniquement à Théo Lanvin pour répondre à vos demandes. Elles ne sont ni vendues ni transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à hello@theolanvin.fr.</p>
+  <p>Les informations recueillies via les formulaires sont destinées uniquement à Théo Lanvin pour répondre à vos demandes. Elles ne sont ni vendues ni transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à hello@exemple.fr.</p>
   <h2>Cookies</h2>
   <p>Ce site n'utilise que des cookies techniques nécessaires à son fonctionnement. Aucun cookie publicitaire n'est déposé sans votre consentement.</p>
   <h2>Crédits</h2>
