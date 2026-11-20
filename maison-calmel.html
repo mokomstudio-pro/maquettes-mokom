@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maquette personnalisable pour hébergement & tourisme</title>
-<meta name="description" content="Maison Calmel, hôtel 5 étoiles et spa au cœur des vignes de Saint-Émilion. 14 chambres et suites, table gastronomique, cave et expériences œnologiques.">
+<meta name="description" content="Maison Calmel, hôtel & spa au cœur des vignes de Saint-Émilion. 14 chambres et suites, table gastronomique, cave et expériences œnologiques.">
 <link rel="preload" as="image" href="img/calmel-hero2.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Figtree:wght@300;400;500&display=swap" rel="stylesheet">
@@ -168,6 +168,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px soli
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 @media (max-width:900px){header nav>.menu{padding-inline-end:28px;scroll-padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}header nav>.menu a{padding-block:9px}}
 header:not(.colle){background:linear-gradient(180deg,rgba(15,14,12,.72) 0%,rgba(15,14,12,.45) 70%,rgba(15,14,12,0) 100%)}@media (max-width:900px){header,header:not(.colle){background:var(--nuit)}}
+/* Bouton Réserver lisible et facile à toucher sur téléphone (16 px, zone de 44 px) */
+@media (max-width:900px){header .right .btn{font-size:16px!important;min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:10px 18px!important;line-height:1.1}}
 </style>
 </head>
 <body>
@@ -177,7 +179,7 @@ header:not(.colle){background:linear-gradient(180deg,rgba(15,14,12,.72) 0%,rgba(
     <nav>
       <div class="menu"><a href="#chambres">Chambres</a><a href="#spa">Spa</a><a href="#table">La table</a><a href="#experiences">Expériences</a></div>
       <a href="#" class="logo">Calmel<small>Saint-Émilion</small></a>
-      <div class="right"><span>FR / EN</span><a href="#" class="btn btn-line light">Réserver</a></div>
+      <div class="right"><span>FR / EN</span><a href="#reserver" class="btn btn-line light">Réserver</a></div>
     </nav>
   </div>
 </header>
@@ -186,11 +188,11 @@ header:not(.colle){background:linear-gradient(180deg,rgba(15,14,12,.72) 0%,rgba(
   <div class="ph" style="background-image:url(img/calmel-hero2.jpg);background-position:center 60%"><span>Photo — la bâtisse au lever du jour, vignes en brume</span></div>
   <div class="wrap">
     <div>
-      <span class="label">Hôtel & Spa ····· Cinq étoiles</span>
+      <span class="label">Hôtel & Spa ····· Saint-Émilion</span>
       <h1>Une maison<br>dans <i>les vignes.</i></h1>
       <p>Quatorze chambres et suites dans une chartreuse du XVIII<sup>e</sup> siècle, au cœur du vignoble de Saint-Émilion, à quarante minutes de Bordeaux.</p>
     </div>
-    <form class="booking" onsubmit="event.preventDefault()">
+    <form class="booking" id="reserver" onsubmit="event.preventDefault()">
       <label>Arrivée<input value="12 déc. 2026"></label>
       <label>Départ<input value="14 déc. 2026"></label>
       <label>Voyageurs<select><option>2 adultes</option><option>1 adulte</option><option>2 adultes, 1 enfant</option></select></label>
@@ -205,7 +207,7 @@ header:not(.colle){background:linear-gradient(180deg,rgba(15,14,12,.72) 0%,rgba(
     <h2>Le silence des vignes, <i>l'art de recevoir</i> du Sud-Ouest.</h2>
     <p>Maison Calmel est une demeure familiale devenue hôtel en 2019. On y vient pour la lumière du matin sur les ceps, la table de Julien Dubreuil, le spa creusé dans l'ancien chai, et le sentiment, rare, d'être attendu.</p>
     <a href="#chambres" class="btn btn-line">Découvrir la maison</a>
-    <div class="marks"><div><b>14</b>chambres & suites</div><div><b>1 ★</b>Guide des tables du Sud-Ouest</div><div><b>8 ha</b>de vignes en propriété</div><div><b>2019</b>ouverture</div></div>
+    <div class="marks"><div><b>14</b>chambres & suites</div><div><b>1</b>table gastronomique</div><div><b>8 ha</b>de vignes en propriété</div><div><b>2019</b>ouverture</div></div>
   </div>
 </section>
 
@@ -235,7 +237,7 @@ header:not(.colle){background:linear-gradient(180deg,rgba(15,14,12,.72) 0%,rgba(
   <div class="ph gold" style="background-image:url(img/calmel-table.jpg)"><span>Photo — assiette, table de Julien Dubreuil</span></div>
   <div class="txt">
     <span class="label">La table</span>
-    <h2>Une étoile, <i>un potager</i>, huit hectares.</h2>
+    <h2>Une table, <i>un potager</i>, huit hectares.</h2>
     <p>Julien Dubreuil compose un menu unique chaque soir, à partir du potager de la maison et des pêcheurs du Bassin. Les vins viennent de notre propriété et des voisins que nous aimons.</p>
     <p>Dîner du mercredi au dimanche · Menu en 6 ou 8 services · 145 € / 185 €</p>
     <a href="#" class="btn btn-line light">Réserver une table</a>
@@ -284,7 +286,7 @@ header:not(.colle){background:linear-gradient(180deg,rgba(15,14,12,.72) 0%,rgba(
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div><div class="logo">Calmel<small>Saint-Émilion</small></div><p>Hôtel & Spa cinq étoiles, table gastronomique, au cœur du vignoble de Saint-Émilion. Membre du réseau Maisons de Pierre & Vigne.</p></div>
+      <div><div class="logo">Calmel<small>Saint-Émilion</small></div><p>Hôtel & Spa, table gastronomique, au cœur du vignoble de Saint-Émilion. Membre du réseau Maisons de Pierre & Vigne.</p></div>
       <div><h4>La maison</h4><a href="#">Chambres & suites</a><a href="#">Le spa</a><a href="#">La table</a><a href="#">Expériences</a></div>
       <div><h4>Informations</h4><a href="#">Venir</a><a href="#">Événements privés</a><a href="#">Cartes cadeaux</a><a href="#">Presse</a></div>
       <div><h4>Lettres de la maison</h4><p>Les saisons, les vendanges, les dates d'ouverture.</p><form onsubmit="event.preventDefault()"><input placeholder="Votre e-mail"><button>S'inscrire</button></form></div>
